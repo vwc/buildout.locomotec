@@ -6529,10 +6529,19 @@ body > header #site-header {
   height: 350px;
   padding: 20px;
 }
-#logo {
-  background: url(../img/logo.png) 0 0 no-repeat transparent;
+body > header #site-header #costum_header {
   height: 100px;
   width: 100px;
+}
+body > header #site-header #costum_header #logo {
+  background: url(../img/logo.png) 0 0 no-repeat transparent;
+  margin: 0px 18px;
+  width: 420px;
+  height: 150px;
+  display: block;
+  text-indent: -3000px;
+  overflow: hidden;
+  border: none;
 }
 body > footer {
   margin-top: 20px;
