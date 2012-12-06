@@ -21,10 +21,9 @@
     <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js"></script>
     <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
   </head>
-
+  
   <body>
-
-    <header id="topbar">
+<header id="topbar">
       <div id="editbar-wrapper" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container-fluid" id="editbar">
@@ -51,25 +50,39 @@
       </nav>
     </header>
 
-    <section class="container">
-      <div id="content">
-        <h1>Starter template <small>The barebone minimal</small></h1>
-        <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+    
+    <section class="container" id="site-wrapper">
+      <div id="content-wrapper">
+        <div id="main-content">
+          <div class="row-fluid">
+            <div class="span8">
+              <div id="content">
+                
+              </div>
+            </div>
+            <div class="span3">
+              <div id="sidebar-right">
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section> <!-- /container -->
-
+    </section>
+    
     <footer id="site-footer">
-     <div class="divide-footer"></div>
-      <div class="container">
-        <p>&copy; ACME Corp. 2012</p>
-      </div>
-
+        <div class="divide-footer">
+            <div class="container">
+                <p>&copy; ACME Corp. 2012</p>
+            </div>
+        </div>
     </footer>
-
-    <!-- Le javascript
+    
+        <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/application.js"></script>
-
+    
   </body>
 </html>
+

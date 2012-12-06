@@ -3,7 +3,8 @@
 
 
 body {
-    background: #ebe3d1;
+   /* background: #ebe3d1;*/
+   background: #f6f3ec;
 }
 
 // locomotec for providing a data image via stylesheet
@@ -16,7 +17,8 @@ body {
 // twitter bootstarp navbar to make the edit bar look like a
 // browser toolbar
 body > header {
-    background: #ebe3d1;
+    /* background: #ebe3d1;*/
+    background: #f6f3ec;
     #toolbar + nav,
     #editbar-wrapper + nav {
         margin-top: @navbarHeight;
@@ -29,7 +31,7 @@ body > header {
         }
     }
     #site-header {
-      background: url(../img/header_frontpage.png) 50%  0% no-repeat transparent ;
+      background: url(../img/header_content.png) 50%  0% no-repeat transparent ;
       height: 350px;    
       padding: @baseLineHeight;
       #costum_header {
@@ -46,17 +48,25 @@ body > header {
             border: none;
         }
     }
+    
     }
 
 }
 
+#content {
+    margin-left: 50px;
+}
+#sidebar {
+
+}
 
 // locomotec styles for a HMTL5 based site footer
 body > footer {
     margin-top: @baseLineHeight;
     padding: @baseLineHeight 0;
 /*    border-top: 1px solid @grayLighter; */
-    background-color:#ebe3d1;
+    /* background: #ebe3d1;*/
+    background: #f6f3ec;
 }
 .divide-footer {
     background:url(../img/divide.png) 50% 0 no-repeat transparent;
