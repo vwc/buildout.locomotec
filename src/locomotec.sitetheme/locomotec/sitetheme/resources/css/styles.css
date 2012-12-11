@@ -6535,20 +6535,49 @@ body > header #site-header {
 }
 body > header #site-header #costum_header {
   height: 100px;
-  width: 100px;
 }
 body > header #site-header #costum_header #logo {
   background: url(../img/logo.png) 0 0 no-repeat transparent;
   margin: 0px 18px;
-  width: 420px;
-  height: 150px;
+  width: 35%;
+  height: 100px;
   display: block;
   text-indent: -3000px;
   overflow: hidden;
   border: none;
 }
+body > header #site-header #costum_header #main-nav {
+  width: 60%;
+  float: right;
+  margin-top: -50px;
+}
+body > header #site-header #costum_header #main-nav ul,
+body > header #site-header #costum_header #main-nav li {
+  color: #423a38;
+  font-size: 110%;
+  text-decoration: none;
+  padding: 2px;
+  float: right;
+  display: inline-block;
+}
+body > header #site-header #costum_header #main-nav ul a,
+body > header #site-header #costum_header #main-nav li a {
+  color: #423a38;
+  font-weight: bold;
+}
+body > header #site-header #costum_header #main-nav ul a a:hover,
+body > header #site-header #costum_header #main-nav li a a:hover {
+  font-size: 150%;
+}
 #content {
   margin-left: 50px;
+}
+#content h1.documentFirstHeading {
+  margin-top: -200px;
+}
+#sidebar-right {
+  margin-left: 50px;
+  margin-top: -150px;
 }
 body > footer {
   margin-top: 20px;

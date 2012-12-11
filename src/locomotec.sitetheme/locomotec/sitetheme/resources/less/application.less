@@ -34,19 +34,41 @@ body > header {
       background: url(../img/header_content.png) 50%  0% no-repeat transparent ;
       height: 350px;    
       padding: @baseLineHeight;
+
       #costum_header {
-          height: 100px;
-          width: 100px;
+        height: 100px;
         #logo {
             background: url(../img/logo.png) 0 0 no-repeat transparent;
             margin: 0px 18px;
-            width: 420px;
-            height: 150px;
+            width: 35%;
+            height: 100px;
             display: block;
             text-indent: -3000px;
             overflow: hidden;
             border: none;
         }
+        #main-nav {
+            width: 60%;
+            float:right;
+            margin-top: -50px;
+
+            ul, li {
+                color: #423a38;
+                font-size: 110%;
+                text-decoration: none;
+                padding:2px;
+                float: right;
+                display: inline-block;
+                a {
+                    color: #423a38;
+                    font-weight: bold;
+                    a:hover {
+                        font-size: 150%;
+                    }
+                }
+            }  
+        }
+
     }
     
     }
@@ -55,11 +77,19 @@ body > header {
 
 #content {
     margin-left: 50px;
+
+    h1.documentFirstHeading {
+        margin-top: -200px;
+    }
 }
-#sidebar {
+#sidebar-right {
+    margin-left: 50px;
+    margin-top: -150px;
+}
+
+.special-content {
 
 }
-
 // locomotec styles for a HMTL5 based site footer
 body > footer {
     margin-top: @baseLineHeight;
