@@ -30,11 +30,13 @@ body > header {
             }
         }
     }
+
     #site-header {
       background: url(../img/header_content.png) 50%  0% no-repeat transparent ;
       height: 350px;    
       padding: @baseLineHeight;
 
+    /* Logo und Navigation*/
       #costum_header {
         height: 100px;
         #logo {
@@ -75,12 +77,9 @@ body > header {
 
 }
 
-.container {
-    width: 960px;
-}
 #content {
     margin-top: 150px;
-    margin-left: -20px;
+
     h2.headline {
         background: url(../img/divide_content.png) 0 45px no-repeat transparent;
         font-size: 140%;
@@ -92,13 +91,13 @@ body > header {
 
     }
 
+
 }
+
 #sidebar-right {
-    width: 280px;
-    margin-top: 10px;
     dl.portletNavigationTree {
         ul {
-            width: auto;
+
             margin-bottom: 50px;
             display: block;
             li {
@@ -106,9 +105,10 @@ body > header {
                 list-style: none;
                 text-align: right;
                 height: 50px;
-                width: auto;
+
                 color: #423a38;
                 span {
+                    font-weight: bold;
                     color: #423a38;
                 }
                 a:hover {
@@ -117,6 +117,32 @@ body > header {
                 }
             }
         
+        }
+    }
+    dl.portletEvents {
+        float: right;
+        background: url(../img/divide_small.png) 0px 50px no-repeat transparent;
+        dt.portletHeader a {
+            background: url(../img/Sprite.png) -550px -140px no-repeat transparent;
+            float: right;
+            height: 40px;
+/*            width: 250px;*/
+            padding-left: 70px;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            font-size: 140%;
+            color: #423a38;
+        }
+        dd.portletItem {
+            float: right;
+            a {
+                color: #f09206;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+        dd.portletFooter {
+            float: right;
         }
     }
 }
@@ -128,22 +154,73 @@ body > header {
         margin-top: -200px;
     }
     h1.documentFirstHeading{
-        width: 900px;
+        width: 940px;
         height: 60px;
         padding-top: 30px;
         padding-left: 60px;
         padding-bottom: 10px;
         margin-top: -250px;
-    }   
+    }  
+ 
 }
 
+.section-vision {
+     #special-header {
 
+        background: url(../img/Sprite.png) 0px -140px no-repeat transparent;
+        height: 50px;
+        width: 70px;
+        margin-top: -200px;
+    }
+    h1.documentFirstHeading{
+        width: 940px;
+        height: 60px;
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-bottom: 10px;
+        margin-top: -250px;
+    }
+}
+
+.section-firma {
+     #special-header {
+        background: url(../img/Sprite.png) -142px -135px no-repeat transparent;
+        height: 70px;
+        width: 70px;
+        margin-top: -190px;
+    }
+    h1.documentFirstHeading{
+        width: 940px;
+        height: 50px;
+        padding-top: 30px;
+        padding-left: 70px;
+        padding-bottom: 10px;
+        margin-top: -250px;
+    }
+}
+
+.section-investoren {
+     #special-header {
+        background: url(../img/Sprite.png) -405px -140px no-repeat transparent;
+        height: 50px;
+        width: 80px;
+        margin-top: -200px;
+    }
+    h1.documentFirstHeading{
+        width: 940px;
+        height: 60px;
+        padding-top: 30px;
+        padding-left: 75px;
+        padding-bottom: 10px;
+        margin-top: -250px;
+    }    
+}
 .special-content {
 
 }
 
 #divide {
-    background: url(../img/divide.png) 50% 5px no-repeat transparent;
+    background: url(../img/divide.png) 0 5px no-repeat transparent;
     width: auto;
     height: 15px;
     padding-bottom: 10px;

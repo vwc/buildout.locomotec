@@ -6532,6 +6532,8 @@ body > header #site-header {
   background: url(../img/header_content.png) 50% 0% no-repeat transparent;
   height: 350px;
   padding: 20px;
+  /* Logo und Navigation*/
+
 }
 body > header #site-header #costum_header {
   height: 100px;
@@ -6569,12 +6571,8 @@ body > header #site-header #costum_header #main-nav ul a:hover,
 body > header #site-header #costum_header #main-nav li a:hover {
   font-size: 150%;
 }
-.container {
-  width: 960px;
-}
 #content {
   margin-top: 150px;
-  margin-left: -20px;
 }
 #content h2.headline {
   background: url(../img/divide_content.png) 0 45px no-repeat transparent;
@@ -6585,12 +6583,7 @@ body > header #site-header #costum_header #main-nav li a:hover {
   color: #423a38;
   text-decoration: none;
 }
-#sidebar-right {
-  width: 280px;
-  margin-top: 10px;
-}
 #sidebar-right dl.portletNavigationTree ul {
-  width: auto;
   margin-bottom: 50px;
   display: block;
 }
@@ -6599,15 +6592,42 @@ body > header #site-header #costum_header #main-nav li a:hover {
   list-style: none;
   text-align: right;
   height: 50px;
-  width: auto;
   color: #423a38;
 }
 #sidebar-right dl.portletNavigationTree ul li span {
+  font-weight: bold;
   color: #423a38;
 }
 #sidebar-right dl.portletNavigationTree ul li a:hover {
   text-decoration: none;
   background-color: #423a38 transparent;
+}
+#sidebar-right dl.portletEvents {
+  float: right;
+  background: url(../img/divide_small.png) 0px 50px no-repeat transparent;
+}
+#sidebar-right dl.portletEvents dt.portletHeader a {
+  background: url(../img/Sprite.png) -550px -140px no-repeat transparent;
+  float: right;
+  height: 40px;
+  /*            width: 250px;*/
+
+  padding-left: 70px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 140%;
+  color: #423a38;
+}
+#sidebar-right dl.portletEvents dd.portletItem {
+  float: right;
+}
+#sidebar-right dl.portletEvents dd.portletItem a {
+  color: #f09206;
+  text-decoration: none;
+  font-weight: bold;
+}
+#sidebar-right dl.portletEvents dd.portletFooter {
+  float: right;
 }
 .section-aktivitaeten #special-header {
   background: url(../img/Sprite.png) -285px -140px no-repeat transparent;
@@ -6616,15 +6636,57 @@ body > header #site-header #costum_header #main-nav li a:hover {
   margin-top: -200px;
 }
 .section-aktivitaeten h1.documentFirstHeading {
-  width: 900px;
+  width: 940px;
   height: 60px;
   padding-top: 30px;
   padding-left: 60px;
   padding-bottom: 10px;
   margin-top: -250px;
 }
+.section-vision #special-header {
+  background: url(../img/Sprite.png) 0px -140px no-repeat transparent;
+  height: 50px;
+  width: 70px;
+  margin-top: -200px;
+}
+.section-vision h1.documentFirstHeading {
+  width: 940px;
+  height: 60px;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-bottom: 10px;
+  margin-top: -250px;
+}
+.section-firma #special-header {
+  background: url(../img/Sprite.png) -142px -135px no-repeat transparent;
+  height: 70px;
+  width: 70px;
+  margin-top: -190px;
+}
+.section-firma h1.documentFirstHeading {
+  width: 940px;
+  height: 50px;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-bottom: 10px;
+  margin-top: -250px;
+}
+.section-investoren #special-header {
+  background: url(../img/Sprite.png) -405px -140px no-repeat transparent;
+  height: 50px;
+  width: 80px;
+  margin-top: -200px;
+}
+.section-investoren h1.documentFirstHeading {
+  width: 940px;
+  height: 60px;
+  padding-top: 30px;
+  padding-left: 75px;
+  padding-bottom: 10px;
+  margin-top: -250px;
+}
 #divide {
-  background: url(../img/divide.png) 50% 5px no-repeat transparent;
+  background: url(../img/divide.png) 0 5px no-repeat transparent;
   width: auto;
   height: 15px;
   padding-bottom: 10px;
