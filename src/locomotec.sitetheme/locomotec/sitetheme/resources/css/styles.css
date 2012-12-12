@@ -6538,7 +6538,7 @@ body > header #site-header #costum_header {
 }
 body > header #site-header #costum_header #logo {
   background: url(../img/logo.png) 0 0 no-repeat transparent;
-  margin: 0px 18px;
+  margin-left: -18px;
   width: 35%;
   height: 100px;
   display: block;
@@ -6565,19 +6565,69 @@ body > header #site-header #costum_header #main-nav li a {
   color: #423a38;
   font-weight: bold;
 }
-body > header #site-header #costum_header #main-nav ul a a:hover,
-body > header #site-header #costum_header #main-nav li a a:hover {
+body > header #site-header #costum_header #main-nav ul a:hover,
+body > header #site-header #costum_header #main-nav li a:hover {
   font-size: 150%;
 }
-#content {
-  margin-left: 50px;
+.container {
+  width: 960px;
 }
-#content h1.documentFirstHeading {
-  margin-top: -200px;
+#content {
+  margin-top: 150px;
+  margin-left: -20px;
+}
+#content h2.headline {
+  background: url(../img/divide_content.png) 0 45px no-repeat transparent;
+  font-size: 140%;
+  height: 50px;
+}
+#content h2.headline a {
+  color: #423a38;
+  text-decoration: none;
 }
 #sidebar-right {
-  margin-left: 50px;
-  margin-top: -150px;
+  width: 280px;
+  margin-top: 10px;
+}
+#sidebar-right dl.portletNavigationTree ul {
+  width: auto;
+  margin-bottom: 50px;
+  display: block;
+}
+#sidebar-right dl.portletNavigationTree ul li {
+  background: url(../img/divide_small.png) 0px 49px no-repeat transparent;
+  list-style: none;
+  text-align: right;
+  height: 50px;
+  width: auto;
+  color: #423a38;
+}
+#sidebar-right dl.portletNavigationTree ul li span {
+  color: #423a38;
+}
+#sidebar-right dl.portletNavigationTree ul li a:hover {
+  text-decoration: none;
+  background-color: #423a38 transparent;
+}
+.section-aktivitaeten #special-header {
+  background: url(../img/Sprite.png) -285px -140px no-repeat transparent;
+  height: 50px;
+  width: 70px;
+  margin-top: -200px;
+}
+.section-aktivitaeten h1.documentFirstHeading {
+  width: 900px;
+  height: 60px;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-bottom: 10px;
+  margin-top: -250px;
+}
+#divide {
+  background: url(../img/divide.png) 50% 5px no-repeat transparent;
+  width: auto;
+  height: 15px;
+  padding-bottom: 10px;
 }
 body > footer {
   margin-top: 20px;

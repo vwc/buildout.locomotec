@@ -39,7 +39,7 @@ body > header {
         height: 100px;
         #logo {
             background: url(../img/logo.png) 0 0 no-repeat transparent;
-            margin: 0px 18px;
+            margin-left: -18px;
             width: 35%;
             height: 100px;
             display: block;
@@ -62,9 +62,9 @@ body > header {
                 a {
                     color: #423a38;
                     font-weight: bold;
-                    a:hover {
-                        font-size: 150%;
-                    }
+                }
+                a:hover {
+                    font-size: 150%;
                 }
             }  
         }
@@ -75,19 +75,78 @@ body > header {
 
 }
 
+.container {
+    width: 960px;
+}
 #content {
-    margin-left: 50px;
+    margin-top: 150px;
+    margin-left: -20px;
+    h2.headline {
+        background: url(../img/divide_content.png) 0 45px no-repeat transparent;
+        font-size: 140%;
+        height: 50px;
+        a {
+           color: #423a38;
+           text-decoration: none;   
+        }
 
-    h1.documentFirstHeading {
-        margin-top: -200px;
     }
+
 }
 #sidebar-right {
-    margin-left: 50px;
-    margin-top: -150px;
+    width: 280px;
+    margin-top: 10px;
+    dl.portletNavigationTree {
+        ul {
+            width: auto;
+            margin-bottom: 50px;
+            display: block;
+            li {
+                background: url(../img/divide_small.png) 0px 49px no-repeat transparent;
+                list-style: none;
+                text-align: right;
+                height: 50px;
+                width: auto;
+                color: #423a38;
+                span {
+                    color: #423a38;
+                }
+                a:hover {
+                    text-decoration: none;
+                    background-color: #423a38 transparent; 
+                }
+            }
+        
+        }
+    }
+}
+.section-aktivitaeten {
+     #special-header {
+        background: url(../img/Sprite.png) -285px -140px no-repeat transparent;
+        height: 50px;
+        width: 70px;
+        margin-top: -200px;
+    }
+    h1.documentFirstHeading{
+        width: 900px;
+        height: 60px;
+        padding-top: 30px;
+        padding-left: 60px;
+        padding-bottom: 10px;
+        margin-top: -250px;
+    }   
 }
 
+
 .special-content {
+
+}
+
+#divide {
+    background: url(../img/divide.png) 50% 5px no-repeat transparent;
+    width: auto;
+    height: 15px;
+    padding-bottom: 10px;
 
 }
 // locomotec styles for a HMTL5 based site footer
