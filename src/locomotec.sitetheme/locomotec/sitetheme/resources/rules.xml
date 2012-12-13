@@ -8,6 +8,8 @@
     <!-- locomotec to add minimal theme template for the
          tiles editiong overlays -->
     <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
+
+    <theme href="frontpage.html" css:if-content="body.section-front-page" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -51,7 +53,7 @@
             css:content-children="#portal-personaltools" />
 
         <!-- Logo (link target) -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
+        <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 
         <!-- Site actions -->
         <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
