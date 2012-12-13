@@ -6556,9 +6556,9 @@ body > header #site-header #costum_header #main-nav {
 body > header #site-header #costum_header #main-nav ul,
 body > header #site-header #costum_header #main-nav li {
   color: #423a38;
-  font-size: 110%;
+  font-size: 130%;
   text-decoration: none;
-  padding: 2px;
+  padding-left: 10px;
   float: right;
   display: inline-block;
 }
@@ -6569,10 +6569,30 @@ body > header #site-header #costum_header #main-nav li a {
 }
 body > header #site-header #costum_header #main-nav ul a:hover,
 body > header #site-header #costum_header #main-nav li a:hover {
+  padding-bottom: 20px;
   font-size: 150%;
+  background: url(../img/arrow.png) 50% 30px no-repeat transparent;
+}
+body > header #site-header #costum_header #main-nav ul a:active,
+body > header #site-header #costum_header #main-nav li a:active {
+  padding-bottom: 20px;
+  font-size: 150%;
+  background: url(../img/arrow.png) 50% 30px no-repeat transparent;
 }
 #content {
   margin-top: 150px;
+}
+#content a {
+  color: #f09206;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#content ul,
+#content li {
+  list-style-image: url(../img/arrow_yellow.png);
+}
+#content h1.documentFirstHeading {
+  background: url(../img/divide.png) 0px 80px no-repeat transparent;
 }
 #content h2.headline {
   background: url(../img/divide_content.png) 0 45px no-repeat transparent;
@@ -6582,6 +6602,9 @@ body > header #site-header #costum_header #main-nav li a:hover {
 #content h2.headline a {
   color: #423a38;
   text-decoration: none;
+}
+#sidebar-right {
+  margin-left: 50px;
 }
 #sidebar-right dl.portletNavigationTree ul {
   margin-bottom: 50px;
@@ -6603,35 +6626,64 @@ body > header #site-header #costum_header #main-nav li a:hover {
   background-color: #423a38 transparent;
 }
 #sidebar-right dl.portletEvents {
-  float: right;
+  margin-bottom: 50px;
   background: url(../img/divide_small.png) 0px 50px no-repeat transparent;
 }
 #sidebar-right dl.portletEvents dt.portletHeader a {
-  background: url(../img/Sprite.png) -550px -140px no-repeat transparent;
-  float: right;
-  height: 40px;
-  /*            width: 250px;*/
-
-  padding-left: 70px;
+  background: url(../img/Sprite.png) -570px -140px no-repeat transparent;
+  text-decoration: none;
+  float: left;
+  height: 50px;
   padding-top: 20px;
-  margin-bottom: 10px;
-  font-size: 140%;
+  padding-left: 70px;
+  font-size: 150%;
   color: #423a38;
 }
 #sidebar-right dl.portletEvents dd.portletItem {
   float: right;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 #sidebar-right dl.portletEvents dd.portletItem a {
+  margin-bottom: 10px;
   color: #f09206;
   text-decoration: none;
   font-weight: bold;
 }
-#sidebar-right dl.portletEvents dd.portletFooter {
-  float: right;
+#sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails {
+  width: auto;
+  margin-bottom: 10px;
+}
+#sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails span:before {
+  content: url(../img/divide_arrow_bf.png);
+}
+#sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails span:after {
+  content: url(../img/divide_arrow_bf.png);
+}
+#sidebar-right dl.portletStaticText {
+  list-style-image: url(../img/arrow_yellow.png);
+}
+#sidebar-right dl.portletStaticText dt.portletHeader {
+  background: url(../img/egomotion.png) 10px 0px no-repeat transparent;
+  text-decoration: none;
+  float: left;
+  height: 50px;
+  padding-top: 30px;
+  padding-left: 70px;
+  font-size: 150%;
+  color: #423a38;
+}
+#sidebar-right dl.portletStaticText dd.portletItem {
+  background: url(../img/divide_small.png) -20px 60px no-repeat transparent;
+}
+#sidebar-right dl.portletStaticText dd.portletItem a {
+  color: #f09206;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .section-aktivitaeten #special-header {
-  background: url(../img/Sprite.png) -285px -140px no-repeat transparent;
-  height: 50px;
+  background: url(../img/Sprite.png) -285px -145px no-repeat transparent;
+  height: 70px;
   width: 70px;
   margin-top: -200px;
 }
@@ -6644,8 +6696,8 @@ body > header #site-header #costum_header #main-nav li a:hover {
   margin-top: -250px;
 }
 .section-vision #special-header {
-  background: url(../img/Sprite.png) 0px -140px no-repeat transparent;
-  height: 50px;
+  background: url(../img/Sprite.png) 0px -145px no-repeat transparent;
+  height: 70px;
   width: 70px;
   margin-top: -200px;
 }
@@ -6658,8 +6710,8 @@ body > header #site-header #costum_header #main-nav li a:hover {
   margin-top: -250px;
 }
 .section-firma #special-header {
-  background: url(../img/Sprite.png) -142px -135px no-repeat transparent;
-  height: 70px;
+  background: url(../img/Sprite.png) -142px -145px no-repeat transparent;
+  height: 80px;
   width: 70px;
   margin-top: -190px;
 }
@@ -6672,8 +6724,8 @@ body > header #site-header #costum_header #main-nav li a:hover {
   margin-top: -250px;
 }
 .section-investoren #special-header {
-  background: url(../img/Sprite.png) -405px -140px no-repeat transparent;
-  height: 50px;
+  background: url(../img/Sprite.png) -405px -145px no-repeat transparent;
+  height: 70px;
   width: 80px;
   margin-top: -200px;
 }
@@ -6699,6 +6751,19 @@ body > footer {
   /* background: #ebe3d1;*/
 
   background: #f6f3ec;
+}
+body > footer li {
+  margin-left: 10px;
+  padding-left: 10px;
+  float: right;
+  width: auto;
+  display: block;
+}
+body > footer li a {
+  color: #423a38;
+}
+body > footer li a:hover {
+  color: #423a38;
 }
 .divide-footer {
   background: url(../img/divide.png) 50% 0 no-repeat transparent;

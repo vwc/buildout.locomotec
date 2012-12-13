@@ -55,10 +55,11 @@ body > header {
             margin-top: -50px;
 
             ul, li {
+                    
                 color: #423a38;
-                font-size: 110%;
+                font-size: 130%;
                 text-decoration: none;
-                padding:2px;
+                padding-left: 10px;
                 float: right;
                 display: inline-block;
                 a {
@@ -66,8 +67,17 @@ body > header {
                     font-weight: bold;
                 }
                 a:hover {
+                    padding-bottom: 20px;
                     font-size: 150%;
+                    background: url(../img/arrow.png) 50% 30px no-repeat transparent;
                 }
+
+                a:active {
+                    padding-bottom: 20px;
+                    font-size: 150%;
+                    background: url(../img/arrow.png) 50% 30px no-repeat transparent;
+                }
+
             }  
         }
 
@@ -79,7 +89,18 @@ body > header {
 
 #content {
     margin-top: 150px;
+    a {
+        color: #f09206;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    ul, li {
+        list-style-image: url(../img/arrow_yellow.png);
+    }        
 
+    h1.documentFirstHeading {
+        background: url(../img/divide.png) 0px 80px no-repeat transparent;
+    }
     h2.headline {
         background: url(../img/divide_content.png) 0 45px no-repeat transparent;
         font-size: 140%;
@@ -95,9 +116,9 @@ body > header {
 }
 
 #sidebar-right {
+    margin-left: 50px;
     dl.portletNavigationTree {
         ul {
-
             margin-bottom: 50px;
             display: block;
             li {
@@ -120,36 +141,68 @@ body > header {
         }
     }
     dl.portletEvents {
-        float: right;
+        margin-bottom: 50px;
         background: url(../img/divide_small.png) 0px 50px no-repeat transparent;
         dt.portletHeader a {
-            background: url(../img/Sprite.png) -550px -140px no-repeat transparent;
-            float: right;
-            height: 40px;
-/*            width: 250px;*/
-            padding-left: 70px;
+            background: url(../img/Sprite.png) -570px -140px no-repeat transparent;
+            text-decoration: none;
+            float: left;
+            height: 50px;
             padding-top: 20px;
-            margin-bottom: 10px;
-            font-size: 140%;
+            padding-left: 70px;
+            font-size: 150%;
             color: #423a38;
         }
         dd.portletItem {
             float: right;
+            margin-top: 10px;
+            margin-bottom: 20px;
             a {
+                margin-bottom: 10px;
                 color: #f09206;
                 text-decoration: none;
                 font-weight: bold;
             }
+
+            span.portletItemDetails {
+                width: auto;
+                margin-bottom: 10px;
+            span:before {
+                content: url(../img/divide_arrow_bf.png);
+            }
+            span:after {
+                content: url(../img/divide_arrow_bf.png);
+            }
+
+            }
         }
-        dd.portletFooter {
-            float: right;
+    }
+    dl.portletStaticText {
+        list-style-image: url(../img/arrow_yellow.png);
+        dt.portletHeader {
+            background: url(../img/egomotion.png) 10px 0px no-repeat transparent;
+            text-decoration: none;
+            float: left;
+            height: 50px;
+            padding-top: 30px;
+            padding-left: 70px;
+            font-size: 150%;
+            color: #423a38;
+        }
+        dd.portletItem {
+            background: url(../img/divide_small.png) -20px 60px no-repeat transparent;
+            a {
+                color: #f09206;
+                font-weight: bold;
+                text-decoration: underline;
+            }
         }
     }
 }
 .section-aktivitaeten {
      #special-header {
-        background: url(../img/Sprite.png) -285px -140px no-repeat transparent;
-        height: 50px;
+        background: url(../img/Sprite.png) -285px -145px no-repeat transparent;
+        height: 70px;
         width: 70px;
         margin-top: -200px;
     }
@@ -167,8 +220,8 @@ body > header {
 .section-vision {
      #special-header {
 
-        background: url(../img/Sprite.png) 0px -140px no-repeat transparent;
-        height: 50px;
+        background: url(../img/Sprite.png) 0px -145px no-repeat transparent;
+        height: 70px;
         width: 70px;
         margin-top: -200px;
     }
@@ -184,8 +237,8 @@ body > header {
 
 .section-firma {
      #special-header {
-        background: url(../img/Sprite.png) -142px -135px no-repeat transparent;
-        height: 70px;
+        background: url(../img/Sprite.png) -142px -145px no-repeat transparent;
+        height: 80px;
         width: 70px;
         margin-top: -190px;
     }
@@ -201,8 +254,8 @@ body > header {
 
 .section-investoren {
      #special-header {
-        background: url(../img/Sprite.png) -405px -140px no-repeat transparent;
-        height: 50px;
+        background: url(../img/Sprite.png) -405px -145px no-repeat transparent;
+        height: 70px;
         width: 80px;
         margin-top: -200px;
     }
@@ -233,6 +286,20 @@ body > footer {
 /*    border-top: 1px solid @grayLighter; */
     /* background: #ebe3d1;*/
     background: #f6f3ec;
+    li {
+        margin-left: 10px;
+        padding-left: 10px;
+        float: right;
+        width: auto;
+        display: block;
+        a {
+            color: #423a38;
+        }
+        a:hover {
+            color: #423a38;
+        }
+    }
+
 }
 .divide-footer {
     background:url(../img/divide.png) 50% 0 no-repeat transparent;

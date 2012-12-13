@@ -59,7 +59,7 @@
             </span>
         </a>
 
-              <span class="tile" tal:define="edesc obj/Description" tal:content="python:edesc[:50] + '...'"></span>
+              <span class="tile" tal:define="edesc obj/Description" tal:content="python:edesc[:150] + '...'"></span>
     </dd>
     </tal:events>
 
@@ -69,7 +69,7 @@
            tal:attributes="href view/prev_events_link"
            class="tile">
             <span i18n:translate="box_previous_events">
-                Previous events&hellip;
+
             </span>
         </a>
       
@@ -80,7 +80,7 @@
            class="tile"
            tal:attributes="href view/all_events_link"
            i18n:translate="box_upcoming_events">
-                Upcoming events&hellip;
+
         </a>
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
