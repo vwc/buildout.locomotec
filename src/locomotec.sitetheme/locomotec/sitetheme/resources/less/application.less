@@ -1,23 +1,31 @@
 // Custom application specific styles
 //--------------------------------------
 
+@appBackgroundColor:        #f6f3ec;
 
 body {
-   /* background: #ebe3d1;*/
-   background: url(../img/header_content.png) 50%  0% no-repeat #f6f3ec;
+   background: @appBackgroundColor;
+   &.tile-overlay {
+    background:transparent;
+    #tile-wrapper {
+        padding: @baseLineHeight;
+    }
+   }
 }
 
-// locomotec for providing a data image via stylesheet
-// Add this class to any element to provide some extend of visual noise
-.make-some-noise {
-    background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQAQMAAAC032DuAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMACHhIRQoAAAN7SURBVCiRAXADj/wAAkQJcM1mLQnAjAAb4sEhBjkWRBpWAIKF/FlkjVDJKKgA0KxA5QFOFWKpQgBG5PjjxiiDVJtnAHD5UwQVQstA7u8AOAYIMPmwiKga2gBooyeQA+jdVxiNABAIYGkr3lgTDBsAXQBAcGFmEGFEXQAwUgJEk6SsEMjDAApsetkgJK9PKJQAfDApaQUONGIDEgAKpcRsXsojEuY1ACYN4xSjdyGRVLcAsCBxpEiAUIkwYgBGLNoX24Yj9iJRAGMGy8gopJFOQvkAEZgtO9HAJC+9WACKQEJCwJGqpRoIAKYmUxdgMdl89AIApMRLQ/2pQLVbBQBDTLPsYJCDUEjoAHzhwoxoCKB4DAgAAN6ASuQFERMyvQCzWAJoFpkGjFsGAGLQnTrBTH4zIKIAFGUFG3UALzJDiwCmsCEwxUDwgFgIAFi/LtLBIAUJNBEAE4TENLhU8TjOCgAtAYILmwxnJrBoAAhNyenNNwViQFkANAFOhHKUo84QUAD0DRiji8DNOMJqADHrmeMWgFAgRrQAmIm9A9EhEGSBSgAulqWIGymRfxpwAH0DAAQSAnKWgdQASeJNibLEQzNOZwBzyCNrQnAEFoQoAAxMomBElggSqkgAAwFV5OAQZJ28ZwCCFaFCjSWxAObRAB8AJgRUj4BKIygApBGgk0MCkUMxFADVwIDCBY+OdMWgAG1xdOROdABshSMACAFX0QKD4hVCgwB2Mh6ZnAco8kNpAHsI4C8RY9CIiewAqyAZg6UNgAz7mgBkAxCbD25svIhqACgzbQNxciGqYNQAkARc2iVSMJ2lZADNJknADN80kC5jAOOUE5OONKUAsA0ARQLA1ABqDAEQCACIlnFgRPrqeUQyAKkAOV/GAUgi1RAAeAIX22Pv4uTlJABvEiKL1OBOaIWIAEsoNPRyRGQcMM0AQmzLIn0jGg0gNAAqsAQfVSb/NB1UAAi0AywKJQUIjCoA85ksYPNtqJExcQAYgoDzhYBwbWAdAKsgPswqlOqHbJMAUQlvpxLB1UzAGABpyxQ0mCs81wNXACHgmQEVxF1T9FUA8jrxkbDXWRJhoQBgoSwOksFRSSibACNkCSFowJxiMBYA4ek2cwRDk1DM8wCQCsQXTxHsamgRAEGGIlVQmcLwKhUAG+wigJjtKYW0HQC0OKRNEGFqXIOAbRpCReUGtgIAAAAASUVORK5CYII=);
+#site-wrapper {
+    background: url(../img/header_content.png) 50%  0% no-repeat @appBackgroundColor;
+}
+#editbar-wrapper + #site-wrapper,
+#toolbar + #site-wrapper {
+    margin-top: @navbarHeight;
 }
 
 // locomotec styles for a custom editbar override of the basic
 // twitter bootstarp navbar to make the edit bar look like a
 // browser toolbar
 
-body > header {
+#topbar {
     /* background: #ebe3d1;*/
     //background: #f6f3ec;
     #toolbar + nav,
@@ -169,49 +177,55 @@ body > header {
 */
 
 .special-box {
-    margin-left: 35px;
-    width: 20%;
-    display: inline-block;
-    
-    .special-content {
-        text-align: center;
-        font-size: 120%;
-        line-height: 1.5em;
-        
-    }
     .special-header {
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin: @baseLineHeight 0;
+        padding-top: @baseLineHeight * 5;
         text-align: center;
         color: #fcb034;
         text-transform: uppercase;
-        font-size: 200%;
-    }
-    .special-pic-vision {
-        width: 150px;
-        height: 90px;
+        font-size: @baseFontSize * 2;
         background: url(../img/Sprite.png) 30px 0px no-repeat transparent;
+        &.box-2 {
+            background: url(../img/Sprite.png) -120px 0px no-repeat transparent;
+        }
+        &.box-3 {
+            background: url(../img/Sprite.png) -260px 0px no-repeat transparent;
+        }
+        &.box-4 {
+            background: url(../img/Sprite.png) -390px 0px no-repeat transparent;
+        }
     }
-    .special-pic-wir {
-        width: 140px;
-        height: 110px;
-        background: url(../img/Sprite.png) -120px 0px no-repeat transparent;
+    .special-content {
+        text-align: center;
+        font-size: @baseFontSize * 1.2;
+        line-height: @baseLineHeight * 1.5;
+        
     }
-    .special-pic-aktivitaeten {
-        width: 140px;
-        height: 100px;
-        background: url(../img/Sprite.png) -260px 0px no-repeat transparent;
-    }
-    .special-pic-kooperationen {
-        width: 150px;
-        height: 90px;
-        background: url(../img/Sprite.png) -390px 0px no-repeat transparent;
-    }
+    //.special-pic-vision {
+    //    width: 150px;
+    //    height: 90px;
+    //    background: url(../img/Sprite.png) 30px 0px no-repeat transparent;
+    //}
+    //.special-pic-wir {
+    //    width: 140px;
+    //    height: 110px;
+    //    background: url(../img/Sprite.png) -120px 0px no-repeat transparent;
+    //}
+    //.special-pic-aktivitaeten {
+    //    width: 140px;
+    //    height: 100px;
+    //    
+    //}
+    //.special-pic-kooperationen {
+    //    width: 150px;
+    //    height: 90px;
+    //    
+    //}
 }
 
 
 
-#content {
+#content-core {
     //margin-top: 150px;
     a {
         color: #f09206;
@@ -236,7 +250,7 @@ body > header {
     }
 }
 
-#sidebar-right {
+#sidebar {
     /* Der Navigationspart der noch gemacht werden muss */
     dl.portletNavigationTree {
         dd.portletItem {
@@ -262,7 +276,7 @@ body > header {
         }
     }
     dl.portletEvents {
-        margin-left: 40px;
+        //margin-left: 40px;
         margin-bottom: 50px;
         background: url(../img/divide_small.png) 0px 30px no-repeat transparent;
         
@@ -383,7 +397,7 @@ body > header {
 }
 
 // locomotec styles for a HMTL5 based site footer
-body > footer {
+#site-footer {
     margin-top: @baseLineHeight;
     padding: @baseLineHeight 0;
 /*    border-top: 1px solid @grayLighter; */

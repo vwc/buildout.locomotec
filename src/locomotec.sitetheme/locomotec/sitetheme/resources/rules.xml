@@ -7,9 +7,9 @@
     <!-- Add alternativ theme templates -->
     <!-- locomotec to add minimal theme template for the
          tiles editiong overlays -->
-    <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
+    <theme href="minimal.html" if-path="@@edit-tile" />
 
-    <theme href="frontpage.html" css:if-content="body.section-front-page" />
+    <theme href="frontpage.html" css:if-content="body.template-frontpage-view" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -55,12 +55,12 @@
         <!-- Logo (link target) -->
         <copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 
-        <!-- Site actions -->
-        <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
-
-        <!-- Portal searchbox -->
-        <!--<copy attributes="action" css:content="#portal-searchbox form"
-            css:theme="#portal-searchbox" />-->
+        <!-- Frontpage styles -->
+        <rules css:if-content="body.template-frontpage-view">
+            <replace css:theme="#fp-header-content"
+                css:content="#fp-header-content"
+                css:if-content="#fp-header-content" />
+        </rules>
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
@@ -79,10 +79,8 @@
             css:theme-children="#below-main-content" />
 
         <!-- Columns -->
-        <replace css:content-children="#portal-column-one > *"
-            css:theme-children="#sidebar-left" />
         <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar-right" />
+            css:theme-children="#sidebar" />
 
     </rules>
 
