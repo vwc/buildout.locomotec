@@ -6498,6 +6498,16 @@ body > header {
   /* background: #ebe3d1;*/
 
   background: #f6f3ec;
+  /*
+   HEADER FRONTPAGE
+
+*/
+
+  /* *
+ *    ENDE FRONTPAGE ZEUGS
+ *
+ **/
+
 }
 body > header #toolbar + nav,
 body > header #editbar-wrapper + nav {
@@ -6528,17 +6538,95 @@ body > header #toolbar + nav .navbar-inner .container:after,
 body > header #editbar-wrapper + nav .navbar-inner .container:after {
   clear: both;
 }
-body > header #site-header {
+body > header #header-frontpage {
+  background: url(../img/header_frontpage.png) 50% 0% no-repeat transparent;
+  height: 350px;
+  padding: 20px;
+}
+body > header #header-frontpage #header-box {
+  color: #423a38;
+  font-weight: bold;
+  font-size: 130%;
+}
+body > header #header-frontpage #header-box h1 {
+  color: #fcb034;
+}
+body > header #header-frontpage #costum_header {
+  height: 110px;
+  background: url(../img/divide.png) 0 100px no-repeat transparent;
+}
+body > header #header-frontpage #costum_header #sprach-links li {
+  margin-left: 10px;
+  padding-left: 10px;
+  float: right;
+  font-weight: bold;
+  display: block;
+}
+body > header #header-frontpage #costum_header #sprach-links li a {
+  color: #423a38;
+}
+body > header #header-frontpage #costum_header #sprach-links li a:hover {
+  color: #423a38;
+}
+body > header #header-frontpage #costum_header #logo {
+  background: url(../img/logo.png) 0 0 no-repeat transparent;
+  margin-left: -18px;
+  margin-top: -20px;
+  width: 35%;
+  height: 100px;
+  display: block;
+  text-indent: -3000px;
+  overflow: hidden;
+  border: none;
+}
+body > header #header-frontpage #costum_header #main-nav {
+  width: 60%;
+  float: right;
+  margin-top: -50px;
+}
+body > header #header-frontpage #costum_header #main-nav ul,
+body > header #header-frontpage #costum_header #main-nav li {
+  color: #423a38;
+  font-size: 120%;
+  text-decoration: none;
+  padding-left: 10px;
+  float: right;
+  display: inline-block;
+}
+body > header #header-frontpage #costum_header #main-nav ul a,
+body > header #header-frontpage #costum_header #main-nav li a {
+  color: #423a38;
+  font-weight: bold;
+}
+body > header #header-frontpage #costum_header #main-nav ul a:hover,
+body > header #header-frontpage #costum_header #main-nav li a:hover {
+  padding-bottom: 20px;
+  font-size: 150%;
+}
+body > header #content-header {
   background: url(../img/header_content.png) 50% 0% no-repeat transparent;
   height: 350px;
   padding: 20px;
   /* Logo und Navigation*/
 
 }
-body > header #site-header #costum_header {
+body > header #content-header #costum_header {
   height: 100px;
 }
-body > header #site-header #costum_header #logo {
+body > header #content-header #costum_header #sprach-links li {
+  margin-left: 10px;
+  padding-left: 10px;
+  float: right;
+  font-weight: bold;
+  display: block;
+}
+body > header #content-header #costum_header #sprach-links li a {
+  color: #423a38;
+}
+body > header #content-header #costum_header #sprach-links li a:hover {
+  color: #423a38;
+}
+body > header #content-header #costum_header #logo {
   background: url(../img/logo.png) 0 0 no-repeat transparent;
   margin-left: -18px;
   width: 35%;
@@ -6548,36 +6636,78 @@ body > header #site-header #costum_header #logo {
   overflow: hidden;
   border: none;
 }
-body > header #site-header #costum_header #main-nav {
+body > header #content-header #costum_header #main-nav {
   width: 60%;
   float: right;
   margin-top: -50px;
 }
-body > header #site-header #costum_header #main-nav ul,
-body > header #site-header #costum_header #main-nav li {
+body > header #content-header #costum_header #main-nav ul,
+body > header #content-header #costum_header #main-nav li {
   color: #423a38;
-  font-size: 130%;
+  font-size: 120%;
   text-decoration: none;
   padding-left: 10px;
   float: right;
   display: inline-block;
 }
-body > header #site-header #costum_header #main-nav ul a,
-body > header #site-header #costum_header #main-nav li a {
+body > header #content-header #costum_header #main-nav ul a,
+body > header #content-header #costum_header #main-nav li a {
   color: #423a38;
   font-weight: bold;
 }
-body > header #site-header #costum_header #main-nav ul a:hover,
-body > header #site-header #costum_header #main-nav li a:hover {
+body > header #content-header #costum_header #main-nav ul a:hover,
+body > header #content-header #costum_header #main-nav li a:hover {
   padding-bottom: 20px;
   font-size: 150%;
   background: url(../img/arrow.png) 50% 30px no-repeat transparent;
 }
-body > header #site-header #costum_header #main-nav ul a:active,
-body > header #site-header #costum_header #main-nav li a:active {
+body > header #content-header #costum_header #main-nav ul a:active,
+body > header #content-header #costum_header #main-nav li a:active {
   padding-bottom: 20px;
   font-size: 150%;
   background: url(../img/arrow.png) 50% 30px no-repeat transparent;
+}
+/*
+    FRONTPAGE CONTENT
+
+*/
+.special-box {
+  margin-left: 35px;
+  width: 20%;
+  display: inline-block;
+}
+.special-box .special-content {
+  text-align: center;
+  font-size: 120%;
+  line-height: 1.5em;
+}
+.special-box .special-header {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #fcb034;
+  text-transform: uppercase;
+  font-size: 200%;
+}
+.special-box .special-pic-vision {
+  width: 150px;
+  height: 90px;
+  background: url(../img/Sprite.png) 30px 0px no-repeat transparent;
+}
+.special-box .special-pic-wir {
+  width: 140px;
+  height: 110px;
+  background: url(../img/Sprite.png) -120px 0px no-repeat transparent;
+}
+.special-box .special-pic-aktivitaeten {
+  width: 140px;
+  height: 100px;
+  background: url(../img/Sprite.png) -260px 0px no-repeat transparent;
+}
+.special-box .special-pic-kooperationen {
+  width: 150px;
+  height: 90px;
+  background: url(../img/Sprite.png) -390px 0px no-repeat transparent;
 }
 #content {
   margin-top: 150px;
@@ -6604,43 +6734,43 @@ body > header #site-header #costum_header #main-nav li a:active {
   text-decoration: none;
 }
 #sidebar-right {
-  margin-left: 50px;
+  /* Der Navigationspart der noch gemacht werden muss */
+
 }
-#sidebar-right dl.portletNavigationTree ul {
+#sidebar-right dl.portletNavigationTree dd.portletItem ul {
   margin-bottom: 50px;
   display: block;
 }
-#sidebar-right dl.portletNavigationTree ul li {
+#sidebar-right dl.portletNavigationTree dd.portletItem ul li {
   background: url(../img/divide_small.png) 0px 49px no-repeat transparent;
   list-style: none;
   text-align: right;
   height: 50px;
   color: #423a38;
 }
-#sidebar-right dl.portletNavigationTree ul li span {
+#sidebar-right dl.portletNavigationTree dd.portletItem ul li span {
   font-weight: bold;
   color: #423a38;
 }
-#sidebar-right dl.portletNavigationTree ul li a:hover {
+#sidebar-right dl.portletNavigationTree dd.portletItem ul li a:hover {
   text-decoration: none;
   background-color: #423a38 transparent;
 }
 #sidebar-right dl.portletEvents {
+  margin-left: 40px;
   margin-bottom: 50px;
-  background: url(../img/divide_small.png) 0px 50px no-repeat transparent;
+  background: url(../img/divide_small.png) 0px 30px no-repeat transparent;
 }
 #sidebar-right dl.portletEvents dt.portletHeader a {
   background: url(../img/Sprite.png) -570px -140px no-repeat transparent;
   text-decoration: none;
-  float: left;
   height: 50px;
   padding-top: 20px;
-  padding-left: 70px;
+  padding-left: 60px;
   font-size: 150%;
   color: #423a38;
 }
 #sidebar-right dl.portletEvents dd.portletItem {
-  float: right;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -6651,30 +6781,23 @@ body > header #site-header #costum_header #main-nav li a:active {
   font-weight: bold;
 }
 #sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails {
+  margin-top: 20px;
   width: auto;
   margin-bottom: 10px;
 }
-#sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails span:before {
-  content: url(../img/divide_arrow_bf.png);
-}
-#sidebar-right dl.portletEvents dd.portletItem span.portletItemDetails span:after {
-  content: url(../img/divide_arrow_bf.png);
-}
 #sidebar-right dl.portletStaticText {
+  background: url(../img/divide_small.png) 0px 60px no-repeat transparent;
   list-style-image: url(../img/arrow_yellow.png);
+  margin-left: 40px;
 }
 #sidebar-right dl.portletStaticText dt.portletHeader {
   background: url(../img/egomotion.png) 10px 0px no-repeat transparent;
   text-decoration: none;
-  float: left;
   height: 50px;
   padding-top: 30px;
   padding-left: 70px;
   font-size: 150%;
   color: #423a38;
-}
-#sidebar-right dl.portletStaticText dd.portletItem {
-  background: url(../img/divide_small.png) -20px 60px no-repeat transparent;
 }
 #sidebar-right dl.portletStaticText dd.portletItem a {
   color: #f09206;
@@ -6737,12 +6860,6 @@ body > header #site-header #costum_header #main-nav li a:active {
   padding-bottom: 10px;
   margin-top: -250px;
 }
-#divide {
-  background: url(../img/divide.png) 0 5px no-repeat transparent;
-  width: auto;
-  height: 15px;
-  padding-bottom: 10px;
-}
 body > footer {
   margin-top: 20px;
   padding: 20px 0;
@@ -6753,8 +6870,7 @@ body > footer {
   background: #f6f3ec;
 }
 body > footer li {
-  margin-left: 10px;
-  padding-left: 10px;
+  margin-left: 15px;
   float: right;
   width: auto;
   display: block;

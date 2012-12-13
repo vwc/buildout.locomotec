@@ -76,12 +76,7 @@
     </dd>
 
     <dd class="portletFooter">
-        <a href=""
-           class="tile"
-           tal:attributes="href view/all_events_link"
-           i18n:translate="box_upcoming_events">
 
-        </a>
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
     </dd>
