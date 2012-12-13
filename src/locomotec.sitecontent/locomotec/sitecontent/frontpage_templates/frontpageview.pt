@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="mth.skihotels">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <article id="frontpage-view">
+    <header>
+      <h1 tal:content="context/Title" />
+    </header>
+
+    <section id="fp-header-content">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-header" />
+    </section>
+
+    <section id="fp-box-1">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-1" />
+    </section>
+    <section id="fp-box-2">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-2" />
+    </section>
+    <section id="fp-box-3">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-3" />
+    </section>
+    <section id="fp-box-4">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-4" />
+    </section>
+
+  </article>
+    
+  </metal:content-core>
+</metal:main>
+
+
+</body>
+</html>
