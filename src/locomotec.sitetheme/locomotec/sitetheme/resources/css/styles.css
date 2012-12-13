@@ -205,7 +205,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -873,7 +873,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 label {
   display: block;
@@ -3996,7 +3996,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -6512,6 +6512,7 @@ body.tile-overlay #tile-wrapper {
 }
 #topbar #header-frontpage #header-box h1 {
   color: #fcb034;
+  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px, rgba(0, 0, 0, 0.3) -1px -2px;
 }
 #topbar #header-frontpage #costum_header {
   height: 110px;
@@ -6633,26 +6634,27 @@ body.tile-overlay #tile-wrapper {
 */
 .special-box .special-header {
   margin: 20px 0;
-  padding-top: 100px;
+  padding-top: 120px;
   text-align: center;
   color: #fcb034;
   text-transform: uppercase;
   font-size: 28px;
-  background: url(../img/Sprite.png) 30px 0px no-repeat transparent;
+  background: url(../img/sprite.png) -30px 0px no-repeat transparent;
 }
 .special-box .special-header.box-2 {
-  background: url(../img/Sprite.png) -120px 0px no-repeat transparent;
+  background: url(../img/sprite.png) -280px 0px no-repeat transparent;
 }
 .special-box .special-header.box-3 {
-  background: url(../img/Sprite.png) -260px 0px no-repeat transparent;
+  background: url(../img/sprite.png) -500px 0px no-repeat transparent;
 }
 .special-box .special-header.box-4 {
-  background: url(../img/Sprite.png) -390px 0px no-repeat transparent;
+  background: url(../img/sprite.png) -730px 0px no-repeat transparent;
 }
 .special-box .special-content {
   text-align: center;
-  font-size: 16.8px;
-  line-height: 30px;
+}
+.special-box .special-content p {
+  font-size: 16px;
 }
 #content-core a {
   color: #f09206;
@@ -6703,7 +6705,7 @@ body.tile-overlay #tile-wrapper {
   background: url(../img/divide_small.png) 0px 30px no-repeat transparent;
 }
 #sidebar dl.portletEvents dt.portletHeader a {
-  background: url(../img/Sprite.png) -570px -140px no-repeat transparent;
+  background: url(../img/Sprite-old.png) -570px -140px no-repeat transparent;
   text-decoration: none;
   height: 50px;
   padding-top: 20px;
@@ -6746,7 +6748,7 @@ body.tile-overlay #tile-wrapper {
   text-decoration: underline;
 }
 .section-aktivitaeten #special-header {
-  background: url(../img/Sprite.png) -285px -145px no-repeat transparent;
+  background: url(../img/Sprite-old.png) -285px -145px no-repeat transparent;
   height: 70px;
   width: 70px;
   margin-top: -200px;
@@ -6760,7 +6762,7 @@ body.tile-overlay #tile-wrapper {
   margin-top: -250px;
 }
 .section-vision #special-header {
-  background: url(../img/Sprite.png) 0px -145px no-repeat transparent;
+  background: url(../img/Sprite-old.png) 0px -145px no-repeat transparent;
   height: 70px;
   width: 70px;
   margin-top: -200px;
@@ -6774,7 +6776,7 @@ body.tile-overlay #tile-wrapper {
   margin-top: -250px;
 }
 .section-firma #special-header {
-  background: url(../img/Sprite.png) -142px -145px no-repeat transparent;
+  background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
   height: 80px;
   width: 70px;
   margin-top: -190px;
@@ -6788,7 +6790,7 @@ body.tile-overlay #tile-wrapper {
   margin-top: -250px;
 }
 .section-investoren #special-header {
-  background: url(../img/Sprite.png) -405px -145px no-repeat transparent;
+  background: url(../img/Sprite-old.png) -405px -145px no-repeat transparent;
   height: 70px;
   width: 80px;
   margin-top: -200px;
@@ -6810,6 +6812,10 @@ body.tile-overlay #tile-wrapper {
 
   background: #f6f3ec;
 }
+#site-footer .divide-footer {
+  background: url(../img/divide.png) 50% 0 no-repeat transparent;
+  height: 5px;
+}
 #site-footer li {
   margin-left: 15px;
   float: right;
@@ -6821,8 +6827,4 @@ body.tile-overlay #tile-wrapper {
 }
 #site-footer li a:hover {
   color: #423a38;
-}
-.divide-footer {
-  background: url(../img/divide.png) 50% 0 no-repeat transparent;
-  height: 5px;
 }
