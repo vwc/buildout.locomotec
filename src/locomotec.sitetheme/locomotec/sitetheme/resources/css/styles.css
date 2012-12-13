@@ -6656,6 +6656,9 @@ body.tile-overlay #tile-wrapper {
 .special-box .special-content p {
   font-size: 16px;
 }
+#breadcrumbs {
+  padding-bottom: 40px;
+}
 #content-core a {
   color: #f09206;
   font-weight: bold;
