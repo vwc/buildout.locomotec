@@ -51,6 +51,7 @@ body {
         color: #423a38;
         font-weight: bold;
         font-size: 130%;
+        line-height:1.5em;
         h1 {
             color: #fcb034;
             text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
@@ -180,9 +181,12 @@ body {
         margin: @baseLineHeight 0;
         padding-top: @baseLineHeight * 6;
         text-align: center;
+        font-weight: bold;
+        //color: #e37c00;
         color: #fcb034;
         text-transform: uppercase;
-        font-size: @baseFontSize * 2;
+        //font-size: @baseFontSize * 2;
+        font-size: 24px;
         background: url(../img/Sprite.png) -30px 0px no-repeat transparent;
         &.box-2 {
             background: url(../img/Sprite.png) -280px 0px no-repeat transparent;
@@ -197,7 +201,8 @@ body {
     .special-content {
         text-align: center;
         p {
-            font-size: @baseFontSize + 2;
+            //font-size: @baseFontSize + 2;
+            font-size: @baseFontSize - 1;
         }
     }
 }
@@ -239,42 +244,26 @@ body {
 
 #subnavigation {
     padding: @baseLineHeight 0;
-    ul.nav-toc li {
+    ul.nav-toc li { 
         text-align: right;
         background: url(../img/divide_small.png) 100% 100% no-repeat transparent;
         padding: @baseLineHeight / 2 0;
         a {
+            padding: @baseLineHeight / 2 0;
             color: @textColor;
             font-weight: bold;
         }
+        a:hover {
+            background: #c0ad97;           
+        }
+        a:focus {
+             background: #c0ad97;
+        }
+
     }
 }
 
 #sidebar {
-    /* Der Navigationspart der noch gemacht werden muss */
-    dl.portletNavigationTree {
-        dd.portletItem {
-        ul {
-            margin-bottom: 50px;
-            display: block;
-            li {
-                background: url(../img/divide_small.png) 0px 49px no-repeat transparent;
-                list-style: none;
-                text-align: right;
-                height: 50px;
-                color: #423a38;
-                span {
-                    font-weight: bold;
-                    color: #423a38;
-                }
-                a:hover {
-                    text-decoration: none;
-                    background-color: #423a38 transparent; 
-                }
-            }
-        }
-        }
-    }
     dl.portletEvents {
         margin-left: 40px;
         margin-bottom: 50px;
