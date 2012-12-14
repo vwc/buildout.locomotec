@@ -6734,7 +6734,7 @@ body.tile-overlay #tile-wrapper {
 }
 #sidebar dl.portletStaticText {
   background: url(../img/divide_small.png) 0px 60px no-repeat transparent;
-  list-style-image: url(../img/arrow_yellow.png);
+  list-style-image: url(../img/listitem.png);
   margin-left: 40px;
 }
 #sidebar dl.portletStaticText dt.portletHeader {
