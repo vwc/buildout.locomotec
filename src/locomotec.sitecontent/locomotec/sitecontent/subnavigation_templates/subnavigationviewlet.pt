@@ -1,0 +1,14 @@
+<div id="subnavigation">
+    <ul class="nav nav-pills nav-stacked nav-toc"
+        tal:define="items viewlet/contained_items">
+        <tal:items tal:repeat="item items">
+            <li tal:define="item_id item/getId">
+                <a href=""
+                    data-appui="tocnav"
+                    tal:attributes="data-target python:'#headline-' + item_id;
+                                    href item/getURL"
+                    tal:content="item/Title" />
+            </li>
+        </tal:items>
+    </ul>
+</div

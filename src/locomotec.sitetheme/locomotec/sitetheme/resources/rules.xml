@@ -32,10 +32,10 @@
         <drop theme="/html/head/link" />
 
         <!-- Custom favicon implementation -->
-        <!--<drop content="link[@type='image/x-icon']" />
+        <drop content="link[@type='image/x-icon']" />
         <after theme="/html/head">
-            <link rel="shortcut icon" href="/++theme++locomotec.jmstheme/img/favicon.ico" type="images/x-icon" />
-        </after>-->
+            <link rel="shortcut icon" href="/++theme++locomotec.sitetheme/img/favicon.ico" type="images/x-icon" />
+        </after>
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -91,6 +91,9 @@
             css:theme-children="#below-main-content" />
 
         <!-- Columns -->
+        <replace css:content="#subnavigation"
+            css:theme="#subnavigation"
+            css:if-content="#subnavigation" />
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
 

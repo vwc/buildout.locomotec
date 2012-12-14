@@ -6657,7 +6657,7 @@ body.tile-overlay #tile-wrapper {
   font-size: 16px;
 }
 #breadcrumbs {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 #content h1.documentFirstHeading {
   background: url(../img/divide.png) 0px 80px no-repeat transparent;
@@ -6682,6 +6682,18 @@ body.tile-overlay #tile-wrapper {
 #content-core h2.headline a {
   color: #423a38;
   text-decoration: none;
+}
+#subnavigation {
+  padding: 20px 0;
+}
+#subnavigation ul.nav-toc li {
+  text-align: right;
+  background: url(../img/divide_small.png) 100% 100% no-repeat transparent;
+  padding: 10px 0;
+}
+#subnavigation ul.nav-toc li a {
+  color: #333333;
+  font-weight: bold;
 }
 #sidebar {
   /* Der Navigationspart der noch gemacht werden muss */

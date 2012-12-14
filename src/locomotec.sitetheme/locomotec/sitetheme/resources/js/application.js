@@ -9,8 +9,16 @@
             // enhancement.
             return;
         }
-        // Add custom javascript calls here
-        // e.g.
-        // $('#my-gallery').scrollable();
+        $('a[data-appui="tocnav"]').on('click', function (e) {
+            e.preventDefault();
+            var target_id = $(this).data('target');
+            $.scrollTo(target_id, {
+                "duration": "slow"
+            }, {onAfter: function () {
+                if (target_id === '#navigation') {
+                    $('#scroll-top').fadeOut('slow');
+                }
+            }});
+        });
     });
 }(jQuery));
