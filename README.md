@@ -1,7 +1,17 @@
 Introduction
 ============
 
-This is a blueprint buildout useful to kickstart new projects.
-This buildout should not be used directly, but is best downloaded
-or cloned to a new repository.
+This is the buildout for locomotec site.
+
+
+Installation
+------------
+
+The buildout is self-contained and includeds all custom packages and site
+specific configuration.
+
+    ```python
+    $ python bootstrap.py -c deployment.cfg
+    $ bin/buildout -c deployment.cfg
+    ```
 
