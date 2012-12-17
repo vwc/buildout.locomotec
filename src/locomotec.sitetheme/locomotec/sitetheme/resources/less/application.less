@@ -212,8 +212,20 @@ body {
 }
 
 #content {
-        h1.documentFirstHeading {
+    h1.documentFirstHeading{
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
         background: url(../img/divide.png) 0px 100% no-repeat transparent;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .size(50px, 70px);
+            border: 1px solid @gray;
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
+        }
     }
 }
 
@@ -348,7 +360,7 @@ body {
     }
 }
 .section-aktivitaeten {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         //width: 940px;
         height: @navbarHeight;
         padding-bottom: @baseLineHeight / 2;
@@ -357,7 +369,7 @@ body {
             content:"\a0";
             display: block;
             float:left;
-            .square(70px);
+            .size(50px, 70px);
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  -285px -145px no-repeat transparent;
         }
@@ -365,7 +377,7 @@ body {
 }
 
 .section-vision {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         //width: 940px;
         height: @navbarHeight;
         padding-bottom: @baseLineHeight / 2;
@@ -374,7 +386,7 @@ body {
             content:"\a0";
             display: block;
             float:left;
-            .square(70px);
+            .size(50px, 70px);
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  0px -145px no-repeat transparent;
         }
@@ -382,7 +394,7 @@ body {
 }
 
 .section-wir {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         //width: 940px;
         height: @navbarHeight;
         padding-bottom: @baseLineHeight / 2;
@@ -391,7 +403,7 @@ body {
             content:"\a0";
             display: block;
             float:left;
-            .square(80px);
+            .size(50px, 70px);
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
         }
@@ -400,7 +412,7 @@ body {
 
 /* kann gelšscht werden, wenn link geupdatet ist */
 .section-firma {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         width: 940px;
         height: 50px;
         padding-top: 30px;
@@ -411,7 +423,7 @@ body {
 }
 
 .section-kooperationen {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         //width: 940px;
         height: @navbarHeight;
         padding-bottom: @baseLineHeight / 2;
@@ -420,7 +432,7 @@ body {
             content:"\a0";
             display: block;
             float:left;
-            .square(80px);
+            .size(50px, 70px);
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  -405px -145px no-repeat transparent;
         }
@@ -429,7 +441,7 @@ body {
 
 /* kann gelšscht werden, wenn link geupdatet ist */
 .section-investoren {
-    h1.documentFirstHeading{
+    #content h1.documentFirstHeading{
         //width: 940px;
         height: @navbarHeight;
         padding-bottom: @baseLineHeight / 2;
@@ -438,7 +450,7 @@ body {
             content:"\a0";
             display: block;
             float:left;
-            .square(80px);
+            .size(50px, 70px);
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  -405px -145px no-repeat transparent;
         }

@@ -1,4 +1,5 @@
-<div id="subnavigation">
+<div id="subnavigation"
+    tal:condition="viewlet/has_items">
     <ul class="nav nav-pills nav-stacked nav-toc"
         tal:define="items viewlet/contained_items">
         <tal:items tal:repeat="item items">

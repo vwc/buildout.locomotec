@@ -6662,7 +6662,19 @@ body.tile-overlay #tile-wrapper {
   padding-bottom: 20px;
 }
 #content h1.documentFirstHeading {
+  height: 40px;
+  padding-bottom: 10px;
   background: url(../img/divide.png) 0px 100% no-repeat transparent;
+}
+#content h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 70px;
+  height: 50px;
+  border: 1px solid #555555;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
 }
 #content-core a {
   color: #e37c00;
@@ -6780,47 +6792,47 @@ body.tile-overlay #tile-wrapper {
   font-weight: bold;
   text-decoration: underline;
 }
-.section-aktivitaeten h1.documentFirstHeading {
+.section-aktivitaeten #content h1.documentFirstHeading {
   height: 40px;
   padding-bottom: 10px;
 }
-.section-aktivitaeten h1.documentFirstHeading:before {
+.section-aktivitaeten #content h1.documentFirstHeading:before {
   content: "\a0";
   display: block;
   float: left;
   width: 70px;
-  height: 70px;
+  height: 50px;
   margin-right: 10px;
   background: url(../img/Sprite-old.png) -285px -145px no-repeat transparent;
 }
-.section-vision h1.documentFirstHeading {
+.section-vision #content h1.documentFirstHeading {
   height: 40px;
   padding-bottom: 10px;
 }
-.section-vision h1.documentFirstHeading:before {
+.section-vision #content h1.documentFirstHeading:before {
   content: "\a0";
   display: block;
   float: left;
   width: 70px;
-  height: 70px;
+  height: 50px;
   margin-right: 10px;
   background: url(../img/Sprite-old.png) 0px -145px no-repeat transparent;
 }
-.section-wir h1.documentFirstHeading {
+.section-wir #content h1.documentFirstHeading {
   height: 40px;
   padding-bottom: 10px;
 }
-.section-wir h1.documentFirstHeading:before {
+.section-wir #content h1.documentFirstHeading:before {
   content: "\a0";
   display: block;
   float: left;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 50px;
   margin-right: 10px;
   background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
 }
 /* kann gel�scht werden, wenn link geupdatet ist */
-.section-firma h1.documentFirstHeading {
+.section-firma #content h1.documentFirstHeading {
   width: 940px;
   height: 50px;
   padding-top: 30px;
@@ -6828,30 +6840,30 @@ body.tile-overlay #tile-wrapper {
   padding-bottom: 10px;
   margin-top: -70px;
 }
-.section-kooperationen h1.documentFirstHeading {
+.section-kooperationen #content h1.documentFirstHeading {
   height: 40px;
   padding-bottom: 10px;
 }
-.section-kooperationen h1.documentFirstHeading:before {
+.section-kooperationen #content h1.documentFirstHeading:before {
   content: "\a0";
   display: block;
   float: left;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 50px;
   margin-right: 10px;
   background: url(../img/Sprite-old.png) -405px -145px no-repeat transparent;
 }
 /* kann gel�scht werden, wenn link geupdatet ist */
-.section-investoren h1.documentFirstHeading {
+.section-investoren #content h1.documentFirstHeading {
   height: 40px;
   padding-bottom: 10px;
 }
-.section-investoren h1.documentFirstHeading:before {
+.section-investoren #content h1.documentFirstHeading:before {
   content: "\a0";
   display: block;
   float: left;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 50px;
   margin-right: 10px;
   background: url(../img/Sprite-old.png) -405px -145px no-repeat transparent;
 }
