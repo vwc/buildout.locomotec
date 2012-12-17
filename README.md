@@ -10,8 +10,6 @@ Installation
 The buildout is self-contained and includeds all custom packages and site
 specific configuration.
 
-    ```python
     $ python bootstrap.py -c deployment.cfg
     $ bin/buildout -c deployment.cfg
-    ```
 
