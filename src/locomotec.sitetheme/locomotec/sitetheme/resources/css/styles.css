@@ -6662,7 +6662,7 @@ body.tile-overlay #tile-wrapper {
   padding-bottom: 20px;
 }
 #content h1.documentFirstHeading {
-  background: url(../img/divide.png) 0px 80px no-repeat transparent;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }
 #content-core a {
   color: #e37c00;
@@ -6674,7 +6674,7 @@ body.tile-overlay #tile-wrapper {
   list-style-image: url(../img/arrow_yellow.png);
 }
 #content-core h1.documentFirstHeading {
-  background: url(../img/divide.png) 0px 80px no-repeat transparent;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }
 #content-core h2.headline {
   background: url(../img/divide_content.png) 0 45px no-repeat transparent;
@@ -6684,6 +6684,9 @@ body.tile-overlay #tile-wrapper {
 #content-core h2.headline a {
   color: #423a38;
   text-decoration: none;
+}
+#content-core .item:first-child h2.headline {
+  display: none;
 }
 #subnavigation {
   padding: 20px 0;
@@ -6703,6 +6706,10 @@ body.tile-overlay #tile-wrapper {
 }
 #subnavigation ul.nav-toc li a:focus {
   background: #c0ad97;
+}
+#sidebar-wrapper {
+  margin-top: 59px;
+  background: url(../img/divide.png) 0px 0px no-repeat transparent;
 }
 #sidebar dl.portletEvents {
   margin-left: 40px;
@@ -6728,10 +6735,31 @@ body.tile-overlay #tile-wrapper {
   text-decoration: none;
   font-weight: bold;
 }
+#sidebar dl.portletEvents dd.portletItem a.tile {
+  border-bottom: 1px dashed #555555;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+#sidebar dl.portletEvents dd.portletItem a.tile :after {
+  content: "\003e";
+  width: 20px;
+  height: 20px;
+  color: #333333;
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+  text-align: right;
+  font-weight: normal;
+}
 #sidebar dl.portletEvents dd.portletItem span.portletItemDetails {
   margin-top: 20px;
+  margin-bottom: -9px;
   width: auto;
-  margin-bottom: 10px;
+}
+#sidebar dl.portletEvents dd.portletItem span.portletItemDetails span {
+  display: inline-block;
+  background: #f6f3ec;
 }
 #sidebar dl.portletStaticText {
   background: url(../img/divide_small.png) 0px 60px no-repeat transparent;
@@ -6752,51 +6780,46 @@ body.tile-overlay #tile-wrapper {
   font-weight: bold;
   text-decoration: underline;
 }
-.section-aktivitaeten #special-header {
-  background: url(../img/Sprite-old.png) -285px -120px no-repeat transparent;
-  height: 70px;
-  width: 70px;
-}
 .section-aktivitaeten h1.documentFirstHeading {
-  width: 940px;
-  height: 60px;
-  padding-top: 30px;
-  padding-left: 60px;
+  height: 40px;
   padding-bottom: 10px;
-  margin-top: -70px;
 }
-.section-vision #special-header {
-  background: url(../img/Sprite-old.png) 0px -120px no-repeat transparent;
-  height: 70px;
+.section-aktivitaeten h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
   width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -285px -145px no-repeat transparent;
 }
 .section-vision h1.documentFirstHeading {
-  width: 940px;
-  height: 60px;
-  padding-top: 30px;
-  padding-left: 70px;
+  height: 40px;
   padding-bottom: 10px;
-  margin-top: -70px;
 }
-.section-wir #special-header {
-  background: url(../img/Sprite-old.png) -142px -120px no-repeat transparent;
-  height: 80px;
-  width: 80px;
+.section-vision h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) 0px -145px no-repeat transparent;
 }
 .section-wir h1.documentFirstHeading {
-  width: 940px;
-  height: 50px;
-  padding-top: 30px;
-  padding-left: 70px;
+  height: 40px;
   padding-bottom: 10px;
-  margin-top: -70px;
+}
+.section-wir h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
 }
 /* kann gel�scht werden, wenn link geupdatet ist */
-.section-firma #special-header {
-  background: url(../img/Sprite-old.png) -142px -120px no-repeat transparent;
-  height: 80px;
-  width: 80px;
-}
 .section-firma h1.documentFirstHeading {
   width: 940px;
   height: 50px;
@@ -6805,32 +6828,32 @@ body.tile-overlay #tile-wrapper {
   padding-bottom: 10px;
   margin-top: -70px;
 }
-.section-kooperationen #special-header {
-  background: url(../img/Sprite-old.png) -405px -120px no-repeat transparent;
-  height: 70px;
-  width: 80px;
-}
 .section-kooperationen h1.documentFirstHeading {
-  width: 940px;
-  height: 60px;
-  padding-top: 30px;
-  padding-left: 75px;
+  height: 40px;
   padding-bottom: 10px;
-  margin-top: -70px;
+}
+.section-kooperationen h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -405px -145px no-repeat transparent;
 }
 /* kann gel�scht werden, wenn link geupdatet ist */
-.section-investoren #special-header {
-  background: url(../img/Sprite-old.png) -405px -120px no-repeat transparent;
-  height: 70px;
-  width: 80px;
-}
 .section-investoren h1.documentFirstHeading {
-  width: 940px;
-  height: 60px;
-  padding-top: 30px;
-  padding-left: 75px;
+  height: 40px;
   padding-bottom: 10px;
-  margin-top: -70px;
+}
+.section-investoren h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -405px -145px no-repeat transparent;
 }
 #site-footer {
   margin-top: 20px;

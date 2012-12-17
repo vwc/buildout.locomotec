@@ -40,7 +40,7 @@
                Title or id
              </a>
         </h2>
-
+        
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
         <div class="description"

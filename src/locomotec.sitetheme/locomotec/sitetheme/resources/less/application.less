@@ -213,7 +213,7 @@ body {
 
 #content {
         h1.documentFirstHeading {
-        background: url(../img/divide.png) 0px 80px no-repeat transparent;
+        background: url(../img/divide.png) 0px 100% no-repeat transparent;
     }
 }
 
@@ -229,7 +229,7 @@ body {
     }        
 
     h1.documentFirstHeading {
-        background: url(../img/divide.png) 0px 80px no-repeat transparent;
+        background: url(../img/divide.png) 0px 100% no-repeat transparent;
     }
     h2.headline {
         background: url(../img/divide_content.png) 0 45px no-repeat transparent;
@@ -238,6 +238,11 @@ body {
         a {
            color: #423a38;
            text-decoration: none;   
+        }
+    }
+    .item:first-child {
+        h2.headline {
+            display: none;
         }
     }
 }
@@ -263,6 +268,11 @@ body {
     }
 }
 
+#sidebar-wrapper {
+    margin-top: @navbarHeight + (@baseLineHeight - 1);
+    background: url(../img/divide.png) 0px 0px no-repeat transparent;
+}
+
 #sidebar {
     dl.portletEvents {
         margin-left: 40px;
@@ -286,11 +296,31 @@ body {
                 color: #e37c00;
                 text-decoration: none;
                 font-weight: bold;
+                &.tile {
+                    border-bottom: 1px dashed @gray;
+                    display: block;
+                    margin-bottom: 10px;
+                    position: relative;
+                    :after {
+                        content:"\003e";
+                        .square(@baseLineHeight);
+                        color: @textColor;
+                        position: absolute;
+                        right: 0;
+                        bottom: -12px;
+                        text-align: right;
+                        font-weight: normal;
+                    }
+                }
             }
             span.portletItemDetails {
                 margin-top: 20px;
+                margin-bottom: -9px;
                 width: auto;
-                margin-bottom: 10px;
+                span {
+                    display: inline-block;
+                    background:@appBackgroundColor;
+                }
             }
         }
     }
@@ -318,60 +348,58 @@ body {
     }
 }
 .section-aktivitaeten {
-    #special-header {
-        background: url(../img/Sprite-old.png) -285px -120px no-repeat transparent;
-        height: 70px;
-        width: 70px;
-    }
     h1.documentFirstHeading{
-        width: 940px;
-        height: 60px;
-        padding-top: 30px;
-        padding-left: 60px;
-        padding-bottom: 10px;
-        margin-top: -70px;
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
+        //margin-top: -70px;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .square(70px);
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  -285px -145px no-repeat transparent;
+        }
     }  
 }
 
 .section-vision {
-     #special-header {
-        background: url(../img/Sprite-old.png) 0px -120px no-repeat transparent;
-        height: 70px;
-        width: 70px;
-    }
     h1.documentFirstHeading{
-        width: 940px;
-        height: 60px;
-        padding-top: 30px;
-        padding-left: 70px;
-        padding-bottom: 10px;
-        margin-top: -70px;
-    }
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
+        //margin-top: -70px;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .square(70px);
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  0px -145px no-repeat transparent;
+        }
+    }  
 }
 
 .section-wir {
-     #special-header {
-        background: url(../img/Sprite-old.png) -142px -120px no-repeat transparent;
-        height: 80px;
-        width: 80px;
-    }
     h1.documentFirstHeading{
-        width: 940px;
-        height: 50px;
-        padding-top: 30px;
-        padding-left: 70px;
-        padding-bottom: 10px;
-        margin-top: -70px;
-    }
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
+        //margin-top: -70px;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .square(80px);
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
+        }
+    }  
 }
 
 /* kann gelšscht werden, wenn link geupdatet ist */
 .section-firma {
-     #special-header {
-        background: url(../img/Sprite-old.png) -142px -120px no-repeat transparent;
-        height: 80px;
-        width: 80px;
-    }
     h1.documentFirstHeading{
         width: 940px;
         height: 50px;
@@ -383,36 +411,38 @@ body {
 }
 
 .section-kooperationen {
-     #special-header {
-        background: url(../img/Sprite-old.png) -405px -120px no-repeat transparent;
-        height: 70px;
-        width: 80px;
-    }
     h1.documentFirstHeading{
-        width: 940px;
-        height: 60px;
-        padding-top: 30px;
-        padding-left: 75px;
-        padding-bottom: 10px;
-        margin-top: -70px;
-    }    
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
+        //margin-top: -70px;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .square(80px);
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  -405px -145px no-repeat transparent;
+        }
+    }  
 }
 
 /* kann gelšscht werden, wenn link geupdatet ist */
 .section-investoren {
-     #special-header {
-        background: url(../img/Sprite-old.png) -405px -120px no-repeat transparent;
-        height: 70px;
-        width: 80px;
-    }
     h1.documentFirstHeading{
-        width: 940px;
-        height: 60px;
-        padding-top: 30px;
-        padding-left: 75px;
-        padding-bottom: 10px;
-        margin-top: -70px;
-    }    
+        //width: 940px;
+        height: @navbarHeight;
+        padding-bottom: @baseLineHeight / 2;
+        //margin-top: -70px;
+        &:before {
+            content:"\a0";
+            display: block;
+            float:left;
+            .square(80px);
+            margin-right: @baseLineHeight / 2;
+            background: url(../img/Sprite-old.png)  -405px -145px no-repeat transparent;
+        }
+    }  
 }
 
 // locomotec styles for a HMTL5 based site footer
