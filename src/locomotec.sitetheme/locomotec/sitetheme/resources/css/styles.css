@@ -6633,6 +6633,10 @@ body.tile-overlay #tile-wrapper {
     FRONTPAGE CONTENT
 
 */
+.special-box a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
 .special-box .special-header {
   margin: 20px 0;
   padding-top: 120px;
