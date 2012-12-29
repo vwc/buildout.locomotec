@@ -3,7 +3,7 @@
 
 
 body {
-    //background: #f5f5f5;
+    background: url(../img/bgtile.jpg) repeat 0 0 transparent;
 }
 
 // Example for providing a data image via stylesheet
@@ -40,6 +40,40 @@ body > header {
     }
 }
 
+#site-wrapper {
+  background: url(../img/header-content.jpg) no-repeat 0 0 transparent;
+  #site-header {
+      padding-bottom: @baseLineHeight;
+      .nav {
+        margin-top: @baseLineHeight;
+      }
+      #logo {
+        display:block;
+        overflow: hidden;
+        margin: @baseLineHeight / 2 0 @baseLineHeight * 2 0;
+        background:url(../img/logo.png) no-repeat 0 0 transparent;
+        text-indent: -9999px;
+        .size(65px, 260px);
+      }
+  }
+}
+
+#toolbar + #site-wrapper,
+#topbar + #site-wrapper {
+  margin-top: @navbarHeight;
+}
+
+#survey-view {
+  .design-thumbnail {
+    margin: 0px @baseLineHeight @baseLineHeight 0;
+  }
+  .survey-question {
+    background:url(../img/distorted-line.png) no-repeat 0 0 transparent;
+    padding: @baseLineHeight;
+  }
+}
+
+
 // Some eample styles for portlets
 
 .portlet {
@@ -70,6 +104,8 @@ body > header {
 // Example styles for a HMTL5 based site footer
 body > footer {
     margin-top: @baseLineHeight;
-    padding: @baseLineHeight 0;
-    border-top: 1px solid @grayLighter;
+    #footer-content {
+      background:url(../img/distorted-line.png) no-repeat 0 0 transparent;
+      padding: @baseLineHeight 0;
+    }
 }

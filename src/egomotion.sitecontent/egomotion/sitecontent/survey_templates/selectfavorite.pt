@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="egomotion.sitecontent"
+      metal:use-macro="context/main_template/macros/master">
+
+  <metal:block fill-slot="main">
+
+  <div id="content-core">
+    <header>
+      <h1>Select favorite</h1>
+    </header>
+    <p>Select this design blueprint as your favorite</p>
+  </div>
+  </metal:block>
+
+</html>

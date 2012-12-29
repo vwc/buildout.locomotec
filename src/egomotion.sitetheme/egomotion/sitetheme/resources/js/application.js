@@ -9,8 +9,6 @@
             // enhancement.
             return;
         }
-        // Add custom javascript calls here
-        // e.g.
-        // $('#my-gallery').scrollable();
+        $('a[data-appui="gallery"').prettyPhoto();
     });
 }(jQuery));
