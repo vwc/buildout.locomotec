@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="egomotion.sitecontent.layer"
+        interface="egomotion.sitecontent.interfaces.IEgomotionSite"
+    />
+</layers>
