@@ -26,8 +26,11 @@ setup(name='egomotion.sitecontent',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'plone.app.dexterity',
+          'plone.app.dexterity [grok,relations]',
           'plone.namedfile [blobs]',
+          'plone.app.relationfield',
+          'plone.formwidget.autocomplete',
+          'plone.formwidget.contenttree',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
