@@ -28,3 +28,4 @@ src/vwc.tiles
 src/vwc.toolbar
 src/sauna.reload
 src/watchdog
+src/plone.app.relationfield
