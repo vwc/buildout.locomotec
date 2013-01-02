@@ -7,7 +7,8 @@
     <!-- Add alternativ theme templates -->
     <!-- Example to add minimal theme template for the
          tiles editiong overlays -->
-    <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
+    <theme href="minimal.html" if-path="@@edit-tile" />
+    <theme href="frontpage.html" css:if-content="body.template-frontpage-view" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -58,9 +59,30 @@
         <!-- Site actions -->
         <!--<replace css:content="#portal-siteactions li" css:theme-children="#global-nav" />-->
 
-        <!-- Portal searchbox -->
-        <!--<copy attributes="action" css:content="#portal-searchbox form"
-            css:theme="#portal-searchbox" />-->
+        <!-- Frontpage styles -->
+        <rules css:if-content="body.template-frontpage-view">
+            <replace css:theme-children="#frontpage-claim"
+                css:content-children="#frontpage-claim"
+                css:if-content="#frontpage-claim" />
+            <replace css:theme-children="#frontpage-intro"
+                css:content-children="#frontpage-intro"
+                css:if-content="#frontpage-intro" />
+            <replace css:theme="#fp-header-content"
+                css:content="#fp-header-content"
+                css:if-content="#fp-header-content" />
+            <replace css:theme-children="#fp-box-1"
+                css:content-children="#fp-box-1"
+                css:if-content="#fp-box-1" />
+            <replace css:theme-children="#fp-box-2"
+                css:content-children="#fp-box-2"
+                css:if-content="#fp-box-2" />
+            <replace css:theme-children="#fp-box-3"
+                css:content-children="#fp-box-3"
+                css:if-content="#fp-box-3" />
+            <replace css:theme-children="#fp-box-4"
+                css:content-children="#fp-box-4"
+                css:if-content="#fp-box-4" />
+        </rules>
 
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"

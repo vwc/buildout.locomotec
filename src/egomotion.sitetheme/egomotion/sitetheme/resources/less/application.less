@@ -41,7 +41,7 @@ body > header {
 }
 
 #site-wrapper {
-  background: url(../img/header-content.jpg) no-repeat 0 0 transparent;
+  background: url(../img/header-content.jpg) no-repeat 50% 0 transparent;
   #site-header {
       padding-bottom: @baseLineHeight;
       .nav {
@@ -54,6 +54,37 @@ body > header {
         background:url(../img/logo.png) no-repeat 0 0 transparent;
         text-indent: -9999px;
         .size(65px, 260px);
+      }
+  }
+}
+body.frontpage #site-wrapper {
+  background: url(../img/header-frontpage-simple.jpg) no-repeat 50% 0 transparent;
+  #site-header {
+    min-height: 350px;
+    #frontpage-claim {
+      color: @appGreenLight;
+      font-weight: normal;
+      text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+    }
+    #frontpage-intro {
+      color:@appGreen;
+    }
+    #btn-survey {
+      .pull-right();
+      margin: @baseLineHeight 0;
+      .highlighted {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .splashbox {
+      background:url(../img/distorted-line.png) no-repeat 0 0 transparent;
+      padding: @baseLineHeight;
+      &:first-child {
+        background:transparent;
+      }
+      h2 {
+        color: @appGreen;
       }
   }
 }
