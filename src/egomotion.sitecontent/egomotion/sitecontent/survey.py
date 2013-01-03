@@ -1,11 +1,13 @@
 import math
 from Acquisition import aq_inner
+from AccessControl import Unauthorized
 from five import grok
 from plone import api
 
 from zope.component import getMultiAdapter
 from plone.directives import dexterity, form
 
+from plone.keyring import django_random
 
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
@@ -29,7 +31,30 @@ class View(grok.View):
     grok.name('view')
 
     def update(self):
+        context = aq_inner(self.context)
         self.has_images = len(self.contained_images()) > 0
+        unwanted = ('_authenticator', 'form.button.Submit')
+        if 'form.button.Submit' in self.request:
+            self.errors = {}
+            form = self.request.form
+            authenticator = getMultiAdapter((context, self.request),
+                                            name=u"authenticator")
+            if not authenticator.verify():
+                raise Unauthorized
+            surveydata = {}
+            formerrors = {}
+            errorIdx = 0
+            for item in form:
+                if item not in unwanted:
+                    surveydata[item] = form[item]
+            if errorIdx > 0:
+                self.errors = formerrors
+            else:
+                self._processData(surveydata)
+
+    def _processData(self, data):
+        participant_number = django_random.get_random_string()
+        return data
 
     def contained_images(self):
         context = aq_inner(self.context)
