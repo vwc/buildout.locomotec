@@ -114,6 +114,16 @@ class View(grok.View):
         return item
 
 
+class AutosaveSurvey(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('autosave-survey')
+
+    def update(self):
+        context = aq_inner(self.context)
+        self.context_url = context.absolute_url()
+
+
 class SelectFavorite(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')

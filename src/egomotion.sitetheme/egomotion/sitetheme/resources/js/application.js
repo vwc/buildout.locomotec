@@ -17,5 +17,26 @@
                 "duration": "slow"
             });
         });
+        var ajax_form = $('form[data-appui="autosave"]');
+        var ajax_save_url = $(ajax_form).data('appui-target');
+        $(ajax_form).autosave({
+            callbacks: {
+                trigger: ["change", function () {
+                    var self = this;
+                    $('input[name="form.buttons.Submit"]').click(function () {
+                        self.save();
+                    });
+                }],
+                save: {
+                    method: "ajax",
+                    options: {
+                        url: ajax_save_url,
+                        success: function () {
+                            alert("autosaved");
+                        }
+                    }
+                }
+            }
+        });
     });
 }(jQuery));

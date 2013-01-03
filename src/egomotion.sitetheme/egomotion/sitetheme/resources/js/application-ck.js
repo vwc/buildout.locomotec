@@ -9,5 +9,25 @@
                 duration: "slow"
             });
         });
+        var t = e('form[data-appui="autosave"]'), n = e(t).data("appui-target");
+        e(t).autosave({
+            callbacks: {
+                trigger: [ "change", function() {
+                    var t = this;
+                    e('input[name="form.buttons.Submit"]').click(function() {
+                        t.save();
+                    });
+                } ],
+                save: {
+                    method: "ajax",
+                    options: {
+                        url: n,
+                        success: function() {
+                            alert("autosaved");
+                        }
+                    }
+                }
+            }
+        });
     });
 })(jQuery);
