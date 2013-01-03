@@ -392,7 +392,7 @@
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="functionality.additional" type="text" placeholder="Additional information">
+              <input class="input-xxlarge" id="functionality.additional" type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon functionality -->
@@ -417,8 +417,8 @@
               Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)
             </label>
             <div class="input-prepend">
-               <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="accessory.additional" type="text" placeholder="Additional information">
+               <span class="add-on discreet">Sonstiges</span>
+              <input class="input-xxlarge" id="accessory.additional" type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -448,8 +448,8 @@
               Ich möchte damit regelmäßig eine unverbindliche Leistungsdiagnostik durchführen können.
             </label>
             <div class="input-prepend">
-               <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Additional information">
+               <span class="add-on discreet">Sonstiges</span>
+              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -522,8 +522,8 @@
                 Schrittzähler mit Kalorienverbrauch
             </label>
             <div class="input-prepend">
-               <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="trainingresource.additional" type="text" placeholder="Additional information">
+               <span class="add-on discreet">Sonstiges</span>
+              <input class="input-xxlarge" id="trainingresource.additional" type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -622,7 +622,7 @@
           <div class="controls">
             <div class="input-append">
               <input class="span1" id="appendedInput" type="text">
-              <span class="add-on">Jahre</span>
+              <span class="add-on discreet">Jahre</span>
             </div>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1" value="option1">
@@ -676,7 +676,7 @@
               <input class="span1" id="appendedInput"
                 name="participant.investment"
                 type="text">
-              <span class="add-on">EUR</span>
+              <span class="add-on discreet">EUR</span>
             </div>
           </div>
         </div>
@@ -709,8 +709,8 @@
                 Fitnessstudiobeiträge
             </label>
             <div class="input-prepend">
-               <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="participant.investment.additional" type="text" placeholder="Additional information">
+               <span class="add-on discreet">Sonstiges</span>
+              <input class="input-xxlarge" id="participant.investment.additional" type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -764,15 +764,15 @@
               einen Crosstrainer
             </label>
             <div class="controls">
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
                 500 &ndash; 1000 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
                 1000 &ndash; 2000 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
                 2000 &ndash; 3000 EUR
               </label>
@@ -783,15 +783,15 @@
               ein Rennrad
             </label>
             <div class="controls">
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 300 &ndash; 1000 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 1000 &ndash; 2500 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 2500 &ndash; 7500 EUR
               </label>
@@ -802,15 +802,15 @@
               ein Mountainbike
             </label>
             <div class="controls">
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 150&ndash; 750 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 750 &ndash; 1500 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 1500 &ndash; 3000 EUR
               </label>
@@ -821,15 +821,15 @@
               eine Trainerstunde
             </label>
             <div class="controls controls-row">
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 25 &ndash; 50 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 50 &ndash; 75 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 75 &ndash; 100 EUR
               </label>
@@ -840,15 +840,15 @@
               Monatsabo im Fitnessclub
             </label>
             <div class="controls controls-row">
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 20 &ndash; 50 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 50 &ndash; 80 EUR
               </label>
-              <label class="radio inline span2">
+              <label class="radio inline">
                 <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
                 80 &ndash; 120 EUR
               </label>
@@ -897,7 +897,7 @@
             id="btn-submit"
             name="form.buttons.Submit"
             i18n:translate="">
-            Submit survey
+            Umfrage abschicken
           </button>
         </div>
       </form>

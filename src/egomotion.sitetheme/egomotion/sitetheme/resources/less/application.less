@@ -62,6 +62,7 @@ body.frontpage #site-wrapper {
   #site-header {
     min-height: 350px;
     #frontpage-claim {
+      margin-top: @baseLineHeight;
       color: @appGreenLight;
       font-weight: normal;
       text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
@@ -74,6 +75,14 @@ body.frontpage #site-wrapper {
       margin: @baseLineHeight 0;
       .highlighted {
         text-transform: uppercase;
+        font-size: @baseFontSize * 1.75;
+      }
+    }
+    nav {
+      margin-top: @baseLineHeight;
+      #main-nav > li > a:hover {
+        color: @white;
+        background-color: @linkColor;
       }
     }
   }
@@ -101,6 +110,12 @@ body.frontpage #site-wrapper {
   .survey-question {
     background:url(../img/distorted-line.png) no-repeat 0 0 transparent;
     padding: @baseLineHeight;
+    .control-label {
+      font-weight: bold;
+    }
+    .radio.inline {
+      min-width: 120px;
+    }
   }
 }
 
