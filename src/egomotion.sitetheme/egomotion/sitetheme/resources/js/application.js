@@ -10,5 +10,12 @@
             return;
         }
         $('a[data-appui="gallery"]').prettyPhoto();
+        $('a[data-appui="pagescroll"]').on('click', function (e) {
+            e.preventDefault();
+            var target_div = $(this).data('target');
+            $.scrollTo(target_div, {
+                "duration": "slow"
+            });
+        });
     });
 }(jQuery));
