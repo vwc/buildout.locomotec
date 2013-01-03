@@ -6700,9 +6700,6 @@ body.tile-overlay #tile-wrapper {
   color: #423a38;
   text-decoration: none;
 }
-#content-core .item:first-child h2.headline {
-  display: none;
-}
 #subnavigation {
   padding: 20px 0;
 }
@@ -6884,7 +6881,7 @@ div.field span.required:after {
 }
 #site-footer .divide-footer {
   background: url(../img/divide.png) 50% 0 no-repeat transparent;
-  height: 5px;
+  padding-top: 10px;
 }
 #site-footer li {
   margin-left: 15px;

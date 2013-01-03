@@ -60,6 +60,9 @@
 
         <!-- Frontpage styles -->
         <rules css:if-content="body.template-frontpage-view">
+            <replace css:theme-children="#fp-header-claim"
+                css:content-children="#fp-header-claim"
+                css:if-content="#fp-header-claim" />
             <replace css:theme="#fp-header-content"
                 css:content="#fp-header-content"
                 css:if-content="#fp-header-content" />
@@ -80,6 +83,9 @@
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
+
+        <replace css:content="#portal-globalnav li"
+            css:theme-children="#kontaktbar" />
 
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'

@@ -14,7 +14,9 @@
     <header>
       <h1 tal:content="context/Title" />
     </header>
-
+    <section id="fp-header-claim">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.plaintext/fp-claim" />
+    </section>
     <section id="fp-header-content">
       <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-header" />
     </section>
