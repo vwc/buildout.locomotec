@@ -57,18 +57,18 @@
           <div class="row-fluid">
             <div class="span4">
               <div class="control-group field"
-                tal:define="error errors/billing.firstname | nothing;
+                tal:define="error errors/favorite1 | nothing;
                             err_msg python:error and error['active'] == True"
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
-                  for="billing.firstname"
+                  for="favorite1"
                   i18n:translate="">Nummer</label>
                 <div class="controls">
                   <input
                     type="text"
                     class="input-mini"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1"
+                    name="favorie1"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                     <div class="help-block error"
@@ -81,32 +81,32 @@
             </div>
             <div class="span4">
               <div class="control-group field"
-                tal:define="error errors/billing.firstname | nothing;
+                tal:define="error errors/favorite1.likes | nothing;
                             err_msg python:error and error['active'] == True"
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
-                  for="billing.firstname"
+                  for="favorite1.likes.one"
                   i18n:translate="">Merkmale, die mir am besten gefallen</label>
                 <div class="controls">
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.likes.one"
+                    name="favorite1.likes.one"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.likes.two"
+                    name="favorite1.likes.two"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.likes.three"
+                    name="favorite1.likes.three"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
@@ -114,32 +114,32 @@
             </div>
             <div class="span4">
               <div class="control-group field"
-                tal:define="error errors/billing.firstname | nothing;
+                tal:define="error errors/favorite1.dislikes.one | nothing;
                             err_msg python:error and error['active'] == True"
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
-                  for="billing.firstname"
+                  for="favorite1.dislikes.one"
                   i18n:translate="">Merkmale, die mir am wenigsten gefallen</label>
                 <div class="controls">
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.dislikes.one"
+                    name="favorite1.dislikes.one"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.dislikes.two"
+                    name="favorite1.dislikes.two"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
-                    id="billing.firstname"
-                    name="billing.firstname"
+                    id="favorite1.dislikes.three"
+                    name="favorite1.dislikes.three"
                     required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
@@ -157,15 +157,21 @@
             <div class="controls">
               <div class="input-prepend">
                 <span class="add-on discreet">a.</span>
-                <input class="input-xxlarge" id="prependedInput" type="text">
+                <input class="input-xxlarge" id="dislikes.one"
+                  name="dislikes.one"
+                  type="text">
               </div>
               <div class="input-prepend">
                 <span class="add-on discreet">b.</span>
-                <input class="input-xxlarge" id="prependedInput" type="text">
+                <input class="input-xxlarge" id="dislikes.two"
+                  dislikes="dislikes.two"
+                  type="text">
               </div>
               <div class="input-prepend">
                 <span class="add-on discreet">c.</span>
-                <input class="input-xxlarge" id="prependedInput" type="text">
+                <input class="input-xxlarge" id="dislikes.three"
+                  name="dislikes.three"
+                  type="text">
               </div>
             </div>
           </div><!-- / favorites global dislike -->
@@ -183,19 +189,19 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="functionality.one">
               Ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="functionality.two">
               Ein Navigationsprogramm zum Laufen auf unbekannten Routen
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="functionality.three">
               Eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="functionality.four">
               Eine Funktion, die es mir ermöglicht, mit meinen Freunden einen virtuellen Lauftreff zu organisieren (Videokonferenz z.B. über Skype mit Freunden an entfernten Orten)
             </label>
             <div class="input-prepend">
@@ -213,20 +219,20 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="accessory.one">
               Beleuchtung, Klingel, Schloss
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="accessory.two">
               Flaschenhalter, Ablage („Handschuhfach“) für Schlüssel und andere Kleinigkeiten
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="accessory.three">
               Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)
             </label>
             <div class="input-prepend">
                <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="products.additional" type="text" placeholder="Additional information">
+              <input class="input-xxlarge" id="accessory.additional" type="text" placeholder="Additional information">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -240,24 +246,24 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="benefit.one">
               Ich würde gerne damit zum Einkaufen joggen (Befestigung für Einkaufskorb).
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="benefit.two">
               Ich möchte mit meinen Kindern joggen gehen (Befestigung für Kindersitz bzw. Babyschale)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="benefit.three">
               Ich möchte damit auch schwere Lasten transportieren und selbst damit fahren können.
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="benefit.four">
               Ich möchte damit regelmäßig eine unverbindliche Leistungsdiagnostik durchführen können.
             </label>
             <div class="input-prepend">
                <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="advantages.additional" type="text" placeholder="Additional information">
+              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Additional information">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -268,15 +274,15 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option1">
               sehr wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option1">
               wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option1">
               unwichtig
             </label>
           </div>
@@ -290,48 +296,48 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.one">
                 Pulsuhr ohne GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.two">
                 Pulsuhr mit GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.three">
                 Laufband zuhause
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.four">
                 Laufband im Fitnessstudio
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.five">
                 persönlicher Lauftrainer im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.six">
                 persönlicher Lauftrainer privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.seven">
                 Laufgruppe im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.eight">
                 Laufgruppe privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.nine">
                 Trainingsapp auf Smartphone
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="trainingresource.ten">
                 Schrittzähler mit Kalorienverbrauch
             </label>
             <div class="input-prepend">
                <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="helpers.additional" type="text" placeholder="Additional information">
+              <input class="input-xxlarge" id="trainingresource.additional" type="text" placeholder="Additional information">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -345,15 +351,15 @@
 
           <div class="control-group">
             <label class="radio">
-              <input type="radio" name="training.support" value="">
+              <input type="radio" name="trainingresource.effect" value="">
               optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
             </label>
             <label class="radio">
-              <input type="radio" name="training.support" value="">
+              <input type="radio" name="trainingresource.effect" value="">
               ausreichend, aber meine Trainingsfortschritte könnten besser sein
             </label>
             <label class="radio">
-              <input type="radio" name="training.support" value="">
+              <input type="radio" name="trainingresource.effect" value="">
               schlecht, ich mache kaum Trainingsfortschritte
             </label>
           </div>
@@ -366,15 +372,15 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="training.optimization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
               gut
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.optimization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
               es geht so
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.optimization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
               schlecht
             </label>
           </div>
@@ -481,7 +487,9 @@
           </h4>
           <div class="controls">
             <div class="input-append">
-              <input class="span1" id="appendedInput" type="text">
+              <input class="span1" id="appendedInput"
+                name="participant.investment"
+                type="text">
               <span class="add-on">EUR</span>
             </div>
           </div>
@@ -495,28 +503,28 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="participant.investment.one">
                 Sportgeräte
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="participant.investment.two">
                 Trainerstunden
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="participant.investment.three">
                 Sportbekleidung
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="participant.investment.four">
                 Wellness (Sauna, Massagen)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="participant.investment.five">
                 Fitnessstudiobeiträge
             </label>
             <div class="input-prepend">
                <span class="add-on">Sonstiges</span>
-              <input class="input-xxlarge" id="amount.additional" type="text" placeholder="Additional information">
+              <input class="input-xxlarge" id="participant.investment.additional" type="text" placeholder="Additional information">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -671,23 +679,23 @@
           </h4>
           <div class="controls">
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="purchase.one">
                 Ja, wenn Design, Funktionalität und Qualität stimmen.
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="purchase.two">
                 Nein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value="" name="purchase.three">
                 Unentschieden
             </label>
           </div>
           <div id="nopurchase" class="controls">
-              <label for="nopurchase.comment">
+              <label for="purchase.comment">
                 Begründung</label>
               <textarea rows="3" class="input-xxlarge"
-                id="nopurchase.comment">
+                id="purchase.comment">
               </textarea>
               <span class="help-block">
                 Hier hast Du die Möglichkeit, eine optionale Begründung für Dein
