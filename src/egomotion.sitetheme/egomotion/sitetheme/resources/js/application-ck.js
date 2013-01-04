@@ -1,5 +1,25 @@
 /*jslint white:false, onevar:true, undef:true, nomen:true, eqeqeq:true, plusplus:true, bitwise:true, regexp:true, newcap:true, immed:true, strict:false, browser:true *//*global jQuery:false, document:false, window:false, location:false */(function(e) {
     e(document).ready(function() {
+        function t() {
+            e('form[data-appui="autosave"]').each(function() {
+                var t = e(this).data("appui-target");
+                e.ajax({
+                    url: t,
+                    data: e(this).serializeArray(),
+                    success: function(t) {
+                        if (t.success) {
+                            message = t.message;
+                            e.gritter.add({
+                                title: message,
+                                text: "This will fade out after a certain amount of time."
+                            });
+                            var n = '<p class="text-warning">' + message + "</p>";
+                            e("#form-state").append(n).slideDown("slow");
+                        } else alert(error_msg + "\n\nError:\n" + t.messages);
+                    }
+                });
+            });
+        }
         if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) < 7) return;
         e('a[data-appui="gallery"]').prettyPhoto();
         e('a[data-appui="pagescroll"]').on("click", function(t) {
@@ -9,25 +29,6 @@
                 duration: "slow"
             });
         });
-        var t = e('form[data-appui="autosave"]'), n = e(t).data("appui-target");
-        e(t).autosave({
-            callbacks: {
-                trigger: [ "change", function() {
-                    var t = this;
-                    e('input[name="form.buttons.Submit"]').click(function() {
-                        t.save();
-                    });
-                } ],
-                save: {
-                    method: "ajax",
-                    options: {
-                        url: n,
-                        success: function() {
-                            alert("autosaved");
-                        }
-                    }
-                }
-            }
-        });
+        setInterval(t, 3e4);
     });
 })(jQuery);
