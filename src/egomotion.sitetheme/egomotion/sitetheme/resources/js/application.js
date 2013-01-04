@@ -17,5 +17,31 @@
                 "duration": "slow"
             });
         });
+        function autoSaveSurvey() {
+            $('form[data-appui="autosave"]').each(function () {
+                var ajax_url = $(this).data('appui-target');
+                $.ajax({
+                    url: ajax_url,
+                    data: $(this).serializeArray(),
+                    success: function (data) {
+                        if (data.success) {
+                            message = data.message;
+                            $.gritter.add({
+                                // (string | mandatory) the heading of the notification
+                                title: message,
+                                // (string | mandatory) the text inside the notification
+                                text: 'This will fade out after a certain amount of time.'
+                            });
+                            var htmlString = '<p class="text-warning">' + message + '</p>';
+                            $('#form-state').append(htmlString).slideDown('slow');
+                        } else {
+                            // This could be nicer in the future...
+                            alert(error_msg + "\n\nError:\n" + data.messages);
+                        }
+                    }
+                });
+            });
+        }
+        setInterval(autoSaveSurvey, 30000);
     });
 }(jQuery));

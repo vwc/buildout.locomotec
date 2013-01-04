@@ -49,11 +49,14 @@
     </section>
     <section class="visualClear">
       <form id="form-survey" method="post"
-        tal:attributes="action request/URL">
+        data-appui="autosave"
+        tal:define="context_url context/absolute_url"
+        tal:attributes="action request/URL;
+                        data-appui-target python:context_url + '/@@autosave-survey'">
 
         <div class="survey-question">
           <h4>Meine Favoriten</h4>
-
+          <div id="form-state"></div>
           <div class="row-fluid">
             <div class="span4">
               <div class="control-group field"

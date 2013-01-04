@@ -1,4 +1,5 @@
 import math
+import json
 from Acquisition import aq_inner
 from AccessControl import Unauthorized
 from five import grok
@@ -112,6 +113,27 @@ class View(grok.View):
             item['width'] = scale.width
             item['height'] = scale.height
         return item
+
+
+class AutosaveSurvey(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('autosave-survey')
+
+    def update(self):
+        self.query = self.request["QUERY_STRING"]
+
+    def render(self):
+        context = aq_inner(self.context)
+        sort_query = list(self.query.split(','))
+        data = self.request.form
+        msg = _(u"Survey state successfully saved")
+        results = {'success': True,
+                   'message': msg
+                   }
+        self.request.response.setHeader('Content-Type',
+                                        'application/json; charset=utf-8')
+        return json.dumps(results)
 
 
 class SelectFavorite(grok.View):
