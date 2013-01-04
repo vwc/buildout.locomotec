@@ -32,8 +32,8 @@
                                 // (string | mandatory) the text inside the notification
                                 text: 'This will fade out after a certain amount of time.'
                             });
-                            var htmlString = '<p class="text-warning">' + message + '</p>';
-                            $('#form-state').append(htmlString).slideDown('slow');
+                            //var htmlString = '<p class="text-warning">' + message + '</p>';
+                            //$('#form-state').append(htmlString).slideDown('slow');
                         } else {
                             // This could be nicer in the future...
                             alert(error_msg + "\n\nError:\n" + data.messages);

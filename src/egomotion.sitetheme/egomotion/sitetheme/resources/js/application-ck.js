@@ -13,8 +13,6 @@
                                 title: message,
                                 text: "This will fade out after a certain amount of time."
                             });
-                            var n = '<p class="text-warning">' + message + "</p>";
-                            e("#form-state").append(n).slideDown("slow");
                         } else alert(error_msg + "\n\nError:\n" + t.messages);
                     }
                 });
