@@ -19,7 +19,7 @@
     <div tal:condition="context/text"
       tal:content="structure context/text/output" />
 
-    <tal:subpages tal:condition="view.has_subpage">
+    <tal:subpages tal:condition="view/has_subpages">
       <section class="contentpage-subpage"
         tal:repeat="item view/subpages">
         <header class="subpage-header">
@@ -35,6 +35,20 @@
         <div tal:content="structure item/text/output" />
       </section>
     </tal:subpages>
+
+    <tal:nosubpages tal:condition="not:view/has_subpages">
+      <div tal:condition="not:view/anonymous"
+        class="alert">
+        <h4>Information</h4>
+        <p>Diese Inhaltsseite hat keine Unterseiten.</p>
+        <p>Da Sie im CMS angemeldet sind, können Sie eine
+          <a href="" tal:define="context_url context/absolute_url"
+            tal:attributes="href python:context_url + '/++add++locomotec.sitecontent.contentpage'">
+            Unterseite anlegen</a>. Diese wird anschliessend automatisch hier
+            gelistet.
+          </p>
+      </div>
+    </tal:nosubpages>
 
   </article>
     

@@ -87,6 +87,10 @@
         <replace css:content="#portal-globalnav li"
             css:theme-children="#kontaktbar" />
 
+        <!-- Language switcher -->
+        <replace css:content="#portal-languageselector li"
+            css:theme-children="#language-links" />
+
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
             css:theme-children='#breadcrumbs' />

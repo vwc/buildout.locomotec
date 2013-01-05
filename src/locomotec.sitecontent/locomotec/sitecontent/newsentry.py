@@ -1,3 +1,4 @@
+import datetime
 from DateTime import DateTime
 from five import grok
 
@@ -31,6 +32,11 @@ class INewsEntry(form.Schema, IImageScaleTraversable):
         title=_(u"Summary"),
         required=True,
     )
+
+
+@form.default_value(field=INewsEntry['start'])
+def startDefaultValue(data):
+    return datetime.datetime.today() + datetime.timedelta(7)
 
 
 @indexer(INewsEntry)

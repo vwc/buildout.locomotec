@@ -6575,17 +6575,20 @@ body.tile-overlay #tile-wrapper {
 #topbar #content-header #costum_header {
   height: 100px;
 }
-#topbar #content-header #costum_header #sprach-links li {
+#topbar #content-header #costum_header #sprach-links li,
+#topbar #content-header #costum_header #language-links li {
   margin-left: 10px;
   padding-left: 10px;
   float: right;
   font-weight: bold;
   display: block;
 }
-#topbar #content-header #costum_header #sprach-links li a {
+#topbar #content-header #costum_header #sprach-links li a,
+#topbar #content-header #costum_header #language-links li a {
   color: #423a38;
 }
-#topbar #content-header #costum_header #sprach-links li a:hover {
+#topbar #content-header #costum_header #sprach-links li a:hover,
+#topbar #content-header #costum_header #language-links li a:hover {
   color: #423a38;
 }
 #topbar #content-header #costum_header #logo {
@@ -6670,6 +6673,20 @@ body.tile-overlay #tile-wrapper {
   background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }
 #content h1.documentFirstHeading:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 70px;
+  height: 50px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
+}
+.contentpage-header {
+  height: 40px;
+  padding-bottom: 10px;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
+}
+.contentpage-header:before {
   content: "\a0";
   display: block;
   float: left;

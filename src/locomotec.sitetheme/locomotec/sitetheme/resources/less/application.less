@@ -118,7 +118,8 @@ body {
     /* Logo und Navigation*/
       #costum_header {
         height: 100px;
-        #sprach-links li{
+        #sprach-links li,
+        #language-links li {
             margin-left: 10px;
             padding-left: 10px;
             float: right;
@@ -228,6 +229,20 @@ body {
             margin-right: @baseLineHeight / 2;
             background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
         }
+    }
+}
+
+.contentpage-header {
+    height: @navbarHeight;
+    padding-bottom: @baseLineHeight / 2;
+    background: url(../img/divide.png) 0px 100% no-repeat transparent;
+    &:before {
+        content:"\a0";
+        display: block;
+        float:left;
+        .size(50px, 70px);
+        margin-right: @baseLineHeight / 2;
+        background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
     }
 }
 
