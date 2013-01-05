@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="locomotec.sitecontent">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <article id="contentpage-view">
+    <header class="contentpage-header">
+      <h1 tal:content="context/Title" />
+    </header>
+    <p class="lead" tal:condition="context/Description"
+      tal:content="context/Description" />
+    <div tal:condition="context/text"
+      tal:content="structure context/text/output" />
+
+    <tal:subpages tal:condition="view.has_subpage">
+      <section class="contentpage-subpage"
+        tal:repeat="item view/subpages">
+        <header class="subpage-header">
+          <h2 tal:define="item_id item/getId"
+            tal:attributes="id python:'headline-' + item_id">
+            <span tal:condition="view/anonymous"
+              tal:content="item/Title" />
+            <a href="" tal:condition="not:view/anonymous"
+              tal:attributes="href item/getURL"
+              tal:content="item/Title" />
+          </h2>
+        </header>
+        <div tal:content="structure item/text/output" />
+      </section>
+    </tal:subpages>
+
+  </article>
+    
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+
