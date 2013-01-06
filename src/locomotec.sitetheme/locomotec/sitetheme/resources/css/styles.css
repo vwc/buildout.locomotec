@@ -6716,6 +6716,10 @@ body.tile-overlay #tile-wrapper {
   color: #423a38;
   text-decoration: none;
 }
+#content-core p.lead {
+  font-size: 17.5px;
+  line-height: 25px;
+}
 .newsitem-preview {
   padding: 10px;
   background: url(../img/divide.png) 0px 100% no-repeat transparent;

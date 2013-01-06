@@ -11,18 +11,31 @@
   <metal:content-core define-macro="main">
 
     <article id="news-view"
-      tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+      tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                  cstate context/@@plone_context_state;
+                  parent cstate/parent">
       <header class="contentpage-header">
-        <h1 tal:content="context/Title" />
+        <h1>
+          News &amp; Events
+        </h1>
       </header>
-      <p class="muted">
-        <span tal:content="context/location" />,
-        <span tal:define="date context/start"
-          tal:attributes="datetime date"
-          tal:content="python:toLocalizedTime(date)" />
+      <section id="content-core">
+        <h2 class="headline" id="headline-main"
+          tal:content="context/Title" />
+        <h5>
+          <span tal:define="date context/start"
+            tal:attributes="datetime date"
+            tal:content="python:toLocalizedTime(date)" />,
+          <span tal:content="context/location" />
+        </h5>
+        <p class="lead" tal:condition="context/Description"
+          tal:content="context/Description" />
+        <div tal:condition="context/text"
+          tal:content="structure context/text/output" />
+        <p><a href="" tal:attributes="href parent/absolute_url">
+          Zur &Uuml;bersicht <span tal:replace="parent/Title" /></a>
         </p>
-      <div tal:condition="context/text"
-        tal:content="structure context/text/output" />
+      </section>
     </article>
     
   </metal:content-core>
