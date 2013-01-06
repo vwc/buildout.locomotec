@@ -60,7 +60,8 @@ body {
       #costum_header {
         height: 110px;
         background: url(../img/divide.png) 0 100px no-repeat transparent;
-        #sprach-links li{
+        #sprach-links li,
+        #language-links li {
             margin-left: 10px;
             padding-left: 10px;
             float: right;
@@ -87,23 +88,23 @@ body {
         #main-nav {
             width: 60%;
             float:right;
+            text-align: right;
             margin-top: -50px;
-            ul, li {
-                color: #423a38;
-                font-size: 120%;
-                text-decoration: none;
-                padding-left: 10px;
-                float: right;
-                display: inline-block;
-                a {
+                li {
                     color: #423a38;
-                    font-weight: bold;
-                }
-                a:hover {
-                    padding-bottom: 20px;
-                    font-size: 150%;
-                }
-            }  
+                    font-size: 120%;
+                    text-decoration: none;
+                    padding-left: 10px;
+                    display: inline-block;
+                    a {
+                        color: #423a38;
+                        font-weight: bold;
+                    }
+                    a:hover {
+                        padding-bottom: 20px;
+                        font-size: 150%;
+                    }
+                }    
             }
         }
     }
@@ -189,6 +190,7 @@ body {
         //color: #e37c00;
         color: #fcb034;
         text-transform: uppercase;
+        text-align: center;
         //font-size: @baseFontSize * 2;
         font-size: 24px;
         background: url(../img/Sprite.png) -30px 0px no-repeat transparent;

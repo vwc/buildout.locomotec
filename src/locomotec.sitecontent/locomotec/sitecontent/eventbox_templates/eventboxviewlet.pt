@@ -1,4 +1,5 @@
 <div class="box" id="newsentry-box"
+    i18n:domain="locomotec.sitecontent"
     tal:condition="viewlet/has_items">
     <div class="box-header">
         <h4>News &amp; Events</h4>
@@ -21,11 +22,16 @@
                 </h5>
                 <p class="discreet" tal:content="item/Description" />
                 <small><a href="" tal:attributes="href item/getURL">
-                    mehr&hellip;</a></small>
+                    <span i18n:translate="">Read more</span>&hellip;
+                </a></small>
             </div>
         </tal:items>
     </div>
-    <div class="box-footer">
-        <a href="#">Archiv</a>
+    <div class="box-footer"
+        tal:condition="viewlet/has_newsfolder">
+        <a href="#" tal:define="archive viewlet/news_archive"
+            tal:attributes="href archive/getURL">
+            <span i18n:translate="">Archive</span>
+        </a>
     </div>
 </div>
