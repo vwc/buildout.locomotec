@@ -10,10 +10,17 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
-    <article id="news-view">
+    <article id="news-view"
+      tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
       <header class="contentpage-header">
         <h1 tal:content="context/Title" />
       </header>
+      <p class="muted">
+        <span tal:content="context/location" />,
+        <span tal:define="date context/start"
+          tal:attributes="datetime date"
+          tal:content="python:toLocalizedTime(date)" />
+        </p>
       <div tal:condition="context/text"
         tal:content="structure context/text/output" />
     </article>

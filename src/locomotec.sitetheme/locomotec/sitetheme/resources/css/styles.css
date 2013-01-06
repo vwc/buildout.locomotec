@@ -6716,6 +6716,10 @@ body.tile-overlay #tile-wrapper {
   color: #423a38;
   text-decoration: none;
 }
+.newsitem-preview {
+  padding: 10px;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
+}
 #subnavigation {
   padding: 20px 0;
 }

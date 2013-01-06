@@ -24,18 +24,21 @@
                       b_start python:int(request.get('b_start', 0));
                       results python:context.restrictedTraverse('@@folderListing')(batch=True, b_size=b_size, b_start=b_start);
                       batch python:Batch(results, b_size, b_start);">
-        <section tal:repeat="item results">
-          <h2 class="headline">
-            <a href="" tal:attributes="href item/getURL"
-              tal:content="item/Title" /><br />
+        <section tal:repeat="item results"
+          class="newsitem-preview">
+          <h4 class="headline">
             <small>
-              <span tal:content="item/location" />
-                <span tal:define="date item/release"
+              <span tal:content="item/location" />,
+                <span tal:define="date item/start"
                   tal:attributes="datetime date"
                   tal:content="python:toLocalizedTime(date)" />
-          </h2>
+            </small><br />
+            <a href="" tal:attributes="href item/getURL"
+              tal:content="item/Title" />
+          </h4>
           <p tal:condition="item/Description" 
             tal:content="item/Description" />
+          <a href="" tal:attributes="href item/getURL">mehr</a>
         </section>
         <div metal:use-macro="context/batch_macros/macros/navigation" />
       </div>
