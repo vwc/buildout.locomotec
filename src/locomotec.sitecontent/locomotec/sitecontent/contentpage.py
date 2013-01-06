@@ -1,5 +1,6 @@
 from five import grok
 from Acquisition import aq_inner
+from zope import schema
 
 from plone import api
 from plone.directives import dexterity, form
@@ -17,6 +18,13 @@ class IContentPage(form.Schema, IImageScaleTraversable):
     """
     A folderish content page with automatic content listing
     """
+    headline = schema.TextLine(
+        title=_(u"Content Headline"),
+        description=_(u"Enter an optional headline for the body text that "
+                      u"will be used both as subheadline in the content area "
+                      u"and as the first navigation entry"),
+        required=False,
+    )
     text = RichText(
         title=_(u"Text"),
         description=_(u"The main body text of this content page. Will be "

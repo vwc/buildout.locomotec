@@ -5659,6 +5659,11 @@ input.datetime-widget,
 #content-core label {
   font-weight: bold;
 }
+#content-core label span.formHelp {
+  display: block;
+  color: #999999;
+  font-weight: normal;
+}
 div.field {
   margin-bottom: 10px;
 }
@@ -6682,7 +6687,7 @@ body.tile-overlay #tile-wrapper {
   background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
 }
 .contentpage-header {
-  height: 40px;
+  min-height: 40px;
   padding-bottom: 10px;
   background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }

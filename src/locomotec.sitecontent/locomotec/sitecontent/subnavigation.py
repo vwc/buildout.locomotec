@@ -7,9 +7,11 @@ from plone.app.layout.viewlets.interfaces import IPortalFooter
 from Products.CMFCore.interfaces import IFolderish
 from Products.ATContentTypes.interfaces.document import IATDocument
 
+from locomotec.sitecontent.contentpage import IContentPage
+
 
 class SubnavigationViewlet(grok.Viewlet):
-    grok.context(IFolderish)
+    grok.context(IContentPage)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
     grok.name('locomotec.sitecontent.SubnavigationViewlet')
@@ -20,7 +22,7 @@ class SubnavigationViewlet(grok.Viewlet):
     def contained_items(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
-        brains = catalog(object_provides=IATDocument.__identifier__,
+        brains = catalog(object_provides=IContentPage.__identifier__,
                          path=dict(query='/'.join(context.getPhysicalPath()),
                                    depth=1),
                          review_state='published')
