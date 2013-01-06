@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-01-06 14:41+0000\n"
+"POT-Creation-Date: 2013-01-06 17:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 
 #: ./../profiles/default/types/locomotec.sitecontent.contentpage.xml
 msgid "A folderish content page with automatic content listing"
+msgstr ""
+
+#: ./../eventbox_templates/eventboxviewlet.pt:34
+msgid "Archive"
 msgstr ""
 
 #: ./../contentpage.py:22
@@ -67,6 +71,10 @@ msgstr ""
 
 #: ./../newsentry.py:27
 msgid "Please enter a date like either the event date or the release date of the news entry"
+msgstr ""
+
+#: ./../eventbox_templates/eventboxviewlet.pt:25
+msgid "Read more"
 msgstr ""
 
 #: ./../newsentry.py:32
