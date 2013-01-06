@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: locomotec.sitecontent\n"
+"POT-Creation-Date: 2013-01-02 11:59+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
+"Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: locomotec.sitecontent\n"
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsfolder.xml
+msgid "A folder for a unified news and events type"
+msgstr "Ordner für News und Events, der als Archiv fungiert."
+
+#: ./../profiles/default/types/locomotec.sitecontent.contentpage.xml
+msgid "A folderish content page with automatic content listing"
+msgstr "Inhaltsseite mit automatischer Auflistung von Unterseiten"
+
+#: ./../contentpage.py:22
+msgid "Content Headline"
+msgstr "Überschrift"
+
+#: ./../profiles/default/types/locomotec.sitecontent.contentpage.xml
+msgid "ContentPage"
+msgstr "Inhaltsseite"
+
+#: ./../newsentry.py:26
+msgid "Date"
+msgstr "Datum"
+
+#: ./../contentpage.py:23
+msgid "Enter an optional headline for the body text that will be used both as subheadline in the content area and as the first navigation entry"
+msgstr "Tragen Sie hier eine optionale Überschrift für den Haupttext/Einleitungstext ein. Diese Überschrift wird sowohl im Inhaltsbereich als auch als erster Navigationspunkt verwendet."
+
+#: ./../newsfolder.py:16
+msgid "Introductional text"
+msgstr "Einleitungstext"
+
+#: ./../newsentry.py:22
+msgid "Location"
+msgstr "Ort"
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsentry.xml
+msgid "News or event anouncement"
+msgstr "Aktuelle Meldung / Terminankündigung"
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsentry.xml
+msgid "NewsEntry"
+msgstr "Aktuelle Meldung"
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsfolder.xml
+msgid "NewsFolder"
+msgstr "News & Events Ordner"
+
+#: ./../newsfolder.py:17
+msgid "Optional introductional text for the news and event archive view"
+msgstr "Optionaler Einleitungstext für das News & Events Archiv"
+
+#: ./../newsentry.py:27
+msgid "Please enter a date like either the event date or the release date of the news entry"
+msgstr "Bitte geben Sie entweder ein Veröffentlichungsdatum oder - im Falle eines Events - das Veranstaltungsdatum ein."
+
+#: ./../newsentry.py:32
+msgid "Summary"
+msgstr "Zusammenfassung"
+
+#: ./../contentpage.py:29
+msgid "Text"
+msgstr "haupttext"
+
+#: ./../contentpage.py:30
+msgid "The main body text of this content page. Will be displayed in automatic subcontent listings or above the subcontents as an optional introduction"
+msgstr "Der textinhalt dieser Inhaltsseite. Dieser wird, falls es sich bei dieser Inahltsseite um eine Unterseite einer anderen Inhaltsseite handelt, in der entsprechenden automatischen Auflistung auf der Elternseite gezeigt."
+

@@ -1,0 +1,83 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-01-06 14:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: locomotec.sitecontent\n"
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsfolder.xml
+msgid "A folder for a unified news and events type"
+msgstr ""
+
+#: ./../profiles/default/types/locomotec.sitecontent.contentpage.xml
+msgid "A folderish content page with automatic content listing"
+msgstr ""
+
+#: ./../contentpage.py:22
+msgid "Content Headline"
+msgstr ""
+
+#: ./../profiles/default/types/locomotec.sitecontent.contentpage.xml
+msgid "ContentPage"
+msgstr ""
+
+#: ./../newsentry.py:26
+msgid "Date"
+msgstr ""
+
+#: ./../contentpage.py:23
+msgid "Enter an optional headline for the body text that will be used both as subheadline in the content area and as the first navigation entry"
+msgstr ""
+
+#: ./../newsfolder.py:16
+msgid "Introductional text"
+msgstr ""
+
+#: ./../newsentry.py:22
+msgid "Location"
+msgstr ""
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsentry.xml
+msgid "News or event anouncement"
+msgstr ""
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsentry.xml
+msgid "NewsEntry"
+msgstr ""
+
+#: ./../profiles/default/types/locomotec.sitecontent.newsfolder.xml
+msgid "NewsFolder"
+msgstr ""
+
+#: ./../newsfolder.py:17
+msgid "Optional introductional text for the news and event archive view"
+msgstr ""
+
+#: ./../newsentry.py:27
+msgid "Please enter a date like either the event date or the release date of the news entry"
+msgstr ""
+
+#: ./../newsentry.py:32
+msgid "Summary"
+msgstr ""
+
+#: ./../contentpage.py:29
+msgid "Text"
+msgstr ""
+
+#: ./../contentpage.py:30
+msgid "The main body text of this content page. Will be displayed in automatic subcontent listings or above the subcontents as an optional introduction"
+msgstr ""
+
