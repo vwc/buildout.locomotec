@@ -7,6 +7,8 @@ from plone.app.layout.viewlets.interfaces import IPortalFooter
 from Products.CMFCore.interfaces import IFolderish
 from Products.ATContentTypes.interfaces.document import IATDocument
 
+from locomotec.sitecontent.newsentry import INewsEntry
+
 
 class EventBoxViewlet(grok.Viewlet):
     grok.context(IFolderish)
@@ -20,8 +22,7 @@ class EventBoxViewlet(grok.Viewlet):
     def get_items(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
-        brains = catalog(object_provides=IATDocument.__identifier__,
-                         path=dict(query='/'.join(context.getPhysicalPath()),
-                                   depth=1),
-                         review_state='published')
+        brains = catalog(object_provides=INewsEntry.__identifier__,
+                         review_state='published',
+                         sort_on='start')
         return brains

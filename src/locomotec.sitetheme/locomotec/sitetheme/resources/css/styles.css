@@ -6743,6 +6743,66 @@ body.tile-overlay #tile-wrapper {
   margin-top: 59px;
   background: url(../img/divide.png) 0px 0px no-repeat transparent;
 }
+#newsentry-box {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+#newsentry-box .box-header {
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+  text-decoration: none;
+  height: 50px;
+}
+#newsentry-box .box-header h4,
+#newsentry-box .box-header h3 {
+  background: url(../img/Sprite-old.png) -570px -140px no-repeat transparent;
+  padding: 20px 0 20px 60px;
+  color: #423a38;
+}
+#newsentry-box .box-content {
+  padding: 10px 0 0 10px;
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+}
+#newsentry-box .box-content .box-item-meta {
+  border-bottom: 1px dashed #555555;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+#newsentry-box .box-content .box-item-meta :after {
+  content: "\003e";
+  width: 20px;
+  height: 20px;
+  color: #333333;
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+  text-align: right;
+  font-weight: normal;
+}
+#newsentry-box .box-content .box-item-meta a {
+  display: block;
+  margin: 10px 0px -10px 10px;
+  width: auto;
+  font-size: 11.9px;
+  font-weight: bold;
+}
+#newsentry-box .box-content .box-item-meta a span {
+  display: inline-block;
+  background: #f6f3ec;
+}
+#newsentry-box .box-content h5 a {
+  color: #333333;
+  font-weight: normal;
+}
+#newsentry-box .box-content .discreet {
+  font-size: 11.9px;
+  line-height: 16px;
+}
+#newsentry-box .box-footer {
+  padding: 10px 0;
+  text-align: right;
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+}
 #sidebar dl.portletEvents {
   margin-left: 40px;
   margin-bottom: 50px;
@@ -6799,13 +6859,15 @@ body.tile-overlay #tile-wrapper {
   margin-left: 40px;
 }
 #sidebar dl.portletStaticText dt.portletHeader {
-  background: url(../img/egomotion_icon.png) 10px 0px no-repeat transparent;
+  background: url(../img/logo-egomotion.png) 0px 0px no-repeat transparent;
   text-decoration: none;
   height: 40px;
   padding-top: 30px;
   padding-left: 70px;
   font-size: 150%;
   color: #423a38;
+  text-indent: -9000px;
+  overflow: hidden;
 }
 #sidebar dl.portletStaticText dd.portletItem a {
   color: #e37c00;

@@ -107,6 +107,11 @@
         <replace css:content="#subnavigation"
             css:theme="#subnavigation"
             css:if-content="#subnavigation" />
+
+        <replace css:content="#newsentry-box"
+            css:theme="#sidebar-news"
+            css:if-content="#newsentry-box" />
+
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
 
