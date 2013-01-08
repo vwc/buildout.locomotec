@@ -22,12 +22,13 @@ class NavbarViewlet(grok.Viewlet):
         portal = api.portal.get()
         en_root = portal['en']
         root = getNavigationRoot(context)
+        type_interface = 'locomotec.sitecontent.contentpage.IContentPage'
         path = {'query': '/'.join(en_root.getPhysicalPath()),
                 'navtree': 2,
                 'navtree_start': 2}
         query = {'path': path,
                  'review_state': 'published',
-                 'portal_types': ('locomotec.sitecontent.contentpage',),
+                 'object_provides': type_interface,
                  'sort_on': 'getObjPositionInParent'}
         root_obj = context.unrestrictedTraverse(root)
         tree = buildFolderTree(root_obj, root_obj, query,

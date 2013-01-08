@@ -88,9 +88,8 @@
         <rules css:if-content="body.section-en">
             <replace css:content="#main-navbar li"
                 css:theme-children="#main-nav" />
-            <replace css:content="#main-navbar li"
-                css:theme-children="#kontaktbar" />
         </rules>
+        
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
@@ -123,6 +122,10 @@
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
 
+        <rules css:if-content="body.section-en">
+            <replace css:content="#main-navbar li"
+                css:theme-children="#kontaktbar" />
+        </rules>
         <replace css:content="#portal-globalnav li"
             css:theme-children="#kontaktbar" />
 

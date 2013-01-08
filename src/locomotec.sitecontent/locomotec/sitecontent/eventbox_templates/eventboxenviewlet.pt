@@ -22,7 +22,7 @@
                 </h5>
                 <p class="discreet" tal:content="item/Description" />
                 <small><a href="" tal:attributes="href item/getURL">
-                    <span>mehr</span>&hellip;
+                    more&hellip;
                 </a></small>
             </div>
         </tal:items>
@@ -31,7 +31,7 @@
         tal:condition="viewlet/has_newsfolder">
         <a href="#" tal:define="archive viewlet/news_archive"
             tal:attributes="href archive/getURL">
-            <span>Archiv</span>
+            <span i18n:translate="">Archive</span>
         </a>
     </div>
 </div>
