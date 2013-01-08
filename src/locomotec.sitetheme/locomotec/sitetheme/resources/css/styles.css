@@ -6540,7 +6540,8 @@ body.tile-overlay #tile-wrapper {
 #topbar #header-frontpage #costum_header #language-links li a:hover {
   color: #423a38;
 }
-#topbar #header-frontpage #costum_header #logo {
+#topbar #header-frontpage #costum_header #logo,
+#topbar #header-frontpage #costum_header #logo-en {
   background: url(../img/logo.png) 0 0 no-repeat transparent;
   margin-left: -18px;
   margin-top: -20px;
@@ -6596,7 +6597,8 @@ body.tile-overlay #tile-wrapper {
 #topbar #content-header #costum_header #language-links li a:hover {
   color: #423a38;
 }
-#topbar #content-header #costum_header #logo {
+#topbar #content-header #costum_header #logo,
+#topbar #content-header #costum_header #logo-en {
   background: url(../img/logo.png) 0 0 no-repeat transparent;
   margin-left: -18px;
   width: 35%;

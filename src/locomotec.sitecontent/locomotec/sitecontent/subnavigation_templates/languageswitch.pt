@@ -2,7 +2,7 @@
     <ul id="language-links"
         tal:define="base_url viewlet/switcher_base_url">
         <li><a href="/de?set_language=de"
-                tal:attributes="href python:base_url + '/de?set_language=de'">
+                tal:attributes="href base_url">
                 Deutsch</a>
         </li>
         <li><a href="/en?set_language=en"

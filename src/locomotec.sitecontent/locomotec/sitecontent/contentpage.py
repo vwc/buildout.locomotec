@@ -18,11 +18,10 @@ class IContentPage(form.Schema, IImageScaleTraversable):
     """
     A folderish content page with automatic content listing
     """
-    headline = schema.TextLine(
-        title=_(u"Content Headline"),
-        description=_(u"Enter an optional headline for the body text that "
-                      u"will be used both as subheadline in the content area "
-                      u"and as the first navigation entry"),
+    teaser = schema.Text(
+        title=_(u"Frontpage Teaser"),
+        description=_(u"Optional teaser text for the frontpage should this "
+                      u"content page be displayed as a preview"),
         required=False,
     )
     text = RichText(

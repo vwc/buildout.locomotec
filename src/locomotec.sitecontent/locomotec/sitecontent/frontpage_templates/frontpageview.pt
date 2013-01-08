@@ -33,9 +33,12 @@
               </div>
             </a>
             <div class="special-content">
-              <p><span tal:content="item/Description">Description</span>
+              <p><span tal:condition="item/teaser" tal:content="item/teaser">
+                    Description</span>
+                  <span tal:condition="not:item/teaser" tal:content="item/Description">
+                    Description</span>
                 <a href="" i18n:translate=""
-                  tal:attributes="href item/getURL">more&hellip;</a>
+                  tal:attributes="href item/getURL">mehr&hellip;</a>
               </p>
             </div>
           </div>
