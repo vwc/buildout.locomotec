@@ -6609,29 +6609,25 @@ body.tile-overlay #tile-wrapper {
 #topbar #content-header #costum_header #main-nav {
   width: 60%;
   float: right;
+  text-align: right;
   margin-top: -50px;
 }
-#topbar #content-header #costum_header #main-nav ul,
 #topbar #content-header #costum_header #main-nav li {
   color: #423a38;
   font-size: 120%;
   text-decoration: none;
   padding-left: 10px;
-  float: right;
   display: inline-block;
 }
-#topbar #content-header #costum_header #main-nav ul a,
 #topbar #content-header #costum_header #main-nav li a {
   color: #423a38;
   font-weight: bold;
 }
-#topbar #content-header #costum_header #main-nav ul a:hover,
 #topbar #content-header #costum_header #main-nav li a:hover {
   padding-bottom: 20px;
   font-size: 150%;
   background: url(../img/arrow.png) 50% 30px no-repeat transparent;
 }
-#topbar #content-header #costum_header #main-nav ul a:active,
 #topbar #content-header #costum_header #main-nav li a:active {
   padding-bottom: 20px;
   font-size: 150%;
