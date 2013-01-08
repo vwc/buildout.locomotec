@@ -15,12 +15,12 @@
       <h1 tal:content="context/Title" />
     </header>
     <section id="content-core">
-      <h2 class="headline" id="headline-main">
+      <!--<h2 class="headline" id="headline-main">
         <span tal:condition="context/headline"
           tal:replace="context/headline" />
         <span tal:condition="not:context/headline"
           tal:replace="context/Title" />
-      </h2>
+      </h2>-->
       <p class="lead" tal:condition="context/Description"
         tal:content="context/Description" />
       <div tal:condition="context/text"

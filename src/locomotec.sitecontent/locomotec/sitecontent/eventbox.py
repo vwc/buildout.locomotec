@@ -33,7 +33,9 @@ class EventBoxViewlet(grok.Viewlet):
                          path=dict(query='/'.join(navroot.getPhysicalPath()),
                                    depth=3),
                          review_state='published',
-                         sort_on='start')
+                         sort_on='start',
+                         sort_order='reverse',
+                         sort_limit=3)[:3]
         return brains
 
     def news_archive(self):
