@@ -5659,6 +5659,11 @@ input.datetime-widget,
 #content-core label {
   font-weight: bold;
 }
+#content-core label span.formHelp {
+  display: block;
+  color: #999999;
+  font-weight: normal;
+}
 div.field {
   margin-bottom: 10px;
 }
@@ -6519,17 +6524,20 @@ body.tile-overlay #tile-wrapper {
   height: 110px;
   background: url(../img/divide.png) 0 100px no-repeat transparent;
 }
-#topbar #header-frontpage #costum_header #sprach-links li {
+#topbar #header-frontpage #costum_header #sprach-links li,
+#topbar #header-frontpage #costum_header #language-links li {
   margin-left: 10px;
   padding-left: 10px;
   float: right;
   font-weight: bold;
   display: block;
 }
-#topbar #header-frontpage #costum_header #sprach-links li a {
+#topbar #header-frontpage #costum_header #sprach-links li a,
+#topbar #header-frontpage #costum_header #language-links li a {
   color: #423a38;
 }
-#topbar #header-frontpage #costum_header #sprach-links li a:hover {
+#topbar #header-frontpage #costum_header #sprach-links li a:hover,
+#topbar #header-frontpage #costum_header #language-links li a:hover {
   color: #423a38;
 }
 #topbar #header-frontpage #costum_header #logo {
@@ -6546,23 +6554,20 @@ body.tile-overlay #tile-wrapper {
 #topbar #header-frontpage #costum_header #main-nav {
   width: 60%;
   float: right;
+  text-align: right;
   margin-top: -50px;
 }
-#topbar #header-frontpage #costum_header #main-nav ul,
 #topbar #header-frontpage #costum_header #main-nav li {
   color: #423a38;
   font-size: 120%;
   text-decoration: none;
   padding-left: 10px;
-  float: right;
   display: inline-block;
 }
-#topbar #header-frontpage #costum_header #main-nav ul a,
 #topbar #header-frontpage #costum_header #main-nav li a {
   color: #423a38;
   font-weight: bold;
 }
-#topbar #header-frontpage #costum_header #main-nav ul a:hover,
 #topbar #header-frontpage #costum_header #main-nav li a:hover {
   padding-bottom: 20px;
   font-size: 150%;
@@ -6575,17 +6580,20 @@ body.tile-overlay #tile-wrapper {
 #topbar #content-header #costum_header {
   height: 100px;
 }
-#topbar #content-header #costum_header #sprach-links li {
+#topbar #content-header #costum_header #sprach-links li,
+#topbar #content-header #costum_header #language-links li {
   margin-left: 10px;
   padding-left: 10px;
   float: right;
   font-weight: bold;
   display: block;
 }
-#topbar #content-header #costum_header #sprach-links li a {
+#topbar #content-header #costum_header #sprach-links li a,
+#topbar #content-header #costum_header #language-links li a {
   color: #423a38;
 }
-#topbar #content-header #costum_header #sprach-links li a:hover {
+#topbar #content-header #costum_header #sprach-links li a:hover,
+#topbar #content-header #costum_header #language-links li a:hover {
   color: #423a38;
 }
 #topbar #content-header #costum_header #logo {
@@ -6601,29 +6609,25 @@ body.tile-overlay #tile-wrapper {
 #topbar #content-header #costum_header #main-nav {
   width: 60%;
   float: right;
+  text-align: right;
   margin-top: -50px;
 }
-#topbar #content-header #costum_header #main-nav ul,
 #topbar #content-header #costum_header #main-nav li {
   color: #423a38;
   font-size: 120%;
   text-decoration: none;
   padding-left: 10px;
-  float: right;
   display: inline-block;
 }
-#topbar #content-header #costum_header #main-nav ul a,
 #topbar #content-header #costum_header #main-nav li a {
   color: #423a38;
   font-weight: bold;
 }
-#topbar #content-header #costum_header #main-nav ul a:hover,
 #topbar #content-header #costum_header #main-nav li a:hover {
   padding-bottom: 20px;
   font-size: 150%;
   background: url(../img/arrow.png) 50% 30px no-repeat transparent;
 }
-#topbar #content-header #costum_header #main-nav ul a:active,
 #topbar #content-header #costum_header #main-nav li a:active {
   padding-bottom: 20px;
   font-size: 150%;
@@ -6644,6 +6648,7 @@ body.tile-overlay #tile-wrapper {
   text-align: center;
   color: #fcb034;
   text-transform: uppercase;
+  text-align: center;
   font-size: 24px;
   background: url(../img/Sprite.png) -30px 0px no-repeat transparent;
 }
@@ -6676,6 +6681,23 @@ body.tile-overlay #tile-wrapper {
   margin-right: 10px;
   background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
 }
+#content table.plain img {
+  max-width: none;
+}
+.contentpage-header {
+  min-height: 40px;
+  padding-bottom: 10px;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
+}
+.contentpage-header:before {
+  content: "\a0";
+  display: block;
+  float: left;
+  width: 70px;
+  height: 50px;
+  margin-right: 10px;
+  background: url(../img/Sprite-old.png) -142px -145px no-repeat transparent;
+}
 #content-core a {
   color: #e37c00;
   font-weight: bold;
@@ -6696,6 +6718,14 @@ body.tile-overlay #tile-wrapper {
 #content-core h2.headline a {
   color: #423a38;
   text-decoration: none;
+}
+#content-core p.lead {
+  font-size: 17.5px;
+  line-height: 25px;
+}
+.newsitem-preview {
+  padding: 10px;
+  background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }
 #subnavigation {
   padding: 20px 0;
@@ -6719,6 +6749,66 @@ body.tile-overlay #tile-wrapper {
 #sidebar-wrapper {
   margin-top: 59px;
   background: url(../img/divide.png) 0px 0px no-repeat transparent;
+}
+#newsentry-box {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+#newsentry-box .box-header {
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+  text-decoration: none;
+  height: 50px;
+}
+#newsentry-box .box-header h4,
+#newsentry-box .box-header h3 {
+  background: url(../img/Sprite-old.png) -570px -140px no-repeat transparent;
+  padding: 20px 0 20px 60px;
+  color: #423a38;
+}
+#newsentry-box .box-content {
+  padding: 10px 0 0 10px;
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+}
+#newsentry-box .box-content .box-item-meta {
+  border-bottom: 1px dashed #555555;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+#newsentry-box .box-content .box-item-meta :after {
+  content: "\003e";
+  width: 20px;
+  height: 20px;
+  color: #333333;
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+  text-align: right;
+  font-weight: normal;
+}
+#newsentry-box .box-content .box-item-meta a {
+  display: block;
+  margin: 10px 0px -10px 10px;
+  width: auto;
+  font-size: 11.9px;
+  font-weight: bold;
+}
+#newsentry-box .box-content .box-item-meta a span {
+  display: inline-block;
+  background: #f6f3ec;
+}
+#newsentry-box .box-content h5 a {
+  color: #333333;
+  font-weight: normal;
+}
+#newsentry-box .box-content .discreet {
+  font-size: 11.9px;
+  line-height: 16px;
+}
+#newsentry-box .box-footer {
+  padding: 10px 0;
+  text-align: right;
+  background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
 }
 #sidebar dl.portletEvents {
   margin-left: 40px;
@@ -6776,13 +6866,15 @@ body.tile-overlay #tile-wrapper {
   margin-left: 40px;
 }
 #sidebar dl.portletStaticText dt.portletHeader {
-  background: url(../img/egomotion_icon.png) 10px 0px no-repeat transparent;
+  background: url(../img/logo-egomotion.png) 0px 0px no-repeat transparent;
   text-decoration: none;
   height: 40px;
   padding-top: 30px;
   padding-left: 70px;
   font-size: 150%;
   color: #423a38;
+  text-indent: -9000px;
+  overflow: hidden;
 }
 #sidebar dl.portletStaticText dd.portletItem a {
   color: #e37c00;
@@ -6880,11 +6972,13 @@ div.field span.required:after {
   background: url(../img/divide.png) 50% 0 no-repeat transparent;
   padding-top: 10px;
 }
+#site-footer ul {
+  text-align: right;
+}
 #site-footer li {
   margin-left: 15px;
-  float: right;
   width: auto;
-  display: block;
+  display: inline-block;
 }
 #site-footer li a {
   color: #423a38;

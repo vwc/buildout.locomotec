@@ -84,8 +84,9 @@
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
 
-        <replace css:content="#portal-globalnav li"
-            css:theme-children="#kontaktbar" />
+        <!-- Language switcher -->
+        <replace css:content="#language-links"
+            css:theme="#language-links" />
 
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
@@ -103,8 +104,19 @@
         <replace css:content="#subnavigation"
             css:theme="#subnavigation"
             css:if-content="#subnavigation" />
+
+        <replace css:content="#newsentry-box"
+            css:theme="#sidebar-news"
+            css:if-content="#newsentry-box" />
+
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
+
+        <drop css:theme="#footer-static-en" if="$language = 'de'" />
+        <drop css:theme="#footer-static-de" if="$language = 'en'" />
+
+        <replace css:content="#portal-globalnav li"
+            css:theme-children="#kontaktbar" />
 
     </rules>
 

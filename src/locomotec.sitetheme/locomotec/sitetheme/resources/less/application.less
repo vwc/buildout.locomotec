@@ -60,7 +60,8 @@ body {
       #costum_header {
         height: 110px;
         background: url(../img/divide.png) 0 100px no-repeat transparent;
-        #sprach-links li{
+        #sprach-links li,
+        #language-links li {
             margin-left: 10px;
             padding-left: 10px;
             float: right;
@@ -87,23 +88,23 @@ body {
         #main-nav {
             width: 60%;
             float:right;
+            text-align: right;
             margin-top: -50px;
-            ul, li {
-                color: #423a38;
-                font-size: 120%;
-                text-decoration: none;
-                padding-left: 10px;
-                float: right;
-                display: inline-block;
-                a {
+                li {
                     color: #423a38;
-                    font-weight: bold;
-                }
-                a:hover {
-                    padding-bottom: 20px;
-                    font-size: 150%;
-                }
-            }  
+                    font-size: 120%;
+                    text-decoration: none;
+                    padding-left: 10px;
+                    display: inline-block;
+                    a {
+                        color: #423a38;
+                        font-weight: bold;
+                    }
+                    a:hover {
+                        padding-bottom: 20px;
+                        font-size: 150%;
+                    }
+                }    
             }
         }
     }
@@ -118,7 +119,8 @@ body {
     /* Logo und Navigation*/
       #costum_header {
         height: 100px;
-        #sprach-links li{
+        #sprach-links li,
+        #language-links li {
             margin-left: 10px;
             padding-left: 10px;
             float: right;
@@ -144,13 +146,13 @@ body {
         #main-nav {
             width: 60%;
             float:right;
+            text-align: right;
             margin-top: -50px;
-            ul, li {                    
+            li {                    
                 color: #423a38;
                 font-size: 120%;
                 text-decoration: none;
                 padding-left: 10px;
-                float: right;
                 display: inline-block;
                 a {
                     color: #423a38;
@@ -189,6 +191,7 @@ body {
         //color: #e37c00;
         color: #fcb034;
         text-transform: uppercase;
+        text-align: center;
         //font-size: @baseFontSize * 2;
         font-size: 24px;
         background: url(../img/Sprite.png) -30px 0px no-repeat transparent;
@@ -229,6 +232,25 @@ body {
             background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
         }
     }
+    table.plain {
+        img {
+            max-width: none;
+        }
+    }
+}
+
+.contentpage-header {
+    min-height: @navbarHeight;
+    padding-bottom: @baseLineHeight / 2;
+    background: url(../img/divide.png) 0px 100% no-repeat transparent;
+    &:before {
+        content:"\a0";
+        display: block;
+        float:left;
+        .size(50px, 70px);
+        margin-right: @baseLineHeight / 2;
+        background: url(../img/Sprite-old.png)  -142px -145px no-repeat transparent;
+    }
 }
 
 #content-core {
@@ -254,11 +276,15 @@ body {
            text-decoration: none;   
         }
     }
-    //.item:first-child {
-    //    h2.headline {
-    //        display: none;
-    //    }
-    //}
+    p.lead {
+        font-size: @baseFontSize * 1.25;
+        line-height: @baseLineHeight * 1.25;
+    }
+}
+
+.newsitem-preview {
+    padding: @baseLineHeight / 2;
+    background: url(../img/divide.png) 0px 100% no-repeat transparent;
 }
 
 #subnavigation {
@@ -285,6 +311,65 @@ body {
 #sidebar-wrapper {
     margin-top: @navbarHeight + (@baseLineHeight - 1);
     background: url(../img/divide.png) 0px 0px no-repeat transparent;
+}
+
+#newsentry-box {
+    margin-left: @baseLineHeight * 2;
+    margin-bottom: @navbarHeight;
+    .box-header {
+        background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+        text-decoration: none;
+        height: 50px;
+        h4, h3 {
+            background: url(../img/Sprite-old.png) -570px -140px no-repeat transparent;
+            padding: @baseLineHeight 0 @baseLineHeight @baseLineHeight * 3;
+            color: #423a38;
+        }
+    }
+    .box-content {
+        padding: @baseLineHeight / 2 0 0 @baseLineHeight / 2;
+        background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+        .box-item-meta {
+            border-bottom: 1px dashed @gray;
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            :after {
+                content:"\003e";
+                .square(@baseLineHeight);
+                color: @textColor;
+                position: absolute;
+                right: 0;
+                bottom: -11px;
+                text-align: right;
+                font-weight: normal;
+            }
+            a {
+                display: block;
+                margin: 10px 0px -10px 10px;
+                width: auto;
+                font-size: @fontSizeSmall;
+                font-weight: bold;
+                span {
+                    display: inline-block;
+                    background:@appBackgroundColor;
+                }
+            }
+        }
+        h5 a {
+            color: @textColor;
+            font-weight: normal;
+        }
+        .discreet {
+            font-size: @fontSizeSmall;
+            line-height: @baseLineHeight - 4;   
+        }
+    }
+    .box-footer {
+        padding: @baseLineHeight / 2 0;
+        text-align: right;
+        background: url(../img/divide_small.png) 0px 100% no-repeat transparent;
+    }
 }
 
 #sidebar {
@@ -343,16 +428,17 @@ body {
         list-style-image: url(../img/listitem.png);
         margin-left: 40px;
         dt.portletHeader {
-            background: url(../img/egomotion_icon.png) 10px 0px no-repeat transparent;
+            background: url(../img/logo-egomotion.png) 0px 0px no-repeat transparent;
             text-decoration: none;
             height: 40px;
             padding-top: 30px;
             padding-left: 70px;
             font-size: 150%;
             color: #423a38;
+            text-indent: -9000px;
+            overflow: hidden;
         }
         dd.portletItem {
-
             a {
                 color: #e37c00;
                 font-weight: bold;
@@ -474,11 +560,13 @@ div.field span.required:after {
         background:url(../img/divide.png) 50% 0 no-repeat transparent;
         padding-top: @baseLineHeight / 2;
     }
+    ul {
+        text-align: right;
+    }
     li {
         margin-left: 15px;
-        float: right;
         width: auto;
-        display: block;
+        display: inline-block;
         a {
             color: #423a38;
         }

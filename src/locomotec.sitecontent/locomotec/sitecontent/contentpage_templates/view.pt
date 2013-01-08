@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="locomotec.sitecontent">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <article id="contentpage-view">
+    <header class="contentpage-header">
+      <h1 tal:content="context/Title" />
+    </header>
+    <section id="content-core">
+      <!--<h2 class="headline" id="headline-main">
+        <span tal:condition="context/headline"
+          tal:replace="context/headline" />
+        <span tal:condition="not:context/headline"
+          tal:replace="context/Title" />
+      </h2>-->
+      <p class="lead" tal:condition="context/Description"
+        tal:content="context/Description" />
+      <div tal:condition="context/text"
+        tal:content="structure context/text/output" />
+  
+      <tal:subpages tal:condition="view/has_subpages">
+        <section class="contentpage-subpage"
+          tal:repeat="item view/subpages">
+          <header class="subpage-header">
+            <h2 tal:define="item_id item/getId"
+              class="headline"
+              tal:attributes="id python:'headline-' + item_id">
+              <span tal:condition="view/anonymous"
+                tal:content="item/Title" />
+              <a href="" tal:condition="not:view/anonymous"
+                tal:attributes="href item/getURL"
+                tal:content="item/Title" />
+            </h2>
+          </header>
+          <div tal:content="structure item/text/output" />
+        </section>
+      </tal:subpages>
+  
+      <tal:nosubpages tal:condition="not:view/has_subpages">
+        <div tal:condition="not:view/anonymous"
+          class="alert">
+          <h4>Information</h4>
+          <p>Diese Inhaltsseite hat keine Unterseiten.</p>
+          <p>Da Sie im CMS angemeldet sind, können Sie eine
+            <a href="" tal:define="context_url context/absolute_url"
+              tal:attributes="href python:context_url + '/++add++locomotec.sitecontent.contentpage'">
+              Unterseite anlegen</a>. Diese wird anschliessend automatisch hier
+              gelistet.
+            </p>
+        </div>
+      </tal:nosubpages>
+    </section>
+  </article>
+    
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+

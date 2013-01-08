@@ -2,6 +2,17 @@
     tal:condition="viewlet/has_items">
     <ul class="nav nav-pills nav-stacked nav-toc"
         tal:define="items viewlet/contained_items">
+        <!--<li>
+            <a href=""
+                data-appui="tocnav"
+                data-target="#headline-main"
+                tal:attributes="href context/absolute_url">
+                <span tal:condition="context/headline"
+                    tal:replace="context/headline" />
+                <span tal:condition="not:context/headline"
+                    tal:replace="context/Title" />
+            </a>
+        </li>-->
         <tal:items tal:repeat="item items">
             <li tal:define="item_id item/getId">
                 <a href=""

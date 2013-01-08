@@ -1,0 +1,37 @@
+<div class="box" id="newsentry-box"
+    i18n:domain="locomotec.sitecontent"
+    tal:condition="viewlet/has_items">
+    <div class="box-header">
+        <h4>News &amp; Events</h4>
+    </div>
+    <div class="box-content"
+        tal:define="items viewlet/get_items;
+                    toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+        <tal:items tal:repeat="item items">
+            <div class="box-item">
+                <div class="box-item-meta"
+                    tal:define="item_date item/start;
+                                item_location item/location">
+                    <a href="" tal:attributes="href item/getURL">
+                        <span tal:content="python:toLocalizedTime(item_date)" />
+                        <span tal:content="item_location" />
+                    </a>
+                </div>
+                <h5><a href="" tal:attributes="href item/getURL"
+                    tal:content="item/Title" />
+                </h5>
+                <p class="discreet" tal:content="item/Description" />
+                <small><a href="" tal:attributes="href item/getURL">
+                    <span i18n:translate="">Read more</span>&hellip;
+                </a></small>
+            </div>
+        </tal:items>
+    </div>
+    <div class="box-footer"
+        tal:condition="viewlet/has_newsfolder">
+        <a href="#" tal:define="archive viewlet/news_archive"
+            tal:attributes="href archive/getURL">
+            <span i18n:translate="">Archive</span>
+        </a>
+    </div>
+</div>
