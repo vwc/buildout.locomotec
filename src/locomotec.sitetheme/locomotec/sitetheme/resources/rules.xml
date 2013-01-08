@@ -72,18 +72,6 @@
             <replace css:theme="#fp-header-content"
                 css:content="#fp-header-content"
                 css:if-content="#fp-header-content" />
-            <replace css:theme-children="#fp-box-1"
-                css:content-children="#fp-box-1"
-                css:if-content="#fp-box-1" />
-            <replace css:theme-children="#fp-box-2"
-                css:content-children="#fp-box-2"
-                css:if-content="#fp-box-2" />
-            <replace css:theme-children="#fp-box-3"
-                css:content-children="#fp-box-3"
-                css:if-content="#fp-box-3" />
-            <replace css:theme-children="#fp-box-4"
-                css:content-children="#fp-box-4"
-                css:if-content="#fp-box-4" />
         </rules>
 
         <rules css:if-content="body.template-frontpage-en-view">
@@ -134,9 +122,6 @@
 
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
-
-        <drop css:theme="#footer-static-en" if="$language = 'de'" />
-        <drop css:theme="#footer-static-de" if="$language = 'en'" />
 
         <replace css:content="#portal-globalnav li"
             css:theme-children="#kontaktbar" />
