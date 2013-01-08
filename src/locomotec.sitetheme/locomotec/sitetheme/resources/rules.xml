@@ -60,6 +60,8 @@
 
         <!-- Frontpage styles -->
         <rules css:if-content="body.template-frontpage-view">
+            <replace css:theme="#frontpage-content"
+                css:content="#frontpage-content" />
             <replace css:theme-children="#fp-header-claim"
                 css:content-children="#fp-header-claim"
                 css:if-content="#fp-header-claim" />
