@@ -24,8 +24,7 @@ class EventBoxViewlet(grok.Viewlet):
     def get_items(self):
         context = aq_inner(self.context)
         if self.has_newsfolder:
-            archive = self.news_archive()
-            navroot = archive.getObject()
+            navroot = self.news_archive()
         else:
             navroot = api.portal.get_navigation_root(context)
         catalog = getToolByName(context, 'portal_catalog')
@@ -39,8 +38,8 @@ class EventBoxViewlet(grok.Viewlet):
         return brains
 
     def news_archive(self):
-        folders = self.get_newsfolders()
-        return folders[0]
+        portal = api.portal.get()
+        return portal['news-events']
 
     def get_newsfolders(self):
         context = aq_inner(self.context)
@@ -66,8 +65,7 @@ class EventBoxENViewlet(grok.Viewlet):
     def get_items(self):
         context = aq_inner(self.context)
         if self.has_newsfolder:
-            archive = self.news_archive()
-            navroot = archive.getObject()
+            navroot = self.news_archive()
         else:
             portal = api.portal.get()
             navroot = portal['en']
@@ -82,8 +80,9 @@ class EventBoxENViewlet(grok.Viewlet):
         return brains
 
     def news_archive(self):
-        folders = self.get_newsfolders()
-        return folders[0]
+        portal = api.portal.get()
+        root = portal['en']
+        return root['news-events']
 
     def get_newsfolders(self):
         context = aq_inner(self.context)

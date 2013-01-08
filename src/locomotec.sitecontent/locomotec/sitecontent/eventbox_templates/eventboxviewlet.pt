@@ -30,7 +30,7 @@
     <div class="box-footer"
         tal:condition="viewlet/has_newsfolder">
         <a href="#" tal:define="archive viewlet/news_archive"
-            tal:attributes="href archive/getURL">
+            tal:attributes="href archive/absolute_url">
             <span>Archiv</span>
         </a>
     </div>

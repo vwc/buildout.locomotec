@@ -89,7 +89,7 @@
             <replace css:content="#main-navbar li"
                 css:theme-children="#main-nav" />
         </rules>
-        
+
         <!-- Global navigation -->
         <replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />
@@ -115,6 +115,11 @@
             css:theme="#subnavigation"
             css:if-content="#subnavigation" />
 
+        <rules css:if-content="body.section-en">
+            <replace css:content="#newsentry-box-en"
+            css:theme="#sidebar-news"
+            css:if-content="#newsentry-box-en" />
+        </rules>
         <replace css:content="#newsentry-box"
             css:theme="#sidebar-news"
             css:if-content="#newsentry-box" />
