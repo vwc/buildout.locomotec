@@ -112,6 +112,12 @@
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#sidebar" />
 
+        <drop css:theme="#footer-static-en" if="$language = 'de'" />
+        <drop css:theme="#footer-static-de" if="$language = 'en'" />
+
+        <replace css:content="#portal-globalnav li"
+            css:theme-children="#kontaktbar" />
+
     </rules>
 
 </rules>
