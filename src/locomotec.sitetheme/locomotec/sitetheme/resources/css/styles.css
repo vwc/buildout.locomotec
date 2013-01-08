@@ -6641,6 +6641,7 @@ body.tile-overlay #tile-wrapper {
   margin: 20px 0;
   padding-top: 120px;
   font-weight: bold;
+  text-align: center;
   color: #fcb034;
   text-transform: uppercase;
   font-size: 24px;
@@ -6654,9 +6655,6 @@ body.tile-overlay #tile-wrapper {
 }
 .special-box .special-header.box-4 {
   background: url(../img/Sprite.png) -730px 0px no-repeat transparent;
-}
-.special-box .special-content {
-  text-align: center;
 }
 .special-box .special-content p {
   font-size: 13px;
