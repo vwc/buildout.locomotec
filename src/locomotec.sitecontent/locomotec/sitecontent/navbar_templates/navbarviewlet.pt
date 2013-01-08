@@ -1,0 +1,22 @@
+<div id="navbar-viewlet">
+    <ul id="main-navbar" tal:define="navtree viewlet/sections">
+        <tal:sections tal:repeat="tab viewlet/sections">
+            <li tal:define="item tab/item;
+                            item_id item/getId;
+                            item_title item/Title;
+                            item_url item/getURL;
+                            selected python:viewlet.isActiveItem(item_id)"
+                tal:attributes="id string:tab-${item_id};
+                                class selected">
+                <a href=""
+                    tal:attributes="href item_url"
+                    tal:content="item_title" />
+            </li>
+        </tal:sections>
+    </ul>
+    <a href="" id="portal-url-en"
+        tal:define="base_url viewlet/en_base_url"
+        tal:attributes="href python:base_url">
+        EN base url
+    </a>
+</div>

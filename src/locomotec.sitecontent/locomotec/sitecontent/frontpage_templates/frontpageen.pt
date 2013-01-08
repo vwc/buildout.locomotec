@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="mth.skihotels">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+  <article id="frontpage-view">
+    <header>
+      <h1 tal:content="context/Title" />
+    </header>
+    <section id="fp-header-claim">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.plaintext/fp-claim" />
+    </section>
+    <section id="fp-header-content">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-header" />
+    </section>
+
+    <section id="frontpage-content" tal:condition="view/has_subpages">
+      <div class="row-fluid">
+        <tal:items tal:repeat="item view/subpages">
+          <div class="span3 special-box"
+            tal:define="count repeat/item/number">
+            <a href="/vision" tal:attributes="href item/getURL">
+              <div class="special-header box-1"
+                tal:attributes="class string:special-header box-${count}">
+                <span tal:content="item/Title">Vision</span>
+              </div>
+            </a>
+            <div class="special-content">
+              <p><span tal:condition="item/teaser" tal:content="item/teaser">
+                    Description</span>
+                  <span tal:condition="not:item/teaser" tal:content="item/Description">
+                    Description</span>
+                <a href="" i18n:translate=""
+                  tal:attributes="href item/getURL">more&hellip;</a>
+              </p>
+            </div>
+          </div>
+        </tal:items>
+      </div>
+    </section>
+
+    <section id="fp-box-1">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-1" />
+    </section>
+    <section id="fp-box-2">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-2" />
+    </section>
+    <section id="fp-box-3">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-3" />
+    </section>
+    <section id="fp-box-4">
+      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-4" />
+    </section>
+
+  </article>
+    
+  </metal:content-core>
+</metal:main>
+
+
+</body>
+</html>
