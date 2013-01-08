@@ -6974,11 +6974,13 @@ div.field span.required:after {
   background: url(../img/divide.png) 50% 0 no-repeat transparent;
   padding-top: 10px;
 }
+#site-footer ul {
+  text-align: right;
+}
 #site-footer li {
   margin-left: 15px;
-  float: right;
   width: auto;
-  display: block;
+  display: inline-block;
 }
 #site-footer li a {
   color: #423a38;
