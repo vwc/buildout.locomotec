@@ -7,12 +7,14 @@ from Products.CMFCore.utils import getToolByName
 from plone.app.layout.viewlets.interfaces import IPortalFooter
 from Products.CMFCore.interfaces import IFolderish
 
+from locomotec.sitecontent.interfaces import ILocomotecSite
 from locomotec.sitecontent.newsfolder import INewsFolder
 from locomotec.sitecontent.newsentry import INewsEntry
 
 
 class EventBoxViewlet(grok.Viewlet):
     grok.context(IFolderish)
+    grok.layer(ILocomotecSite)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
     grok.name('locomotec.sitecontent.EventBoxViewlet')
@@ -54,6 +56,7 @@ class EventBoxViewlet(grok.Viewlet):
 
 class EventBoxENViewlet(grok.Viewlet):
     grok.context(IFolderish)
+    grok.layer(ILocomotecSite)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
     grok.name('locomotec.sitecontent.EventBoxENViewlet')

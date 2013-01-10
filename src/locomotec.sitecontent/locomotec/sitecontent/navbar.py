@@ -10,9 +10,12 @@ from plone.app.layout.navigation.navtree import buildFolderTree
 
 from plone.app.layout.viewlets.interfaces import IPortalFooter
 
+from locomotec.sitecontent.interfaces import ILocomotecSite
+
 
 class NavbarViewlet(grok.Viewlet):
     grok.context(Interface)
+    grok.layer(ILocomotecSite)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
     grok.name('locomotec.sitecontent.NavbarViewlet')
