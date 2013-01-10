@@ -30,7 +30,7 @@
                                 // (string | mandatory) the heading of the notification
                                 title: message,
                                 // (string | mandatory) the text inside the notification
-                                text: 'This will fade out after a certain amount of time.'
+                                text: data.timestamp
                             });
                             //var htmlString = '<p class="text-warning">' + message + '</p>';
                             //$('#form-state').append(htmlString).slideDown('slow');
@@ -42,6 +42,7 @@
                 });
             });
         }
+        //setTimeout(autoSaveSurvey(), 2000);
         setInterval(autoSaveSurvey, 30000);
     });
 }(jQuery));

@@ -1,17 +1,23 @@
 import math
 import json
+from datetime import datetime
 from Acquisition import aq_inner
 from AccessControl import Unauthorized
+
+from zope import schema
 from five import grok
 from plone import api
 
 from zope.component import getMultiAdapter
+from zope.component import getUtility
 from plone.directives import dexterity, form
 
 from plone.keyring import django_random
 
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
+
+from egomotion.sitecontent.surveytool import ISurveyTool
 
 from egomotion.sitecontent import MessageFactory as _
 
@@ -20,6 +26,14 @@ class ISurvey(form.Schema, IImageScaleTraversable):
     """
     A folderish survey holding participant objects
     """
+    answers = schema.List(
+        title=_(u"Participant Answers"),
+        description=_(u"Basic answer storage"),
+        value_type=schema.TextLine(
+            title=_(u"Anser"),
+        ),
+        required=False,
+    )
 
 
 class Survey(dexterity.Container):
@@ -35,7 +49,7 @@ class View(grok.View):
         context = aq_inner(self.context)
         self.has_images = len(self.contained_images()) > 0
         unwanted = ('_authenticator', 'form.button.Submit')
-        if 'form.button.Submit' in self.request:
+        if 'form.buttons.Submit' in self.request:
             self.errors = {}
             form = self.request.form
             authenticator = getMultiAdapter((context, self.request),
@@ -54,8 +68,29 @@ class View(grok.View):
                 self._processData(surveydata)
 
     def _processData(self, data):
-        participant_number = django_random.get_random_string()
-        return data
+        context = aq_inner(self.context)
+        tool = getUtility(ISurveyTool)
+        survey_state = tool.get()
+        answers = getattr(context, 'answers', None)
+        if answers is not None:
+            answers.append(json.dumps(survey_state))
+        else:
+            answers = json.dumps(survey_state)
+        setattr(context, 'answers', answers)
+        return json.dumps(answers)
+
+    def default_value(self, fieldname):
+        tool = getUtility(ISurveyTool)
+        value = ''
+        try:
+            state = tool.get()
+        except KeyError:
+            state = None
+        if state is not None:
+            data = state['survey-state']
+            if fieldname in data:
+                value = data[fieldname]
+        return value
 
     def contained_images(self):
         context = aq_inner(self.context)
@@ -127,16 +162,54 @@ class AutosaveSurvey(grok.View):
         context = aq_inner(self.context)
         sort_query = list(self.query.split(','))
         data = self.request.form
-        msg = _(u"Survey state successfully saved")
+        tool = getUtility(ISurveyTool)
+        puid = django_random.get_random_string()
+        data['puid'] = puid
+        name = 'survey-state'
+        tool.add(name, data)
+        now = datetime.now()
+        timestamp = api.portal.get_localized_time(datetime=now,
+                                                  long_format=True)
+        time_info = _(u"Autosave %s") % timestamp
+        msg = _(u"Survey state automatically saved")
         results = {'success': True,
-                   'message': msg
+                   'message': msg,
+                   'timestamp': time_info
                    }
         self.request.response.setHeader('Content-Type',
                                         'application/json; charset=utf-8')
         return json.dumps(results)
+
+    def has_active_session(self):
+        active = False
+        try:
+            session = self.surverytool()
+        except KeyError:
+            session = None
+        if session is not None:
+            active = True
+        return active
+
+    def surveytool(self):
+        tool = getUtility(ISurveyTool)
+        return tool.get()
+
+    def get_client_ip(self):
+        request = self.request
+        if "HTTP_X_FORWARDED_FOR" in request.environ:
+            ip = request.environ['HTTP_X_FORWARDED_FOR']
+        elif "HTTP_HOST" in request.environ:
+            ip = request.environ['REMOTE_ADDR']
+        else:
+            ip = None
+        return ip
 
 
 class SelectFavorite(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')
     grok.name('favorite-select')
+
+    def survey_state(self):
+        tool = getUtility(ISurveyTool)
+        return tool.get()

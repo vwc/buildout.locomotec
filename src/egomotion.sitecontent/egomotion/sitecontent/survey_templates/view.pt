@@ -71,7 +71,6 @@
                     class="input-mini"
                     id="favorite1"
                     name="favorite1"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                     <div class="help-block error"
                       tal:condition="err_msg">
@@ -95,21 +94,18 @@
                     class="input-xlarge"
                     id="favorite1.likes.one"
                     name="favorite1.likes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite1.likes.two"
                     name="favorite1.likes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite1.likes.three"
                     name="favorite1.likes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite1 like -->
@@ -128,21 +124,18 @@
                     class="input-xlarge"
                     id="favorite1.dislikes.one"
                     name="favorite1.dislikes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite1.dislikes.two"
                     name="favorite1.dislikes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite1.dislikes.three"
                     name="favorite1.dislikes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite 1 dislike -->
@@ -164,7 +157,6 @@
                     class="input-mini"
                     id="favorite2"
                     name="favorite2"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                     <div class="help-block error"
                       tal:condition="err_msg">
@@ -188,21 +180,18 @@
                     class="input-xlarge"
                     id="favorite2.likes.one"
                     name="favorite2.likes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite2.likes.two"
                     name="favorite2.likes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite2.likes.three"
                     name="favorite2.likes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite 2 like -->
@@ -221,21 +210,18 @@
                     class="input-xlarge"
                     id="favorite2.dislikes.one"
                     name="favorite2.dislikes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite2.dislikes.two"
                     name="favorite2.dislikes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite2.dislikes.three"
                     name="favorite2.dislikes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite 2 dislike -->
@@ -257,7 +243,6 @@
                     class="input-mini"
                     id="favorite3"
                     name="favorite3"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                     <div class="help-block error"
                       tal:condition="err_msg">
@@ -281,21 +266,18 @@
                     class="input-xlarge"
                     id="favorite3.likes.one"
                     name="favorite3.likes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite3.likes.two"
                     name="favorite3.likes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite3.likes.three"
                     name="favorite3.likes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite1 like -->
@@ -314,21 +296,18 @@
                     class="input-xlarge"
                     id="favorite3.dislikes.one"
                     name="favorite3.dislikes.one"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite3.dislikes.two"
                     name="favorite3.dislikes.two"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                   <input
                     type="text"
                     class="input-xlarge"
                     id="favorite3.dislikes.three"
                     name="favorite3.dislikes.three"
-                    required="required"
                     tal:attributes="value python:error and view.default_value(error) or ''" />
                 </div>
               </div><!-- / favorite 1 dislike -->
@@ -347,19 +326,22 @@
                 <span class="add-on discreet">a.</span>
                 <input class="input-xxlarge" id="dislikes.one"
                   name="dislikes.one"
-                  type="text">
+                  type="text"
+                  tal:attributes="value python:view.default_value(fieldname='dislikes.one')">
               </div>
               <div class="input-prepend">
                 <span class="add-on discreet">b.</span>
                 <input class="input-xxlarge" id="dislikes.two"
                   dislikes="dislikes.two"
-                  type="text">
+                  type="text"
+                  tal:attributes="value python:view.default_value(fieldname='dislikes.two')">
               </div>
               <div class="input-prepend">
                 <span class="add-on discreet">c.</span>
                 <input class="input-xxlarge" id="dislikes.three"
                   name="dislikes.three"
-                  type="text">
+                  type="text"
+                  tal:attributes="value python:view.default_value(fieldname='dislikes.three')">
               </div>
             </div>
           </div><!-- / favorites global dislike -->
@@ -377,24 +359,31 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="" name="functionality.one">
+              <input type="checkbox" value="off" name="functionality.one"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.one')">
               Ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="functionality.two">
+              <input type="checkbox" value="off" name="functionality.two"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.two')">
               Ein Navigationsprogramm zum Laufen auf unbekannten Routen
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="functionality.three">
+              <input type="checkbox" value="off" name="functionality.three"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.three')">
               Eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="functionality.four">
+              <input type="checkbox" value="off" name="functionality.four"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.four')">
               Eine Funktion, die es mir ermöglicht, mit meinen Freunden einen virtuellen Lauftreff zu organisieren (Videokonferenz z.B. über Skype mit Freunden an entfernten Orten)
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="functionality.additional" type="text" placeholder="Optionale weitere Angaben">
+              <input class="input-xxlarge" id="functionality.additional"
+                name="functionality.additional"
+                type="text" placeholder="Optionale weitere Angaben"
+                tal:attributes="value python:view.default_value(fieldname='functionality.additional')">
             </div>
           </div>
         </div><!-- / addon functionality -->
@@ -407,20 +396,26 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="" name="accessory.one">
+              <input type="checkbox" value="off" name="accessory.one"
+                tal:attributes="checked python:view.default_value(fieldname='accessory.one')">
               Beleuchtung, Klingel, Schloss
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="accessory.two">
+              <input type="checkbox" value="off" name="accessory.two"
+                tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
               Flaschenhalter, Ablage („Handschuhfach“) für Schlüssel und andere Kleinigkeiten
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="accessory.three">
+              <input type="checkbox" value="off" name="accessory.three"
+                tal:attributes="checked python:view.default_value(fieldname='accessory.three')">
               Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="accessory.additional" type="text" placeholder="Optionale weitere Angaben">
+              <input class="input-xxlarge" id="accessory.additional"
+                name="accessory.additional"
+                type="text" placeholder="Optionale weitere Angaben"
+                tal:attributes="value python:view.default_value(fieldname='accessory.additional')">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -434,24 +429,29 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="" name="benefit.one">
+              <input type="checkbox" value="off" name="benefit.one"
+                tal:attributes="checked python:view.default_value(fieldname='benefit.one')">
               Ich würde gerne damit zum Einkaufen joggen (Befestigung für Einkaufskorb).
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="benefit.two">
+              <input type="checkbox" value="off" name="benefit.two"
+                tal:attributes="checked python:view.default_value(fieldname='benefit.two')">
               Ich möchte mit meinen Kindern joggen gehen (Befestigung für Kindersitz bzw. Babyschale)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="benefit.three">
+              <input type="checkbox" value="off" name="benefit.three"
+                tal:attributes="checked python:view.default_value(fieldname='benefit.three')">
               Ich möchte damit auch schwere Lasten transportieren und selbst damit fahren können.
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="benefit.four">
+              <input type="checkbox" value="off" name="benefit.four"
+                tal:attributes="checked python:view.default_value(fieldname='benefit.four')">
               Ich möchte damit regelmäßig eine unverbindliche Leistungsdiagnostik durchführen können.
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Optionale weitere Angaben">
+              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Optionale weitere Angaben"
+                tal:attributes="value python:view.default_value(fieldname='benefit.additional')">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -462,15 +462,18 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option1"
+                tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               sehr wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option2"
+                tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option1">
+              <input type="radio" name="roadwork" id="roadwork1" value="option3"
+                tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               unwichtig
             </label>
           </div>
@@ -891,7 +894,7 @@
               </span>
           </div>
         </div>
-
+        <span tal:replace="structure context/@@authenticator/authenticator" />
         <!-- Form actions -->
         <div class="form-actions">
           <button type="submit"

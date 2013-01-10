@@ -12,6 +12,8 @@
       <h1>Select favorite</h1>
     </header>
     <p>Select this design blueprint as your favorite</p>
+    <h2>Survey state</h2>
+    <code tal:content="view/survey_state">Code</code>
   </div>
   </metal:block>
 

@@ -1,6 +1,9 @@
 from five import grok
+from plone import api
+
 from zope.interface import Interface
 from zope.globalrequest import getRequest
+from zope.component.hooks import getSite
 
 from collective.beaker.interfaces import ISession
 
