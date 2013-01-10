@@ -11,8 +11,9 @@ from plone import api
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from plone.directives import dexterity, form
-
 from plone.keyring import django_random
+
+from plone.dexterity.utils import createContentInContainer
 
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
@@ -26,14 +27,6 @@ class ISurvey(form.Schema, IImageScaleTraversable):
     """
     A folderish survey holding participant objects
     """
-    answers = schema.List(
-        title=_(u"Participant Answers"),
-        description=_(u"Basic answer storage"),
-        value_type=schema.TextLine(
-            title=_(u"Anser"),
-        ),
-        required=False,
-    )
 
 
 class Survey(dexterity.Container):

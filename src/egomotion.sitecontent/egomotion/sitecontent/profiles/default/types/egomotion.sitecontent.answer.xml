@@ -1,24 +1,22 @@
 <?xml version="1.0"?>
-<object name="egomotion.sitecontent.survey"
+<object name="egomotion.sitecontent.answer"
    meta_type="Dexterity FTI"
    i18n:domain="egomotion.sitecontent" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Survey</property>
+  <property name="title" i18n:translate="">Answer</property>
   <property name="description"
-    i18n:translate="">A folderish survey holding participant objects</property>
-  <property name="icon_expr">string:${portal_url}/folder_icon.png</property>
-  <property name="factory">egomotion.sitecontent.survey</property>
-  <property name="global_allow">True</property>
-  <property name="filter_content_types">True</property>  
-  <property name="allowed_content_types">
-    <element value="egomotion.sitecontent.answer" />
-  </poperty>
+    i18n:translate="">A single survey participation</property>
+  <property name="icon_expr">string:${portal_url}/document_icon.png</property>
+  <property name="factory">egomotion.sitecontent.answer</property>
+  <property name="global_allow">False</property>
+  <property name="filter_content_types">False</property>  
+  <property name="allowed_content_types" />
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">egomotion.sitecontent.survey.ISurvey</property> 
-  <property name="klass">egomotion.sitecontent.survey.Survey</property>
+  <property name="schema">egomotion.sitecontent.answer.IAnswer</property> 
+  <property name="klass">egomotion.sitecontent.answer.Answer</property>
 
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
