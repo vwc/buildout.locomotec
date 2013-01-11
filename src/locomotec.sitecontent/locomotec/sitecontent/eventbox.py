@@ -36,7 +36,7 @@ class EventBoxViewlet(grok.Viewlet):
                          review_state='published',
                          sort_on='start',
                          sort_order='reverse',
-                         sort_limit=3)[:3]
+                         sort_limit=2)[:2]
         return brains
 
     def news_archive(self):
@@ -79,7 +79,7 @@ class EventBoxENViewlet(grok.Viewlet):
                          review_state='published',
                          sort_on='start',
                          sort_order='reverse',
-                         sort_limit=3)[:3]
+                         sort_limit=2)[:2]
         return brains
 
     def news_archive(self):

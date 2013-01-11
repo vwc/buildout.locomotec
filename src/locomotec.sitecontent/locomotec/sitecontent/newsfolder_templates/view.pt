@@ -38,7 +38,9 @@
           </h4>
           <p tal:condition="item/Description" 
             tal:content="item/Description" />
-          <a href="" tal:attributes="href item/getURL">mehr</a>
+          <a href="" tal:attributes="href item/getURL">
+            <span i18n:translate="">mehr</span>&hellip;
+          </a>
         </section>
         <div metal:use-macro="context/batch_macros/macros/navigation" />
       </div>
