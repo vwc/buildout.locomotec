@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="locomotec.sitecontent.layer"
+        interface="locomotec.sitecontent.interfaces.ILocomotecSite"
+    />
+</layers>
