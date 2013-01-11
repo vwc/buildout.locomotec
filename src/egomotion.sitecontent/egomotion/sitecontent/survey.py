@@ -40,6 +40,7 @@ class View(grok.View):
 
     def update(self):
         context = aq_inner(self.context)
+        self.anonymous = api.user.is_anonymous()
         self.has_images = len(self.contained_images()) > 0
         unwanted = ('_authenticator', 'form.button.Submit')
         if 'form.buttons.Submit' in self.request:
@@ -181,14 +182,25 @@ class AutosaveSurvey(grok.View):
     def render(self):
         data = self.request.form
         tool = getUtility(ISurveyTool)
-        puid = django_random.get_random_string()
-        data['puid'] = puid
-        name = 'survey-state'
-        tool.add(name, data)
         now = datetime.now()
         timestamp = api.portal.get_localized_time(datetime=now,
                                                   long_format=True)
-        time_info = _(u"Autosave %s") % timestamp
+        client_ip = self.get_client_ip()
+        if client_ip is None:
+            userinfo = timestamp
+        else:
+            userinfo = client_ip + '-' + timestamp
+        name = 'survey-state'
+        if not self.has_active_session():
+            puid = django_random.get_random_string()
+            data['puid'] = puid
+        else:
+            current_session = tool[name]
+            saved_puid = current_session['puid']
+            data['puid'] = saved_puid
+        data['pid'] = client_ip
+        tool.add(name, data)
+        time_info = _(u"Autosave %s") % userinfo
         msg = _(u"Survey state automatically saved")
         results = {'success': True,
                    'message': msg,

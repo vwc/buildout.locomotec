@@ -15,6 +15,13 @@
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
+    <section tal:condition="not:view/anonymous" class="alert">
+      <h4>Adminsitration</h4>
+      <p>Sie sind als Redakteur angemeldet:
+        <a href="" tal:attributes="href python:context_url + '/@@survey-adminsitration'">
+          Ergebnisse anzeigen</a>
+      </p>
+    </section>
     <section>
       <h4>
         1. Die folgenden 15 Designskizzen zeigen, wie unser Lauftrainer als
