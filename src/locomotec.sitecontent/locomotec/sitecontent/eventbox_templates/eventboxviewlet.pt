@@ -1,6 +1,5 @@
 <div class="box" id="newsentry-box"
-    i18n:domain="locomotec.sitecontent"
-    tal:condition="viewlet/has_items">
+    i18n:domain="locomotec.sitecontent">
     <div class="box-header">
         <h4>News &amp; Events</h4>
     </div>
