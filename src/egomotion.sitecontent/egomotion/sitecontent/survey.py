@@ -13,7 +13,9 @@ from plone.directives import dexterity, form
 from plone.keyring import django_random
 
 from plone.dexterity.utils import createContentInContainer
+from plone.app.uuid.utils import uuidToObject
 
+from plone.uuid.interfaces import IUUID
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
 
@@ -78,9 +80,11 @@ class View(grok.View):
             'egomotion.sitecontent.answer',
             checkConstraints=False, **itemdata)
         setattr(item, 'answers', answers)
+        setattr(item, 'participant', index)
         modified(item)
         item.reindexObject(idxs='modified')
-        next_url = context.absolute_url() + '/@@survey-saved'
+        uid = IUUID(item)
+        next_url = context.absolute_url() + '/@@survey-saved?uuid=' + uid
         return self.request.response.redirect(next_url)
 
     def generate_index(self):
@@ -195,7 +199,8 @@ class AutosaveSurvey(grok.View):
             puid = django_random.get_random_string()
             data['puid'] = puid
         else:
-            current_session = tool[name]
+            session = tool.get()
+            current_session = session[name]
             saved_puid = current_session['puid']
             data['puid'] = saved_puid
         data['pid'] = client_ip
@@ -213,7 +218,7 @@ class AutosaveSurvey(grok.View):
     def has_active_session(self):
         active = False
         try:
-            session = self.surverytool()
+            session = self.surveytool()
         except KeyError:
             session = None
         if session is not None:
@@ -239,6 +244,19 @@ class SurveySaved(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')
     grok.name('survey-saved')
+
+    def item_info(self):
+        item = self.resolve_item()
+        info = {}
+        answers = json.loads(item.answers)
+        results = answers['survey-state']
+        info['code'] = results['puid']
+        info['index'] = item.participant
+        return info
+
+    def resolve_item(self):
+        uuid = self.request.get('uuid', None)
+        return uuidToObject(uuid)
 
 
 class SelectFavorite(grok.View):

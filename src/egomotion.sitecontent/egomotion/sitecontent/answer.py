@@ -15,6 +15,14 @@ class IAnswer(form.Schema, IImageScaleTraversable):
         title=_(u"Answers"),
         required=False,
     )
+    participant = schema.TextLine(
+        title=_(u"Participant number"),
+        required=False,
+    )
+    claimed = schema.Bool(
+        title=_(u"Sweepstake code claimed?"),
+        required=False,
+    )
 
 
 class Answer(dexterity.Item):

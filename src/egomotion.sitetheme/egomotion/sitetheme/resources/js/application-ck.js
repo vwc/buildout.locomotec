@@ -20,6 +20,7 @@
         }
         if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) < 7) return;
         e('a[data-appui="gallery"]').prettyPhoto();
+        e("#sweepstake-notice").expose();
         e('a[data-appui="pagescroll"]').on("click", function(t) {
             t.preventDefault();
             var n = e(this).data("target");

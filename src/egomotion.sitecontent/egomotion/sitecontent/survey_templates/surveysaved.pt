@@ -7,16 +7,51 @@
 
   <metal:block fill-slot="main">
 
-  <article id="content-core">
+  <article id="content-core"
+    tal:define="item view/resolve_item;
+                portal_url context/portal_url">
     <header>
-      <h1>Survey saved</h1>
+      <h1>Vielen Dank für die Teilnahme an unserer Umfrage</h1>
     </header>
-    <div class="alert">
-      <h4>Data successfully saved</h4>
-      <p>This view will hold participant specific information, like
-        the sweepstake code and a warm thank you
-      </p>
-    </div>
+    <section tal:condition="item">
+      <div class="alert alert-error">
+        <h4>Dieser Link ist ungültig</h4>
+        <p>Nach Abschluss der Umfrage kann nur einmalig eine Losnummer und
+          der dazugehörige Gewinncode ausgegeben werden.</p>
+      </div>
+      <div class="well" id="sweepstake-notice"
+        tal:condition="not:item/claimed">
+        <h2>Teilnahme am Gewinnspiel</h2>
+        <a href="javascript:window.print()"
+          class="btn pull-right">
+          <i class="icon-print"></i>
+          Drucken
+        </a>
+        <p class="lead">
+          Merke Dir Deine Nummer und Deinen Code (ggf. ausdrucken),<br />
+          damit Du nach Ablauf des Gewinnspiels Deinen Gewinn einfordern kannst.
+        </p>
+        <tal:block tal:define="info view/item_info">
+          <label>Losnummer</label>
+          <div class="input-prepend input-append">
+            <span class="add-on"><i class="icon-star"></i></span>
+            <input class="input-medium" id="number" type="text"
+              tal:attributes="value item/participant">
+            <button class="btn" type="button"><i class="icon-copy"></i></button>
+          </div>
+          <label>Gewinncode</label>
+          <div class="input-prepend input-append">
+            <span class="add-on"><i class="icon-gift"></i></span>
+            <input class="input-medium" id="sweepstake.code" type="text"
+              tal:attributes="value info/code">
+            <button class="btn" type="button"><i class="icon-copy"></i></button>
+          </div>
+          <div class="help-text">
+            <p class="text-warning">Dieser Gewinncode wird nur einmalig angezeigt!</p>
+          </div>
+        </tal:block>
+      </div>
+    </section>
   </article>
   </metal:block>
 

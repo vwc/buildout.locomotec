@@ -16,10 +16,11 @@
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
     <section tal:condition="not:view/anonymous" class="alert">
-      <h4>Adminsitration</h4>
+      <h4>Administration</h4>
       <p>Sie sind als Redakteur angemeldet:
-        <a href="" tal:attributes="href python:context_url + '/@@survey-adminsitration'">
-          Ergebnisse anzeigen</a>
+        <a href="" tal:attributes="href python:context_url + '/@@survey-administration'">
+          <i class="icon-cog"></i>
+          Umfrage Verwaltung</a>
       </p>
     </section>
     <section>
