@@ -3,13 +3,12 @@ import json
 from datetime import datetime
 from Acquisition import aq_inner
 from AccessControl import Unauthorized
-
-from zope import schema
 from five import grok
 from plone import api
 
 from zope.component import getMultiAdapter
 from zope.component import getUtility
+from zope.lifecycleevent import modified
 from plone.directives import dexterity, form
 from plone.keyring import django_random
 
@@ -19,6 +18,7 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
 
 from egomotion.sitecontent.surveytool import ISurveyTool
+from egomotion.sitecontent.answer import IAnswer
 
 from egomotion.sitecontent import MessageFactory as _
 
@@ -62,15 +62,39 @@ class View(grok.View):
 
     def _processData(self, data):
         context = aq_inner(self.context)
+        itemdata = {}
         tool = getUtility(ISurveyTool)
         survey_state = tool.get()
-        answers = getattr(context, 'answers', None)
-        if answers is not None:
-            answers.append(json.dumps(survey_state))
-        else:
-            answers = json.dumps(survey_state)
-        setattr(context, 'answers', answers)
-        return json.dumps(answers)
+        answers = json.dumps(survey_state)
+        now = datetime.now()
+        timestamp = api.portal.get_localized_time(datetime=now)
+        index = self.generate_index()
+        new_title = str(index) + ' - ' + timestamp
+        itemdata['title'] = new_title
+        container = context
+        item = createContentInContainer(
+            container,
+            'egomotion.sitecontent.answer',
+            checkConstraints=False, **itemdata)
+        setattr(item, 'answers', answers)
+        modified(item)
+        item.reindexObject(idxs='modified')
+        next_url = context.absolute_url() + '/@@survey-saved'
+        return self.request.response.redirect(next_url)
+
+    def generate_index(self):
+        items = self.contained_answers()
+        count = len(items)
+        new_index = count + 1
+        return new_index
+
+    def contained_answers(self):
+        context = aq_inner(self.context)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog(object_provides=IAnswer.__identifier__,
+                          path=dict(query='/'.join(context.getPhysicalPath()),
+                                    depth=1))
+        return results
 
     def default_value(self, fieldname):
         tool = getUtility(ISurveyTool)
@@ -80,9 +104,12 @@ class View(grok.View):
         except KeyError:
             state = None
         if state is not None:
-            data = state['survey-state']
-            if fieldname in data:
-                value = data[fieldname]
+            try:
+                data = state['survey-state']
+                if fieldname in data:
+                    value = data[fieldname]
+            except KeyError:
+                value = ''
         return value
 
     def contained_images(self):
@@ -152,8 +179,6 @@ class AutosaveSurvey(grok.View):
         self.query = self.request["QUERY_STRING"]
 
     def render(self):
-        context = aq_inner(self.context)
-        sort_query = list(self.query.split(','))
         data = self.request.form
         tool = getUtility(ISurveyTool)
         puid = django_random.get_random_string()
@@ -196,6 +221,12 @@ class AutosaveSurvey(grok.View):
         else:
             ip = None
         return ip
+
+
+class SurveySaved(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('survey-saved')
 
 
 class SelectFavorite(grok.View):

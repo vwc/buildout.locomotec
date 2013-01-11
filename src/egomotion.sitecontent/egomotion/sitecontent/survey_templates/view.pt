@@ -894,6 +894,30 @@
               </span>
           </div>
         </div>
+
+        <div class="survey-question">
+          <div class="controls">
+            <label class="checkbox">
+              <input type="checkbox" value="off" name="interest.one">
+              Ja, ich interessiere mich für den RUFUS und würde gerne informiert
+              werden, wie es mit RUFUS weitergeht und wann er auf dem Markt ist. 
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="off" name="interest.two">
+                Ja, ich möchte gerne zu den ersten 100 Kunden gehören, die RUFUS
+                zur Hälfte des Preises erwerben können. Ich möchte mir hiermit
+                eine unverbindliche Kaufoption sichern, die ich jederzeit und
+                ohne weitere Mitteilung verfallen lassen kann.
+            </label>
+            <div class="input-prepend">
+               <span class="add-on discreet">E-Mail-Adresse</span>
+              <input class="input-xxlarge" id="email" type="text"
+                name="email"
+                placeholder="max@mustermann.de">
+            </div>
+          </div>
+        </div>
+
         <span tal:replace="structure context/@@authenticator/authenticator" />
         <!-- Form actions -->
         <div class="form-actions">

@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="egomotion.sitecontent"
+      metal:use-macro="context/main_template/macros/master">
+
+  <metal:block fill-slot="main">
+
+  <article id="content-core">
+    <header>
+      <h1>Survey saved</h1>
+    </header>
+    <div class="alert">
+      <h4>Data successfully saved</h4>
+      <p>This view will hold participant specific information, like
+        the sweepstake code and a warm thank you
+      </p>
+    </div>
+  </article>
+  </metal:block>
+
+</html>
