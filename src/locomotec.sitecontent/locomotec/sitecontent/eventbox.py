@@ -23,6 +23,13 @@ class EventBoxViewlet(grok.Viewlet):
         self.has_newsfolder = len(self.get_newsfolders()) > 0
         self.has_items = len(self.get_items()) > 0
 
+    def is_displayed(self):
+        context = aq_inner(self.context)
+        display = True
+        if 'en' in context.getPhysicalPath():
+            display = False
+        return display
+
     def get_items(self):
         context = aq_inner(self.context)
         if self.has_newsfolder:
@@ -64,6 +71,14 @@ class EventBoxENViewlet(grok.Viewlet):
     def update(self):
         self.has_newsfolder = len(self.get_newsfolders()) > 0
         self.has_items = len(self.get_items()) > 0
+
+    def is_displayed(self):
+        context = aq_inner(self.context)
+        path = context.getPhysicalPath()
+        available = False
+        if 'en' in path:
+            available = True
+        return available
 
     def get_items(self):
         context = aq_inner(self.context)

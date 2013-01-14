@@ -1,9 +1,11 @@
 <div class="box" id="newsentry-box"
-    i18n:domain="locomotec.sitecontent">
+    i18n:domain="locomotec.sitecontent"
+    tal:condition="viewlet/is_displayed">
     <div class="box-header">
         <h4>News &amp; Events</h4>
     </div>
     <div class="box-content"
+        tal:condition="viewlet/has_items"
         tal:define="items viewlet/get_items;
                     toLocalizedTime nocall:context/@@plone/toLocalizedTime">
         <tal:items tal:repeat="item items">
@@ -25,6 +27,11 @@
                 </a></small>
             </div>
         </tal:items>
+    </div>
+    <div class="box-content"
+        tal:condition="not:viewlet/has_items">
+        <p class="discreet">Im Augenblick liegen keine News/Events vor</p>
+        <br />
     </div>
     <div class="box-footer"
         tal:condition="viewlet/has_newsfolder">
