@@ -9,6 +9,7 @@
             // enhancement.
             return;
         }
+        $('span[data-appui="prettydate"]').timeago();
         $('a[data-appui="gallery"]').prettyPhoto();
         if ($('#sweepstake-notice').length > 0) {
             $('#sweepstake-notice').expose();

@@ -12,6 +12,14 @@
      conditionalcomment="" cookable="True" enabled="True"
      expression="request/HTTP_X_THEME_ENABLED | nothing"
      id="++theme++egomotion.sitetheme/js/jquery.autosave.js" inline="False"/>
+<javascript authenticated="False" cacheable="True" compression="none"
+     conditionalcomment="" cookable="True" enabled="True"
+     expression="request/HTTP_X_THEME_ENABLED | nothing"
+     id="++theme++egomotion.sitetheme/js/jquery.timeago.js" inline="False"/>
+<javascript authenticated="False" cacheable="True" compression="none"
+     conditionalcomment="" cookable="True" enabled="True"
+     expression="request/HTTP_X_THEME_ENABLED | nothing"
+     id="++theme++egomotion.sitetheme/js/jquery.timeago.de.js" inline="False"/>
  <javascript authenticated="False" cacheable="True" compression="safe"
      conditionalcomment="" cookable="True" enabled="True"
      expression="request/HTTP_X_THEME_ENABLED | nothing"

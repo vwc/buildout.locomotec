@@ -6832,6 +6832,92 @@ body.frontpage #site-wrapper .splashbox h2 {
 #sweepstake-notice {
   background: #ffffff;
 }
+.statuspanel {
+  width: 150px !important;
+  background-color: #ffffff;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.statuspanel .top {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #555555;
+  color: #ffffff;
+  padding-top: 20px;
+}
+.statuspanel .top i {
+  display: block;
+  margin: 0px auto 20px;
+}
+.statuspanel .top h6 {
+  display: inline;
+  background-color: #555555;
+  position: relative;
+  top: 5px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  color: #FFF;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.statuspanel .bottom {
+  padding-top: 20px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-align: center;
+  border-top: none;
+}
+.statuspanel .bottom h2 {
+  font-weight: 600;
+  margin: 0;
+}
+.statuspanel .bottom h6 {
+  font-size: 0.7em;
+  font-weight: 1;
+  position: relative;
+  bottom: 10px;
+  color: #555555;
+}
+.statuspanel .warning,
+.statuspanel .warning h6 {
+  background-color: #ffa93c;
+  /*    box-shadow: inset 0 0 10px lighten($warning, 8%);
+      border: 1px solid darken($warning, 20%)*/
+}
+.statuspanel .success,
+.statuspanel .success h6 {
+  background-color: #4cb158;
+  /*    box-shadow: inset 0 0 10px lighten($success, 8%);
+      border: 1px solid darken($success, 20%)*/
+}
+.statuspanel .danger,
+.statuspanel .danger h6 {
+  background-color: #ea494a;
+  /*    box-shadow: inset 0 0 10px lighten($danger, 8%);
+      border: 1px solid darken($danger, 20%)*/
+}
+.statuspanel .info,
+.statuspanel .info h6 {
+  background-color: #14b8d4;
+  /*    box-shadow: inset 0 0 10px lighten($info, 8%);
+      border: 1px solid darken($info, 20%)*/
+}
+.statuspanel .primary,
+.statuspanel .primary h6 {
+  background-color: #007ccd;
+  /*    box-shadow: inset 0 0 10px lighten($primary, 8%);
+      border: 1px solid darken($primary, 20%)*/
+}
+.statuspanel .purple,
+.statuspanel .purple h6 {
+  background-color: #7932ea;
+  /*    box-shadow: inset 0 0 10px lighten($purple, 8%);
+      border: 1px solid darken($purple, 20%)*/
+}
 .portlet .portletHeader {
   font-size: 20px;
   padding: 11px 19px;

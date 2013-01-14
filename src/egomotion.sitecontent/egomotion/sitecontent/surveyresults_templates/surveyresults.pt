@@ -10,8 +10,127 @@
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
 
-    <p class="lead">This is the survey results view providing statistical
-      information and a csv download</p>
+  <section tal:condition="not:view/anonymous">
+
+    <div class="well">
+      <h2>Ergebnisse Umfrage</h2>
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="statuspanel">
+            <div class="top">
+              <i class="icon-bar-chart icon-4x"></i>
+              <h6>Umfrage</h6>
+            </div>
+            <div class="bottom">
+              <h2 tal:content="view/answers_idx">100</h2>
+              <h6>Teilnehmer</h6>
+            </div>
+          </div>
+          <div class="visualClear"><!-- --></div>
+        </div>
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span8">
+              <p class="muted">
+                Laden Sie den aktuellen Stand der gesammelten Umfragedaten
+                als csv-Datei herunter.
+              </p>
+              <div tal:define="latest view/latest_answer">
+                <p tal:define="time latest/modified">
+                  <strong>Letzte Änderung:</strong>
+                  <span tal:content="time"
+                     tal:attributes="data-appui string:prettydate;
+                                     title time" />
+                </p>
+                <p tal:define="download context/download">
+                  <strong>Letzter Download:</strong>
+                  <span tal:content="download"
+                     tal:attributes="data-appui string:prettydate;
+                                     title download" />
+                </p>
+              </div>
+            </div>
+            <div class="span4">
+              <form method="post"
+                tal:attributes="action request/URL">
+                <span tal:replace="structure context/@@authenticator/authenticator" />
+                <!-- Form actions -->
+                <div class="xform-actions">
+                  <button type="submit"
+                    class="btn btn-primary btn-block btn-large pull-right"
+                    id="btn-submit"
+                    name="form.buttons.Submit"
+                    i18n:translate="">
+                    <i class="icon-download"></i>
+                    Download results
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="visualClear">&nbsp;</div>
+          <table tal:define="
+              Batch python:modules['Products.CMFPlone'].Batch;
+              b_size python:int(request.get('b_size', 20));
+              b_start python:int(request.get('b_start', 0));
+              results python:context.restrictedTraverse('@@folderListing')(batch=True, b_size=b_size, b_start=b_start, portal_type=['egomotion.sitecontent.answer']);
+              batch python:Batch(results, b_size, b_start);"
+              class="table">
+              <tbody>
+                <tr tal:repeat="item results">
+                  <td><strong tal:content="item/Title" /></td>
+                  <td tal:define="modified item/modified"
+                    class="discreet">
+                    <span tal:content="modified"
+                      tal:attributes="data-appui string:prettydate;
+                                      title modified" />
+                  </td>
+                  <td tal:define="item_index repeat/item/index">
+                      <a href="#myModal"
+                        tal:attributes="href python:'#popover' + str(item_index)"
+                        role="button"
+                        data-toggle="modal">
+                        <i class="icon-info-sign"></i>
+                        Details
+                      </a>
+                      <code tal:content="python:view.get_item_details(item)" />
+                      <!-- Modal -->
+                      <div id="myModal" class="modal hide fade"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="myModalLabel"
+                        aria-hidden="true"
+                        tal:define="item_details python:view.get_item_details(item)"
+                        tal:attributes="id python:'popover' + str(item_index)">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h3 id="myModalLabel">Teilnehmer <span tal:replace="item/participant" /></h3>
+                        </div>
+                        <div class="modal-body">
+                          <table class="table-condensed">
+                            <tbody>
+                              <tr tal:repeat="detail item_details">
+                                <th tal:content="detail/title" />
+                                <td  class="discreet" tal:content="detail/value">
+                                  Blah
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        </div>
+                      </div>
+                  </td>
+                </tr>
+                <div metal:use-macro="context/batch_macros/macros/navigation" />
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
     
   </metal:content-core>
 </metal:main>

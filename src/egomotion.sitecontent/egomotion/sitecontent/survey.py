@@ -5,6 +5,7 @@ from Acquisition import aq_inner
 from AccessControl import Unauthorized
 from five import grok
 from plone import api
+from zope import schema
 
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -29,6 +30,10 @@ class ISurvey(form.Schema, IImageScaleTraversable):
     """
     A folderish survey holding participant objects
     """
+    download = schema.TextLine(
+        title=_(u"Last Download"),
+        required=False,
+    )
 
 
 class Survey(dexterity.Container):

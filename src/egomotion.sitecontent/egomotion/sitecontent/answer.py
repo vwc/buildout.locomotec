@@ -1,5 +1,7 @@
 from five import grok
 from zope import schema
+from plone import api
+
 from plone.directives import dexterity, form
 
 from plone.namedfile.interfaces import IImageScaleTraversable
@@ -33,3 +35,6 @@ class View(grok.View):
     grok.context(IAnswer)
     grok.require('zope2.View')
     grok.name('view')
+
+    def update(self):
+        self.anonymous = api.user.is_anonymous()

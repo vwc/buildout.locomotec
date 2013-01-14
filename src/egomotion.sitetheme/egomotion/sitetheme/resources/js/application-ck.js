@@ -19,6 +19,7 @@
             });
         }
         if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) < 7) return;
+        e('span[data-appui="prettydate"]').timeago();
         e('a[data-appui="gallery"]').prettyPhoto();
         e("#sweepstake-notice").length > 0 && e("#sweepstake-notice").expose();
         e('a[data-appui="pagescroll"]').on("click", function(t) {

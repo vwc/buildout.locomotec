@@ -7,12 +7,13 @@
       i18n:domain="egomotion.sitecontent">
 <body>
 
-<metal:main fill-slot="content-core">
-  <metal:content-core define-macro="content-core">
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
 
-    <div tal:content="context/answers">
-      Answers
+    <div class="page-header">
+      <h1>Umfrage Teilnehmer</h1>
     </div>
+
     
   </metal:content-core>
 </metal:main>

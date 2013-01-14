@@ -18,7 +18,7 @@
     <section tal:condition="not:view/anonymous" class="alert">
       <h4>Administration</h4>
       <p>Sie sind als Redakteur angemeldet:
-        <a href="" tal:attributes="href python:context_url + '/@@survey-administration'">
+        <a href="" tal:attributes="href python:context_url + '/@@survey-results'">
           <i class="icon-cog"></i>
           Umfrage Verwaltung</a>
       </p>
@@ -816,15 +816,15 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
                 150&ndash; 750 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
                 750 &ndash; 1500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
                 1500 &ndash; 3000 EUR
               </label>
             </div>
@@ -835,15 +835,15 @@
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
                 25 &ndash; 50 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
                 50 &ndash; 75 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
                 75 &ndash; 100 EUR
               </label>
             </div>
@@ -854,15 +854,15 @@
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
                 20 &ndash; 50 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
                 50 &ndash; 80 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
                 80 &ndash; 120 EUR
               </label>
             </div>
@@ -928,13 +928,13 @@
 
         <span tal:replace="structure context/@@authenticator/authenticator" />
         <!-- Form actions -->
-        <div class="form-actions">
+        <div class="xform-actions">
           <button type="submit"
             class="btn btn-primary btn-large pull-right"
             id="btn-submit"
             name="form.buttons.Submit"
             i18n:translate="">
-            Umfrage abschicken
+            Fragebogen abschicken
           </button>
         </div>
       </form>
