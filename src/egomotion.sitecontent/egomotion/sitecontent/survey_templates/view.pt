@@ -25,10 +25,10 @@
     </section>
     <section>
       <h4>
-        1. Die folgenden 15 Designskizzen zeigen, wie unser Lauftrainer als
+        1. Die folgenden 15 Designskizzen zeigen, wie unser RUFUS als
         Produkt aussehen k&ouml;nnte. Bitte w&auml;hle unter diesen Skizzen drei
-        Favoriten aus und gib an, welche Merkmale Dir am besten und welche am
-        wenigsten gefallen.
+        Favoriten aus und gib an, welche designerischen Merkmale Dir am besten und welche
+        am wenigsten gefallen.
       </h4>
       <div id="design-gallery"
         tal:condition="view/has_images">
@@ -369,22 +369,24 @@
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.one"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.one')">
-              Ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
+              Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.two"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.two')">
-              Ein Navigationsprogramm zum Laufen auf unbekannten Routen
+              Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
+              in Form einer sogenannten Trainingsdokumentation
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.three"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.three')">
-              Eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
+                Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
+                Beweglichkeitstraining anbietet
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.four"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.four')">
-              Eine Funktion, die es mir ermöglicht, mit meinen Freunden einen virtuellen Lauftreff zu organisieren (Videokonferenz z.B. über Skype mit Freunden an entfernten Orten)
+              Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
