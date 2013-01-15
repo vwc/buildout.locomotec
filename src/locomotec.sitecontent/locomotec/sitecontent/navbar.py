@@ -26,7 +26,6 @@ class NavbarViewlet(grok.Viewlet):
         en_root = portal['en']
         root = getNavigationRoot(context)
         portaltypes = ['locomotec.sitecontent.contentpage',
-                       'locomotec.sitecontent.newsfolder',
                        'FormFolder']
         path = {'query': '/'.join(en_root.getPhysicalPath()),
                 'navtree': 2,
