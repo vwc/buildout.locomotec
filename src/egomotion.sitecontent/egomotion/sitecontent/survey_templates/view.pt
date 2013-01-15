@@ -369,24 +369,42 @@
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.one"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.one')">
-              Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
+              ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.two"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.two')">
-              Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
+              eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
               in Form einer sogenannten Trainingsdokumentation
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.three"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.three')">
-                Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
+                eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
                 Beweglichkeitstraining anbietet
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="functionality.four"
                 tal:attributes="checked python:view.default_value(fieldname='functionality.four')">
-              Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
+              eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="off" name="functionality.five"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen
+              Ern&auml;hrungsvorschlag macht
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="off" name="functionality.six"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              ein Navigationsprogramm zum Laufen auf unbekannten Routen
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="off" name="functionality.seven"
+                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              eine Funktion, die es mir erm&ouml;glicht, mit meinen Freunden einen
+              virtuellen Lauftreff zu organisieren (Videokonferenz z.B. &uuml;ber
+              Skype mit Freunden an entfernten Orten)
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
@@ -400,8 +418,8 @@
 
         <div class="survey-question">
           <h4>
-            4. Welches Zubehör sollte der Lauftrainer Deiner Meinung nach haben?<br />
-            <small>(mehrere Antworten möglich)</small>
+            4. Welches Zubeh&ouml;r sollte der Lauftrainer Deiner Meinung nach haben?<br />
+            <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
@@ -413,12 +431,12 @@
             <label class="checkbox">
               <input type="checkbox" value="off" name="accessory.two"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
-              Flaschenhalter, Ablage („Handschuhfach“) für Schlüssel und andere Kleinigkeiten
+              Flaschenhalter, Ablage (&bdquo;Handschuhfach&ldquo;) f&uuml;r Schl&uuml;ssel und andere Kleinigkeiten
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="accessory.three"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.three')">
-              Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)
+              Medienzubeh&ouml;r bzw. Anschl&uuml;sse (Dockingstation f&uuml;r Smartphone, USB, etc)
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
@@ -432,31 +450,26 @@
 
         <div class="survey-question">
           <h4>
-            5. Welchen zusätzlichen Nutzen sollte der Lauftrainer Deiner
+            5. Welchen zus&auml;tzlichen Nutzen sollte der Lauftrainer Deiner
             Meinung nach haben?<br />
-            <small>(mehrere Antworten möglich)</small>
+            <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="off" name="benefit.one"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.one')">
-              Ich würde gerne damit zum Einkaufen joggen (Befestigung für Einkaufskorb).
+              Ich w&uuml;rde damit gerne zum Einkaufen joggen (Befestigung f&uuml;r Einkaufskorb).
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="benefit.two"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.two')">
-              Ich möchte mit meinen Kindern joggen gehen (Befestigung für Kindersitz bzw. Babyschale)
+              Ich m&ouml;chte mit meinen Kindern joggen gehen (Befestigung f&uuml;r Kindersitz bzw. Babyschale)
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="benefit.three"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.three')">
-              Ich möchte damit auch schwere Lasten transportieren und selbst damit fahren können.
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" value="off" name="benefit.four"
-                tal:attributes="checked python:view.default_value(fieldname='benefit.four')">
-              Ich möchte damit regelmäßig eine unverbindliche Leistungsdiagnostik durchführen können.
+              Ich m&ouml;chte damit auch schwere Lasten transportieren und selbst damit fahren k&ouml;nnen.
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
@@ -468,7 +481,7 @@
 
         <div class="survey-question">
           <h4>
-            6. Wie wichtig ist für Dich ein systematisches Lauftraining (z.B. nach einem Trainingsplan)
+            6. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)
           </h4>
           <div class="controls">
             <label class="radio inline">
@@ -491,8 +504,8 @@
 
         <div class="survey-question">
           <h4>
-            7. Welche „Hilfsmittel“ verwendest Du für Dein Lauftraining<br />
-            <small>(mehrere Antworten möglich)</small>
+            7. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining<br />
+            <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
@@ -545,9 +558,9 @@
 
         <div class="survey-question">
           <h4>
-            8. Wie wirkungsvoll unterstützt Dich dieses „Hilfsmittel“ bei
+            8. Wie wirkungsvoll unterst&uuml;tzen Dich diese &bdquo;Hilfsmittel&ldquo; bei
             deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz
-            und Deiner Geschwindigkeit?
+            und Deiner Laufgeschwindigkeit?
           </h4>
 
           <div class="control-group">
@@ -557,7 +570,7 @@
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect" value="">
-              ausreichend, aber meine Trainingsfortschritte könnten besser sein
+              ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect" value="">
@@ -611,21 +624,21 @@
 
         <div class="survey-question">
           <h4>
-            11. Wieviel würdest Du maximal für einen solchen Lauftrainer pro
+            11. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro
             Trainingsstunde bezahlen wollen?
           </h4>
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
-              25 EUR
+              25 - 50 EUR
             </label>
             <label class="radio inline">
               <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
-              50 EUR
+              50 - 75 EUR
             </label>
             <label class="radio inline">
               <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
-              75 EUR
+              75 - 100 EUR
             </label>
           </div>
         </div>
@@ -645,7 +658,7 @@
             </label>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1" value="option1">
-              männlich
+              m&auml;nnlich
             </label>
           </div>
         </div>
@@ -656,35 +669,61 @@
           </h4>
           <div class="controls">
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios1"
+                value="participant.occupation1">
+              Sch&uuml;ler / Student
+            </label>
+            <label class="radio">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios2"
+                value="participant.occupation2">
+              Nicht-Erwerbst&auml;tige(r)
+            </label>
+            <label class="radio">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios3"
+                value="participant.occupation3">
               ArbeiterIn / SachbearbeiterIn
             </label>
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios4"
+                value="participant.occupation4">
               Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst
             </label>
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios5"
+                value="participant.occupation5">
               Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst
             </label>
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios6"
+                value="participant.occupation6">
               GeschäftsführerIn / Vorstand
             </label>
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
-              Selbständige(r)
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios7"
+                value="participant.occupation7">
+              Selbständige(r) / Freiberufliche(r)
             </label>
             <label class="radio">
-              <input type="radio" name="participant.occupation" id="optionsRadios1" value="option1">
-              UnternehmerIn
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios8"
+                value="participant.occupation8">
+              Unternehmer(in)
+            </label>
+            <label class="radio">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios9"
+                value="participant.occupation9">
+              Rentner(in)
+            </label>
+            <label class="radio">
+              <input type="radio" name="participant.occupation" id="participantOccupationRadios10"
+                value="participant.occupation10">
+              Sonst
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4>
-            14. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Gesundheit investiert?
+            14. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Wellness investiert?
           </h4>
           <div class="controls">
             <div class="input-append">
