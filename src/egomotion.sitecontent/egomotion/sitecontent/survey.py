@@ -273,12 +273,9 @@ class SurveySessionInfo(grok.View):
     grok.name('survey-session-info')
 
     def render(self):
-        portal = api.portal.get()
-        getUtility(ISurveyTool).destroy(portal)
-        portal_url = portal.absolute_url()
-        api.portal.show_message(
-            message=_(u"Session cleared"), request=self.request)
-        return self.request.response.redirect(portal_url)
+        tool = getUtility(ISurveyTool)
+        data = tool.get()
+        return json.dumps(data)
 
 
 class ClearSurveySession(grok.View):
