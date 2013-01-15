@@ -264,6 +264,21 @@ class SurveySaved(grok.View):
         return uuidToObject(uuid)
 
 
+class ClearSurveySession(grok.View):
+    grok.context(ISurvey)
+    grok.require('cmf.ModifyPortalContent')
+    grok.name('survey-session-clear')
+
+    def render(self):
+        tool = getUtility(ISurveyTool)
+        portal = api.portal.get()
+        tool.destroy(portal)
+        portal_url = portal.absolute_url()
+        api.portal.show_message(
+            message=_(u"Session cleared"), request=self.request)
+        return self.request.response.redirect(portal_url)
+
+
 class SelectFavorite(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')

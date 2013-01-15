@@ -510,48 +510,50 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.one">
+              <input type="checkbox" value="off" name="trainingresource.one">
                 Pulsuhr ohne GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.two">
+              <input type="checkbox" value="off" name="trainingresource.two">
                 Pulsuhr mit GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.three">
+              <input type="checkbox" value="off" name="trainingresource.three">
                 Laufband zuhause
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.four">
+              <input type="checkbox" value="off" name="trainingresource.four">
                 Laufband im Fitnessstudio
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.five">
+              <input type="checkbox" value="off" name="trainingresource.five">
                 persönlicher Lauftrainer im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.six">
+              <input type="checkbox" value="off" name="trainingresource.six">
                 persönlicher Lauftrainer privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.seven">
+              <input type="checkbox" value="off" name="trainingresource.seven">
                 Laufgruppe im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.eight">
+              <input type="checkbox" value="off" name="trainingresource.eight">
                 Laufgruppe privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.nine">
+              <input type="checkbox" value="off" name="trainingresource.nine">
                 Trainingsapp auf Smartphone
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="trainingresource.ten">
+              <input type="checkbox" value="off" name="trainingresource.ten">
                 Schrittzähler mit Kalorienverbrauch
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="trainingresource.additional" type="text" placeholder="Optionale weitere Angaben">
+              <input class="input-xxlarge" id="trainingresource.additional"
+                name="trainingresource.additional"
+                type="text" placeholder="Optionale weitere Angaben">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -565,15 +567,18 @@
 
           <div class="control-group">
             <label class="radio">
-              <input type="radio" name="trainingresource.effect" value="">
+              <input type="radio" name="trainingresource.effect"
+                value="trainingresource.effect1">
               optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
             </label>
             <label class="radio">
-              <input type="radio" name="trainingresource.effect" value="">
+              <input type="radio" name="trainingresource.effect"
+                value="trainingresource.effect2">
               ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
             </label>
             <label class="radio">
-              <input type="radio" name="trainingresource.effect" value="">
+              <input type="radio" name="trainingresource.effect"
+                value="trainingresource.effect3">
               schlecht, ich mache kaum Trainingsfortschritte
             </label>
           </div>
@@ -586,15 +591,18 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1"
+                value="good">
               gut
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1"
+                value="medium">
               es geht so
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.monitor" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.monitor" id="optionsRadios1"
+                value="bad">
               schlecht
             </label>
           </div>
@@ -608,15 +616,18 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="training.personalization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.personalization" id="optionsRadios1"
+                value="very important">
               sehr wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.personalization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.personalization" id="optionsRadios1"
+                value="important">
               wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.personalization" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.personalization" id="optionsRadios1"
+                value="unimportant">
               unwichtig
             </label>
           </div>
