@@ -325,7 +325,7 @@
 
         <div class="survey-question">
           <h4>
-            2. Was gef&auml;llt Dir am wenigsten bei den anderen Entw&uuml;rfen
+            2. Was gef&auml;llt Dir am wenigsten bei den anderen Entw&uuml;rfen?
           </h4>
 
           <div class="control-group">
@@ -481,7 +481,7 @@
 
         <div class="survey-question">
           <h4>
-            6. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)
+            6. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?
           </h4>
           <div class="controls">
             <label class="radio inline">
@@ -504,7 +504,7 @@
 
         <div class="survey-question">
           <h4>
-            7. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining<br />
+            7. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining?<br />
             <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
@@ -782,8 +782,8 @@
 
         <div class="survey-question">
           <h4>
-            16. Welchen Betrag (in Euro) würdest Du ungefähr investieren in
-              die unten aufgelisteten Produkte.
+            16. Welchen Betrag würdest Du ungefähr investieren in
+              die unten aufgelisteten Produkte?
           </h4>
 
           <div class="control-group">
