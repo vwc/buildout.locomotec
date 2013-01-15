@@ -58,6 +58,7 @@ class SurveyResults(grok.View):
         CSV_HEADER_I18N = [self.context.translate(_(x)) for x in CSV_HEADER]
         csvWriter.writerow(CSV_HEADER_I18N)
         export_data = self.prepare_export_data()
+        cleaned_data = self.prettify_export_data(export_data)
         for entry in export_data:
             obj = entry
             csvWriter.writerow([obj.salutation,
@@ -87,13 +88,31 @@ class SurveyResults(grok.View):
         data = {}
         results = self.survey_answers()
         for r in results:
-            itemdata = list()
             obj = r.getObject()
             index = obj.participant
             answers = json.loads(obj.answers)
-            itemdata.append(answers)
+            if 'survey-state' in answers:
+                itemdata = answers['survey-state']
+            else:
+                itemdata = {}
             data[index] = itemdata
         return data
+
+    def prettify_export_data(self, data):
+        cleaned = {}
+        for x in data:
+            index = x
+            results = data[x]
+            if len(results) > 0:
+                item = {}
+                for r in results:
+                    cleaned_value = self.prettify_value(results[r])
+                    item[r] = cleaned_value
+                cleaned[index] = item
+        return cleaned
+
+    def prettify_value(self, value):
+        return value
 
     def get_item_details(self, item):
         answers = json.loads(item.answers)

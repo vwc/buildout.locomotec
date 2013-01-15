@@ -18,6 +18,7 @@
         <h4>Dieser Link ist ungültig</h4>
         <p>Nach Abschluss der Umfrage kann nur einmalig eine Losnummer und
           der dazugehörige Gewinncode ausgegeben werden.</p>
+        <p tal:content="view/marker" />
       </div>
       <div class="well" id="sweepstake-notice"
         tal:condition="not:item/claimed">

@@ -72,8 +72,15 @@ class View(grok.View):
         context = aq_inner(self.context)
         itemdata = {}
         tool = getUtility(ISurveyTool)
-        survey_state = tool.get()
-        answers = json.dumps(survey_state)
+        session = tool.get()
+        state = session['survey-state']
+        if 'puid' not in state:
+            state['puid'] = django_random.get_random_string()
+            tool.add('survey-state', state)
+            survey = tool.get()
+        else:
+            survey = session
+        answers = json.dumps(survey)
         now = datetime.now()
         timestamp = api.portal.get_localized_time(datetime=now)
         index = self.generate_index()
@@ -88,8 +95,12 @@ class View(grok.View):
         setattr(item, 'participant', index)
         modified(item)
         item.reindexObject(idxs='modified')
+        token = django_random.get_random_string(length=24)
+        tool.add('token', token)
         uid = IUUID(item)
-        next_url = context.absolute_url() + '/@@survey-saved?uuid=' + uid
+        url = context.absolute_url()
+        base_url = url + '/@@survey-saved?uuid=' + uid
+        next_url = base_url + '&token=' + token
         return self.request.response.redirect(next_url)
 
     def generate_index(self):
@@ -211,7 +222,7 @@ class AutosaveSurvey(grok.View):
                 data['puid'] = saved_puid
             except KeyError:
                 data['puid'] = puid
-        data['pid'] = client_ip
+        data['pip'] = client_ip
         tool.add(name, data)
         time_info = _(u"Autosave %s") % userinfo
         msg = _(u"Survey state automatically saved")
@@ -253,6 +264,29 @@ class SurveySaved(grok.View):
     grok.require('zope2.View')
     grok.name('survey-saved')
 
+    def update(self):
+        self.token = self.request.get('token', None)
+        self.marker = self.set_participation_marker()
+
+    def set_participation_marker(self):
+        item = self.resolve_item()
+        tool = getUtility(ISurveyTool)
+        session = tool.get()
+        marker = True
+        if 'token' in session:
+            token = session['token']
+            if token == self.token:
+                state = {}
+                data = json.loads(item.answers)
+                results = data['survey-state']
+                state['idx'] = results['puid']
+                state['token'] = token
+                state['ip'] = results['pip']
+                tool.add('token', state)
+                tool.remove('survey-state')
+                marker = False
+        return marker
+
     def item_info(self):
         item = self.resolve_item()
         info = {}
@@ -285,7 +319,8 @@ class ClearSurveySession(grok.View):
 
     def render(self):
         portal = api.portal.get()
-        getUtility(ISurveyTool).destroy(portal)
+        tool = getUtility(ISurveyTool)
+        tool.destroy()
         portal_url = portal.absolute_url()
         api.portal.show_message(
             message=_(u"Session cleared"), request=self.request)

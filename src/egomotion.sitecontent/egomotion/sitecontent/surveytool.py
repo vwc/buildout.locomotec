@@ -42,6 +42,12 @@ class ISurveyTool(Interface):
             @param answers: serialized survey form data
         """
 
+    def remove(context):
+        """ Remove answers from the session
+
+            @param uuid: catalog uuid of participation object
+        """
+
 
 class SurveyTool(grok.GlobalUtility):
     grok.provides(ISurveyTool)
@@ -82,6 +88,12 @@ class SurveyTool(grok.GlobalUtility):
             survey[item_id] = answers
             return survey[item_id]
         return None
+
+    def remove(self, uuid):
+        survey = self.get()
+        if uuid in survey:
+            del survey[uuid]
+            return uuid
 
 
 class UnicodeWriter:
