@@ -912,34 +912,32 @@
 
         <div class="survey-question">
           <h4>
-            17. Unser persönlicher Lauftrainer RUFUS wird in etwa zum Preis
-            eines besseren Lauftrainers oder Crosstrainers, bzw. eines besseren
-            Rennrads oder Mountainbikes auf den Markt kommen, also kein
-            wirkliches Billigprodukt sein. Würdest Du Dir einen RUFUS kaufen?
+            17. W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="controls">
             <label class="checkbox">
               <input type="checkbox" value="" name="purchase.one">
-                Ja, wenn Design, Funktionalität und Qualität stimmen.
+                ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
             </label>
             <label class="checkbox">
               <input type="checkbox" value="" name="purchase.two">
-                Nein
+                nein
             </label>
             <label class="checkbox">
               <input type="checkbox" value="" name="purchase.three">
-                Unentschieden
+                unentschieden
             </label>
           </div>
           <div id="nopurchase" class="controls">
               <label for="purchase.comment">
-                Begründung</label>
+                Begr&uuml;ndung</label>
               <textarea rows="3" class="input-xxlarge"
                 id="purchase.comment">
               </textarea>
               <span class="help-block">
-                Hier hast Du die Möglichkeit, eine optionale Begründung für Dein
-                "Unentschieden" oder "Nein" abzugeben.
+                Falls Deine Antwort &bdquo;Nein&ldquo; oder &bdquo;Unentschieden&ldquo; ist,
+                w&uuml;rdest Du uns sehr helfen, wenn Du eine kurze Begr&uuml;ndung
+                angeben w&uuml;rdest.
               </span>
           </div>
         </div>
@@ -948,15 +946,15 @@
           <div class="controls">
             <label class="checkbox">
               <input type="checkbox" value="off" name="interest.one">
-              Ja, ich interessiere mich für den RUFUS und würde gerne informiert
-              werden, wie es mit RUFUS weitergeht und wann er auf dem Markt ist. 
+              ja, ich interessiere mich f&uuml;r RUFUS und w&uuml;rde gerne informiert
+              werden, wie es mit ihm weitergeht und wann er auf dem Markt ist. 
             </label>
             <label class="checkbox">
               <input type="checkbox" value="off" name="interest.two">
-                Ja, ich möchte gerne zu den ersten 100 Kunden gehören, die RUFUS
-                zur Hälfte des Preises erwerben können. Ich möchte mir hiermit
-                eine unverbindliche Kaufoption sichern, die ich jederzeit und
-                ohne weitere Mitteilung verfallen lassen kann.
+                Ich halte RUFUS f&uuml;r eine tolle Produktidee und m&ouml;chte mir eine
+                unverbindliche Kaufoption zu einem &bdquo;Fr&uuml;hbucher-Rabatt&ldquo; von 25%
+                sichern, die ich jederzeit und ohne weitere Mitteilung
+                verfallen lassen kann.
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">E-Mail-Adresse</span>
@@ -969,7 +967,7 @@
 
         <span tal:replace="structure context/@@authenticator/authenticator" />
         <!-- Form actions -->
-        <div class="xform-actions">
+        <div class="xform-actions" id="survey-form-actions">
           <button type="submit"
             class="btn btn-primary btn-large pull-right"
             id="btn-submit"
