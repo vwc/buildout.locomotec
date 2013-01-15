@@ -200,14 +200,17 @@ class AutosaveSurvey(grok.View):
         else:
             userinfo = client_ip + '-' + timestamp
         name = 'survey-state'
+        puid = django_random.get_random_string()
         if not self.has_active_session():
-            puid = django_random.get_random_string()
             data['puid'] = puid
         else:
             session = tool.get()
-            current_session = session[name]
-            saved_puid = current_session['puid']
-            data['puid'] = saved_puid
+            try:
+                current_session = session[name]
+                saved_puid = current_session['puid']
+                data['puid'] = saved_puid
+            except KeyError:
+                data['puid'] = puid
         data['pid'] = client_ip
         tool.add(name, data)
         time_info = _(u"Autosave %s") % userinfo
@@ -264,15 +267,25 @@ class SurveySaved(grok.View):
         return uuidToObject(uuid)
 
 
+class SurveySessionInfo(grok.View):
+    grok.context(ISurvey)
+    grok.require('cmf.ModifyPortalContent')
+    grok.name('survey-session-info')
+
+    def render(self):
+        tool = getUtility(ISurveyTool)
+        data = tool.get()
+        return json.dumps(data)
+
+
 class ClearSurveySession(grok.View):
     grok.context(ISurvey)
     grok.require('cmf.ModifyPortalContent')
     grok.name('survey-session-clear')
 
     def render(self):
-        tool = getUtility(ISurveyTool)
         portal = api.portal.get()
-        tool.destroy(portal)
+        getUtility(ISurveyTool).destroy(portal)
         portal_url = portal.absolute_url()
         api.portal.show_message(
             message=_(u"Session cleared"), request=self.request)

@@ -93,7 +93,7 @@
                         <i class="icon-info-sign"></i>
                         Details
                       </a>
-                      <code tal:content="python:view.get_item_details(item)" />
+                      <!--<code tal:content="python:view.get_item_details(item)" />-->
                       <!-- Modal -->
                       <div id="myModal" class="modal hide fade"
                         tabindex="-1"
