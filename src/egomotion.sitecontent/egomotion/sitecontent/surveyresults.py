@@ -98,13 +98,16 @@ class SurveyResults(grok.View):
     def get_item_details(self, item):
         answers = json.loads(item.answers)
         mapping = self.survey_data_mappings()
-        data = {}
+        data = []
         if len(answers) > 0:
             results = answers['survey-state']
-            item = results[item]
             for r in results:
                 item = {}
-                item['value'] = results[r]
+                try:
+                    item['value'] = results[r]
+                except KeyError:
+                    item['value'] = _(u"No value given or not callable")
+                item['value'] = r
                 try:
                     title = mapping[r]
                 except KeyError:
