@@ -101,13 +101,12 @@ class SurveyResults(grok.View):
         data = []
         if len(answers) > 0:
             results = answers['survey-state']
-            for r in results:
+            for r in mapping:
                 item = {}
                 try:
                     item['value'] = results[r]
                 except KeyError:
                     item['value'] = _(u"No value given or not callable")
-                item['value'] = r
                 try:
                     title = mapping[r]
                 except KeyError:
