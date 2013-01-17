@@ -481,42 +481,47 @@
 
         <div class="survey-question">
           <h4>
-            6. Wie häufig gehst Du laufen?
+            6. Wie h&auml;ufig gehst Du laufen?
           </h4>
           <div class="controls">
-            <label class="radio inline">
-              <input type="radio" name="frequency" id="roadwork1" value="option1"
+            <label class="radio">
+              <input type="radio" name="frequency" id="frequency1" value="option1"
                 tal:attributes="checked python:view.default_value(fieldname='frequency')">
-                regelmäßig (mehrmals in der Woche)
+                regelm&auml;&szlig;ig (mehrmals in der Woche)
             </label>
-            <label class="radio inline">
-              <input type="radio" name="frequency" id="roadwork1" value="option2"
+            <label class="radio">
+              <input type="radio" name="frequency" id="frequency2" value="option2"
                 tal:attributes="checked python:view.default_value(fieldname='frequency')">
-                häufig (nicht jede Woche aber mehrmals im Monat)
+                h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
             </label>
-            <label class="radio inline">
-              <input type="radio" name="frequency" id="roadwork1" value="option3"
+            <label class="radio">
+              <input type="radio" name="frequency" id="frequency3" value="option3"
                 tal:attributes="checked python:view.default_value(fieldname='frequency')">
                 gelegentlich
             </label>
-            <label class="radio inline">
-              <input type="radio" name="frequency" id="roadwork1" value="option3"
+            <label class="radio">
+              <input type="radio" name="frequency" id="frequency4" value="option3"
                 tal:attributes="checked python:view.default_value(fieldname='frequency')">
-                nie, aber ich überlege schon länger damit anzufangen
+                nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
             </label>
-            <label class="radio inline">
-              <input type="radio" name="frequency" id="roadwork1" value="option3"
+            <label class="radio">
+              <input type="radio" name="frequency" id="frequency5" value="option3"
                 tal:attributes="checked python:view.default_value(fieldname='frequency')">
                 nie, mir macht Laufen keinen Spass
             </label>
           </div>
-          <span class="help-block">
-            Falls Du diese Frage mit "nie, mit macht Laufen keinen Spass"
+          <div class="alert">
+            <p><i class="icon-info-sign"></i>
+            Falls Du diese Frage mit &quot;nie, mit macht Laufen keinen Spass&quot;
             beantwortet hast, dann gehe gleich zu Frage 13.
-          </span>
-          <p><a href="#survey-question-13"
+            </p>
+            <p>
+            <a href="#survey-question-13"
               data-appui="pagescroll" data-target="#survey-question-13">
               Zu Frage 13 springen</a>
+            </p>
+          </div>
+          <p>
           </p>
         </div>
 
