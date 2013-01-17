@@ -481,7 +481,49 @@
 
         <div class="survey-question">
           <h4>
-            6. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?
+            6. Wie häufig gehst Du laufen?
+          </h4>
+          <div class="controls">
+            <label class="radio inline">
+              <input type="radio" name="frequency" id="roadwork1" value="option1"
+                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+                regelmäßig (mehrmals in der Woche)
+            </label>
+            <label class="radio inline">
+              <input type="radio" name="frequency" id="roadwork1" value="option2"
+                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+                häufig (nicht jede Woche aber mehrmals im Monat)
+            </label>
+            <label class="radio inline">
+              <input type="radio" name="frequency" id="roadwork1" value="option3"
+                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+                gelegentlich
+            </label>
+            <label class="radio inline">
+              <input type="radio" name="frequency" id="roadwork1" value="option3"
+                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+                nie, aber ich überlege schon länger damit anzufangen
+            </label>
+            <label class="radio inline">
+              <input type="radio" name="frequency" id="roadwork1" value="option3"
+                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+                nie, mir macht Laufen keinen Spass
+            </label>
+          </div>
+          <span class="help-block">
+            Falls Du diese Frage mit "nie, mit macht Laufen keinen Spass"
+            beantwortet hast, dann gehe gleich zu Frage 13.
+          </span>
+          <p><a href="#survey-question-13"
+              data-appui="pagescroll" data-target="#survey-question-13">
+              Zu Frage 13 springen</a>
+          </p>
+        </div>
+
+
+        <div class="survey-question">
+          <h4>
+            7. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?
           </h4>
           <div class="controls">
             <label class="radio inline">
@@ -504,7 +546,7 @@
 
         <div class="survey-question">
           <h4>
-            7. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining?<br />
+            8. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining?<br />
             <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
@@ -560,7 +602,7 @@
 
         <div class="survey-question">
           <h4>
-            8. Wie wirkungsvoll unterst&uuml;tzen Dich diese &bdquo;Hilfsmittel&ldquo; bei
+            9. Wie wirkungsvoll unterst&uuml;tzen Dich diese &bdquo;Hilfsmittel&ldquo; bei
             deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz
             und Deiner Laufgeschwindigkeit?
           </h4>
@@ -586,7 +628,7 @@
 
         <div class="survey-question">
           <h4>
-            9. Wie genau kannst Du mit einer Pulsuhr (mit Schrittzähler oder GPS)
+            10. Wie genau kannst Du mit einer Pulsuhr (mit Schrittzähler oder GPS)
             Deinen Puls und Deine Laufgeschwindigkeit steuern?
           </h4>
           <div class="controls">
@@ -610,7 +652,7 @@
 
         <div class="survey-question">
           <h4>
-            10. Wie wichtig wäre es für Dich, einen persönlichen Lauftrainer
+            11. Wie wichtig wäre es für Dich, einen persönlichen Lauftrainer
             zu haben, der Dir jederzeit zur Verfügung steht und mit Dir ein
             individuell auf Dich zugeschnittenes Trainingsprogramm absolviert?
           </h4>
@@ -635,7 +677,7 @@
 
         <div class="survey-question">
           <h4>
-            11. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro
+            12. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro
             Trainingsstunde bezahlen wollen?
           </h4>
           <div class="controls">
@@ -654,9 +696,9 @@
           </div>
         </div>
 
-        <div class="survey-question">
+        <div class="survey-question" id="survey-question-13">
           <h4>
-            12. Alter und Geschlecht
+            13. Alter und Geschlecht
           </h4>
           <div class="controls">
             <div class="input-append">
@@ -676,7 +718,7 @@
 
         <div class="survey-question">
           <h4>
-            13. Berufliche Stellung
+            14. Berufliche Stellung
           </h4>
           <div class="controls">
             <label class="radio">
@@ -734,7 +776,7 @@
 
         <div class="survey-question">
           <h4>
-            14. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Wellness investiert?
+            15. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Wellness investiert?
           </h4>
           <div class="controls">
             <div class="input-append">
@@ -748,7 +790,7 @@
 
         <div class="survey-question">
           <h4>
-            15. Woraus hat sich dieser Betrag zusammengesetzt?<br />
+            16. Woraus hat sich dieser Betrag zusammengesetzt?<br />
             <small>(Mehrfachnennung möglich)</small>
           </h4>
 
@@ -782,7 +824,7 @@
 
         <div class="survey-question">
           <h4>
-            16. Welchen Betrag würdest Du ungefähr investieren in
+            17. Welchen Betrag würdest Du ungefähr investieren in
               die unten aufgelisteten Produkte?
           </h4>
 
@@ -923,7 +965,7 @@
 
         <div class="survey-question">
           <h4>
-            17. W&uuml;rdest Du Dir einen RUFUS kaufen?
+            18. W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="controls">
             <label class="checkbox">

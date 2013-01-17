@@ -61,6 +61,9 @@ body.frontpage #site-wrapper {
   background: url(../img/header-frontpage-simple.jpg) no-repeat 50% 0 transparent;
   #site-header {
     min-height: 350px;
+    #header-content {
+      min-height: 300px;
+    }
     #frontpage-claim {
       margin-top: @baseLineHeight;
       color: @appGreenLight;
@@ -83,6 +86,21 @@ body.frontpage #site-wrapper {
       #main-nav > li > a:hover {
         color: @white;
         background-color: @linkColor;
+      }
+    }
+  }
+  #header-contact-info {
+    margin: @baseLineHeight;
+    .widget-contact {
+      padding: @paddingSmall;
+      //background: rgba(255, 255, 255, 0.5);
+      margin-bottom: @baseLineHeight / 2;
+      color: @appGreen;
+      font-size: @baseFontSize * 1.1;
+      font-weight: bold;
+      .icon-wrapper {
+        display: inline-block;
+        .square(20px);
       }
     }
   }

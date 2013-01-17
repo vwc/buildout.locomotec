@@ -9,6 +9,7 @@
          tiles editiong overlays -->
     <theme href="minimal.html" if-path="@@edit-tile" />
     <theme href="frontpage.html" css:if-content="body.template-frontpage-view" />
+    <theme href="frontpage.html" css:if-content="body.section-erlaeuterungen-und-teilnahmebedingungen" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -82,6 +83,11 @@
             <replace css:theme-children="#fp-box-4"
                 css:content-children="#fp-box-4"
                 css:if-content="#fp-box-4" />
+        </rules>
+
+        <rules css:if-content="body.section-erlaeuterungen-und-teilnahmebedingungen">
+            <replace css:content-children="#content"
+                css:theme-children="#frontpage-content" />
         </rules>
 
         <!-- Global navigation -->
