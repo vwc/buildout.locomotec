@@ -22,6 +22,13 @@
           <i class="icon-cog"></i>
           Umfrage Verwaltung</a>
       </p>
+      <p>Um eine erneute Duchführung der Umfrage ohne bereits zwischengespeicherter
+        Daten zu beginnen, kann eine aktive Sitzung aus dem Zwischenspeicher
+        entfernt werden:
+        <a href="" tal:attributes="href python:context_url + '/@@survey-session-clear'">
+          <i class="icon-refresh"></i>
+          Sitzung bereinigen</a>
+      </p>
     </section>
     <section>
       <h4>

@@ -59,10 +59,9 @@
                   <button type="submit"
                     class="btn btn-primary btn-block btn-large pull-right"
                     id="btn-submit"
-                    name="form.buttons.Submit"
-                    i18n:translate="">
+                    name="form.buttons.Submit">
                     <i class="icon-download"></i>
-                    Download results
+                    <span i18n:translate="">Download results</span>
                   </button>
                 </div>
               </form>

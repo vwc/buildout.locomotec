@@ -1,0 +1,372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: egomotion.sitecontent\n"
+"POT-Creation-Date: 2013-01-17 12:20+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
+"Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: egomotionsitecontent\n"
+
+#: ./../profiles/default/types/egomotion.sitecontent.survey.xml
+msgid "A folderish survey holding participant objects"
+msgstr "Ein Ordner der Teilnehmerobjekte der Umfrage speichert."
+
+#: ./../profiles/default/types/egomotion.sitecontent.answer.xml
+msgid "A single survey participation"
+msgstr "Eine ausgefühlte und gespeicherte Umfrageteilnahme"
+
+#: ./../surveyresults.py:168
+msgid "Accessory Additional"
+msgstr "Zubehör (Freitext)"
+
+#: ./../surveyresults.py:169
+msgid "Accessory One"
+msgstr "Zubehör 1"
+
+#: ./../surveyresults.py:170
+msgid "Accessory Three"
+msgstr "Zubehör 3"
+
+#: ./../surveyresults.py:171
+msgid "Accessory Two"
+msgstr "Zubehör 2"
+
+#: ./../profiles/default/types/egomotion.sitecontent.answer.xml
+msgid "Answer"
+msgstr "Antwort"
+
+#: ./../answer.py:17
+msgid "Answers"
+msgstr "Antworten"
+
+#: ./../survey.py:227
+msgid "Autosave %s"
+msgstr "Zwischengespeichert:"
+
+#: ./../surveyresults.py:172
+msgid "Benefit One"
+msgstr "Zusatznutzen 1"
+
+#: ./../surveyresults.py:173
+msgid "Benefit Three"
+msgstr "Zusatznutzen 3"
+
+#: ./../surveyresults.py:174
+msgid "Benefit Two"
+msgstr "Zusatznutzen 2"
+
+#: ./../surveyresults.py:175
+msgid "Dislike One"
+msgstr "Negativmerkmale andere 1"
+
+#: ./../surveyresults.py:177
+msgid "Dislike Three"
+msgstr "Negativmerkmale andere 3"
+
+#: ./../surveyresults.py:176
+msgid "Dislike Two"
+msgstr "Negativmerkmale andere 2"
+
+#: ./../surveyresults_templates/surveyresults.pt:64
+msgid "Download results"
+msgstr "Umfrageergenisse herunterladen"
+
+#: ./../surveyresults.py:178
+msgid "E-Mail"
+msgstr "E-Mail-Adresse"
+
+#: ./../surveyresults.py:179
+msgid "Favorite 1"
+msgstr "Nr. Favorit 1"
+
+#: ./../surveyresults.py:180
+msgid "Favorite 1 - Dislike 1"
+msgstr "Negativmerkmal Favorit 1-1"
+
+#: ./../surveyresults.py:182
+msgid "Favorite 1 - Dislike 2"
+msgstr "Negativmerkmal Favorit 1-2"
+
+#: ./../surveyresults.py:181
+msgid "Favorite 1 - Dislike 3"
+msgstr "Negativmerkmal Favorit 1-3"
+
+#: ./../surveyresults.py:183
+msgid "Favorite 1 - Like 1"
+msgstr "Positivmerkmal Favorit 1-1"
+
+#: ./../surveyresults.py:185
+msgid "Favorite 1 - Like 2"
+msgstr "Positivmerkmal Favorit 1-2"
+
+#: ./../surveyresults.py:184
+msgid "Favorite 1 - Like 3"
+msgstr "Positivmerkmal Favorit 1-3"
+
+#: ./../surveyresults.py:186
+msgid "Favorite 2"
+msgstr "Nr. Favorit 2"
+
+#: ./../surveyresults.py:187
+msgid "Favorite 2 - Dislike 1"
+msgstr "Negativmerkmal Favorit 2-1"
+
+#: ./../surveyresults.py:189
+msgid "Favorite 2 - Dislike 2"
+msgstr "Negativmerkmal Favorit 2-2"
+
+#: ./../surveyresults.py:188
+msgid "Favorite 2 - Dislike 3"
+msgstr "Negativmerkmal Favorit 2-3"
+
+#: ./../surveyresults.py:190
+msgid "Favorite 2 - Like 1"
+msgstr "Positivmerkmal Favorit 2-1"
+
+#: ./../surveyresults.py:192
+msgid "Favorite 2 - Like 2"
+msgstr "Positivmerkmal Favorit 2-2"
+
+#: ./../surveyresults.py:191
+msgid "Favorite 2 - Like 3"
+msgstr "Positivmerkmal Favorit 2-3"
+
+#: ./../surveyresults.py:193
+msgid "Favorite 3"
+msgstr "Nr. Favorit 3"
+
+#: ./../surveyresults.py:194
+msgid "Favorite 3 - Dislike 1"
+msgstr "Negativmerkmal Favorit 3-1"
+
+#: ./../surveyresults.py:196
+msgid "Favorite 3 - Dislike 2"
+msgstr "Negativmerkmal Favorit 3-2"
+
+#: ./../surveyresults.py:195
+msgid "Favorite 3 - Dislike 3"
+msgstr "Negativmerkmal Favorit 3-3"
+
+#: ./../surveyresults.py:197
+msgid "Favorite 3 - Like 1"
+msgstr "Positivmerkmal Favorit 3-1"
+
+#: ./../surveyresults.py:199
+msgid "Favorite 3 - Like 2"
+msgstr "Positivmerkmal Favorit 3-2"
+
+#: ./../surveyresults.py:198
+msgid "Favorite 3 - Like 3"
+msgstr "Positivmerkmal Favorit 3-3"
+
+#: ./../survey_templates/view.pt:1029
+msgid "Fragebogen abschicken"
+msgstr "Fragebogen abschicken"
+
+#: ./../surveyresults.py:203
+msgid "Functionality 1"
+msgstr "Funktionen 1"
+
+#: ./../surveyresults.py:205
+msgid "Functionality 2"
+msgstr "Funktionen 2"
+
+#: ./../surveyresults.py:204
+msgid "Functionality 3"
+msgstr "Funktionen 3"
+
+#: ./../surveyresults.py:202
+msgid "Functionality 4"
+msgstr "Funktionen 4"
+
+#: ./../surveyresults.py:206
+msgid "Functionality 5"
+msgstr "Funktionen 5"
+
+#: ./../surveyresults.py:207
+msgid "Functionality 6"
+msgstr "Funktionen 6"
+
+#: ./../surveyresults.py:208
+msgid "Functionality 7"
+msgstr "Funktionen 7"
+
+#: ./../surveyresults.py:201
+msgid "Functionality Additional"
+msgstr "Funktionen (Freitext)"
+
+#: ./../survey.py:34
+msgid "Last Download"
+msgstr "Letzter Download"
+
+#: ./../survey_templates/view.pt:96
+msgid "Merkmale, die mir am besten gefallen"
+msgstr "Merkmale, die mir am besten gefallen"
+
+#: ./../survey_templates/view.pt:126
+msgid "Merkmale, die mir am wenigsten gefallen"
+msgstr "Merkmale, die mir am wenigsten gefallen"
+
+#: ./../surveyresults.py:128
+msgid "No value given or not callable"
+msgstr "Keine Angabe"
+
+#: ./../survey_templates/view.pt:73
+msgid "Nummer"
+msgstr "Nummer"
+
+#: ./../surveyresults.py:224
+msgid "Participant Code"
+msgstr "Teilnehmer Lfd. Nummer"
+
+#: ./../surveyresults.py:209
+msgid "Participant Gender"
+msgstr "Geschlecht"
+
+#: ./../surveyresults.py:217
+msgid "Participant ID"
+msgstr "ID-Code"
+
+#: ./../surveyresults.py:210
+msgid "Participant Investment"
+msgstr "Ausgaben Sonst"
+
+#: ./../surveyresults.py:213
+msgid "Participant Investment 1"
+msgstr "Ausgaben Geräte"
+
+#: ./../surveyresults.py:215
+msgid "Participant Investment 2"
+msgstr "Ausgaben Trainerstunden"
+
+#: ./../surveyresults.py:214
+msgid "Participant Investment 3"
+msgstr "Ausgaben Sportbekleidung"
+
+#: ./../surveyresults.py:212
+msgid "Participant Investment 4"
+msgstr "Ausgaben Wellness"
+
+#: ./../surveyresults.py:211
+msgid "Participant Investment 5"
+msgstr "Ausgaben Fitnessstudio"
+
+#: ./../surveyresults.py:216
+msgid "Participant Occupation"
+msgstr "Beruf"
+
+#: ./../answer.py:21
+msgid "Participant number"
+msgstr "Lfd. Nummer"
+
+#: ./../surveyresults.py:218
+msgid "Price Bike"
+msgstr "Ausgabenbereitschaft Rennrad"
+
+#: ./../surveyresults.py:219
+msgid "Price Crosstrainer"
+msgstr "Ausgabenbereitschaft Crosstrainer"
+
+#: ./../surveyresults.py:220
+msgid "Price Hometrainer"
+msgstr "Ausgabenbereitschaft Hometrainer"
+
+#: ./../surveyresults.py:221
+msgid "Price Mountainbike"
+msgstr "Ausgabenbereitschaft Mountainbike"
+
+#: ./../surveyresults.py:222
+msgid "Price Personal Trainer"
+msgstr "Ausgabenbereitschaft Trainerstunden"
+
+#: ./../surveyresults.py:223
+msgid "Price Treadmill"
+msgstr "Ausgabenbereitschaft Laufband"
+
+#: ./../surveyresults.py:225
+msgid "Roadwork"
+msgstr "Systematisches Lauftraining"
+
+#: ./../survey.py:326
+msgid "Session cleared"
+msgstr "Der Zwischenspeicher wurde entleert"
+
+#: ./../profiles/default/types/egomotion.sitecontent.survey.xml
+msgid "Survey"
+msgstr "Umfrage"
+
+#: ./../survey.py:228
+msgid "Survey state automatically saved"
+msgstr "Umfragedaten automatisch zwischengespeichert"
+
+#: ./../answer.py:25
+msgid "Sweepstake code claimed?"
+msgstr "Wurde der Gutscheincode abgerufen?"
+
+#: ./../surveyresults.py:200
+msgid "Training Frequency"
+msgstr "Trainingshäufigkeit"
+
+#: ./../surveyresults.py:226
+msgid "Training Maximum Price"
+msgstr "Ausgaben"
+
+#: ./../surveyresults.py:227
+msgid "Training Monitor"
+msgstr "Training HIlfsmittel"
+
+#: ./../surveyresults.py:228
+msgid "Training Personalization"
+msgstr "Persönlicher Lauftrainer"
+
+#: ./../surveyresults.py:234
+msgid "Training Resource 1"
+msgstr "Pulsuhr ohne GPS"
+
+#: ./../surveyresults.py:237
+msgid "Training Resource 10"
+msgstr "Schrittzähler mit Kalorienverbrauch"
+
+#: ./../surveyresults.py:239
+msgid "Training Resource 2"
+msgstr "Pulsuhr mit GPS"
+
+#: ./../surveyresults.py:238
+msgid "Training Resource 3"
+msgstr "Laufband zuhause"
+
+#: ./../surveyresults.py:232
+msgid "Training Resource 4"
+msgstr "Laufband im Fitnessstudio"
+
+#: ./../surveyresults.py:231
+msgid "Training Resource 5"
+msgstr "persönlicher Lauftrainer im Verein"
+
+#: ./../surveyresults.py:236
+msgid "Training Resource 6"
+msgstr "persönlicher Lauftrainer privat"
+
+#: ./../surveyresults.py:235
+msgid "Training Resource 7"
+msgstr "Laufgruppe im Verein"
+
+#: ./../surveyresults.py:230
+msgid "Training Resource 8"
+msgstr "Laufgruppe privat"
+
+#: ./../surveyresults.py:233
+msgid "Training Resource 9"
+msgstr "Trainingsapp auf Smartphone"
+
+#: ./../surveyresults.py:229
+msgid "Training Resource Effect"
+msgstr "Wirkungsgrad"
+
