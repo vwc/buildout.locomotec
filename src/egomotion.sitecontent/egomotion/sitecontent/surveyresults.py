@@ -36,9 +36,9 @@ class SurveyResults(grok.View):
                                             name=u"authenticator")
             if not authenticator.verify():
                 raise Unauthorized
-            self.exportResults(form)
+            self.exportResults()
 
-    def exportResults(self, data):
+    def exportResults(self):
         """Returns a CSV file with all newsletter subscribers.
         """
         context = aq_inner(self.context)
@@ -59,12 +59,12 @@ class SurveyResults(grok.View):
         csvWriter.writerow(CSV_HEADER_I18N)
         export_data = self.prepare_export_data()
         cleaned_data = self.prettify_export_data(export_data)
-        for entry in export_data:
-            obj = entry
-            csvWriter.writerow([obj.salutation,
-                                obj.fullname,
-                                obj.email,
-                                obj.organization])
+        for entry in cleaned_data:
+            result = cleaned_data[entry]
+            answers = []
+            for r in result:
+                answers.append(result[r])
+            csvWriter.writerow(answers)
         file.close()
         data = open(filename, "r").read()
         prefix = 'surveyresults'
@@ -73,13 +73,13 @@ class SurveyResults(grok.View):
         cache_control = "must-revalidate, post-check=0, pre-check=0, public"
         # Create response
         response = context.REQUEST.response
-        response.addHeader('Content-Disposition',
-                           "attachment; filename=%s") % name
-        response.addHeader('Content-Type', 'text/csv')
-        response.addHeader('Content-Length', "%d" % len(data))
-        response.addHeader('Pragma', "no-cache")
-        response.addHeader('Cache-Control', cache_control)
-        response.addHeader('Expires', "0")
+        #response.addHeader('Content-Disposition',
+        #                   "attachment; filename=%s") % name
+        #response.addHeader('Content-Type', 'text/csv')
+        #response.addHeader('Content-Length', "%d" % len(data))
+        #response.addHeader('Pragma', "no-cache")
+        #response.addHeader('Cache-Control', cache_control)
+        #response.addHeader('Expires', "0")
 
         # Return CSV data
         return data
@@ -156,9 +156,12 @@ class SurveyResults(grok.View):
         return items[0]
 
     def csv_headers(self):
-        HEADER = [_(u"salutation"), _(u"fullname"), _(u"email"),
-                  _(u"organization"), ]
-        return HEADER
+        fileheaders = []
+        mappings = self.survey_data_mappings()
+        for entry in mappings:
+            header = mappings[entry]
+            fileheaders.append(header)
+        return fileheaders
 
     def survey_data_mappings(self):
         MAP = {
@@ -194,6 +197,7 @@ class SurveyResults(grok.View):
             u'favorite3.likes.one': _(u"Favorite 3 - Like 1"),
             u'favorite3.likes.three': _(u"Favorite 3 - Like 3"),
             u'favorite3.likes.two': _(u"Favorite 3 - Like 2"),
+            u'frequency': _(u"Training Frequency"),
             u'functionality.additional': _(u"Functionality Additional"),
             u'functionality.four': _(u"Functionality 4"),
             u'functionality.one': _(u"Functionality 1"),
