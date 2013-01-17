@@ -1,11 +1,15 @@
 import math
 import json
 from datetime import datetime
-from Acquisition import aq_inner
-from AccessControl import Unauthorized
 from five import grok
 from plone import api
 from zope import schema
+
+from Acquisition import aq_inner
+from AccessControl import Unauthorized
+from AccessControl import getSecurityManager
+from AccessControl.SecurityManagement import newSecurityManager
+from AccessControl.SecurityManagement import setSecurityManager
 
 from zope.component import getMultiAdapter
 from zope.component import getUtility
@@ -14,7 +18,6 @@ from plone.directives import dexterity, form
 from plone.keyring import django_random
 
 from plone.dexterity.utils import createContentInContainer
-from plone.app.uuid.utils import uuidToObject
 
 from plone.uuid.interfaces import IUUID
 from plone.namedfile.interfaces import IImageScaleTraversable
@@ -269,36 +272,62 @@ class SurveySaved(grok.View):
         self.marker = self.set_participation_marker()
 
     def set_participation_marker(self):
-        item = self.resolve_item()
+        context = aq_inner(self.context)
+        uuid = self.request.get('uuid', None)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog.unrestrictedSearchResults(UID=uuid)
         tool = getUtility(ISurveyTool)
         session = tool.get()
         marker = True
-        if 'token' in session:
-            token = session['token']
-            if token == self.token:
-                state = {}
-                data = json.loads(item.answers)
-                results = data['survey-state']
-                state['idx'] = results['puid']
-                state['token'] = token
-                state['ip'] = results['pip']
-                tool.add('token', state)
-                tool.remove('survey-state')
-                marker = False
+        owner = context.getWrappedOwner()
+        sm = getSecurityManager()
+        newSecurityManager(self.request, owner)
+        try:
+            item = results[0].getObject()
+            if 'token' in session:
+                token = session['token']
+                if token == self.token:
+                    state = {}
+                    data = json.loads(item.answers)
+                    results = data['survey-state']
+                    state['idx'] = results['puid']
+                    state['token'] = token
+                    state['ip'] = results['pip']
+                    tool.add('token', state)
+                    tool.remove('survey-state')
+                    marker = False
+        finally:
+            setSecurityManager(sm)
         return marker
 
     def item_info(self):
-        item = self.resolve_item()
-        info = {}
-        answers = json.loads(item.answers)
-        results = answers['survey-state']
-        info['code'] = results['puid']
-        info['index'] = item.participant
-        return info
+        context = aq_inner(self.context)
+        uuid = self.request.get('uuid', None)
+        if uuid is not None:
+            catalog = api.portal.get_tool(name='portal_catalog')
+            results = catalog.unrestrictedSearchResults(UID=uuid)
+            owner = context.getWrappedOwner()
+            sm = getSecurityManager()
+            newSecurityManager(self.request, owner)
+            try:
+                item = results[0].getObject()
+                info = {}
+                answers = json.loads(item.answers)
+                results = answers['survey-state']
+                info['code'] = results['puid']
+                info['index'] = item.participant
+                info['marker'] = self.marker
+                return info
+            finally:
+                setSecurityManager(sm)
 
     def resolve_item(self):
         uuid = self.request.get('uuid', None)
-        return uuidToObject(uuid)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog.unrestrictedSearchResults(UID=uuid)
+        if len(results) > 0:
+            item = results[0].getObject()
+            return item
 
 
 class SurveySessionInfo(grok.View):
