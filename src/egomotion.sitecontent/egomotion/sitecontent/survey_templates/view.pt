@@ -30,6 +30,9 @@
           <i class="icon-refresh"></i>
           Sitzung bereinigen</a>
       </p>
+      <p class="discreet"><i class="icon-info-sign"></i>
+        IP: <span tal:content="view/get_client_ip" />
+      </p>
     </section>
 
     <section tal:condition="has_token">

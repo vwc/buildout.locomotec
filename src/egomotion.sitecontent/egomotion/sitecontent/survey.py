@@ -205,6 +205,16 @@ class View(grok.View):
             item['height'] = scale.height
         return item
 
+    def get_client_ip(self):
+        request = self.request
+        if "HTTP_X_FORWARDED_FOR" in request.environ:
+            ip = request.environ['HTTP_X_FORWARDED_FOR']
+        elif "HTTP_HOST" in request.environ:
+            ip = request.environ['REMOTE_ADDR']
+        else:
+            ip = None
+        return ip
+
 
 class AutosaveSurvey(grok.View):
     grok.context(ISurvey)
