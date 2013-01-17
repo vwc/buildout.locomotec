@@ -22,7 +22,6 @@
           der dazugeh&ouml;rige Gewinncode ausgegeben werden.</p>
         <a href="" class="btn btn-primary pull-right"
           tal:attributes="href portal_url">Zur Startseite egomotion.com</a>
-          <span tal:replace="item/marker" />
       </div>
 
       <tal:block tal:condition="python:marker and marker == False">
