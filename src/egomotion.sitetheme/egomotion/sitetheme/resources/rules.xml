@@ -63,11 +63,11 @@
         <!-- Frontpage styles -->
         <rules css:if-content="body.template-frontpage-view">
             <replace css:theme-children="#frontpage-claim"
-                css:content-children="#frontpage-claim"
-                css:if-content="#frontpage-claim" />
+                css:content-children="#header-claim"
+                css:if-content="#header-claim" />
             <replace css:theme-children="#frontpage-intro"
-                css:content-children="#frontpage-intro"
-                css:if-content="#frontpage-intro" />
+                css:content-children="#header-intro"
+                css:if-content="#header-intro" />
             <replace css:theme="#fp-header-content"
                 css:content="#fp-header-content"
                 css:if-content="#fp-header-content" />
@@ -86,6 +86,12 @@
         </rules>
 
         <rules css:if-content="body.section-erlaeuterungen-und-teilnahmebedingungen">
+            <replace css:theme-children="#frontpage-claim"
+                css:content-children="#header-claim"
+                css:if-content="#header-claim" />
+            <replace css:theme-children="#frontpage-intro"
+                css:content-children="#header-intro"
+                css:if-content="#header-intro" />
             <replace css:content-children="#content"
                 css:theme-children="#frontpage-content" />
         </rules>
