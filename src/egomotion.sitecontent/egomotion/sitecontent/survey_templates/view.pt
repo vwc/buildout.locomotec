@@ -36,10 +36,15 @@
       <div class="alert alert-error">
         <h4>Hinweis</h4>
         <p>Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
-          Sie haben bereits an unserer Umfrage teilgenommen.</p>
+          Du hast bereits an unserer Umfrage teilgenommen.</p>
       </div>
       <h4>Weitere Informationen</h4>
-      <p></p>
+      <p>F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
+        an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage
+        teilgenommen hast, k&ouml;nnte es sein, dass bereits
+        einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden
+        (z.B. durch einen Kollegen in Deinem B&uuml;ro).
+      </p>
     </section>
 
     <section tal:condition="not:has_token">
