@@ -51,6 +51,7 @@ class View(grok.View):
     def update(self):
         context = aq_inner(self.context)
         self.anonymous = api.user.is_anonymous()
+        self.token = self.token_in_session()
         self.has_images = len(self.contained_images()) > 0
         unwanted = ('_authenticator', 'form.button.Submit')
         if 'form.buttons.Submit' in self.request:
@@ -105,6 +106,17 @@ class View(grok.View):
         base_url = url + '/@@survey-saved?uuid=' + uid
         next_url = base_url + '&token=' + token
         return self.request.response.redirect(next_url)
+
+    def token_in_session(self):
+        tool = getUtility(ISurveyTool)
+        token = False
+        try:
+            session = tool.get()
+        except KeyError:
+            session = None
+        if session is not None and 'token' in session:
+            token = True
+        return token
 
     def generate_index(self):
         items = self.contained_answers()

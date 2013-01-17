@@ -11,11 +11,12 @@
   <metal:content-core define-macro="main">
 
   <article id="survey-view"
-    tal:define="context_url context/absolute_url">
+    tal:define="context_url context/absolute_url;
+                has_token view/token">
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
-    <section tal:condition="not:view/anonymous" class="alert alert-error">
+    <section tal:condition="not:view/anonymous" class="alert alert-warning">
       <h4>Administration</h4>
       <p>Sie sind als Redakteur angemeldet:
         <a href="" tal:attributes="href python:context_url + '/@@survey-results'">
@@ -30,7 +31,18 @@
           Sitzung bereinigen</a>
       </p>
     </section>
-    <section>
+
+    <section tal:condition="has_token">
+      <div class="alert alert-error">
+        <h4>Hinweis</h4>
+        <p>Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
+          Sie haben bereits an unserer Umfrage teilgenommen.</p>
+      </div>
+      <h4>Weitere Informationen</h4>
+      <p></p>
+    </section>
+
+    <section tal:condition="not:has_token">
       <h4>
         1. Die folgenden 15 Designskizzen zeigen, wie unser RUFUS als
         Produkt aussehen k&ouml;nnte. Bitte w&auml;hle unter diesen Skizzen drei
@@ -62,7 +74,8 @@
         </tal:block>
       </div>
     </section>
-    <section class="visualClear">
+    <section class="visualClear"
+      tal:condition="not:has_token">
       <form id="form-survey" method="post"
         data-appui="autosave"
         tal:define="context_url context/absolute_url"
