@@ -1,0 +1,9 @@
+<div id="infobar"
+    tal:define="portal_url viewlet/portal_url">
+    <div id="header-claim">
+        <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.plaintext/header-claim" />
+    </div>
+    <div id="header-intro">
+        <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.richtext/header-intro" />
+    </div>
+</div>
