@@ -22,7 +22,7 @@
           tal:attributes="href portal_url">Zur Startseite egomotion.com</a>
       </div>
       <div class="well" id="sweepstake-notice"
-        tal:condition="not:item/marker">
+        tal:condition="view/initial">
         <h2>Teilnahme am Gewinnspiel</h2>
         <a href="javascript:window.print()"
           class="btn pull-right">

@@ -225,7 +225,12 @@ class AutosaveSurvey(grok.View):
         self.query = self.request["QUERY_STRING"]
 
     def render(self):
-        data = self.request.form
+        form = self.request.form
+        data = {}
+        unwanted = ('_authenticator', 'form.button.Submit')
+        for value in form:
+            if value not in unwanted:
+                data[value] = form[value]
         tool = getUtility(ISurveyTool)
         now = datetime.now()
         timestamp = api.portal.get_localized_time(datetime=now,
@@ -292,6 +297,7 @@ class SurveySaved(grok.View):
     def update(self):
         self.token = self.request.get('token', None)
         self.marker = self.set_participation_marker()
+        self.initial = False
 
     def set_participation_marker(self):
         context = aq_inner(self.context)
@@ -318,6 +324,7 @@ class SurveySaved(grok.View):
                     tool.add('token', state)
                     tool.remove('survey-state')
                     marker = False
+                    self.initial = True
         finally:
             setSecurityManager(sm)
         return marker
@@ -365,7 +372,7 @@ class SurveySessionInfo(grok.View):
 
 class ClearSurveySession(grok.View):
     grok.context(ISurvey)
-    grok.require('cmf.ModifyPortalContent')
+    grok.require('zope2.View')
     grok.name('survey-session-clear')
 
     def render(self):
