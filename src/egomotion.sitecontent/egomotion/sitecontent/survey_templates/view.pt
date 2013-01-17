@@ -15,7 +15,7 @@
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
-    <section tal:condition="not:view/anonymous" class="alert">
+    <section tal:condition="not:view/anonymous" class="alert alert-error">
       <h4>Administration</h4>
       <p>Sie sind als Redakteur angemeldet:
         <a href="" tal:attributes="href python:context_url + '/@@survey-results'">
