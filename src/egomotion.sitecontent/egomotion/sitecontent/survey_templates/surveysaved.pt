@@ -25,7 +25,6 @@
           Merke Dir Deine Nummer und den Codewort oder drucke es Dir aus,
           damit Du nach Ablauf des Gewinnspiels Deinen Gewinn einfordern kannst.
         </p>
-        <pre tal:content="info" />
           <label>Losnummer</label>
           <div class="input-prepend input-append">
             <span class="add-on"><i class="icon-star"></i></span>
@@ -43,6 +42,9 @@
           <div class="help-text">
             <p class="text-warning">Dieser Gewinncode wird nur einmalig angezeigt!</p>
           </div>
+          <a href="" class="btn pull-right"
+            tal:attributes="href portal_url">Fenster schliessen</a>
+          <div class="visualClear"><!-- --></div>
       </div>
     </section>
   </article>
