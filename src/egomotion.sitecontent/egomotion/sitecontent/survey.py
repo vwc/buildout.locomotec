@@ -232,7 +232,6 @@ class AutosaveSurvey(grok.View):
         self.query = self.request["QUERY_STRING"]
 
     def render(self):
-        context = aq_inner(self.context)
         form = self.request.form
         data = {}
         unwanted = ('_authenticator', 'form.button.Submit')
@@ -249,9 +248,7 @@ class AutosaveSurvey(grok.View):
         else:
             ip_state = self.postprocess_client(client_ip)
             if ip_state is True:
-                url = context.absolute_url()
-                next_url = url + '/@@survey-saved?uuid='
-                return self.request.response.redirect(next_url)
+                continue
             userinfo = client_ip + '-' + timestamp
         name = 'survey-state'
         puid = django_random.get_random_string()
