@@ -35,7 +35,46 @@ class SurveyResults(grok.View):
                                             name=u"authenticator")
             if not authenticator.verify():
                 raise Unauthorized
-            self.exportResults()
+            now = DateTime()
+            timestamp = str(now)
+            setattr(context, 'download', timestamp)
+            modified(context)
+            CSV_HEADER = self.csv_headers()
+            # Create CSV file
+            filename = tempfile.mktemp()
+            file = open(filename, 'wb')
+            csvWriter = UnicodeWriter(file,
+                                      {'delimiter': ',',
+                                       'quotechar': '"',
+                                       'quoting': csv.QUOTE_MINIMAL})
+            CSV_HEADER_I18N = [self.context.translate(_(x)) for x in
+                               CSV_HEADER]
+            csvWriter.writerow(CSV_HEADER_I18N)
+            export_data = self.prepare_export_data()
+            cleaned_data = self.prettify_export_data(export_data)
+            for entry in cleaned_data:
+                result = cleaned_data[entry]
+                answers = []
+                for r in result:
+                    answers.append(result[r])
+                csvWriter.writerow(answers)
+            file.close()
+            data = open(filename, "r").read()
+            prefix = 'surveyresults'
+            ext = ''
+            name = "%s-%s%s" % (prefix, time.time(), ext)
+            c_control = "must-revalidate, post-check=0, pre-check=0, public"
+            disposition = "attachment; filename=%s" % name
+            # Create response
+            response = self.request.response
+            response.addHeader('Content-Disposition', disposition)
+            response.addHeader('Content-Type', 'text/csv')
+            response.addHeader('Content-Length', "%d" % len(data))
+            response.addHeader('Pragma', "no-cache")
+            response.addHeader('Cache-Control', c_control)
+            response.addHeader('Expires', "0")
+            # Return CSV data
+            return data
 
     def exportResults(self):
         """Returns a CSV file with all newsletter subscribers.
@@ -237,3 +276,11 @@ class SurveyResults(grok.View):
             u'trainingresource.three': _(u"Training Resource 3"),
             u'trainingresource.two': _(u"Training Resource 2")}
         return MAP
+
+
+class ExportResults(grok.View):
+    grok.context(ISurvey)
+    grok.require('cmf.ModifyPortalContent')
+    grok.name('export-results')
+
+    
