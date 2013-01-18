@@ -66,20 +66,20 @@ class SurveyResults(grok.View):
             csvWriter.writerow(answers)
         file.close()
         data = open(filename, "r").read()
-        prefix = 'surveyresults'
-        ext = ''
-        name = "%s-%s%s" % (prefix, time.time(), ext)
+        prefix = 'egomotion-survey'
+        export_timestamp = int(round(time.time()))
+        ext = '.csv'
+        name = "%s-%s%s" % (prefix, export_timestamp, ext)
         cache_control = "must-revalidate, post-check=0, pre-check=0, public"
         # Create response
-        response = context.REQUEST.response
-        response.addHeader('Content-Disposition',
-                           "attachment; filename=%s") % name
-        response.addHeader('Content-Type', 'text/csv')
-        response.addHeader('Content-Length', "%d" % len(data))
-        response.addHeader('Pragma', "no-cache")
-        response.addHeader('Cache-Control', cache_control)
-        response.addHeader('Expires', "0")
-
+        response = self.request.response
+        response.setHeader('Content-Disposition',
+                           "attachment; filename=%s" % name)
+        response.setHeader('Content-Type', 'text/csv')
+        response.setHeader('Content-Length', "%d" % len(data))
+        response.setHeader('Pragma', "no-cache")
+        response.setHeader('Cache-Control', cache_control)
+        response.setHeader('Expires', "0")
         # Return CSV data
         return data
 
