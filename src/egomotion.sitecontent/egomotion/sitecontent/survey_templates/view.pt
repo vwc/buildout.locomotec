@@ -867,11 +867,11 @@
                 100 &ndash; 250 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option2">
                 250 &ndash; 500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option3">
                 500 &ndash; 1500 EUR
               </label>
             </div>
@@ -995,7 +995,7 @@
         <div class="survey-question">
           <h4>
             18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren
-            REnnrads oder Laufbands) auf den Markt kommen.
+            Rennrads oder Laufbands) auf den Markt kommen.
             W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="controls">
