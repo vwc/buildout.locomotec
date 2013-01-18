@@ -37,6 +37,13 @@ class ISurvey(form.Schema, IImageScaleTraversable):
         title=_(u"Last Download"),
         required=False,
     )
+    clients = schema.List(
+        title=_(u"Clients"),
+        value_type=schema.TextLine(
+            title=_(u"Client"),
+        ),
+        required=False,
+    )
 
 
 class Survey(dexterity.Container):
@@ -225,6 +232,7 @@ class AutosaveSurvey(grok.View):
         self.query = self.request["QUERY_STRING"]
 
     def render(self):
+        context = aq_inner(self.context)
         form = self.request.form
         data = {}
         unwanted = ('_authenticator', 'form.button.Submit')
@@ -239,6 +247,11 @@ class AutosaveSurvey(grok.View):
         if client_ip is None:
             userinfo = timestamp
         else:
+            ip_state = self.postprocess_client(client_ip)
+            if ip_state is True:
+                url = context.absolute_url()
+                next_url = url + '/@@survey-saved?uuid='
+                return self.request.response.redirect(next_url)
             userinfo = client_ip + '-' + timestamp
         name = 'survey-state'
         puid = django_random.get_random_string()
@@ -263,6 +276,17 @@ class AutosaveSurvey(grok.View):
         self.request.response.setHeader('Content-Type',
                                         'application/json; charset=utf-8')
         return json.dumps(results)
+
+    def postprocess_client(self, client):
+        context = aq_inner(self.context)
+        known_client = False
+        stored = context.clients
+        if client in stored:
+            known_client = True
+        else:
+            updated = stored.append(client)
+            setattr(context, 'clients', updated)
+        return known_client
 
     def has_active_session(self):
         active = False

@@ -128,9 +128,9 @@
           </table>
         </div>
       </div>
-      <pre class="pre-scrollable"
+      <!--<pre class="pre-scrollable"
         tal:content="view/exportResults">
-      </pre>
+      </pre>-->
     </div>
   </section>
     

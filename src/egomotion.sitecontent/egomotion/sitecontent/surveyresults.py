@@ -31,7 +31,6 @@ class SurveyResults(grok.View):
         self.has_answers = self.answers_idx() > 0
         if 'form.buttons.Submit' in self.request:
             self.errors = {}
-            form = self.request.form
             authenticator = getMultiAdapter((context, self.request),
                                             name=u"authenticator")
             if not authenticator.verify():
@@ -73,13 +72,13 @@ class SurveyResults(grok.View):
         cache_control = "must-revalidate, post-check=0, pre-check=0, public"
         # Create response
         response = context.REQUEST.response
-        #response.addHeader('Content-Disposition',
-        #                   "attachment; filename=%s") % name
-        #response.addHeader('Content-Type', 'text/csv')
-        #response.addHeader('Content-Length', "%d" % len(data))
-        #response.addHeader('Pragma', "no-cache")
-        #response.addHeader('Cache-Control', cache_control)
-        #response.addHeader('Expires', "0")
+        response.addHeader('Content-Disposition',
+                           "attachment; filename=%s") % name
+        response.addHeader('Content-Type', 'text/csv')
+        response.addHeader('Content-Length', "%d" % len(data))
+        response.addHeader('Pragma', "no-cache")
+        response.addHeader('Cache-Control', cache_control)
+        response.addHeader('Expires', "0")
 
         # Return CSV data
         return data
