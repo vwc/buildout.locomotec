@@ -122,10 +122,12 @@ class View(grok.View):
         modified(item)
         item.reindexObject(idxs='modified')
         token = django_random.get_random_string(length=24)
+        code = django_random.get_random_string(length=12)
         #results = answers['survey-state']
         token_info = {}
         token_info['idx'] = index
         token_info['token'] = token
+        token_info['code'] = code
         token_info['timestamp'] = timestamp
         token_info['ip'] = state['pip']
         tool.add('token', token_info)
@@ -138,9 +140,12 @@ class View(grok.View):
 
     def update_survey_information(self, uid):
         context = aq_inner(self.context)
+        portal = api.portal.get()
+        survey = portal['umfrage']
         updated = False
         clients = getattr(context, 'clients', list())
-        participants = getattr(context, 'participants', list())
+        participants = getattr(survey, 'participants', list())
+        import pdb; pdb.set_trace( )
         if participants and uid not in participants:
             updated_participants = participants.append(uid)
             setattr(context, 'participants', updated_participants)
@@ -162,6 +167,7 @@ class View(grok.View):
             updated = True
         if updated is True:
             modified(context)
+            context.reindexObject(idxs='modified')
         return uid
 
     def token_in_session(self):

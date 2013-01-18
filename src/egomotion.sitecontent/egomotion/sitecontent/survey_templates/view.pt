@@ -34,6 +34,7 @@
         IP: <span tal:content="view/get_client_ip" />
       </p>
     </section>
+    <pre tal:content="context/clients" />
 
     <section tal:condition="has_token">
       <div class="alert alert-error">
