@@ -164,6 +164,9 @@ class SurveyResults(grok.View):
 
     def survey_data_mappings(self):
         MAP = {
+            u'pid': _(u"Participant ID"),
+            u'puid': _(u"Participant Code"),
+            u'email': _(u"E-Mail"),
             u'accessory.additional': _(u"Accessory Additional"),
             u'accessory.one': _(u"Accessory One"),
             u'accessory.three': _(u"Accessory Three"),
@@ -174,7 +177,6 @@ class SurveyResults(grok.View):
             u'dislikes.one': _(u"Dislike One"),
             u'dislikes.two': _(u"Dislike Two"),
             u'dislikes.three': _(u"Dislike Three"),
-            u'email': _(u"E-Mail"),
             u'favorite1': _(u"Favorite 1"),
             u'favorite1.dislikes.one': _(u"Favorite 1 - Dislike 1"),
             u'favorite1.dislikes.three': _(u"Favorite 1 - Dislike 3"),
@@ -213,14 +215,12 @@ class SurveyResults(grok.View):
             u'participant.investment.three': _(u"Participant Investment 3"),
             u'participant.investment.two': _(u"Participant Investment 2"),
             u'participant.occupation': _(u"Participant Occupation"),
-            u'pid': _(u"Participant ID"),
             u'price.bike': _(u"Price Bike"),
             u'price.crosstrainer': _(u"Price Crosstrainer"),
             u'price.hometrainer': _(u"Price Hometrainer"),
             u'price.mountainbike': _(u"Price Mountainbike"),
             u'price.trainer': _(u"Price Personal Trainer"),
             u'price.treadmill': _(u"Price Treadmill"),
-            u'puid': _(u"Participant Code"),
             u'roadwork': _(u"Roadwork"),
             u'training.maxprice': _(u"Training Maximum Price"),
             u'training.monitor': _(u"Training Monitor"),

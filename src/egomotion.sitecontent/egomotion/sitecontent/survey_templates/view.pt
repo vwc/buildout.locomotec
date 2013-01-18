@@ -514,28 +514,23 @@
           </h4>
           <div class="controls">
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency1" value="option1"
-                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+              <input type="radio" name="frequency" id="frequency1" value="option1">
                 regelm&auml;&szlig;ig (mehrmals in der Woche)
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency2" value="option2"
-                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+              <input type="radio" name="frequency" id="frequency2" value="option2">
                 h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency3" value="option3"
-                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+              <input type="radio" name="frequency" id="frequency3" value="option3">
                 gelegentlich
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency4" value="option3"
-                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+              <input type="radio" name="frequency" id="frequency4" value="option3">
                 nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency5" value="option3"
-                tal:attributes="checked python:view.default_value(fieldname='frequency')">
+              <input type="radio" name="frequency" id="frequency5" value="option3">
                 nie, mir macht Laufen keinen Spass
             </label>
           </div>
@@ -580,7 +575,7 @@
 
         <div class="survey-question">
           <h4>
-            8. Welche &bdquo;Hilfsmittel&ldquo; verwendest Du f&uuml;r Dein Lauftraining?<br />
+            8. Welche Hilfsmittel verwendest Du f&uuml;r Dein Lauftraining?<br />
             <small>(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
@@ -636,7 +631,7 @@
 
         <div class="survey-question">
           <h4>
-            9. Wie wirkungsvoll unterst&uuml;tzen Dich diese &bdquo;Hilfsmittel&ldquo; bei
+            9. Wie wirkungsvoll unterst&uuml;tzen Dich diese Hilfsmittel bei
             deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz
             und Deiner Laufgeschwindigkeit?
           </h4>
@@ -662,7 +657,8 @@
 
         <div class="survey-question">
           <h4>
-            10. Wie genau kannst Du mit einer Pulsuhr (mit Schrittzähler oder GPS)
+            10. Vorausgesetzt Du trainierst mit einer Pulsuhr, wie genau kannst
+            Du mit dieser Pulsuhr (mit Schrittzähler oder GPS)
             Deinen Puls und Deine Laufgeschwindigkeit steuern?
           </h4>
           <div class="controls">
@@ -872,11 +868,11 @@
                 100 &ndash; 250 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option2">
                 250 &ndash; 500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option3">
                 500 &ndash; 1500 EUR
               </label>
             </div>
@@ -1000,7 +996,7 @@
         <div class="survey-question">
           <h4>
             18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren
-            REnnrads oder Laufbands) auf den Markt kommen.
+            Rennrads oder Laufbands) auf den Markt kommen.
             W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="controls">
