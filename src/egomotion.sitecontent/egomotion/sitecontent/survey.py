@@ -231,6 +231,76 @@ class View(grok.View):
         return ip
 
 
+class SurveySaved(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('survey-saved')
+
+    def update(self):
+        self.token = self.request.get('token', None)
+        self.marker = self.set_participation_marker()
+        self.initial = False
+
+    def set_participation_marker(self):
+        context = aq_inner(self.context)
+        uuid = self.request.get('uuid', None)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog.unrestrictedSearchResults(UID=uuid)
+        tool = getUtility(ISurveyTool)
+        session = tool.get()
+        marker = True
+        owner = context.getWrappedOwner()
+        sm = getSecurityManager()
+        newSecurityManager(self.request, owner)
+        try:
+            item = results[0].getObject()
+            if 'token' in session:
+                token = session['token']
+                if token == self.token:
+                    state = {}
+                    data = json.loads(item.answers)
+                    results = data['survey-state']
+                    state['idx'] = results['puid']
+                    state['token'] = token
+                    state['ip'] = results['pip']
+                    tool.add('token', state)
+                    tool.remove('survey-state')
+                    marker = False
+                    self.initial = True
+        finally:
+            setSecurityManager(sm)
+        return marker
+
+    def item_info(self):
+        context = aq_inner(self.context)
+        uuid = self.request.get('uuid', None)
+        if uuid is not None:
+            catalog = api.portal.get_tool(name='portal_catalog')
+            results = catalog.unrestrictedSearchResults(UID=uuid)
+            owner = context.getWrappedOwner()
+            sm = getSecurityManager()
+            newSecurityManager(self.request, owner)
+            try:
+                item = results[0].getObject()
+                info = {}
+                answers = json.loads(item.answers)
+                results = answers['survey-state']
+                info['code'] = results['puid']
+                info['index'] = item.participant
+                info['marker'] = self.marker
+                return info
+            finally:
+                setSecurityManager(sm)
+
+    def resolve_item(self):
+        uuid = self.request.get('uuid', None)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog.unrestrictedSearchResults(UID=uuid)
+        if len(results) > 0:
+            item = results[0].getObject()
+            return item
+
+
 class AutosaveSurvey(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')
@@ -319,76 +389,6 @@ class AutosaveSurvey(grok.View):
         else:
             ip = None
         return ip
-
-
-class SurveySaved(grok.View):
-    grok.context(ISurvey)
-    grok.require('zope2.View')
-    grok.name('survey-saved')
-
-    def update(self):
-        self.token = self.request.get('token', None)
-        self.marker = self.set_participation_marker()
-        self.initial = False
-
-    def set_participation_marker(self):
-        context = aq_inner(self.context)
-        uuid = self.request.get('uuid', None)
-        catalog = api.portal.get_tool(name='portal_catalog')
-        results = catalog.unrestrictedSearchResults(UID=uuid)
-        tool = getUtility(ISurveyTool)
-        session = tool.get()
-        marker = True
-        owner = context.getWrappedOwner()
-        sm = getSecurityManager()
-        newSecurityManager(self.request, owner)
-        try:
-            item = results[0].getObject()
-            if 'token' in session:
-                token = session['token']
-                if token == self.token:
-                    state = {}
-                    data = json.loads(item.answers)
-                    results = data['survey-state']
-                    state['idx'] = results['puid']
-                    state['token'] = token
-                    state['ip'] = results['pip']
-                    tool.add('token', state)
-                    tool.remove('survey-state')
-                    marker = False
-                    self.initial = True
-        finally:
-            setSecurityManager(sm)
-        return marker
-
-    def item_info(self):
-        context = aq_inner(self.context)
-        uuid = self.request.get('uuid', None)
-        if uuid is not None:
-            catalog = api.portal.get_tool(name='portal_catalog')
-            results = catalog.unrestrictedSearchResults(UID=uuid)
-            owner = context.getWrappedOwner()
-            sm = getSecurityManager()
-            newSecurityManager(self.request, owner)
-            try:
-                item = results[0].getObject()
-                info = {}
-                answers = json.loads(item.answers)
-                results = answers['survey-state']
-                info['code'] = results['puid']
-                info['index'] = item.participant
-                info['marker'] = self.marker
-                return info
-            finally:
-                setSecurityManager(sm)
-
-    def resolve_item(self):
-        uuid = self.request.get('uuid', None)
-        catalog = api.portal.get_tool(name='portal_catalog')
-        results = catalog.unrestrictedSearchResults(UID=uuid)
-        if len(results) > 0:
-            item = results[0].getObject()
-            return item
 
 
 class SurveySessionInfo(grok.View):
