@@ -44,6 +44,14 @@ class ISurvey(form.Schema, IImageScaleTraversable):
         ),
         required=False,
     )
+    participants = schema.List(
+        title=_(u"Participants"),
+        description=_(u"A list of participation UIDs for quick access"),
+        value_type=schema.TextLine(
+            title=_(u"Participant UID"),
+        ),
+        required=False,
+    )
 
 
 class Survey(dexterity.Container):
@@ -247,8 +255,6 @@ class AutosaveSurvey(grok.View):
             userinfo = timestamp
         else:
             ip_state = self.postprocess_client(client_ip)
-            if ip_state is True:
-                continue
             userinfo = client_ip + '-' + timestamp
         name = 'survey-state'
         puid = django_random.get_random_string()
@@ -277,12 +283,17 @@ class AutosaveSurvey(grok.View):
     def postprocess_client(self, client):
         context = aq_inner(self.context)
         known_client = False
-        stored = context.clients
-        if client in stored:
-            known_client = True
+        stored = getattr(context, 'clients', None)
+        if stored is not None:
+            if client in stored:
+                known_client = True
+            else:
+                updated = stored.append(client)
+                setattr(context, 'clients', updated)
         else:
-            updated = stored.append(client)
-            setattr(context, 'clients', updated)
+            client_list = list()
+            updated_list = client_list.append(client)
+            setattr(context, 'clients', updated_list)
         return known_client
 
     def has_active_session(self):

@@ -24,7 +24,7 @@
           tal:attributes="href portal_url">Zur Startseite egomotion.com</a>
       </div>
 
-      <tal:block tal:condition="python:marker and marker == False">
+      <tal:block tal:condition="python:marker and marker is False">
       <div class="well" id="sweepstake-notice">
         <h2>Teilnahme am Gewinnspiel</h2>
         <a href="javascript:window.print()"
