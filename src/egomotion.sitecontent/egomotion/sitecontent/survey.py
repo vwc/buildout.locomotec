@@ -18,8 +18,10 @@ from plone.directives import dexterity, form
 from plone.keyring import django_random
 
 from plone.dexterity.utils import createContentInContainer
+from plone.app.uuid.utils import uuidToPhysicalPath
 
 from plone.uuid.interfaces import IUUID
+
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.blob.interfaces import IATBlobImage
 
@@ -82,10 +84,15 @@ class View(grok.View):
             for item in form:
                 if item not in unwanted:
                     surveydata[item] = form[item]
+            surveydata['pip'] = self.get_client_ip()
+            tool = getUtility(ISurveyTool)
+            tool.add('survey-state', surveydata)
+            session = tool.get()
+            current_data = session['survey-state']
             if errorIdx > 0:
                 self.errors = formerrors
             else:
-                self._processData(surveydata)
+                self._processData(current_data)
 
     def _processData(self, data):
         context = aq_inner(self.context)
@@ -115,11 +122,17 @@ class View(grok.View):
         modified(item)
         item.reindexObject(idxs='modified')
         token = django_random.get_random_string(length=24)
-        tool.add('token', token)
+        #results = answers['survey-state']
+        token_info = {}
+        token_info['idx'] = index
+        token_info['token'] = token
+        token_info['timestamp'] = timestamp
+        token_info['ip'] = state['pip']
+        tool.add('token', token_info)
         uid = IUUID(item)
         stored_uid = self.update_survey_information(uid)
         url = context.absolute_url()
-        base_url = url + '/@@survey-saved?uuid=' + stored_uid
+        base_url = url + '/@@survey-save?uuid=' + stored_uid
         next_url = base_url + '&token=' + token
         return self.request.response.redirect(next_url)
 
@@ -128,34 +141,28 @@ class View(grok.View):
         updated = False
         clients = getattr(context, 'clients', list())
         participants = getattr(context, 'participants', list())
-        if uid not in participants:
+        if participants and uid not in participants:
             updated_participants = participants.append(uid)
             setattr(context, 'participants', updated_participants)
             updated = True
+        else:
+            empty_list = list()
+            updated_participants = empty_list.append(uid)
+            setattr(context, 'participants', updated_participants)
+            updated = True
         client_ip = self.get_client_ip()
-        if client_ip not in clients:
+        if clients and client_ip not in clients:
             updated_clients = clients.append(uid)
+            setattr(context, 'clients', updated_clients)
+            updated = True
+        else:
+            empty_list = list()
+            updated_clients = empty_list.append(uid)
             setattr(context, 'clients', updated_clients)
             updated = True
         if updated is True:
             modified(context)
         return uid
-
-    def postprocess_client(self, client):
-        context = aq_inner(self.context)
-        known_client = False
-        stored = getattr(context, 'clients', None)
-        if stored is not None:
-            if client in stored:
-                known_client = True
-            else:
-                updated = stored.append(client)
-                setattr(context, 'clients', updated)
-        else:
-            client_list = list()
-            updated_list = client_list.append(client)
-            setattr(context, 'clients', updated_list)
-        return known_client
 
     def token_in_session(self):
         tool = getUtility(ISurveyTool)
@@ -169,9 +176,13 @@ class View(grok.View):
         return token
 
     def generate_index(self):
-        items = self.contained_answers()
-        count = len(items)
-        new_index = count + 1
+        context = aq_inner(self.context)
+        items = getattr(context, 'participants', list())
+        if items is not None:
+            count = len(items)
+            new_index = count + 1
+        else:
+            new_index = 1
         return new_index
 
     def contained_answers(self):
@@ -276,32 +287,27 @@ class SurveySave(grok.View):
         base_url = context.absolute_url()
         context = aq_inner(self.context)
         uuid = self.request.get('uuid', None)
-        catalog = api.portal.get_tool(name='portal_catalog')
-        results = catalog.unrestrictedSearchResults(UID=uuid)
+        query_token = self.request.get('token', None)
         tool = getUtility(ISurveyTool)
         session = tool.get()
         marker = True
-        owner = context.getWrappedOwner()
-        sm = getSecurityManager()
-        newSecurityManager(self.request, owner)
-        try:
-            item = results[0].getObject()
-            if 'token' in session:
-                token = session['token']
-                if token == self.token:
-                    state = {}
-                    data = json.loads(item.answers)
-                    results = data['survey-state']
-                    state['idx'] = results['puid']
-                    state['token'] = token
-                    state['ip'] = results['pip']
-                    tool.add('token', state)
-                    tool.remove('survey-state')
-                    marker = False
-                    self.initial = True
-        finally:
-            setSecurityManager(sm)
-        return marker
+        if 'token' in session:
+            tokeninfo = session['token']
+            token = tokeninfo['token']
+            if token == query_token:
+                tool.remove('survey-state')
+                marker = False
+        if marker is False:
+            next_url = base_url + '/@@survey-saved?uuid=' + uuid
+        else:
+            next_url = base_url + '/@@survey-invalid'
+        return self.request.response.redirect(next_url)
+
+    def resolve_item(self, uid):
+        context = aq_inner(self.context)
+        item_path = uuidToPhysicalPath(uid)
+        item = context.unrestrictedTraverse(item_path)
+        return item
 
 
 class SurveySaved(grok.View):
@@ -310,9 +316,15 @@ class SurveySaved(grok.View):
     grok.name('survey-saved')
 
     def update(self):
-        self.token = self.request.get('token', None)
-        self.marker = self.set_participation_marker()
+        self.uuid = self.request.get('uuid', None)
+        self.token = self.get_token_info()
         self.initial = False
+
+    def get_token_info(self):
+        tool = getUtility(ISurveyTool)
+        session = tool.get()
+        token_info = session['token']
+        return token_info
 
     def set_participation_marker(self):
         context = aq_inner(self.context)
@@ -365,13 +377,17 @@ class SurveySaved(grok.View):
             finally:
                 setSecurityManager(sm)
 
-    def resolve_item(self):
-        uuid = self.request.get('uuid', None)
-        catalog = api.portal.get_tool(name='portal_catalog')
-        results = catalog.unrestrictedSearchResults(UID=uuid)
-        if len(results) > 0:
-            item = results[0].getObject()
-            return item
+    def resolve_item(self, uid):
+        context = aq_inner(self.context)
+        item_path = uuidToPhysicalPath(uid)
+        item = context.unrestrictedTraverse(item_path)
+        return item
+
+
+class SurveyInvalid(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('survey-invalid')
 
 
 class AutosaveSurvey(grok.View):

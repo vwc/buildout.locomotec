@@ -36,8 +36,6 @@
                                 // (string | mandatory) the text inside the notification
                                 text: data.timestamp
                             });
-                            //var htmlString = '<p class="text-warning">' + message + '</p>';
-                            //$('#form-state').append(htmlString).slideDown('slow');
                         } else {
                             // This could be nicer in the future...
                             alert(error_msg + "\n\nError:\n" + data.messages);
@@ -46,6 +44,9 @@
                 });
             });
         }
+        $('#form-survey').on('load', function () {
+            autoSaveSurvey;
+        });
         //setTimeout(autoSaveSurvey(), 2000);
         setInterval(autoSaveSurvey, 30000);
     });

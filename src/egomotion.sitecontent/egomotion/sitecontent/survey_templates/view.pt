@@ -998,7 +998,9 @@
 
         <div class="survey-question">
           <h4>
-            18. W&uuml;rdest Du Dir einen RUFUS kaufen?
+            18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren
+            REnnrads oder Laufbands) auf den Markt kommen.
+            W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="controls">
             <label class="checkbox">
@@ -1021,7 +1023,7 @@
                 id="purchase.comment">
               </textarea>
               <span class="help-block">
-                Falls Deine Antwort &bdquo;Nein&ldquo; oder &bdquo;Unentschieden&ldquo; ist,
+                Falls Deine Antwort &bdquo;nein&ldquo; oder &bdquo;unentschieden&ldquo; ist,
                 w&uuml;rdest Du uns sehr helfen, wenn Du eine kurze Begr&uuml;ndung
                 angeben w&uuml;rdest.
               </span>

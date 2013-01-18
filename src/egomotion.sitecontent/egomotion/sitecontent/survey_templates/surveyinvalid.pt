@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="egomotion.sitecontent"
+      metal:use-macro="context/main_template/macros/master">
+
+  <metal:block fill-slot="main">
+
+  <article id="content-core"
+    tal:define="portal_url context/portal_url">
+    <header>
+      <h1>Umfrage Informationen</h1>
+    </header>
+    <section>
+      <div class="hero-unit alert alert-error">
+        <h2>Dieser Link ist ung&uuml;ltig</h2>
+        <p class="lead">Nach Abschluss der Umfrage kann nur einmalig eine Losnummer und
+          der dazugeh&ouml;rige Gewinncode ausgegeben werden.</p>
+        <a href="" class="btn btn-primary pull-right"
+          tal:attributes="href portal_url">Zur Startseite egomotion.com</a>
+      </div>
+    </section>
+  </article>
+  </metal:block>
+
+</html>

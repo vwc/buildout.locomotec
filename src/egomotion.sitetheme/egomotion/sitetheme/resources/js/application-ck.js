@@ -29,6 +29,9 @@
                 duration: "slow"
             });
         });
+        e("#form-survey").on("load", function() {
+            t;
+        });
         setInterval(t, 3e4);
     });
 })(jQuery);
