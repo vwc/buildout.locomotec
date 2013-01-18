@@ -117,10 +117,45 @@ class View(grok.View):
         token = django_random.get_random_string(length=24)
         tool.add('token', token)
         uid = IUUID(item)
+        stored_uid = self.update_survey_information(uid)
         url = context.absolute_url()
-        base_url = url + '/@@survey-saved?uuid=' + uid
+        base_url = url + '/@@survey-saved?uuid=' + stored_uid
         next_url = base_url + '&token=' + token
         return self.request.response.redirect(next_url)
+
+    def update_survey_information(self, uid):
+        context = aq_inner(self.context)
+        updated = False
+        clients = getattr(context, 'clients', list())
+        participants = getattr(context, 'participants', list())
+        if uid not in participants:
+            updated_participants = participants.append(uid)
+            setattr(context, 'participants', updated_participants)
+            updated = True
+        client_ip = self.get_client_ip()
+        if client_ip not in clients:
+            updated_clients = clients.append(uid)
+            setattr(context, 'clients', updated_clients)
+            updated = True
+        if updated is True:
+            modified(context)
+        return uid
+
+    def postprocess_client(self, client):
+        context = aq_inner(self.context)
+        known_client = False
+        stored = getattr(context, 'clients', None)
+        if stored is not None:
+            if client in stored:
+                known_client = True
+            else:
+                updated = stored.append(client)
+                setattr(context, 'clients', updated)
+        else:
+            client_list = list()
+            updated_list = client_list.append(client)
+            setattr(context, 'clients', updated_list)
+        return known_client
 
     def token_in_session(self):
         tool = getUtility(ISurveyTool)
@@ -231,6 +266,44 @@ class View(grok.View):
         return ip
 
 
+class SurveySave(grok.View):
+    grok.context(ISurvey)
+    grok.require('zope2.View')
+    grok.name('survey-save')
+
+    def render(self):
+        context = aq_inner(self.context)
+        base_url = context.absolute_url()
+        context = aq_inner(self.context)
+        uuid = self.request.get('uuid', None)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog.unrestrictedSearchResults(UID=uuid)
+        tool = getUtility(ISurveyTool)
+        session = tool.get()
+        marker = True
+        owner = context.getWrappedOwner()
+        sm = getSecurityManager()
+        newSecurityManager(self.request, owner)
+        try:
+            item = results[0].getObject()
+            if 'token' in session:
+                token = session['token']
+                if token == self.token:
+                    state = {}
+                    data = json.loads(item.answers)
+                    results = data['survey-state']
+                    state['idx'] = results['puid']
+                    state['token'] = token
+                    state['ip'] = results['pip']
+                    tool.add('token', state)
+                    tool.remove('survey-state')
+                    marker = False
+                    self.initial = True
+        finally:
+            setSecurityManager(sm)
+        return marker
+
+
 class SurveySaved(grok.View):
     grok.context(ISurvey)
     grok.require('zope2.View')
@@ -324,7 +397,6 @@ class AutosaveSurvey(grok.View):
         if client_ip is None:
             userinfo = timestamp
         else:
-            ip_state = self.postprocess_client(client_ip)
             userinfo = client_ip + '-' + timestamp
         name = 'survey-state'
         puid = django_random.get_random_string()
@@ -349,22 +421,6 @@ class AutosaveSurvey(grok.View):
         self.request.response.setHeader('Content-Type',
                                         'application/json; charset=utf-8')
         return json.dumps(results)
-
-    def postprocess_client(self, client):
-        context = aq_inner(self.context)
-        known_client = False
-        stored = getattr(context, 'clients', None)
-        if stored is not None:
-            if client in stored:
-                known_client = True
-            else:
-                updated = stored.append(client)
-                setattr(context, 'clients', updated)
-        else:
-            client_list = list()
-            updated_list = client_list.append(client)
-            setattr(context, 'clients', updated_list)
-        return known_client
 
     def has_active_session(self):
         active = False
