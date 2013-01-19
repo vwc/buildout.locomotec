@@ -282,5 +282,3 @@ class ExportResults(grok.View):
     grok.context(ISurvey)
     grok.require('cmf.ModifyPortalContent')
     grok.name('export-results')
-
-    
