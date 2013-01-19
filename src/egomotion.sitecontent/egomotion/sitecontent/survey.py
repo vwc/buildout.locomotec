@@ -122,47 +122,47 @@ class View(grok.View):
         modified(item)
         item.reindexObject(idxs='modified')
         token = django_random.get_random_string(length=24)
+        code = django_random.get_random_string(length=12)
         #results = answers['survey-state']
         token_info = {}
         token_info['idx'] = index
         token_info['token'] = token
+        token_info['code'] = code
         token_info['timestamp'] = timestamp
         token_info['ip'] = state['pip']
         tool.add('token', token_info)
         uid = IUUID(item)
-        stored_uid = self.update_survey_information(uid)
+        stored_info = self.update_survey_information(uid)
+        if stored_info:
+            setattr(context, 'clients', stored_info['clients'])
+            setattr(context, 'participants', stored_info['participants'])
+            modified(context)
         url = context.absolute_url()
-        base_url = url + '/@@survey-save?uuid=' + stored_uid
+        base_url = url + '/@@survey-save?uuid=' + uid
         next_url = base_url + '&token=' + token
         return self.request.response.redirect(next_url)
 
     def update_survey_information(self, uid):
         context = aq_inner(self.context)
-        updated = False
-        clients = getattr(context, 'clients', list())
-        participants = getattr(context, 'participants', list())
-        if participants and uid not in participants:
-            updated_participants = participants.append(uid)
-            setattr(context, 'participants', updated_participants)
-            updated = True
+        info = {}
+        clients = getattr(context, 'clients')
+        participants = getattr(context, 'participants')
+        if participants is None:
+            updated_participants = []
+            updated_participants.append(uid)
         else:
-            empty_list = list()
-            updated_participants = empty_list.append(uid)
-            setattr(context, 'participants', updated_participants)
-            updated = True
+            if uid not in participants:
+                updated_participants = participants.append(uid)
+        info['participants'] = updated_participants
         client_ip = self.get_client_ip()
-        if clients and client_ip not in clients:
-            updated_clients = clients.append(uid)
-            setattr(context, 'clients', updated_clients)
-            updated = True
+        if clients is None:
+            updated_clients = list()
+            updated_clients.append(client_ip)
         else:
-            empty_list = list()
-            updated_clients = empty_list.append(uid)
-            setattr(context, 'clients', updated_clients)
-            updated = True
-        if updated is True:
-            modified(context)
-        return uid
+            if client_ip not in clients:
+                updated_clients = clients.append(client_ip)
+        info['clients'] = updated_clients
+        return info
 
     def token_in_session(self):
         tool = getUtility(ISurveyTool)
