@@ -276,9 +276,3 @@ class SurveyResults(grok.View):
             u'trainingresource.three': _(u"Training Resource 3"),
             u'trainingresource.two': _(u"Training Resource 2")}
         return MAP
-
-
-class ExportResults(grok.View):
-    grok.context(ISurvey)
-    grok.require('cmf.ModifyPortalContent')
-    grok.name('export-results')
