@@ -817,7 +817,7 @@
           <div class="controls">
             <div class="input-append">
               <input class="span1" id="appendedInput"
-                name="participant.investment"
+                name="investment"
                 type="text">
               <span class="add-on discreet">EUR</span>
             </div>

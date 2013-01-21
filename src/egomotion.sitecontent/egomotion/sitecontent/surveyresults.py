@@ -1,8 +1,8 @@
 import csv
-import StringIO
 import json
 import time
 
+from StringIO import StringIO
 from DateTime import DateTime
 from Acquisition import aq_inner
 from AccessControl import Unauthorized
@@ -12,6 +12,8 @@ from plone import api
 
 from zope.component import getMultiAdapter
 from zope.lifecycleevent import modified
+
+from Products.CMFPlone.utils import safe_unicode
 
 from egomotion.sitecontent.survey import ISurvey
 from egomotion.sitecontent.answer import IAnswer
@@ -42,8 +44,8 @@ class SurveyResults(grok.View):
             writer = csv.writer(out)
             CSV_HEADER = self.csv_headers()
             # Create CSV file
-            CSV_HEADER_I18N = [self.context.translate(_(x)) for x in
-                               CSV_HEADER]
+            CSV_HEADER_I18N = [(self.context.translate(_(x))).encode('utf-8')
+                               for x in CSV_HEADER]
             writer.writerow(CSV_HEADER_I18N)
             export_data = self.prepare_export_data()
             cleaned_data = self.prettify_export_data(export_data)
@@ -92,12 +94,18 @@ class SurveyResults(grok.View):
             if len(results) > 0:
                 item = {}
                 for r in results:
-                    cleaned_value = self.prettify_value(results[r])
+                    cleaned_value = self.prettify_value(r, results[r])
                     item[r] = cleaned_value
                 cleaned[index] = item
         return cleaned
 
-    def prettify_value(self, value):
+    def prettify_value(self, name, value):
+        try:
+            token = name.split('.')
+        except:
+            token = name
+        if name in self.survey_array_fields():
+            import pdb; pdb.set_trace( )
         return value
 
     def get_item_details(self, item):
@@ -148,6 +156,11 @@ class SurveyResults(grok.View):
             header = mappings[entry]
             fileheaders.append(header)
         return fileheaders
+
+    def survey_array_fields(self):
+        fields = ('interest', 'participant.investment', 'functionality',
+                  'purchase', 'accessory', 'trainingresource', 'benefit')
+        return fields
 
     def survey_data_mappings(self):
         MAP = {

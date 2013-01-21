@@ -78,7 +78,6 @@ class View(grok.View):
                                             name=u"authenticator")
             if not authenticator.verify():
                 raise Unauthorized
-            import pdb; pdb.set_trace( )
             surveydata = {}
             formerrors = {}
             errorIdx = 0
@@ -153,7 +152,8 @@ class View(grok.View):
             updated_participants.append(uid)
         else:
             if uid not in participants:
-                updated_participants = participants.append(uid)
+                participants.append(uid)
+            updated_participants = participants
         info['participants'] = updated_participants
         client_ip = self.get_client_ip()
         if clients is None:
@@ -161,7 +161,8 @@ class View(grok.View):
             updated_clients.append(client_ip)
         else:
             if client_ip not in clients:
-                updated_clients = clients.append(client_ip)
+                clients.append(client_ip)
+            updated_clients = clients
         info['clients'] = updated_clients
         return info
 
