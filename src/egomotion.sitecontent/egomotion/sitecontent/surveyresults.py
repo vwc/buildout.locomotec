@@ -1,4 +1,5 @@
 import csv
+import StringIO
 import json
 import tempfile
 import time
@@ -39,17 +40,13 @@ class SurveyResults(grok.View):
             timestamp = str(now)
             setattr(context, 'download', timestamp)
             modified(context)
+            out = StringIO()
+            writer = csv.writer(out)
             CSV_HEADER = self.csv_headers()
             # Create CSV file
-            filename = tempfile.mktemp()
-            file = open(filename, 'wb')
-            csvWriter = UnicodeWriter(file,
-                                      {'delimiter': ',',
-                                       'quotechar': '"',
-                                       'quoting': csv.QUOTE_MINIMAL})
             CSV_HEADER_I18N = [self.context.translate(_(x)) for x in
                                CSV_HEADER]
-            csvWriter.writerow(CSV_HEADER_I18N)
+            writer.writerow(CSV_HEADER_I18N)
             export_data = self.prepare_export_data()
             cleaned_data = self.prettify_export_data(export_data)
             for entry in cleaned_data:
@@ -57,9 +54,8 @@ class SurveyResults(grok.View):
                 answers = []
                 for r in result:
                     answers.append(result[r])
-                csvWriter.writerow(answers)
-            file.close()
-            data = open(filename, "r").read()
+                writer.writerow(answers)
+            data = out.getvalue()
             prefix = 'surveyresults'
             ext = ''
             name = "%s-%s%s" % (prefix, time.time(), ext)
@@ -67,12 +63,12 @@ class SurveyResults(grok.View):
             disposition = "attachment; filename=%s" % name
             # Create response
             response = self.request.response
-            response.addHeader('Content-Disposition', disposition)
-            response.addHeader('Content-Type', 'text/csv')
-            response.addHeader('Content-Length', "%d" % len(data))
-            response.addHeader('Pragma', "no-cache")
-            response.addHeader('Cache-Control', c_control)
-            response.addHeader('Expires', "0")
+            response.setHeader('Content-Disposition', disposition)
+            response.setHeader('Content-Type', 'text/csv')
+            response.setHeader('Content-Length', "%d" % len(data))
+            response.setHeader('Pragma', "no-cache")
+            response.setHeader('Cache-Control', c_control)
+            response.setHeader('Expires', "0")
             # Return CSV data
             return data
 
