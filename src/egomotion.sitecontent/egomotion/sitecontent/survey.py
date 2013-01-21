@@ -78,6 +78,7 @@ class View(grok.View):
                                             name=u"authenticator")
             if not authenticator.verify():
                 raise Unauthorized
+            import pdb; pdb.set_trace( )
             surveydata = {}
             formerrors = {}
             errorIdx = 0

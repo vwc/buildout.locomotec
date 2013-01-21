@@ -396,41 +396,41 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.one"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.one')">
+              <input type="checkbox" value="functionality.1" name="functionality"
+                >
               ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.two"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.two')">
+              <input type="checkbox" value="functionality.2" name="functionality"
+                >
               eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
               in Form einer sogenannten Trainingsdokumentation
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.three"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.three')">
+              <input type="checkbox" value="functionality.3" name="functionality"
+                >
                 eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
                 Beweglichkeitstraining anbietet
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.four"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.four')">
+              <input type="checkbox" value="functionality.4" name="functionality"
+                >
               eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.five"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              <input type="checkbox" value="functionality.5" name="functionality"
+                >
               eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen
               Ern&auml;hrungsvorschlag macht
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.six"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              <input type="checkbox" value="functionality.6" name="functionality"
+                >
               ein Navigationsprogramm zum Laufen auf unbekannten Routen
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="functionality.seven"
-                tal:attributes="checked python:view.default_value(fieldname='functionality.five')">
+              <input type="checkbox" value="functionality.7" name="functionality"
+                >
               eine Funktion, die es mir erm&ouml;glicht, mit meinen Freunden einen
               virtuellen Lauftreff zu organisieren (Videokonferenz z.B. &uuml;ber
               Skype mit Freunden an entfernten Orten)
@@ -440,7 +440,7 @@
               <input class="input-xxlarge" id="functionality.additional"
                 name="functionality.additional"
                 type="text" placeholder="Optionale weitere Angaben"
-                tal:attributes="value python:view.default_value(fieldname='functionality.additional')">
+                >
             </div>
           </div>
         </div><!-- / addon functionality -->
@@ -453,17 +453,17 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="off" name="accessory.one"
+              <input type="checkbox" value="accessory.1" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.one')">
               Beleuchtung, Klingel, Schloss
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="accessory.two"
+              <input type="checkbox" value="accessory.2" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
               Flaschenhalter, Ablage (&bdquo;Handschuhfach&ldquo;) f&uuml;r Schl&uuml;ssel und andere Kleinigkeiten
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="accessory.three"
+              <input type="checkbox" value="accessory.3" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.three')">
               Medienzubeh&ouml;r bzw. Anschl&uuml;sse (Dockingstation f&uuml;r Smartphone, USB, etc)
             </label>
@@ -486,17 +486,17 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="off" name="benefit.one"
+              <input type="checkbox" value="benefit.1" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.one')">
               Ich w&uuml;rde damit gerne zum Einkaufen joggen (Befestigung f&uuml;r Einkaufskorb).
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="benefit.two"
+              <input type="checkbox" value="benefit.2" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.two')">
               Ich m&ouml;chte mit meinen Kindern joggen gehen (Befestigung f&uuml;r Kindersitz bzw. Babyschale)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="benefit.three"
+              <input type="checkbox" value="benefit.3" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.three')">
               Ich m&ouml;chte damit auch schwere Lasten transportieren und selbst damit fahren k&ouml;nnen.
             </label>
@@ -514,23 +514,23 @@
           </h4>
           <div class="controls">
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency1" value="option1">
+              <input type="radio" name="frequency" id="frequency1" value="frequency.1">
                 regelm&auml;&szlig;ig (mehrmals in der Woche)
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency2" value="option2">
+              <input type="radio" name="frequency" id="frequency2" value="frequency.2">
                 h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency3" value="option3">
+              <input type="radio" name="frequency" id="frequency3" value="frequency.3">
                 gelegentlich
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency4" value="option3">
+              <input type="radio" name="frequency" id="frequency4" value="frequency.4">
                 nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
             </label>
             <label class="radio">
-              <input type="radio" name="frequency" id="frequency5" value="option3">
+              <input type="radio" name="frequency" id="frequency5" value="frequency.5">
                 nie, mir macht Laufen keinen Spass
             </label>
           </div>
@@ -556,17 +556,17 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option1"
+              <input type="radio" name="roadwork" id="roadwork1" value="roadwork.1"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               sehr wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option2"
+              <input type="radio" name="roadwork" id="roadwork2" value="roadwork.2"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               wichtig
             </label>
             <label class="radio inline">
-              <input type="radio" name="roadwork" id="roadwork1" value="option3"
+              <input type="radio" name="roadwork" id="roadwork3" value="roadwork.3"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
               unwichtig
             </label>
@@ -581,43 +581,43 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.one">
+              <input type="checkbox" value="trainingresource.1" name="trainingresource">
                 Pulsuhr ohne GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.two">
+              <input type="checkbox" value="trainingresource.2" name="trainingresource">
                 Pulsuhr mit GPS
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.three">
+              <input type="checkbox" value="trainingresource.3" name="trainingresource">
                 Laufband zuhause
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.four">
+              <input type="checkbox" value="trainingresource.4" name="trainingresource">
                 Laufband im Fitnessstudio
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.five">
+              <input type="checkbox" value="trainingresource.5" name="trainingresource">
                 persönlicher Lauftrainer im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.six">
+              <input type="checkbox" value="trainingresource.6" name="trainingresource">
                 persönlicher Lauftrainer privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.seven">
+              <input type="checkbox" value="trainingresource.7" name="trainingresource">
                 Laufgruppe im Verein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.eight">
+              <input type="checkbox" value="trainingresource.8" name="trainingresource">
                 Laufgruppe privat
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.nine">
+              <input type="checkbox" value="trainingresource.9" name="trainingresource">
                 Trainingsapp auf Smartphone
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="trainingresource.ten">
+              <input type="checkbox" value="trainingresource.10" name="trainingresource">
                 Schrittzähler mit Kalorienverbrauch
             </label>
             <div class="input-prepend">
@@ -639,17 +639,17 @@
           <div class="control-group">
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
-                value="trainingresource.effect1">
+                value="trainingresource.effect.1">
               optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
-                value="trainingresource.effect2">
+                value="trainingresource.effect.2">
               ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
-                value="trainingresource.effect3">
+                value="trainingresource.effect.3">
               schlecht, ich mache kaum Trainingsfortschritte
             </label>
           </div>
@@ -826,23 +826,23 @@
 
           <div class="control-group">
             <label class="checkbox">
-              <input type="checkbox" value="" name="participant.investment.one">
+              <input type="checkbox" value="participant.investment.1" name="participant.investment">
                 Sportgeräte
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="participant.investment.two">
+              <input type="checkbox" value="participant.investment.2" name="participant.investment">
                 Trainerstunden
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="participant.investment.three">
+              <input type="checkbox" value="participant.investment.3" name="participant.investment">
                 Sportbekleidung
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="participant.investment.four">
+              <input type="checkbox" value="participant.investment.4" name="participant.investment">
                 Wellness (Sauna, Massagen)
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="participant.investment.five">
+              <input type="checkbox" value="participant.investment.5" name="participant.investment">
                 Fitnessstudiobeiträge
             </label>
             <div class="input-prepend">
@@ -1001,15 +1001,15 @@
           </h4>
           <div class="controls">
             <label class="checkbox">
-              <input type="checkbox" value="" name="purchase.one">
+              <input type="checkbox" value="purchase.1" name="purchase">
                 ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="purchase.two">
+              <input type="checkbox" value="purchase.2" name="purchase">
                 nein
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="" name="purchase.three">
+              <input type="checkbox" value="purchase.3" name="purchase">
                 unentschieden
             </label>
           </div>
@@ -1030,12 +1030,12 @@
         <div class="survey-question">
           <div class="controls">
             <label class="checkbox">
-              <input type="checkbox" value="off" name="interest.one">
+              <input type="checkbox" value="interest.1" name="interest">
               ja, ich interessiere mich f&uuml;r RUFUS und w&uuml;rde gerne informiert
               werden, wie es mit ihm weitergeht und wann er auf dem Markt ist. 
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="off" name="interest.two">
+              <input type="checkbox" value="interest.2" name="interest">
                 Ich halte RUFUS f&uuml;r eine tolle Produktidee und m&ouml;chte mir eine
                 unverbindliche Kaufoption zu einem &bdquo;Fr&uuml;hbucher-Rabatt&ldquo; von 25%
                 sichern, die ich jederzeit und ohne weitere Mitteilung

@@ -1,7 +1,6 @@
 import csv
 import StringIO
 import json
-import tempfile
 import time
 
 from DateTime import DateTime
@@ -14,7 +13,6 @@ from plone import api
 from zope.component import getMultiAdapter
 from zope.lifecycleevent import modified
 
-from egomotion.sitecontent.surveytool import UnicodeWriter
 from egomotion.sitecontent.survey import ISurvey
 from egomotion.sitecontent.answer import IAnswer
 
@@ -71,52 +69,6 @@ class SurveyResults(grok.View):
             response.setHeader('Expires', "0")
             # Return CSV data
             return data
-
-    def exportResults(self):
-        """Returns a CSV file with all newsletter subscribers.
-        """
-        context = aq_inner(self.context)
-        now = DateTime()
-        timestamp = str(now)
-        setattr(context, 'download', timestamp)
-        modified(context)
-        CSV_HEADER = self.csv_headers()
-
-        # Create CSV file
-        filename = tempfile.mktemp()
-        file = open(filename, 'wb')
-        csvWriter = UnicodeWriter(file,
-                                  {'delimiter': ',',
-                                   'quotechar': '"',
-                                   'quoting': csv.QUOTE_MINIMAL})
-        CSV_HEADER_I18N = [self.context.translate(_(x)) for x in CSV_HEADER]
-        csvWriter.writerow(CSV_HEADER_I18N)
-        export_data = self.prepare_export_data()
-        cleaned_data = self.prettify_export_data(export_data)
-        for entry in cleaned_data:
-            result = cleaned_data[entry]
-            answers = []
-            for r in result:
-                answers.append(result[r])
-            csvWriter.writerow(answers)
-        file.close()
-        data = open(filename, "r").read()
-        prefix = 'egomotion-survey'
-        export_timestamp = int(round(time.time()))
-        ext = '.csv'
-        name = "%s-%s%s" % (prefix, export_timestamp, ext)
-        cache_control = "must-revalidate, post-check=0, pre-check=0, public"
-        # Create response
-        response = self.request.response
-        response.setHeader('Content-Disposition',
-                           "attachment; filename=%s" % name)
-        response.setHeader('Content-Type', 'text/csv')
-        response.setHeader('Content-Length', "%d" % len(data))
-        response.setHeader('Pragma', "no-cache")
-        response.setHeader('Cache-Control', cache_control)
-        response.setHeader('Expires', "0")
-        # Return CSV data
-        return data
 
     def prepare_export_data(self):
         data = {}
