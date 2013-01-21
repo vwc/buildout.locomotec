@@ -664,17 +664,17 @@
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
-                value="good">
+                value="training.monitor.1">
               gut
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
-                value="medium">
+                value="training.monitor.2">
               es geht so
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
-                value="bad">
+                value="training.monitor.3">
               schlecht
             </label>
           </div>
@@ -689,17 +689,17 @@
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
-                value="very important">
+                value="training.personalization.1">
               sehr wichtig
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
-                value="important">
+                value="training.personalization.2">
               wichtig
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
-                value="unimportant">
+                value="training.personalization.3">
               unwichtig
             </label>
           </div>
@@ -712,15 +712,18 @@
           </h4>
           <div class="controls">
             <label class="radio inline">
-              <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.maxprice" id="optionsRadios1"
+                value="training.maxprice.1">
               25 - 50 EUR
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.maxprice" id="optionsRadios1"
+                value="training.maxprice.2">
               50 - 75 EUR
             </label>
             <label class="radio inline">
-              <input type="radio" name="training.maxprice" id="optionsRadios1" value="option1">
+              <input type="radio" name="training.maxprice" id="optionsRadios1"
+                value="training.maxprice.3">
               75 - 100 EUR
             </label>
           </div>
@@ -732,15 +735,18 @@
           </h4>
           <div class="controls">
             <div class="input-append">
-              <input class="span1" id="appendedInput" type="text">
+              <input class="span1" id="appendedInput" type="text"
+                name="participant.age">
               <span class="add-on discreet">Jahre</span>
             </div>
             <label class="radio inline">
-              <input type="radio" name="participant.gender" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.gender" id="optionsRadios1"
+                value="participant.gender.1">
               weiblich
             </label>
             <label class="radio inline">
-              <input type="radio" name="participant.gender" id="optionsRadios1" value="option1">
+              <input type="radio" name="participant.gender" id="optionsRadios1"
+                value="participant.gender.2">
               m&auml;nnlich
             </label>
           </div>
@@ -864,15 +870,18 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1"
+                  value="price.hometrainer.1">
                 100 &ndash; 250 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option2">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1"
+                  value="price.hometrainer.2">
                 250 &ndash; 500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.hometrainer" id="optionsRadios1" value="option3">
+                <input type="radio" name="price.hometrainer" id="optionsRadios1"
+                  value="price.hometrainer.3">
                 500 &ndash; 1500 EUR
               </label>
             </div>
@@ -883,15 +892,18 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.treadmill" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.treadmill" id="optionsRadios1"
+                  value="price.treadmill.1">
                 500 &ndash; 1000 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.treadmill" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.treadmill" id="optionsRadios1"
+                  value="price.treadmill.2">
                 1000 &ndash; 2000 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.treadmill" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.treadmill" id="optionsRadios1"
+                  value="price.treadmill.3">
                 2000 &ndash; 3000 EUR
               </label>
             </div>
@@ -902,15 +914,18 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.crosstrainer" id="optionsRadios1"
+                  value="price.crosstrainer.1">
                 500 &ndash; 1000 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.crosstrainer" id="optionsRadios1"
+                  value="price.crosstrainer.2">
                 1000 &ndash; 2000 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.crosstrainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.crosstrainer" id="optionsRadios1"
+                  value="price.crosstrainer.3">
                 2000 &ndash; 3000 EUR
               </label>
             </div>
@@ -921,15 +936,18 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.bike" id="optionsRadios1"
+                  value="price.bike.1">
                 300 &ndash; 1000 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.bike" id="optionsRadios1"
+                  value="price.bike.2">
                 1000 &ndash; 2500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.bike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.bike" id="optionsRadios1"
+                  value="price.bike.3">
                 2500 &ndash; 7500 EUR
               </label>
             </div>
@@ -940,15 +958,18 @@
             </label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1"
+                  value="price.mountainbike.1">
                 150&ndash; 750 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1"
+                  value="price.mountainbike.2">
                 750 &ndash; 1500 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.mountainbike" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.mountainbike" id="optionsRadios1"
+                  value="price.mountainbike.3">
                 1500 &ndash; 3000 EUR
               </label>
             </div>
@@ -959,15 +980,18 @@
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
-                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1"
+                  value="price.trainer.1">
                 25 &ndash; 50 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1"
+                  value="price.trainer.2">
                 50 &ndash; 75 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.trainer" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.trainer" id="optionsRadios1"
+                  value="price.trainer.3">
                 75 &ndash; 100 EUR
               </label>
             </div>
@@ -978,15 +1002,18 @@
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
-                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1"
+                  value="price.club.1">
                 20 &ndash; 50 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1"
+                  value="price.club.2">
                 50 &ndash; 80 EUR
               </label>
               <label class="radio inline">
-                <input type="radio" name="price.club" id="optionsRadios1" value="option1">
+                <input type="radio" name="price.club" id="optionsRadios1"
+                  value="price.club.3">
                 80 &ndash; 120 EUR
               </label>
             </div>
