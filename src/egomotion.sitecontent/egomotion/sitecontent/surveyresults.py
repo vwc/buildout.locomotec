@@ -76,8 +76,32 @@ class SurveyResults(grok.View):
             # Return CSV data
             return data
 
+    def csv_preview(self):
+        out = StringIO()
+        writer = UnicodeWriter(out,
+                               {'delimiter': ',',
+                                'quotechar': '"',
+                                'quoting': csv.QUOTE_MINIMAL})
+        #writer = csv.writer(out)
+        CSV_HEADER = self.csv_headers()
+        # Create CSV file
+        CSV_HEADER_I18N = [self.context.translate(_(x))
+                           for x in CSV_HEADER]
+        writer.writerow(CSV_HEADER_I18N)
+        export_data = self.prepare_export_data()
+        cleaned_data = export_data
+        for entry in cleaned_data:
+            result = cleaned_data[entry]
+            answers = []
+            for r in result:
+                answers.append(result[r])
+            writer.writerow(answers)
+        data = out.getvalue()
+        return data
+
     def prepare_export_data(self):
         data = {}
+        arrays = self.survey_array_fields()
         results = self.survey_answers()
         for r in results:
             obj = r.getObject()
@@ -87,6 +111,11 @@ class SurveyResults(grok.View):
                 itemdata = answers['survey-state']
             else:
                 itemdata = {}
+            flattened = {}
+            for item in itemdata:
+                if item in arrays:
+                    values = itemdata[item]
+                    import pdb; pdb.set_trace( )
             data[index] = itemdata
         return data
 
@@ -269,7 +298,6 @@ class SurveyResults(grok.View):
                               'functionality.3', 'functionality.4',
                               'functionality.5', 'functionality.6',
                               'functionality.7'],
-            '_authenticator': 'f23699363177c25c8b4d7a0a77b4806be52668d3',
             'dislikes.one': 'Hate 1',
             'favorite1.likes.two': 'Like 1-2',
             'accessory.additional': 'Zubeh\xc3\xb6r Freitext',
