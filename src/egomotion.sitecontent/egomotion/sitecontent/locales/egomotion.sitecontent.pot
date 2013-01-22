@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-01-17 12:20+0000\n"
+"POT-Creation-Date: 2013-01-22 13:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,23 +21,27 @@ msgstr ""
 msgid "A folderish survey holding participant objects"
 msgstr ""
 
+#: ./../survey.py:51
+msgid "A list of participation UIDs for quick access"
+msgstr ""
+
 #: ./../profiles/default/types/egomotion.sitecontent.answer.xml
 msgid "A single survey participation"
 msgstr ""
 
-#: ./../surveyresults.py:168
+#: ./../surveyresults.py:371
 msgid "Accessory Additional"
 msgstr ""
 
-#: ./../surveyresults.py:169
+#: ./../surveyresults.py:368
 msgid "Accessory One"
 msgstr ""
 
-#: ./../surveyresults.py:170
+#: ./../surveyresults.py:370
 msgid "Accessory Three"
 msgstr ""
 
-#: ./../surveyresults.py:171
+#: ./../surveyresults.py:369
 msgid "Accessory Two"
 msgstr ""
 
@@ -49,31 +53,43 @@ msgstr ""
 msgid "Answers"
 msgstr ""
 
-#: ./../survey.py:227
+#: ./../survey.py:433
 msgid "Autosave %s"
 msgstr ""
 
-#: ./../surveyresults.py:172
+#: ./../surveyresults.py:375
+msgid "Benefit Additional"
+msgstr ""
+
+#: ./../surveyresults.py:372
 msgid "Benefit One"
 msgstr ""
 
-#: ./../surveyresults.py:173
+#: ./../surveyresults.py:374
 msgid "Benefit Three"
 msgstr ""
 
-#: ./../surveyresults.py:174
+#: ./../surveyresults.py:373
 msgid "Benefit Two"
 msgstr ""
 
-#: ./../surveyresults.py:175
+#: ./../survey.py:45
+msgid "Client"
+msgstr ""
+
+#: ./../survey.py:43
+msgid "Clients"
+msgstr ""
+
+#: ./../surveyresults.py:357
 msgid "Dislike One"
 msgstr ""
 
-#: ./../surveyresults.py:177
+#: ./../surveyresults.py:359
 msgid "Dislike Three"
 msgstr ""
 
-#: ./../surveyresults.py:176
+#: ./../surveyresults.py:358
 msgid "Dislike Two"
 msgstr ""
 
@@ -81,223 +97,267 @@ msgstr ""
 msgid "Download results"
 msgstr ""
 
-#: ./../surveyresults.py:178
+#: ./../surveyresults.py:414
 msgid "E-Mail"
 msgstr ""
 
-#: ./../surveyresults.py:179
+#: ./../surveyresults.py:336
 msgid "Favorite 1"
 msgstr ""
 
-#: ./../surveyresults.py:180
+#: ./../surveyresults.py:340
 msgid "Favorite 1 - Dislike 1"
 msgstr ""
 
-#: ./../surveyresults.py:182
+#: ./../surveyresults.py:341
 msgid "Favorite 1 - Dislike 2"
 msgstr ""
 
-#: ./../surveyresults.py:181
+#: ./../surveyresults.py:342
 msgid "Favorite 1 - Dislike 3"
 msgstr ""
 
-#: ./../surveyresults.py:183
+#: ./../surveyresults.py:337
 msgid "Favorite 1 - Like 1"
 msgstr ""
 
-#: ./../surveyresults.py:185
+#: ./../surveyresults.py:338
 msgid "Favorite 1 - Like 2"
 msgstr ""
 
-#: ./../surveyresults.py:184
+#: ./../surveyresults.py:339
 msgid "Favorite 1 - Like 3"
 msgstr ""
 
-#: ./../surveyresults.py:186
+#: ./../surveyresults.py:343
 msgid "Favorite 2"
 msgstr ""
 
-#: ./../surveyresults.py:187
+#: ./../surveyresults.py:347
 msgid "Favorite 2 - Dislike 1"
 msgstr ""
 
-#: ./../surveyresults.py:189
+#: ./../surveyresults.py:348
 msgid "Favorite 2 - Dislike 2"
 msgstr ""
 
-#: ./../surveyresults.py:188
+#: ./../surveyresults.py:349
 msgid "Favorite 2 - Dislike 3"
 msgstr ""
 
-#: ./../surveyresults.py:190
+#: ./../surveyresults.py:344
 msgid "Favorite 2 - Like 1"
 msgstr ""
 
-#: ./../surveyresults.py:192
+#: ./../surveyresults.py:345
 msgid "Favorite 2 - Like 2"
 msgstr ""
 
-#: ./../surveyresults.py:191
+#: ./../surveyresults.py:346
 msgid "Favorite 2 - Like 3"
 msgstr ""
 
-#: ./../surveyresults.py:193
+#: ./../surveyresults.py:350
 msgid "Favorite 3"
 msgstr ""
 
-#: ./../surveyresults.py:194
+#: ./../surveyresults.py:354
 msgid "Favorite 3 - Dislike 1"
 msgstr ""
 
-#: ./../surveyresults.py:196
+#: ./../surveyresults.py:355
 msgid "Favorite 3 - Dislike 2"
 msgstr ""
 
-#: ./../surveyresults.py:195
+#: ./../surveyresults.py:356
 msgid "Favorite 3 - Dislike 3"
 msgstr ""
 
-#: ./../surveyresults.py:197
+#: ./../surveyresults.py:351
 msgid "Favorite 3 - Like 1"
 msgstr ""
 
-#: ./../surveyresults.py:199
+#: ./../surveyresults.py:352
 msgid "Favorite 3 - Like 2"
 msgstr ""
 
-#: ./../surveyresults.py:198
+#: ./../surveyresults.py:353
 msgid "Favorite 3 - Like 3"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1029
+#: ./../survey_templates/view.pt:1083
 msgid "Fragebogen abschicken"
 msgstr ""
 
-#: ./../surveyresults.py:203
+#: ./../surveyresults.py:360
 msgid "Functionality 1"
 msgstr ""
 
-#: ./../surveyresults.py:205
+#: ./../surveyresults.py:361
 msgid "Functionality 2"
 msgstr ""
 
-#: ./../surveyresults.py:204
+#: ./../surveyresults.py:362
 msgid "Functionality 3"
 msgstr ""
 
-#: ./../surveyresults.py:202
+#: ./../surveyresults.py:363
 msgid "Functionality 4"
 msgstr ""
 
-#: ./../surveyresults.py:206
+#: ./../surveyresults.py:364
 msgid "Functionality 5"
 msgstr ""
 
-#: ./../surveyresults.py:207
+#: ./../surveyresults.py:365
 msgid "Functionality 6"
 msgstr ""
 
-#: ./../surveyresults.py:208
+#: ./../surveyresults.py:366
 msgid "Functionality 7"
 msgstr ""
 
-#: ./../surveyresults.py:201
+#: ./../surveyresults.py:367
 msgid "Functionality Additional"
 msgstr ""
 
-#: ./../survey.py:34
+#: ./../surveyresults.py:412
+msgid "Interest 1"
+msgstr ""
+
+#: ./../surveyresults.py:413
+msgid "Interest 2"
+msgstr ""
+
+#: ./../survey.py:39
 msgid "Last Download"
 msgstr ""
 
-#: ./../survey_templates/view.pt:96
+#: ./../survey_templates/view.pt:125
 msgid "Merkmale, die mir am besten gefallen"
 msgstr ""
 
-#: ./../survey_templates/view.pt:126
+#: ./../survey_templates/view.pt:155
 msgid "Merkmale, die mir am wenigsten gefallen"
 msgstr ""
 
-#: ./../surveyresults.py:128
+#: ./../surveyresults.py:166
 msgid "No value given or not callable"
 msgstr ""
 
-#: ./../survey_templates/view.pt:73
+#: ./../survey_templates/view.pt:102
 msgid "Nummer"
 msgstr ""
 
-#: ./../surveyresults.py:224
+#: ./../surveyresults.py:393
+msgid "Participant Age"
+msgstr ""
+
+#: ./../surveyresults.py:335
 msgid "Participant Code"
 msgstr ""
 
-#: ./../surveyresults.py:209
+#: ./../surveyresults.py:394
 msgid "Participant Gender"
 msgstr ""
 
-#: ./../surveyresults.py:217
+#: ./../surveyresults.py:333
 msgid "Participant ID"
 msgstr ""
 
-#: ./../surveyresults.py:210
+#: ./../surveyresults.py:334
+msgid "Participant IP"
+msgstr ""
+
+#: ./../surveyresults.py:550
 msgid "Participant Investment"
 msgstr ""
 
-#: ./../surveyresults.py:213
+#: ./../surveyresults.py:396
 msgid "Participant Investment 1"
 msgstr ""
 
-#: ./../surveyresults.py:215
+#: ./../surveyresults.py:397
 msgid "Participant Investment 2"
 msgstr ""
 
-#: ./../surveyresults.py:214
+#: ./../surveyresults.py:398
 msgid "Participant Investment 3"
 msgstr ""
 
-#: ./../surveyresults.py:212
+#: ./../surveyresults.py:399
 msgid "Participant Investment 4"
 msgstr ""
 
-#: ./../surveyresults.py:211
+#: ./../surveyresults.py:400
 msgid "Participant Investment 5"
 msgstr ""
 
-#: ./../surveyresults.py:216
+#: ./../surveyresults.py:395
 msgid "Participant Occupation"
+msgstr ""
+
+#: ./../survey.py:53
+msgid "Participant UID"
 msgstr ""
 
 #: ./../answer.py:21
 msgid "Participant number"
 msgstr ""
 
-#: ./../surveyresults.py:218
+#: ./../survey.py:50
+msgid "Participants"
+msgstr ""
+
+#: ./../surveyresults.py:404
 msgid "Price Bike"
 msgstr ""
 
-#: ./../surveyresults.py:219
+#: ./../surveyresults.py:407
+msgid "Price Club"
+msgstr ""
+
+#: ./../surveyresults.py:403
 msgid "Price Crosstrainer"
 msgstr ""
 
-#: ./../surveyresults.py:220
+#: ./../surveyresults.py:401
 msgid "Price Hometrainer"
 msgstr ""
 
-#: ./../surveyresults.py:221
+#: ./../surveyresults.py:405
 msgid "Price Mountainbike"
 msgstr ""
 
-#: ./../surveyresults.py:222
+#: ./../surveyresults.py:406
 msgid "Price Personal Trainer"
 msgstr ""
 
-#: ./../surveyresults.py:223
+#: ./../surveyresults.py:402
 msgid "Price Treadmill"
 msgstr ""
 
-#: ./../surveyresults.py:225
+#: ./../surveyresults.py:408
+msgid "Purchase 1"
+msgstr ""
+
+#: ./../surveyresults.py:409
+msgid "Purchase 2"
+msgstr ""
+
+#: ./../surveyresults.py:410
+msgid "Purchase 3"
+msgstr ""
+
+#: ./../surveyresults.py:411
+msgid "Purchase Comment"
+msgstr ""
+
+#: ./../surveyresults.py:377
 msgid "Roadwork"
 msgstr ""
 
-#: ./../survey.py:326
+#: ./../survey.py:490
 msgid "Session cleared"
 msgstr ""
 
@@ -305,7 +365,7 @@ msgstr ""
 msgid "Survey"
 msgstr ""
 
-#: ./../survey.py:228
+#: ./../survey.py:434
 msgid "Survey state automatically saved"
 msgstr ""
 
@@ -313,63 +373,67 @@ msgstr ""
 msgid "Sweepstake code claimed?"
 msgstr ""
 
-#: ./../surveyresults.py:200
+#: ./../surveyresults.py:376
 msgid "Training Frequency"
 msgstr ""
 
-#: ./../surveyresults.py:226
+#: ./../surveyresults.py:392
 msgid "Training Maximum Price"
 msgstr ""
 
-#: ./../surveyresults.py:227
+#: ./../surveyresults.py:390
 msgid "Training Monitor"
 msgstr ""
 
-#: ./../surveyresults.py:228
+#: ./../surveyresults.py:391
 msgid "Training Personalization"
 msgstr ""
 
-#: ./../surveyresults.py:234
+#: ./../surveyresults.py:378
 msgid "Training Resource 1"
 msgstr ""
 
-#: ./../surveyresults.py:237
+#: ./../surveyresults.py:387
 msgid "Training Resource 10"
 msgstr ""
 
-#: ./../surveyresults.py:239
+#: ./../surveyresults.py:379
 msgid "Training Resource 2"
 msgstr ""
 
-#: ./../surveyresults.py:238
+#: ./../surveyresults.py:380
 msgid "Training Resource 3"
 msgstr ""
 
-#: ./../surveyresults.py:232
+#: ./../surveyresults.py:381
 msgid "Training Resource 4"
 msgstr ""
 
-#: ./../surveyresults.py:231
+#: ./../surveyresults.py:382
 msgid "Training Resource 5"
 msgstr ""
 
-#: ./../surveyresults.py:236
+#: ./../surveyresults.py:383
 msgid "Training Resource 6"
 msgstr ""
 
-#: ./../surveyresults.py:235
+#: ./../surveyresults.py:384
 msgid "Training Resource 7"
 msgstr ""
 
-#: ./../surveyresults.py:230
+#: ./../surveyresults.py:385
 msgid "Training Resource 8"
 msgstr ""
 
-#: ./../surveyresults.py:233
+#: ./../surveyresults.py:386
 msgid "Training Resource 9"
 msgstr ""
 
-#: ./../surveyresults.py:229
+#: ./../surveyresults.py:388
+msgid "Training Resource Additional"
+msgstr ""
+
+#: ./../surveyresults.py:389
 msgid "Training Resource Effect"
 msgstr ""
 

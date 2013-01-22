@@ -759,52 +759,52 @@
           <div class="controls">
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios1"
-                value="participant.occupation1">
+                value="participant.occupation.1">
               Sch&uuml;ler / Student
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios2"
-                value="participant.occupation2">
+                value="participant.occupation.2">
               Nicht-Erwerbst&auml;tige(r)
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios3"
-                value="participant.occupation3">
+                value="participant.occupation.3">
               ArbeiterIn / SachbearbeiterIn
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios4"
-                value="participant.occupation4">
+                value="participant.occupation.4">
               Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios5"
-                value="participant.occupation5">
+                value="participant.occupation.5">
               Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios6"
-                value="participant.occupation6">
+                value="participant.occupation.6">
               GeschäftsführerIn / Vorstand
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios7"
-                value="participant.occupation7">
+                value="participant.occupation.7">
               Selbständige(r) / Freiberufliche(r)
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios8"
-                value="participant.occupation8">
+                value="participant.occupation.8">
               Unternehmer(in)
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios9"
-                value="participant.occupation9">
+                value="participant.occupation.9">
               Rentner(in)
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios10"
-                value="participant.occupation10">
+                value="participant.occupation.10">
               Sonst
             </label>
           </div>
