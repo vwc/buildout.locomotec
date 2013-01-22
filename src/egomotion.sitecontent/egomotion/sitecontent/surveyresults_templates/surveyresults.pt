@@ -35,13 +35,16 @@
                 Laden Sie den aktuellen Stand der gesammelten Umfragedaten
                 als csv-Datei herunter.
               </p>
-              <div tal:define="latest view/latest_answer">
-                <p tal:define="time latest/modified">
+              <div tal:condition="view/has_answers">
+                <p tal:define="latest view/latest_answer;
+                               time latest/modified">
                   <strong>Letzte Änderung:</strong>
                   <span tal:content="time"
                      tal:attributes="data-appui string:prettydate;
                                      title time" />
                 </p>
+              </div>
+              <div>
                 <p tal:define="download context/download">
                   <strong>Letzter Download:</strong>
                   <span tal:content="download"
