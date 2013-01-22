@@ -52,9 +52,8 @@ class SurveyResults(grok.View):
                                for x in CSV_HEADER]
             writer.writerow(CSV_HEADER_I18N)
             export_data = self.prepare_export_data()
-            cleaned_data = self.prettify_export_data(export_data)
-            for entry in cleaned_data:
-                result = cleaned_data[entry]
+            for entry in export_data:
+                result = export_data[entry]
                 answers = []
                 for r in result:
                     answers.append(result[r])
@@ -89,9 +88,8 @@ class SurveyResults(grok.View):
                            for x in CSV_HEADER]
         writer.writerow(CSV_HEADER_I18N)
         export_data = self.prepare_export_data()
-        cleaned_data = export_data
-        for entry in cleaned_data:
-            result = cleaned_data[entry]
+        for entry in export_data:
+            result = export_data[entry]
             answers = []
             for r in result:
                 answers.append(result[r])
@@ -135,22 +133,6 @@ class SurveyResults(grok.View):
                         flattened[item] = ''
             data[index] = flattened
         return data
-
-    def prettify_export_data(self, data):
-        cleaned = {}
-        for x in data:
-            index = x
-            results = data[x]
-            if len(results) > 0:
-                item = {}
-                for r in results:
-                    cleaned_value = self.prettify_value(r, results[r])
-                    item[r] = cleaned_value
-                cleaned[index] = item
-        return cleaned
-
-    def prettify_value(self, name, value):
-        return value
 
     def get_item_details(self, item):
         answers = json.loads(item.answers)
@@ -235,11 +217,6 @@ class SurveyResults(grok.View):
             'price.club', 'price.trainer', 'price.treadmill',
             'price.mountainbike'
         )
-        return fields
-
-    def survey_array_fields(self):
-        fields = ('interest', 'participant.investment', 'functionality',
-                  'purchase', 'accessory', 'trainingresource', 'benefit')
         return fields
 
     def fields_ordered(self):
@@ -412,231 +389,4 @@ class SurveyResults(grok.View):
             u'interest.1': _(u"Interest 1"),
             u'interest.2': _(u"Interest 2"),
             u'email': _(u"E-Mail")}
-        return fields
-
-    def fields_in_order(self):
-        fields = {
-            u'functionality.additional': u'jkl',
-            u'roadwork': u'2',
-            u'participant.occupation': u'8',
-            u'price.bike': u'1',
-            u'favorite2.dislikes.three': u'jkl',
-            'interest.1': '1',
-            'functionality.3': '1',
-            'trainingresource.1': '0',
-            u'favorite1.dislikes.three': u'jkl',
-            u'favorite3.dislikes.two': u'jlk',
-            u'frequency': u'frequency.2',
-            u'trainingresource.effect': u'2',
-            u'favorite3': u'3',
-            u'favorite2': u'2',
-            u'pip': u'127.0.0.1',
-            'interest.2': '0',
-            'trainingresource.9': '1',
-            u'investment': u'111',
-            u'favorite3.likes.two': u'jkl',
-            u'favorite1.dislikes.one': u'jkl',
-            u'favorite3.dislikes.three': u'jkl',
-            'purchase.1': '1',
-            u'training.maxprice': u'2',
-            'purchase.3': '0',
-            'functionality.1': '1',
-            'trainingresource.6': '0',
-            'purchase.2': '0',
-            'functionality.2': '1',
-            u'training.personalization': u'3',
-            'participant.investment.3': '1',
-            u'puid': u'lSqUbLiPWXol',
-            'participant.investment.1': '0',
-            'functionality.4': '0',
-            'functionality.5': '1',
-            'participant.investment.4': '0',
-            'participant.investment.5': '0',
-            u'favorite1.likes.two': u'jkl',
-            u'favorite2.likes.three': u'jkl',
-            u'dislikes.three': u'jkl',
-            u'email': u'',
-            u'favorite1.likes.one': u'jkl',
-            u'dislikes.one': u'jkl',
-            'trainingresource.8': '0',
-            u'favorite3.dislikes.one': u'jkl',
-            'functionality.6': '1',
-            u'participant.gender': u'2',
-            u'favorite1.dislikes.two': u'jkl',
-            'trainingresource.2': '0',
-            'accessory.3': '0',
-            u'favorite3.likes.three': u'jkl',
-            'functionality.7': '0',
-            u'favorite3.likes.one': u'jlk',
-            'accessory.2': '0',
-            'accessory.1': '1',
-            'trainingresource.5': '0',
-            u'price.crosstrainer': u'3',
-            'trainingresource.4': '1',
-            u'favorite2.likes.two': u'jkl',
-            'trainingresource.3': '0',
-            u'price.hometrainer': u'1',
-            u'participant.age': u'77',
-            u'favorite1.likes.three': u'jkl',
-            u'favorite2.dislikes.two': u'jkl',
-            u'accessory.additional': u'jkl',
-            u'price.club': u'2',
-            u'price.mountainbike': u'price.mountainbike.2',
-            'participant.investment.2': '0',
-            'trainingresource.10': '0',
-            'benefit.2': '1',
-            'benefit.1': '0',
-            u'trainingresource.additional': u'jkl',
-            u'training.monitor': u'3',
-            u'price.trainer': u'3',
-            u'favorite2.dislikes.one': u'jkl',
-            u'favorite2.likes.one': u'jkl',
-            u'price.treadmill': u'2',
-            'trainingresource.7': '0',
-            'benefit.3': '1',
-            u'form.buttons.Submit': u'',
-            u'favorite1': u'1'}
-        fieldlist = list()
-        for field in fields:
-            fieldlist.append(field)
-        return fieldlist
-
-    def survey_data_mappings(self):
-        MAP = {
-            u'pid': _(u"Participant ID"),
-            u'puid': _(u"Participant Code"),
-            u'email': _(u"E-Mail"),
-            u'accessory.additional': _(u"Accessory Additional"),
-            u'accessory.one': _(u"Accessory One"),
-            u'accessory.three': _(u"Accessory Three"),
-            u'accessory.two': _(u"Accessory Two"),
-            u'benefit.one': _(u"Benefit One"),
-            u'benefit.three': _(u"Benefit Three"),
-            u'benefit.two': _(u"Benefit Two"),
-            u'dislikes.one': _(u"Dislike One"),
-            u'dislikes.two': _(u"Dislike Two"),
-            u'dislikes.three': _(u"Dislike Three"),
-            u'favorite1': _(u"Favorite 1"),
-            u'favorite1.dislikes.one': _(u"Favorite 1 - Dislike 1"),
-            u'favorite1.dislikes.three': _(u"Favorite 1 - Dislike 3"),
-            u'favorite1.dislikes.two': _(u"Favorite 1 - Dislike 2"),
-            u'favorite1.likes.one': _(u"Favorite 1 - Like 1"),
-            u'favorite1.likes.three': _(u"Favorite 1 - Like 3"),
-            u'favorite1.likes.two': _(u"Favorite 1 - Like 2"),
-            u'favorite2': _(u"Favorite 2"),
-            u'favorite2.dislikes.one': _(u"Favorite 2 - Dislike 1"),
-            u'favorite2.dislikes.three': _(u"Favorite 2 - Dislike 3"),
-            u'favorite2.dislikes.two': _(u"Favorite 2 - Dislike 2"),
-            u'favorite2.likes.one': _(u"Favorite 2 - Like 1"),
-            u'favorite2.likes.three': _(u"Favorite 2 - Like 3"),
-            u'favorite2.likes.two': _(u"Favorite 2 - Like 2"),
-            u'favorite3': _(u"Favorite 3"),
-            u'favorite3.dislikes.one': _(u"Favorite 3 - Dislike 1"),
-            u'favorite3.dislikes.three': _(u"Favorite 3 - Dislike 3"),
-            u'favorite3.dislikes.two': _(u"Favorite 3 - Dislike 2"),
-            u'favorite3.likes.one': _(u"Favorite 3 - Like 1"),
-            u'favorite3.likes.three': _(u"Favorite 3 - Like 3"),
-            u'favorite3.likes.two': _(u"Favorite 3 - Like 2"),
-            u'frequency': _(u"Training Frequency"),
-            u'functionality.additional': _(u"Functionality Additional"),
-            u'functionality.four': _(u"Functionality 4"),
-            u'functionality.one': _(u"Functionality 1"),
-            u'functionality.three': _(u"Functionality 3"),
-            u'functionality.two': _(u"Functionality 2"),
-            u'functionality.five': _(u"Functionality 5"),
-            u'functionality.six': _(u"Functionality 6"),
-            u'functionality.seven': _(u"Functionality 7"),
-            u'participant.gender': _(u"Participant Gender"),
-            u'participant.investment': _(u"Participant Investment"),
-            u'participant.investment.five': _(u"Participant Investment 5"),
-            u'participant.investment.four': _(u"Participant Investment 4"),
-            u'participant.investment.one': _(u"Participant Investment 1"),
-            u'participant.investment.three': _(u"Participant Investment 3"),
-            u'participant.investment.two': _(u"Participant Investment 2"),
-            u'participant.occupation': _(u"Participant Occupation"),
-            u'price.bike': _(u"Price Bike"),
-            u'price.crosstrainer': _(u"Price Crosstrainer"),
-            u'price.hometrainer': _(u"Price Hometrainer"),
-            u'price.mountainbike': _(u"Price Mountainbike"),
-            u'price.trainer': _(u"Price Personal Trainer"),
-            u'price.treadmill': _(u"Price Treadmill"),
-            u'roadwork': _(u"Roadwork"),
-            u'training.maxprice': _(u"Training Maximum Price"),
-            u'training.monitor': _(u"Training Monitor"),
-            u'training.personalization': _(u"Training Personalization"),
-            u'trainingresource.effect': _(u"Training Resource Effect"),
-            u'trainingresource.eight': _(u"Training Resource 8"),
-            u'trainingresource.five': _(u"Training Resource 5"),
-            u'trainingresource.four': _(u"Training Resource 4"),
-            u'trainingresource.nine': _(u"Training Resource 9"),
-            u'trainingresource.one': _(u"Training Resource 1"),
-            u'trainingresource.seven': _(u"Training Resource 7"),
-            u'trainingresource.six': _(u"Training Resource 6"),
-            u'trainingresource.ten': _(u"Training Resource 10"),
-            u'trainingresource.three': _(u"Training Resource 3"),
-            u'trainingresource.two': _(u"Training Resource 2")}
-        return MAP
-
-    def field_list(self):
-        fields = {
-            'functionality.additional': 'Funktion Freitext',
-            'interest': ['interest.1', 'interest.2'],
-            'participant.occupation': 'participant.occupation10',
-            'price.bike': 'option1',
-            'favorite2.dislikes.three': 'Disike 2-3',
-            'favorite1.dislikes.three': 'Disike 1-3',
-            'favorite3.dislikes.two': 'Disike 3-2',
-            'trainingresource.effect': 'trainingresource.effect.2',
-            'frequency': 'frequency.3',
-            'favorite1': '1',
-            'favorite3': '3',
-            'favorite2': '2',
-            'favorite3.likes.two': 'Like 3-2',
-            'favorite3.dislikes.three': 'Disike 3-3',
-            'training.maxprice': 'option1',
-            'participant.investment': ['100', 'participant.investment.1',
-                                       'participant.investment.2',
-                                       'participant.investment.3',
-                                       'participant.investment.4',
-                                       'participant.investment.5'],
-            'training.personalization': 'very important',
-            'functionality': ['functionality.1', 'functionality.2',
-                              'functionality.3', 'functionality.4',
-                              'functionality.5', 'functionality.6',
-                              'functionality.7'],
-            'dislikes.one': 'Hate 1',
-            'favorite1.likes.two': 'Like 1-2',
-            'accessory.additional': 'Zubeh\xc3\xb6r Freitext',
-            'dislikes.three': 'Hate 3',
-            'email': 'test@example.tld',
-            'favorite1.likes.one': 'Like 1-1',
-            'favorite1.dislikes.one': 'Disike 1-1',
-            'participant.gender': 'option1',
-            'purchase': ['purchase.1', 'purchase.2', 'purchase.3'],
-            'favorite3.likes.three': 'Like 3-3',
-            'favorite3.dislikes.one': 'Disike 3-1',
-            'favorite3.likes.one': 'Like 3-1',
-            'accessory': ['accessory.1', 'accessory.2', 'accessory.3'],
-            'price.crosstrainer': 'option1',
-            'favorite2.likes.two': 'Like 2-2',
-            'price.hometrainer': 'option1',
-            'favorite1.likes.three': 'Like 1-3',
-            'favorite2.dislikes.two': 'Disike 2-2',
-            'favorite2.likes.three': 'Like 2-3',
-            'price.club': 'option1',
-            'trainingresource': ['trainingresource.1', 'trainingresource.2',
-                                 'trainingresource.3', 'trainingresource.4',
-                                 'trainingresource.5', 'trainingresource.6',
-                                 'trainingresource.7', 'trainingresource.8',
-                                 'trainingresource.9', 'trainingresource.10'],
-            'price.mountainbike': 'option1',
-            'trainingresource.additional': 'Hilfsmittel Freitext',
-            'training.monitor': 'good',
-            'price.trainer': 'option1',
-            'favorite2.dislikes.one': 'Disike 2-1',
-            'favorite2.likes.one': 'Like 2-1',
-            'benefit': ['benefit.1', 'benefit.2', 'benefit.3'],
-            'price.treadmill': 'option1',
-            'favorite1.dislikes.two': 'Disike 1-2',
-            'roadwork': 'roadwork.1'}
         return fields
