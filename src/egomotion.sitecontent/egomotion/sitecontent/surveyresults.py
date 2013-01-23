@@ -136,7 +136,8 @@ class SurveyResults(grok.View):
 
     def get_item_details(self, item):
         answers = json.loads(item.answers)
-        mapping = self.survey_data_mappings()
+        mapping = self.fields_ordered()
+        field_titles = self.field_titles()
         data = []
         if len(answers) > 0:
             results = answers['survey-state']
@@ -147,7 +148,7 @@ class SurveyResults(grok.View):
                 except KeyError:
                     item['value'] = _(u"No value given or not callable")
                 try:
-                    title = mapping[r]
+                    title = field_titles[r]
                 except KeyError:
                     title = r
                 item['title'] = title
