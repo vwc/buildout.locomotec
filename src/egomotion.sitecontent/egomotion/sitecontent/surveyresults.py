@@ -58,7 +58,8 @@ class SurveyResults(grok.View):
                 result = export_data[entry]
                 answers = []
                 for r in result:
-                    answers.append(result[r])
+                    value = result[r]
+                    answers.append(value.decode('utf-8'))
                 writer.writerow(answers)
             data = out.getvalue()
             prefix = 'surveyresults'
