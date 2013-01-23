@@ -13,6 +13,8 @@ from plone import api
 from zope.component import getMultiAdapter
 from zope.lifecycleevent import modified
 
+from Products.CMFPlone.utils import safe_unicode
+
 from egomotion.sitecontent.surveytool import UnicodeWriter
 
 from egomotion.sitecontent.survey import ISurvey
@@ -92,7 +94,8 @@ class SurveyResults(grok.View):
             result = export_data[entry]
             answers = []
             for r in result:
-                answers.append(result[r])
+                value = result[r]
+                answers.append(value.decode('utf-8'))
             writer.writerow(answers)
         data = out.getvalue()
         return data
@@ -128,7 +131,8 @@ class SurveyResults(grok.View):
                     flattened[item] = str(index)
                 else:
                     try:
-                        flattened[item] = str(itemdata[item])
+                        value = safe_unicode(itemdata[item]).encode('utf-8')
+                        flattened[item] = str(value)
                     except KeyError:
                         flattened[item] = ''
             data[index] = flattened
