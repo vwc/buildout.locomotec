@@ -128,7 +128,10 @@ class SurveyResults(grok.View):
                         else:
                             flattened[token] = '0'
                 elif item in selections:
-                    value = itemdata[item]
+                    try:
+                        value = itemdata[item]
+                    except KeyError:
+                        value = itemdata[item]
                     splitted_value = value.split('.')
                     flattened[item] = splitted_value[-1]
                 elif item == 'pid':
