@@ -113,6 +113,10 @@ class SurveyResults(grok.View):
             data[index] = flattened
         return data
 
+    def pretty_title(self, key):
+        pretty_titles = self.field_titles()
+        return pretty_titles[key]
+
     def get_item_details(self, item):
         answers = json.loads(item.answers)
         mapping = self.fields_ordered()

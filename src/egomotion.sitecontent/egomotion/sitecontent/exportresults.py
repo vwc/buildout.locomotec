@@ -154,7 +154,7 @@ class ExportSurveyResults(grok.View):
     def fields_containing_selections(self):
         fields = (
             'participant.occupation', 'participant.gender', 'roadwork',
-            'training.monitor', 'trainingresource.effect',
+            'frequency', 'training.monitor', 'trainingresource.effect',
             'training.maxprice', 'training.personalization',
             'price.crosstrainer', 'price.bike', 'price.hometrainer',
             'price.club', 'price.trainer', 'price.treadmill',
