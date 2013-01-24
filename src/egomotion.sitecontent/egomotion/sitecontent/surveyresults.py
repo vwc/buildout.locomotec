@@ -63,7 +63,7 @@ class SurveyResults(grok.View):
                 writer.writerow(answers)
             data = out.getvalue()
             prefix = 'surveyresults'
-            ext = ''
+            ext = '.csv'
             name = "%s-%s%s" % (prefix, time.time(), ext)
             c_control = "must-revalidate, post-check=0, pre-check=0, public"
             disposition = "attachment; filename=%s" % name
