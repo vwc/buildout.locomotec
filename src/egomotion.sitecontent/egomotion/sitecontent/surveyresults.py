@@ -118,7 +118,10 @@ class SurveyResults(grok.View):
             flattened = {}
             for item in fieldorder:
                 if item in arrays:
-                    values = itemdata[item]
+                    try:
+                        values = itemdata[item]
+                    except KeyError:
+                        value = ''
                     for token in arrays[item]:
                         if token in values:
                             flattened[token] = '1'
