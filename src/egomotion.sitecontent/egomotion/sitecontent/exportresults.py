@@ -1,16 +1,12 @@
 import csv
 import json
+import time
 
 from StringIO import StringIO
-from DateTime import DateTime
 from Acquisition import aq_inner
-from AccessControl import Unauthorized
 
 from five import grok
 from plone import api
-
-from zope.component import getMultiAdapter
-from zope.lifecycleevent import modified
 
 from Products.CMFPlone.utils import safe_unicode
 
@@ -22,30 +18,15 @@ from egomotion.sitecontent.answer import IAnswer
 from egomotion.sitecontent import MessageFactory as _
 
 
-class SurveyResults(grok.View):
+class ExportSurveyResults(grok.View):
     grok.context(ISurvey)
     grok.require('cmf.ModifyPortalContent')
-    grok.name('survey-results')
+    grok.name('export-survey-results')
 
     def update(self):
-        context = aq_inner(self.context)
         self.anonymous = api.user.is_anonymous()
-        self.has_answers = self.answers_idx() > 0
-        if 'form.buttons.Submit' in self.request:
-            self.errors = {}
-            authenticator = getMultiAdapter((context, self.request),
-                                            name=u"authenticator")
-            if not authenticator.verify():
-                raise Unauthorized
-            now = DateTime()
-            timestamp = str(now)
-            setattr(context, 'download', timestamp)
-            modified(context)
-            base_url = context.absolute_url()
-            next_url = base_url + '/@@export-survey-results'
-            return self.request.response.redirect(next_url)
 
-    def csv_preview(self):
+    def render(self):
         out = StringIO()
         #writer = UnicodeWriter(out,
         #                       {'delimiter': ';',
@@ -67,7 +48,22 @@ class SurveyResults(grok.View):
                 answers.append(value.decode('utf-8'))
             writer.writerow(answers)
         data = out.getvalue()
-        return data
+        prefix = 'surveyresults'
+        timemarker = int(round(time.time() * 1000))
+        ext = '.csv'
+        filename = "%s-%s%s" % (prefix, timemarker, ext)
+        c_control = "must-revalidate, post-check=0, pre-check=0, public"
+        # Create response
+        self.request.response.setHeader('Content-Length', "%d" % len(data))
+        self.request.response.setHeader('Pragma', "no-cache")
+        self.request.response.setHeader('Cache-Control', c_control)
+        self.request.response.setHeader('Expires', "0")
+        # Return CSV data
+        self.request.response.setHeader('Content-Type', 'text/csv')
+        self.request.response.setHeader('Content-Disposition',
+                                        'attachment; filename=%s'
+                                        % filename)
+        return out.getvalue()
 
     def prepare_export_data(self):
         data = {}
@@ -113,31 +109,6 @@ class SurveyResults(grok.View):
             data[index] = flattened
         return data
 
-    def get_item_details(self, item):
-        answers = json.loads(item.answers)
-        mapping = self.fields_ordered()
-        field_titles = self.field_titles()
-        data = []
-        if len(answers) > 0:
-            results = answers['survey-state']
-            for r in mapping:
-                item = {}
-                try:
-                    item['value'] = results[r]
-                except KeyError:
-                    item['value'] = _(u"No value given or not callable")
-                try:
-                    title = field_titles[r]
-                except KeyError:
-                    title = r
-                item['title'] = title
-                data.append(item)
-        return data
-
-    def answers_idx(self):
-        answers = self.survey_answers()
-        return len(answers)
-
     def survey_answers(self):
         context = aq_inner(self.context)
         catalog = api.portal.get_tool(name='portal_catalog')
@@ -146,14 +117,6 @@ class SurveyResults(grok.View):
                                     depth=1),
                           sort_on='getObjPositionInParent')
         return results
-
-    def latest_answer(self):
-        context = aq_inner(self.context)
-        items = context.restrictedTraverse('@@folderListing')(
-            portal_type='egomotion.sitecontent.answer',
-            sort_on='modified',
-            sort_order='reverse')
-        return items[0]
 
     def csv_headers(self):
         fileheaders = []
@@ -191,7 +154,6 @@ class SurveyResults(grok.View):
     def fields_containing_selections(self):
         fields = (
             'participant.occupation', 'participant.gender', 'roadwork',
-            'frequency',
             'training.monitor', 'trainingresource.effect',
             'training.maxprice', 'training.personalization',
             'price.crosstrainer', 'price.bike', 'price.hometrainer',
