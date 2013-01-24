@@ -131,7 +131,7 @@ class SurveyResults(grok.View):
                     try:
                         value = itemdata[item]
                     except KeyError:
-                        value = itemdata[item]
+                        value = ''
                     splitted_value = value.split('.')
                     flattened[item] = splitted_value[-1]
                 elif item == 'pid':
