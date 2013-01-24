@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-01-22 13:15+0000\n"
+"POT-Creation-Date: 2013-01-24 17:30+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -26,19 +26,23 @@ msgstr "Eine Liste von UIDs der Teilnehmerobjekte"
 msgid "A single survey participation"
 msgstr "Eine ausgefühlte und gespeicherte Umfrageteilnahme"
 
-#: ./../surveyresults.py:371
+#: ./../exportresults.py:291
+#: ./../surveyresults.py:333
 msgid "Accessory Additional"
 msgstr "Zubehör (Freitext)"
 
-#: ./../surveyresults.py:368
+#: ./../exportresults.py:288
+#: ./../surveyresults.py:330
 msgid "Accessory One"
 msgstr "Zubehör 1"
 
-#: ./../surveyresults.py:370
+#: ./../exportresults.py:290
+#: ./../surveyresults.py:332
 msgid "Accessory Three"
 msgstr "Zubehör 3"
 
-#: ./../surveyresults.py:369
+#: ./../exportresults.py:289
+#: ./../surveyresults.py:331
 msgid "Accessory Two"
 msgstr "Zubehör 2"
 
@@ -54,19 +58,23 @@ msgstr "Antworten"
 msgid "Autosave %s"
 msgstr "Zwischengespeichert:"
 
-#: ./../surveyresults.py:375
+#: ./../exportresults.py:295
+#: ./../surveyresults.py:337
 msgid "Benefit Additional"
 msgstr "ZUsatznutzen (Freitext)"
 
-#: ./../surveyresults.py:372
+#: ./../exportresults.py:292
+#: ./../surveyresults.py:334
 msgid "Benefit One"
 msgstr "Zusatznutzen 1"
 
-#: ./../surveyresults.py:374
+#: ./../exportresults.py:294
+#: ./../surveyresults.py:336
 msgid "Benefit Three"
 msgstr "Zusatznutzen 3"
 
-#: ./../surveyresults.py:373
+#: ./../exportresults.py:293
+#: ./../surveyresults.py:335
 msgid "Benefit Two"
 msgstr "Zusatznutzen 2"
 
@@ -78,151 +86,186 @@ msgstr "Client"
 msgid "Clients"
 msgstr "Clients"
 
-#: ./../surveyresults.py:357
+#: ./../exportresults.py:277
+#: ./../surveyresults.py:319
 msgid "Dislike One"
 msgstr "Negativmerkmale andere 1"
 
-#: ./../surveyresults.py:359
+#: ./../exportresults.py:279
+#: ./../surveyresults.py:321
 msgid "Dislike Three"
 msgstr "Negativmerkmale andere 3"
 
-#: ./../surveyresults.py:358
+#: ./../exportresults.py:278
+#: ./../surveyresults.py:320
 msgid "Dislike Two"
 msgstr "Negativmerkmale andere 2"
 
-#: ./../surveyresults_templates/surveyresults.pt:64
+#: ./../surveyresults_templates/surveyresults.pt:67
 msgid "Download results"
 msgstr "Umfrageergenisse herunterladen"
 
-#: ./../surveyresults.py:414
+#: ./../exportresults.py:334
+#: ./../surveyresults.py:376
 msgid "E-Mail"
 msgstr "E-Mail-Adresse"
 
-#: ./../surveyresults.py:336
+#: ./../exportresults.py:256
+#: ./../surveyresults.py:298
 msgid "Favorite 1"
 msgstr "Nr. Favorit 1"
 
-#: ./../surveyresults.py:340
+#: ./../exportresults.py:260
+#: ./../surveyresults.py:302
 msgid "Favorite 1 - Dislike 1"
 msgstr "Negativmerkmal Favorit 1-1"
 
-#: ./../surveyresults.py:341
+#: ./../exportresults.py:261
+#: ./../surveyresults.py:303
 msgid "Favorite 1 - Dislike 2"
 msgstr "Negativmerkmal Favorit 1-2"
 
-#: ./../surveyresults.py:342
+#: ./../exportresults.py:262
+#: ./../surveyresults.py:304
 msgid "Favorite 1 - Dislike 3"
 msgstr "Negativmerkmal Favorit 1-3"
 
-#: ./../surveyresults.py:337
+#: ./../exportresults.py:257
+#: ./../surveyresults.py:299
 msgid "Favorite 1 - Like 1"
 msgstr "Positivmerkmal Favorit 1-1"
 
-#: ./../surveyresults.py:338
+#: ./../exportresults.py:258
+#: ./../surveyresults.py:300
 msgid "Favorite 1 - Like 2"
 msgstr "Positivmerkmal Favorit 1-2"
 
-#: ./../surveyresults.py:339
+#: ./../exportresults.py:259
+#: ./../surveyresults.py:301
 msgid "Favorite 1 - Like 3"
 msgstr "Positivmerkmal Favorit 1-3"
 
-#: ./../surveyresults.py:343
+#: ./../exportresults.py:263
+#: ./../surveyresults.py:305
 msgid "Favorite 2"
 msgstr "Nr. Favorit 2"
 
-#: ./../surveyresults.py:347
+#: ./../exportresults.py:267
+#: ./../surveyresults.py:309
 msgid "Favorite 2 - Dislike 1"
 msgstr "Negativmerkmal Favorit 2-1"
 
-#: ./../surveyresults.py:348
+#: ./../exportresults.py:268
+#: ./../surveyresults.py:310
 msgid "Favorite 2 - Dislike 2"
 msgstr "Negativmerkmal Favorit 2-2"
 
-#: ./../surveyresults.py:349
+#: ./../exportresults.py:269
+#: ./../surveyresults.py:311
 msgid "Favorite 2 - Dislike 3"
 msgstr "Negativmerkmal Favorit 2-3"
 
-#: ./../surveyresults.py:344
+#: ./../exportresults.py:264
+#: ./../surveyresults.py:306
 msgid "Favorite 2 - Like 1"
 msgstr "Positivmerkmal Favorit 2-1"
 
-#: ./../surveyresults.py:345
+#: ./../exportresults.py:265
+#: ./../surveyresults.py:307
 msgid "Favorite 2 - Like 2"
 msgstr "Positivmerkmal Favorit 2-2"
 
-#: ./../surveyresults.py:346
+#: ./../exportresults.py:266
+#: ./../surveyresults.py:308
 msgid "Favorite 2 - Like 3"
 msgstr "Positivmerkmal Favorit 2-3"
 
-#: ./../surveyresults.py:350
+#: ./../exportresults.py:270
+#: ./../surveyresults.py:312
 msgid "Favorite 3"
 msgstr "Nr. Favorit 3"
 
-#: ./../surveyresults.py:354
+#: ./../exportresults.py:274
+#: ./../surveyresults.py:316
 msgid "Favorite 3 - Dislike 1"
 msgstr "Negativmerkmal Favorit 3-1"
 
-#: ./../surveyresults.py:355
+#: ./../exportresults.py:275
+#: ./../surveyresults.py:317
 msgid "Favorite 3 - Dislike 2"
 msgstr "Negativmerkmal Favorit 3-2"
 
-#: ./../surveyresults.py:356
+#: ./../exportresults.py:276
+#: ./../surveyresults.py:318
 msgid "Favorite 3 - Dislike 3"
 msgstr "Negativmerkmal Favorit 3-3"
 
-#: ./../surveyresults.py:351
+#: ./../exportresults.py:271
+#: ./../surveyresults.py:313
 msgid "Favorite 3 - Like 1"
 msgstr "Positivmerkmal Favorit 3-1"
 
-#: ./../surveyresults.py:352
+#: ./../exportresults.py:272
+#: ./../surveyresults.py:314
 msgid "Favorite 3 - Like 2"
 msgstr "Positivmerkmal Favorit 3-2"
 
-#: ./../surveyresults.py:353
+#: ./../exportresults.py:273
+#: ./../surveyresults.py:315
 msgid "Favorite 3 - Like 3"
 msgstr "Positivmerkmal Favorit 3-3"
 
-#: ./../survey_templates/view.pt:1083
+#: ./../survey_templates/view.pt:1082
 msgid "Fragebogen abschicken"
 msgstr "Fragebogen abschicken"
 
-#: ./../surveyresults.py:360
+#: ./../exportresults.py:280
+#: ./../surveyresults.py:322
 msgid "Functionality 1"
 msgstr "Funktionen 1"
 
-#: ./../surveyresults.py:361
+#: ./../exportresults.py:281
+#: ./../surveyresults.py:323
 msgid "Functionality 2"
 msgstr "Funktionen 2"
 
-#: ./../surveyresults.py:362
+#: ./../exportresults.py:282
+#: ./../surveyresults.py:324
 msgid "Functionality 3"
 msgstr "Funktionen 3"
 
-#: ./../surveyresults.py:363
+#: ./../exportresults.py:283
+#: ./../surveyresults.py:325
 msgid "Functionality 4"
 msgstr "Funktionen 4"
 
-#: ./../surveyresults.py:364
+#: ./../exportresults.py:284
+#: ./../surveyresults.py:326
 msgid "Functionality 5"
 msgstr "Funktionen 5"
 
-#: ./../surveyresults.py:365
+#: ./../exportresults.py:285
+#: ./../surveyresults.py:327
 msgid "Functionality 6"
 msgstr "Funktionen 6"
 
-#: ./../surveyresults.py:366
+#: ./../exportresults.py:286
+#: ./../surveyresults.py:328
 msgid "Functionality 7"
 msgstr "Funktionen 7"
 
-#: ./../surveyresults.py:367
+#: ./../exportresults.py:287
+#: ./../surveyresults.py:329
 msgid "Functionality Additional"
 msgstr "Funktionen (Freitext)"
 
-#: ./../surveyresults.py:412
+#: ./../exportresults.py:332
+#: ./../surveyresults.py:374
 msgid "Interest 1"
 msgstr "Schlussfrage Interesse"
 
-#: ./../surveyresults.py:413
+#: ./../exportresults.py:333
+#: ./../surveyresults.py:375
 msgid "Interest 2"
 msgstr "Schlussfrage Begründung"
 
@@ -230,67 +273,74 @@ msgstr "Schlussfrage Begründung"
 msgid "Last Download"
 msgstr "Letzter Download"
 
-#: ./../survey_templates/view.pt:125
+#: ./../survey_templates/view.pt:124
 msgid "Merkmale, die mir am besten gefallen"
 msgstr "Merkmale, die mir am besten gefallen"
 
-#: ./../survey_templates/view.pt:155
+#: ./../survey_templates/view.pt:154
 msgid "Merkmale, die mir am wenigsten gefallen"
 msgstr "Merkmale, die mir am wenigsten gefallen"
 
-#: ./../surveyresults.py:166
+#: ./../surveyresults.py:132
 msgid "No value given or not callable"
 msgstr "Keine Angabe"
 
-#: ./../survey_templates/view.pt:102
+#: ./../survey_templates/view.pt:101
 msgid "Nummer"
 msgstr "Nummer"
 
-#: ./../surveyresults.py:393
+#: ./../exportresults.py:313
+#: ./../surveyresults.py:355
 msgid "Participant Age"
 msgstr "Alter"
 
-#: ./../surveyresults.py:335
+#: ./../exportresults.py:255
+#: ./../surveyresults.py:297
 msgid "Participant Code"
-msgstr "Teilnehmer Lfd. Nummer"
+msgstr "ID-Code"
 
-#: ./../surveyresults.py:394
+#: ./../exportresults.py:314
+#: ./../surveyresults.py:356
 msgid "Participant Gender"
 msgstr "Geschlecht"
 
-#: ./../surveyresults.py:333
+#: ./../exportresults.py:253
+#: ./../surveyresults.py:295
 msgid "Participant ID"
-msgstr "ID-Code"
+msgstr "Teilnehmer Lfd. Nummer"
 
-#: ./../surveyresults.py:334
+#: ./../exportresults.py:254
+#: ./../surveyresults.py:296
 msgid "Participant IP"
 msgstr "IP-Adresse"
 
-#: ./../surveyresults.py:550
-msgid "Participant Investment"
-msgstr "Ausgaben Sonst"
-
-#: ./../surveyresults.py:396
+#: ./../exportresults.py:316
+#: ./../surveyresults.py:358
 msgid "Participant Investment 1"
 msgstr "Ausgaben Geräte"
 
-#: ./../surveyresults.py:397
+#: ./../exportresults.py:317
+#: ./../surveyresults.py:359
 msgid "Participant Investment 2"
 msgstr "Ausgaben Trainerstunden"
 
-#: ./../surveyresults.py:398
+#: ./../exportresults.py:318
+#: ./../surveyresults.py:360
 msgid "Participant Investment 3"
 msgstr "Ausgaben Sportbekleidung"
 
-#: ./../surveyresults.py:399
+#: ./../exportresults.py:319
+#: ./../surveyresults.py:361
 msgid "Participant Investment 4"
 msgstr "Ausgaben Wellness"
 
-#: ./../surveyresults.py:400
+#: ./../exportresults.py:320
+#: ./../surveyresults.py:362
 msgid "Participant Investment 5"
 msgstr "Ausgaben Fitnessstudio"
 
-#: ./../surveyresults.py:395
+#: ./../exportresults.py:315
+#: ./../surveyresults.py:357
 msgid "Participant Occupation"
 msgstr "Beruf"
 
@@ -306,51 +356,63 @@ msgstr "Lfd. Nummer"
 msgid "Participants"
 msgstr "Teilnehmer"
 
-#: ./../surveyresults.py:404
+#: ./../exportresults.py:324
+#: ./../surveyresults.py:366
 msgid "Price Bike"
 msgstr "Ausgabenbereitschaft Rennrad"
 
-#: ./../surveyresults.py:407
+#: ./../exportresults.py:327
+#: ./../surveyresults.py:369
 msgid "Price Club"
 msgstr "Ausgaben Fitnessstudio"
 
-#: ./../surveyresults.py:403
+#: ./../exportresults.py:323
+#: ./../surveyresults.py:365
 msgid "Price Crosstrainer"
 msgstr "Ausgabenbereitschaft Crosstrainer"
 
-#: ./../surveyresults.py:401
+#: ./../exportresults.py:321
+#: ./../surveyresults.py:363
 msgid "Price Hometrainer"
 msgstr "Ausgabenbereitschaft Hometrainer"
 
-#: ./../surveyresults.py:405
+#: ./../exportresults.py:325
+#: ./../surveyresults.py:367
 msgid "Price Mountainbike"
 msgstr "Ausgabenbereitschaft Mountainbike"
 
-#: ./../surveyresults.py:406
+#: ./../exportresults.py:326
+#: ./../surveyresults.py:368
 msgid "Price Personal Trainer"
 msgstr "Ausgabenbereitschaft Trainerstunden"
 
-#: ./../surveyresults.py:402
+#: ./../exportresults.py:322
+#: ./../surveyresults.py:364
 msgid "Price Treadmill"
 msgstr "Ausgabenbereitschaft Laufband"
 
-#: ./../surveyresults.py:408
+#: ./../exportresults.py:328
+#: ./../surveyresults.py:370
 msgid "Purchase 1"
 msgstr "Kaufinteresse"
 
-#: ./../surveyresults.py:409
+#: ./../exportresults.py:329
+#: ./../surveyresults.py:371
 msgid "Purchase 2"
 msgstr "Kaufinteresse"
 
-#: ./../surveyresults.py:410
+#: ./../exportresults.py:330
+#: ./../surveyresults.py:372
 msgid "Purchase 3"
 msgstr "Kaufinteresse"
 
-#: ./../surveyresults.py:411
+#: ./../exportresults.py:331
+#: ./../surveyresults.py:373
 msgid "Purchase Comment"
 msgstr "Kaufinteresse Begründung"
 
-#: ./../surveyresults.py:377
+#: ./../exportresults.py:297
+#: ./../surveyresults.py:339
 msgid "Roadwork"
 msgstr "Systematisches Lauftraining"
 
@@ -370,67 +432,83 @@ msgstr "Umfragedaten automatisch zwischengespeichert"
 msgid "Sweepstake code claimed?"
 msgstr "Wurde der Gutscheincode abgerufen?"
 
-#: ./../surveyresults.py:376
+#: ./../exportresults.py:296
+#: ./../surveyresults.py:338
 msgid "Training Frequency"
 msgstr "Trainingshäufigkeit"
 
-#: ./../surveyresults.py:392
+#: ./../exportresults.py:312
+#: ./../surveyresults.py:354
 msgid "Training Maximum Price"
 msgstr "Ausgaben"
 
-#: ./../surveyresults.py:390
+#: ./../exportresults.py:310
+#: ./../surveyresults.py:352
 msgid "Training Monitor"
 msgstr "Training HIlfsmittel"
 
-#: ./../surveyresults.py:391
+#: ./../exportresults.py:311
+#: ./../surveyresults.py:353
 msgid "Training Personalization"
 msgstr "Persönlicher Lauftrainer"
 
-#: ./../surveyresults.py:378
+#: ./../exportresults.py:298
+#: ./../surveyresults.py:340
 msgid "Training Resource 1"
 msgstr "Pulsuhr ohne GPS"
 
-#: ./../surveyresults.py:387
+#: ./../exportresults.py:307
+#: ./../surveyresults.py:349
 msgid "Training Resource 10"
 msgstr "Schrittzähler mit Kalorienverbrauch"
 
-#: ./../surveyresults.py:379
+#: ./../exportresults.py:299
+#: ./../surveyresults.py:341
 msgid "Training Resource 2"
 msgstr "Pulsuhr mit GPS"
 
-#: ./../surveyresults.py:380
+#: ./../exportresults.py:300
+#: ./../surveyresults.py:342
 msgid "Training Resource 3"
 msgstr "Laufband zuhause"
 
-#: ./../surveyresults.py:381
+#: ./../exportresults.py:301
+#: ./../surveyresults.py:343
 msgid "Training Resource 4"
 msgstr "Laufband im Fitnessstudio"
 
-#: ./../surveyresults.py:382
+#: ./../exportresults.py:302
+#: ./../surveyresults.py:344
 msgid "Training Resource 5"
 msgstr "persönlicher Lauftrainer im Verein"
 
-#: ./../surveyresults.py:383
+#: ./../exportresults.py:303
+#: ./../surveyresults.py:345
 msgid "Training Resource 6"
 msgstr "persönlicher Lauftrainer privat"
 
-#: ./../surveyresults.py:384
+#: ./../exportresults.py:304
+#: ./../surveyresults.py:346
 msgid "Training Resource 7"
 msgstr "Laufgruppe im Verein"
 
-#: ./../surveyresults.py:385
+#: ./../exportresults.py:305
+#: ./../surveyresults.py:347
 msgid "Training Resource 8"
 msgstr "Laufgruppe privat"
 
-#: ./../surveyresults.py:386
+#: ./../exportresults.py:306
+#: ./../surveyresults.py:348
 msgid "Training Resource 9"
 msgstr "Trainingsapp auf Smartphone"
 
-#: ./../surveyresults.py:388
+#: ./../exportresults.py:308
+#: ./../surveyresults.py:350
 msgid "Training Resource Additional"
 msgstr "Hilfsmittel Sonst"
 
-#: ./../surveyresults.py:389
+#: ./../exportresults.py:309
+#: ./../surveyresults.py:351
 msgid "Training Resource Effect"
 msgstr "Wirkungsgrad"
 
