@@ -364,7 +364,7 @@ msgstr "Ausgabenbereitschaft Rennrad"
 #: ./../exportresults.py:327
 #: ./../surveyresults.py:369
 msgid "Price Club"
-msgstr "Ausgaben Fitnessstudio"
+msgstr "Ausgabenbereitschaft Fitnessstudio"
 
 #: ./../exportresults.py:323
 #: ./../surveyresults.py:365
