@@ -368,7 +368,7 @@
               <div class="input-prepend">
                 <span class="add-on discreet">b.</span>
                 <input class="input-xxlarge" id="dislikes.two"
-                  dislikes="dislikes.two"
+                  name="dislikes.two"
                   type="text"
                   tal:attributes="value python:view.default_value(fieldname='dislikes.two')">
               </div>
@@ -501,7 +501,9 @@
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="benefit.additional" type="text" placeholder="Optionale weitere Angaben"
+              <input class="input-xxlarge" id="benefit.additional"
+                type="text" placeholder="Optionale weitere Angaben"
+                name)"benefit.additional"
                 tal:attributes="value python:view.default_value(fieldname='benefit.additional')">
             </div>
           </div>
@@ -852,7 +854,9 @@
             </label>
             <div class="input-prepend">
                <span class="add-on discreet">Sonstiges</span>
-              <input class="input-xxlarge" id="participant.investment.additional" type="text" placeholder="Optionale weitere Angaben">
+              <input class="input-xxlarge" id="participant.investment.additional"
+                type="text" placeholder="Optionale weitere Angaben"
+                name="participant.investment.additional">
             </div>
           </div>
         </div><!-- / addon products -->
@@ -1043,7 +1047,7 @@
               <label for="purchase.comment">
                 Begr&uuml;ndung</label>
               <textarea rows="3" class="input-xxlarge"
-                id="purchase.comment">
+                id="purchase.comment" name="purchase.comment">
               </textarea>
               <span class="help-block">
                 Falls Deine Antwort &bdquo;nein&ldquo; oder &bdquo;unentschieden&ldquo; ist,
