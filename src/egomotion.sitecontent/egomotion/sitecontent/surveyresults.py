@@ -119,7 +119,7 @@ class SurveyResults(grok.View):
         return data
 
     def pretty_title(self, key):
-        pretty_titles = self.field_titles()
+        pretty_titles = survey_fields_i18n()
         return pretty_titles[key]
 
     def answers_idx(self):
@@ -151,3 +151,9 @@ class SurveyResults(grok.View):
             header = titles[idx]
             fileheaders.append(header)
         return fileheaders
+
+    def fields_ordered(self):
+        return survey_fields_ordered()
+
+    def pretty_titles(self):
+        return survey_fields_i18n()
