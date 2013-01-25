@@ -92,7 +92,7 @@ msgstr "Negativmerkmale andere 2"
 
 #: ./../surveyresults_templates/surveyresults.pt:67
 msgid "Download results"
-msgstr "Umfrageergenisse herunterladen"
+msgstr "Umfrageergebnisse herunterladen"
 
 #: ./../surveytool.py:403
 msgid "E-Mail"
