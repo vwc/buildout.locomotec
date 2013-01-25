@@ -503,7 +503,7 @@
                <span class="add-on discreet">Sonstiges</span>
               <input class="input-xxlarge" id="benefit.additional"
                 type="text" placeholder="Optionale weitere Angaben"
-                name)"benefit.additional"
+                name="benefit.additional"
                 tal:attributes="value python:view.default_value(fieldname='benefit.additional')">
             </div>
           </div>
