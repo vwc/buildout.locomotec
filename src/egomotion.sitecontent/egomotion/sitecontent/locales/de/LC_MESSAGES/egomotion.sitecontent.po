@@ -61,7 +61,7 @@ msgstr "Zwischengespeichert:"
 #: ./../exportresults.py:295
 #: ./../surveyresults.py:337
 msgid "Benefit Additional"
-msgstr "ZUsatznutzen (Freitext)"
+msgstr "Zusatznutzen (Freitext)"
 
 #: ./../exportresults.py:292
 #: ./../surveyresults.py:334
@@ -394,17 +394,17 @@ msgstr "Ausgabenbereitschaft Laufband"
 #: ./../exportresults.py:328
 #: ./../surveyresults.py:370
 msgid "Purchase 1"
-msgstr "Kaufinteresse"
+msgstr "Kaufinteresse 1"
 
 #: ./../exportresults.py:329
 #: ./../surveyresults.py:371
 msgid "Purchase 2"
-msgstr "Kaufinteresse"
+msgstr "Kaufinteresse 2"
 
 #: ./../exportresults.py:330
 #: ./../surveyresults.py:372
 msgid "Purchase 3"
-msgstr "Kaufinteresse"
+msgstr "Kaufinteresse 3"
 
 #: ./../exportresults.py:331
 #: ./../surveyresults.py:373
@@ -445,7 +445,7 @@ msgstr "Ausgaben"
 #: ./../exportresults.py:310
 #: ./../surveyresults.py:352
 msgid "Training Monitor"
-msgstr "Training HIlfsmittel"
+msgstr "Training Hilfsmittel"
 
 #: ./../exportresults.py:311
 #: ./../surveyresults.py:353
