@@ -396,7 +396,7 @@
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="functionality.1" name="functionality"
-                >
+                tal:attributes="checked python:view.default_value(fieldname='functionality')">
               ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
             </label>
             <label class="checkbox">
