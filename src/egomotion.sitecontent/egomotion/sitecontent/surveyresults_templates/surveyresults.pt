@@ -75,18 +75,12 @@
               Batch python:modules['Products.CMFPlone'].Batch;
               b_size python:int(request.get('b_size', 20));
               b_start python:int(request.get('b_start', 0));
-              results python:context.restrictedTraverse('@@folderListing')(batch=True, b_size=b_size, b_start=b_start, portal_type=['egomotion.sitecontent.answer']);
+              results view/prepare_export_data;
               batch python:Batch(results, b_size, b_start);"
               class="table">
               <tbody>
                 <tr tal:repeat="item results">
-                  <td><strong tal:content="item/Title" /></td>
-                  <td tal:define="modified item/modified"
-                    class="discreet">
-                    <span tal:content="modified"
-                      tal:attributes="data-appui string:prettydate;
-                                      title modified" />
-                  </td>
+                  <td><strong tal:content="item" /></td>
                   <td tal:define="item_index repeat/item/index">
                       <a href="#myModal"
                         tal:attributes="href python:'#popover' + str(item_index)"
@@ -95,25 +89,25 @@
                         <i class="icon-info-sign"></i>
                         Details
                       </a>
-                      <!--<code tal:content="python:view.get_item_details(item)" />-->
                       <!-- Modal -->
-                      <div id="myModal" class="modal hide fade"
+                      <div id="myModal" class="modal xhide fade"
                         tabindex="-1"
                         role="dialog"
                         aria-labelledby="myModalLabel"
                         aria-hidden="true"
-                        tal:define="item_details python:view.get_item_details(item)"
+                        tal:define="item_details python:results[item];
+                                    sorted_fields view/fields_ordered"
                         tal:attributes="id python:'popover' + str(item_index)">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                          <h3 id="myModalLabel">Teilnehmer <span tal:replace="item/participant" /></h3>
+                          <h3 id="myModalLabel">Teilnehmer <span tal:replace="item" /></h3>
                         </div>
                         <div class="modal-body">
                           <table class="table-condensed">
                             <tbody>
-                              <tr tal:repeat="detail item_details">
-                                <th tal:content="detail/title" />
-                                <td  class="discreet" tal:content="detail/value">
+                              <tr tal:repeat="key sorted_fields">
+                                <th tal:content="python:view.pretty_title(key)" />
+                                <td  class="discreet" tal:content="python:item_details[key]">
                                   Blah
                                 </td>
                               </tr>
