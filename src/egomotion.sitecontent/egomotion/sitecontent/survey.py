@@ -69,6 +69,7 @@ class View(grok.View):
         context = aq_inner(self.context)
         self.anonymous = api.user.is_anonymous()
         self.token = self.token_in_session()
+        self.locked = self.locked_state_info()
         self.has_images = len(self.contained_images()) > 0
         unwanted = ('_authenticator', 'form.button.Submit')
         if 'form.buttons.Submit' in self.request:
@@ -101,12 +102,14 @@ class View(grok.View):
         session = tool.get()
         state = session['survey-state']
         if 'puid' not in state:
-            state['puid'] = django_random.get_random_string()
+            code = django_random.get_random_string(length=12)
+            state['puid'] = code
             tool.add('survey-state', state)
             survey = tool.get()
         else:
             survey = session
         answers = json.dumps(survey)
+        token = django_random.get_random_string(length=24)
         now = datetime.now()
         timestamp = api.portal.get_localized_time(datetime=now)
         index = self.generate_index()
@@ -165,6 +168,17 @@ class View(grok.View):
             updated_clients = clients
         info['clients'] = updated_clients
         return info
+
+    def locked_state_info(self):
+        context = aq_inner(self.context)
+        client_ip = self.get_client_ip()
+        if client_ip in context.clients:
+            locked = True
+        elif self.token is True:
+            locked = True
+        else:
+            locked = False
+        return locked
 
     def token_in_session(self):
         tool = getUtility(ISurveyTool)

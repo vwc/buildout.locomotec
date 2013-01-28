@@ -1034,17 +1034,17 @@
               Monatsabo im Fitnessclub
             </label>
             <div class="controls controls-row">
-              <label class="radio inline">
+              <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.1">
                   ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
               </label>
-              <label class="radio inline">
+              <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.2">
                   nein
               </label>
-              <label class="radio inline">
+              <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.3">
                   unentschieden
