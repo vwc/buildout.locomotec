@@ -1025,20 +1025,27 @@
             Rennrads oder Laufbands) auf den Markt kommen.
             W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" value="purchase.1" name="purchase">
-                ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
+          <div class="control-group visualClear">
+            <label class="control-label">
+              Monatsabo im Fitnessclub
             </label>
-            <label class="checkbox">
-              <input type="checkbox" value="purchase.2" name="purchase">
-                nein
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" value="purchase.3" name="purchase">
-                unentschieden
-            </label>
-          </div>
+            <div class="controls controls-row">
+              <label class="radio inline">
+                <input type="radio" name="purchase" id="optionsRadios1"
+                  value="purchase.1">
+                  ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="purchase" id="optionsRadios1"
+                  value="purchase.2">
+                  nein
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="purchase" id="optionsRadios1"
+                  value="purchase.3">
+                  unentschieden
+              </label>
+            </div>
           <div id="nopurchase" class="controls">
               <label for="purchase.comment">
                 Begr&uuml;ndung</label>
