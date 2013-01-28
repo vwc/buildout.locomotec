@@ -297,7 +297,6 @@ def survey_fields_multiselect():
                                  'trainingresource.5', 'trainingresource.6',
                                  'trainingresource.7', 'trainingresource.8',
                                  'trainingresource.9', 'trainingresource.10'),
-            'purchase': ('purchase.1', 'purchase.2', 'purchase.3'),
             'interest': ('interest.1', 'interest.2'),
         }
         return fields
@@ -306,7 +305,7 @@ def survey_fields_multiselect():
 def survey_fields_select():
     fields = (
         'participant.occupation', 'participant.gender', 'roadwork',
-        'frequency',
+        'frequency', 'purchase',
         'training.monitor', 'trainingresource.effect',
         'training.maxprice', 'training.personalization',
         'price.crosstrainer', 'price.bike', 'price.hometrainer',
