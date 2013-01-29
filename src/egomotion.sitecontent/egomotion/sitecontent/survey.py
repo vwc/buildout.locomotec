@@ -124,8 +124,8 @@ class View(grok.View):
         setattr(item, 'participant', index)
         modified(item)
         item.reindexObject(idxs='modified')
-        token = django_random.get_random_string(length=24)
-        code = django_random.get_random_string(length=12)
+        #token = django_random.get_random_string(length=24)
+        #code = django_random.get_random_string(length=12)
         #results = answers['survey-state']
         token_info = {}
         token_info['idx'] = index
