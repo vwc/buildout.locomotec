@@ -105,8 +105,11 @@ class SurveyResults(grok.View):
                         value = itemdata[item]
                     except KeyError:
                         value = ''
-                    splitted_value = value.split('.')
-                    flattened[item] = splitted_value[-1]
+                    try:
+                        splitted_value = value.split('.')
+                        flattened[item] = splitted_value[-1]
+                    except AttributeError:
+                        flattened[item] = _(u"Outdated field value")
                 elif item == 'pid':
                     flattened[item] = str(index)
                 else:
