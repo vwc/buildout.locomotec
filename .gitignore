@@ -18,6 +18,7 @@ var
 .hg
 .bzr
 .svn
+.codeintel
 *.pyc
 *.pyo
 etc/**/*
