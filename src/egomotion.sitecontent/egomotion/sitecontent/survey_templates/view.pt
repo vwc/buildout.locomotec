@@ -12,7 +12,7 @@
 
   <article id="survey-view"
     tal:define="context_url context/absolute_url;
-                has_token view/token">
+                has_token view/locked_state_info">
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>

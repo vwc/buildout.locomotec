@@ -172,7 +172,7 @@ class View(grok.View):
     def locked_state_info(self):
         context = aq_inner(self.context)
         client_ip = self.get_client_ip()
-        if client_ip in context.clients:
+        if client_ip in context.clients and client_ip != '127.0.0.1':
             locked = True
         elif self.token is True:
             locked = True

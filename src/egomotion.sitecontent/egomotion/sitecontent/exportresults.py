@@ -34,10 +34,6 @@ class ExportSurveyResults(grok.View):
 
     def render(self):
         out = StringIO()
-        #writer = UnicodeWriter(out,
-        #                       {'delimiter': ';',
-        #                        'quotechar': '"',
-        #                        'quoting': csv.QUOTE_ALL})
         writer = UnicodeWriter(out, delimiter=';', quoting=csv.QUOTE_ALL)
         #writer = csv.writer(out)
         CSV_HEADER = self.csv_headers()
@@ -102,8 +98,11 @@ class ExportSurveyResults(grok.View):
                         value = itemdata[item]
                     except KeyError:
                         value = ''
-                    splitted_value = value.split('.')
-                    flattened[item] = splitted_value[-1]
+                    try:
+                        splitted_value = value.split('.')
+                        flattened[item] = splitted_value[-1]
+                    except AttributeError:
+                        flattened[item] = _(u"Outdated field value")
                 elif item == 'pid':
                     flattened[item] = str(index)
                 else:
