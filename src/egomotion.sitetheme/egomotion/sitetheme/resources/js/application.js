@@ -21,6 +21,13 @@
                 "duration": "slow"
             });
         });
+        var clip = new ZeroClipboard( $('#copy-button-id, #copy-button-code'), {
+            moviePath: "/++theme++egomotion.sitetheme/img/ZeroClipboard.swf"
+        });
+        clip.on('complete', function(client, args) {
+            $('#copy-notice').show().delay(3000).fadeOut('slow');
+            //alert('Test triggered: ' + args.text);
+        })
         function autoSaveSurvey() {
             $('form[data-appui="autosave"]').each(function () {
                 var ajax_url = $(this).data('appui-target');
