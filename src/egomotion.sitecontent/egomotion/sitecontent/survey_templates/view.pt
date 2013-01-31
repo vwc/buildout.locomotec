@@ -1090,13 +1090,12 @@
         <span tal:replace="structure context/@@authenticator/authenticator" />
         <!-- Form actions -->
         <div class="xform-actions" id="survey-form-actions">
-          <button type="submit"
+          <input type="submit"
             class="btn btn-primary btn-large pull-right"
             id="btn-submit"
             name="form.buttons.Submit"
-            i18n:translate="">
-            Fragebogen abschicken
-          </button>
+            value="Fragebogen abschicken"
+            i18n:translate="" />
         </div>
       </form>
     </section>
