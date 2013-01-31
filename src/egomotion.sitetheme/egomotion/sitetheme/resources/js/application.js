@@ -28,6 +28,12 @@
             $('#copy-notice').show().delay(3000).fadeOut('slow');
             //alert('Test triggered: ' + args.text);
         })
+        $('#form-survey input[type="text"]').on('keypress', function (e) {
+            if (e.keyCode === 13){
+                console.log('Form submit supressed');
+                return false;
+            }
+        });
         function autoSaveSurvey() {
             $('form[data-appui="autosave"]').each(function () {
                 var ajax_url = $(this).data('appui-target');
