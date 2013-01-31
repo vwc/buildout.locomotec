@@ -69,7 +69,6 @@ class ExportSurveyResults(grok.View):
 
     def prepare_export_data(self):
         data = {}
-        fieldorder = survey_fields_datacollection()
         arrays = survey_fields_multiselect()
         selections = survey_fields_select()
         results = self.survey_answers()
@@ -82,12 +81,12 @@ class ExportSurveyResults(grok.View):
             else:
                 itemdata = {}
             flattened = {}
-            for item in fieldorder:
+            for item in survey_fields_datacollection():
                 if item in arrays:
                     try:
                         values = itemdata[item]
                     except KeyError:
-                        value = ''
+                        values = ''
                     for token in arrays[item]:
                         if token in values:
                             flattened[token] = '1'
