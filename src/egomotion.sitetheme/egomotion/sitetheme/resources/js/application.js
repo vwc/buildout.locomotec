@@ -30,6 +30,7 @@
         })
         $('#form-survey input[type="text"]').on('keypress', function (e) {
             if (e.keyCode === 13){
+                e.preventDefault();
                 console.log('Form submit supressed');
                 return false;
             }
