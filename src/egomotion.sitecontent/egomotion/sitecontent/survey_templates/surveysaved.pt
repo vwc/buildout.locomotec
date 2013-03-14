@@ -11,21 +11,21 @@
     tal:define="info view/token;
                 portal_url context/portal_url">
     <header>
-      <h1>Vielen Dank für die Teilnahme an unserer Umfrage</h1>
+      <h1 i18n:translate="">Vielen Dank für die Teilnahme an unserer Umfrage</h1>
     </header>
     <section>
       <div class="well" id="sweepstake-notice">
-        <h2>Teilnahme am Gewinnspiel</h2>
+        <h2 i18n:translate="">Teilnahme am Gewinnspiel</h2>
         <a href="javascript:window.print()"
           class="btn pull-right">
           <i class="icon-print"></i>
-          Drucken
+          <span i18n:translate="">Drucken</span>
         </a>
-        <p class="lead">
+        <p class="lead" i18n:translate="">
           Merke Dir Deine Nummer und das Codewort oder drucke es Dir aus,
           damit Du nach Ablauf des Gewinnspiels Deinen Gewinn einfordern kannst.
         </p>
-          <label>Losnummer</label>
+          <label i18n:translate="">Losnummer</label>
           <div class="input-prepend input-append">
             <span class="add-on"><i class="icon-star"></i></span>
             <input class="input-medium" id="number" type="text"
@@ -36,7 +36,7 @@
               tal:attributes="data-clipboard-text info/idx">
               <i class="icon-copy"></i></button>
           </div>
-          <label>Codewort</label>
+          <label i18n:translate="">Codewort</label>
           <div class="input-prepend input-append">
             <span class="add-on"><i class="icon-gift"></i></span>
             <input class="input-medium" id="sweepstake.code" type="text"
@@ -47,13 +47,13 @@
               <i class="icon-copy"></i></button>
           </div>
           <div class="help-text hide" id="copy-notice">
-            <p class="text-success">Wert erfolgreich kopiert!</p>
+            <p class="text-success" i18n:translate="">Wert erfolgreich kopiert!</p>
           </div>
           <div class="help-text pull-right">
-            <p class="text-warning">Dieser Gewinncode wird nur einmalig angezeigt!</p>
+            <p class="text-warning" i18n:translate="">Dieser Gewinncode wird nur einmalig angezeigt!</p>
           </div>
           <a href="" class="btn pull-right visualClear"
-            tal:attributes="href portal_url">Fenster schliessen</a>
+            tal:attributes="href portal_url" i18n:translate="">Fenster schliessen</a>
           <div class="visualClear"><!-- --></div>
       </div>
     </section>

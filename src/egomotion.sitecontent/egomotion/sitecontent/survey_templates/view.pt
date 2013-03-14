@@ -12,7 +12,7 @@
 
   <article id="survey-view"
     tal:define="context_url context/absolute_url;
-                has_token view/token">
+                has_token view/locked">
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
@@ -37,12 +37,12 @@
 
     <section tal:condition="has_token">
       <div class="alert alert-error">
-        <h4>Hinweis</h4>
-        <p>Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
+        <h4 i18n:translate="">Hinweis</h4>
+        <p i18n:translate="">Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
           Du hast bereits an unserer Umfrage teilgenommen.</p>
       </div>
-      <h4>Weitere Informationen</h4>
-      <p>F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
+      <h4 i18n:translate="">Weitere Informationen</h4>
+      <p i18n:translate="">F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
         an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage
         teilgenommen hast, k&ouml;nnte es sein, dass bereits
         einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden
@@ -51,7 +51,7 @@
     </section>
 
     <section tal:condition="not:has_token">
-      <h4>
+      <h4 i18n:translate="">
         1. Die folgenden 15 Designskizzen zeigen, wie unser RUFUS als
         Produkt aussehen k&ouml;nnte. Bitte w&auml;hle unter diesen Skizzen drei
         Favoriten aus und gib an, welche designerischen Merkmale Dir am besten und welche
@@ -91,7 +91,7 @@
                         data-appui-target python:context_url + '/@@autosave-survey'">
 
         <div class="survey-question">
-          <h4>Meine Favoriten</h4>
+          <h4 i18n:translate="">Meine Favoriten</h4>
           <div class="row-fluid">
             <div class="span4">
               <div class="control-group field"
@@ -352,7 +352,7 @@
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             2. Was gef&auml;llt Dir am wenigsten bei den anderen Entw&uuml;rfen?
           </h4>
 
@@ -384,12 +384,12 @@
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             3. Welche Funktionen sollte der Lauftrainer zus&auml;tzlich zu den
             oben genannten Deiner Meinung nach haben?
           </h4>
 
-          <div class="help-block">
+          <div class="help-block" i18n:translate="">
             (mehrere Antworten m&ouml;glich)
           </div>
 
@@ -397,45 +397,53 @@
             <label class="checkbox">
               <input type="checkbox" value="functionality.1" name="functionality"
                 tal:attributes="checked python:view.default_value(fieldname='functionality')">
-              ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
+                <span i18n:translate="">
+                  ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.2" name="functionality"
-                >
-              eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
-              in Form einer sogenannten Trainingsdokumentation
+              <input type="checkbox" value="functionality.2" name="functionality">
+                <span i18n:translate="">
+                  eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
+                  in Form einer sogenannten Trainingsdokumentation
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.3" name="functionality"
-                >
-                eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
-                Beweglichkeitstraining anbietet
+              <input type="checkbox" value="functionality.3" name="functionality">
+                <span i18n:translate="">
+                  eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
+                  Beweglichkeitstraining anbietet
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.4" name="functionality"
-                >
-              eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
+              <input type="checkbox" value="functionality.4" name="functionality">
+                <span i18n:translate="">
+                  eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.5" name="functionality"
-                >
-              eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen
-              Ern&auml;hrungsvorschlag macht
+              <input type="checkbox" value="functionality.5" name="functionality">
+                <span i18n:translate="">
+                  eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen
+                  Ern&auml;hrungsvorschlag macht
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.6" name="functionality"
-                >
-              ein Navigationsprogramm zum Laufen auf unbekannten Routen
+              <input type="checkbox" value="functionality.6" name="functionality">
+                <span i18n:translate="">
+                  ein Navigationsprogramm zum Laufen auf unbekannten Routen
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="functionality.7" name="functionality"
-                >
-              eine Funktion, die es mir erm&ouml;glicht, mit meinen Freunden einen
-              virtuellen Lauftreff zu organisieren (Videokonferenz z.B. &uuml;ber
-              Skype mit Freunden an entfernten Orten)
+              <input type="checkbox" value="functionality.7" name="functionality">
+                <span i18n:translate="">
+                  eine Funktion, die es mir erm&ouml;glicht, mit meinen Freunden einen
+                  virtuellen Lauftreff zu organisieren (Videokonferenz z.B. &uuml;ber
+                  Skype mit Freunden an entfernten Orten)
+                </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
               <input class="input-xxlarge" id="functionality.additional"
                 name="functionality.additional"
                 type="text" placeholder="Optionale weitere Angaben"
@@ -445,29 +453,35 @@
         </div><!-- / addon functionality -->
 
         <div class="survey-question">
-          <h4>
-            4. Welches Zubeh&ouml;r sollte der Lauftrainer Deiner Meinung nach haben?<br />
-            <small>(mehrere Antworten m&ouml;glich)</small>
+          <h4><span i18n:translate="">
+            4. Welches Zubeh&ouml;r sollte der Lauftrainer Deiner Meinung nach haben?</span><br />
+            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="accessory.1" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.one')">
-              Beleuchtung, Klingel, Schloss
+                <span i18n:translate="">
+                  Beleuchtung, Klingel, Schloss
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="accessory.2" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
-              Flaschenhalter, Ablage (&bdquo;Handschuhfach&ldquo;) f&uuml;r Schl&uuml;ssel und andere Kleinigkeiten
+                <span i18n:translate="">
+                  Flaschenhalter, Ablage (&bdquo;Handschuhfach&ldquo;) f&uuml;r Schl&uuml;ssel und andere Kleinigkeiten
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="accessory.3" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.three')">
-              Medienzubeh&ouml;r bzw. Anschl&uuml;sse (Dockingstation f&uuml;r Smartphone, USB, etc)
+                <span i18n:translate="">
+                  Medienzubeh&ouml;r bzw. Anschl&uuml;sse (Dockingstation f&uuml;r Smartphone, USB, etc)
+                </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
               <input class="input-xxlarge" id="accessory.additional"
                 name="accessory.additional"
                 type="text" placeholder="Optionale weitere Angaben"
@@ -477,30 +491,36 @@
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4><span i18n:translate="">
             5. Welchen zus&auml;tzlichen Nutzen sollte der Lauftrainer Deiner
-            Meinung nach haben?<br />
-            <small>(mehrere Antworten m&ouml;glich)</small>
+            Meinung nach haben?</span><br />
+            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="benefit.1" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.one')">
-              Ich w&uuml;rde damit gerne zum Einkaufen joggen (Befestigung f&uuml;r Einkaufskorb).
+                <span i18n:translate="">
+                  Ich w&uuml;rde damit gerne zum Einkaufen joggen (Befestigung f&uuml;r Einkaufskorb).
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="benefit.2" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.two')">
-              Ich m&ouml;chte mit meinen Kindern joggen gehen (Befestigung f&uuml;r Kindersitz bzw. Babyschale)
+                <span i18n:translate="">
+                  Ich m&ouml;chte mit meinen Kindern joggen gehen (Befestigung f&uuml;r Kindersitz bzw. Babyschale)
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="benefit.3" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.three')">
-              Ich m&ouml;chte damit auch schwere Lasten transportieren und selbst damit fahren k&ouml;nnen.
+                <span i18n:translate="">
+                  Ich m&ouml;chte damit auch schwere Lasten transportieren und selbst damit fahren k&ouml;nnen.
+                </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
               <input class="input-xxlarge" id="benefit.additional"
                 type="text" placeholder="Optionale weitere Angaben"
                 name="benefit.additional"
@@ -510,39 +530,50 @@
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             6. Wie h&auml;ufig gehst Du laufen?
           </h4>
           <div class="controls">
             <label class="radio">
               <input type="radio" name="frequency" id="frequency1" value="frequency.1">
-                regelm&auml;&szlig;ig (mehrmals in der Woche)
+                <span i18n:translate="">
+                  regelm&auml;&szlig;ig (mehrmals in der Woche)
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency2" value="frequency.2">
-                h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
+                <span i18n:translate="">
+                  h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency3" value="frequency.3">
-                gelegentlich
+                <span i18n:translate="">
+                  gelegentlich
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency4" value="frequency.4">
-                nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
+                <span i18n:translate="">
+                  nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency5" value="frequency.5">
-                nie, mir macht Laufen keinen Spass
+                <span i18n:translate="">
+                  nie, mir macht Laufen keinen Spass
+                </span>
             </label>
           </div>
           <div class="alert">
             <p><i class="icon-info-sign"></i>
-            Falls Du diese Frage mit &quot;nie, mir macht Laufen keinen Spass&quot;
-            beantwortet hast, dann gehe gleich zu Frage 13.
+            <span i18n:translate="">Falls Du diese Frage mit &quot;nie, mir macht Laufen keinen Spass&quot;
+            beantwortet hast, dann gehe gleich zu Frage 13.</span>
             </p>
             <p>
             <a href="#survey-question-13"
-              data-appui="pagescroll" data-target="#survey-question-13">
+              data-appui="pagescroll" data-target="#survey-question-13"
+               i18n:translate="">
               Zu Frage 13 springen</a>
             </p>
           </div>
@@ -552,77 +583,102 @@
 
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             7. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?
           </h4>
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork1" value="roadwork.1"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
-              sehr wichtig
+                <span i18n:translate="">
+                  sehr wichtig
+                </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork2" value="roadwork.2"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
-              wichtig
+                <span i18n:translate="">
+                  wichtig
+                </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork3" value="roadwork.3"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
-              unwichtig
+                <span i18n:translate="">
+                  unwichtig
+                </span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4>
-            8. Welche Hilfsmittel verwendest Du f&uuml;r Dein Lauftraining?<br />
-            <small>(mehrere Antworten m&ouml;glich)</small>
+            <span i18n:translate="">8. Welche Hilfsmittel verwendest Du f&uuml;r Dein Lauftraining?</span><br />
+            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.1" name="trainingresource">
-                Pulsuhr ohne GPS
+                <span i18n:translate="">
+                  Pulsuhr ohne GPS
+                </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="trainingresource.2" name="trainingresource">
+              <input type="checkbox" value="trainingresource.2" name="trainingresource"
+                 i18n:translate="">
                 Pulsuhr mit GPS
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.3" name="trainingresource">
-                Laufband zuhause
+                <span i18n:translate="">
+                  Laufband zuhause
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.4" name="trainingresource">
-                Laufband im Fitnessstudio
+                <span i18n:translate="">
+                  Laufband im Fitnessstudio
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.5" name="trainingresource">
-                persönlicher Lauftrainer im Verein
+                <span i18n:translate="">
+                  persönlicher Lauftrainer im Verein
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.6" name="trainingresource">
-                persönlicher Lauftrainer privat
+                <span i18n:translate="">
+                  persönlicher Lauftrainer privat
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.7" name="trainingresource">
-                Laufgruppe im Verein
+                <span i18n:translate="">
+                  Laufgruppe im Verein
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.8" name="trainingresource">
-                Laufgruppe privat
+                <span i18n:translate="">
+                  Laufgruppe privat
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.9" name="trainingresource">
-                Trainingsapp auf Smartphone
+                <span i18n:translate="">
+                  Trainingsapp auf Smartphone
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.10" name="trainingresource">
-                Schrittzähler mit Kalorienverbrauch
+                <span i18n:translate="">
+                  Schrittzähler mit Kalorienverbrauch
+                </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
               <input class="input-xxlarge" id="trainingresource.additional"
                 name="trainingresource.additional"
                 type="text" placeholder="Optionale weitere Angaben">
@@ -631,7 +687,7 @@
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             9. Wie wirkungsvoll unterst&uuml;tzen Dich diese Hilfsmittel bei
             deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz
             und Deiner Laufgeschwindigkeit?
@@ -641,23 +697,29 @@
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.1">
-              optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
+                <span i18n:translate="">
+                  optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.2">
-              ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
+                <span i18n:translate="">
+                  ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.3">
-              schlecht, ich mache kaum Trainingsfortschritte
+                <span i18n:translate="">
+                  schlecht, ich mache kaum Trainingsfortschritte
+                </span>
             </label>
           </div>
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             10. Vorausgesetzt Du trainierst mit einer Pulsuhr, wie genau kannst
             Du mit dieser Pulsuhr (mit Schrittzähler oder GPS)
             Deinen Puls und Deine Laufgeschwindigkeit steuern?
@@ -666,23 +728,26 @@
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.1">
-              gut
+                <span i18n:translate="">
+                  gut</span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.2">
-              es geht so
+                <span i18n:translate="">
+                  es geht so</span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.3">
-              schlecht
+                <span i18n:translate="">
+                  schlecht</span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             11. Wie wichtig wäre es für Dich, einen persönlichen Lauftrainer
             zu haben, der Dir jederzeit zur Verfügung steht und mit Dir ein
             individuell auf Dich zugeschnittenes Trainingsprogramm absolviert?
@@ -691,23 +756,27 @@
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.1">
-              sehr wichtig
+                <span i18n:translate="">
+                  sehr wichtig
+                </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.2">
-              wichtig
+                <span i18n:translate="">
+                  wichtig</span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.3">
-              unwichtig
+                <span i18n:translate="">
+                  unwichtig</span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             12. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro
             Trainingsstunde bezahlen wollen?
           </h4>
@@ -731,88 +800,105 @@
         </div>
 
         <div class="survey-question" id="survey-question-13">
-          <h4>
+          <h4 i18n:translate="">
             13. Alter und Geschlecht
           </h4>
           <div class="controls">
             <div class="input-append">
               <input class="span1" id="appendedInput" type="text"
                 name="participant.age">
-              <span class="add-on discreet">Jahre</span>
+              <span class="add-on discreet" i18n:translate="">Jahre</span>
             </div>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1"
                 value="participant.gender.1">
-              weiblich
+                <span i18n:translate="">
+                  weiblich
+                </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1"
                 value="participant.gender.2">
-              m&auml;nnlich
+                <span i18n:translate="">
+                  m&auml;nnlich</span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             14. Berufliche Stellung
           </h4>
           <div class="controls">
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios1"
                 value="participant.occupation.1">
-              Sch&uuml;ler / Student
+                <span i18n:translate="">
+                  Sch&uuml;ler / Student
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios2"
                 value="participant.occupation.2">
-              Nicht-Erwerbst&auml;tige(r)
+                <span i18n:translate="">
+                  Nicht-Erwerbst&auml;tige(r)
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios3"
                 value="participant.occupation.3">
-              ArbeiterIn / SachbearbeiterIn
+                <span i18n:translate="">
+                  ArbeiterIn / SachbearbeiterIn
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios4"
                 value="participant.occupation.4">
-              Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst
+                <span i18n:translate="">
+                  Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios5"
                 value="participant.occupation.5">
-              Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst
+                <span i18n:translate="">
+                  Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst</span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios6"
                 value="participant.occupation.6">
-              GeschäftsführerIn / Vorstand
+                <span i18n:translate="">
+                  GeschäftsführerIn / Vorstand</span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios7"
                 value="participant.occupation.7">
-              Selbständige(r) / Freiberufliche(r)
+                <span i18n:translate="">
+                  Selbständige(r) / Freiberufliche(r)</span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios8"
                 value="participant.occupation.8">
-              Unternehmer(in)
+                <span i18n:translate="">
+                  Unternehmer(in)</span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios9"
                 value="participant.occupation.9">
-              Rentner(in)
+                <span i18n:translate="">
+                  Rentner(in)</span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios10"
                 value="participant.occupation.10">
-              Sonst
+                <span i18n:translate="">
+                  Sonst</span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             15. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Wellness investiert?
           </h4>
           <div class="controls">
@@ -826,34 +912,39 @@
         </div>
 
         <div class="survey-question">
-          <h4>
-            16. Woraus hat sich dieser Betrag zusammengesetzt?<br />
-            <small>(Mehrfachnennung möglich)</small>
+          <h4><span i18n:translate="">
+            16. Woraus hat sich dieser Betrag zusammengesetzt?</span><br />
+            <small i18n:translate="">(Mehrfachnennung möglich)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.1" name="participant.investment">
-                Sportgeräte
+                <span i18n:translate="">
+                  Sportgeräte</span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.2" name="participant.investment">
-                Trainerstunden
+                <span i18n:translate="">
+                  Trainerstunden</span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.3" name="participant.investment">
-                Sportbekleidung
+                <span i18n:translate="">
+                  Sportbekleidung</span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.4" name="participant.investment">
-                Wellness (Sauna, Massagen)
+                <span i18n:translate="">
+                  Wellness (Sauna, Massagen)</span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.5" name="participant.investment">
-                Fitnessstudiobeiträge
+                <span i18n:translate="">
+                  Fitnessstudiobeiträge</span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
               <input class="input-xxlarge" id="participant.investment.additional"
                 type="text" placeholder="Optionale weitere Angaben"
                 name="participant.investment.additional">
@@ -862,13 +953,14 @@
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             17. Welchen Betrag würdest Du ungefähr investieren in
               die unten aufgelisteten Produkte?
           </h4>
 
           <div class="control-group">
-            <label class="control-label" for="inputWarning">
+            <label class="control-label" for="inputWarning"
+               i18n:translate="">
               einen Hometrainer
             </label>
             <div class="controls">
@@ -890,7 +982,8 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputWarning">
+            <label class="control-label" for="inputWarning"
+               i18n:translate="">
               ein Laufband
             </label>
             <div class="controls">
@@ -912,7 +1005,8 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputWarning">
+            <label class="control-label" for="inputWarning"
+               i18n:translate="">
               einen Crosstrainer
             </label>
             <div class="controls">
@@ -934,7 +1028,8 @@
             </div>
           </div>
           <div class="control-group visualClear">
-            <label class="control-label">
+            <label class="control-label"
+               i18n:translate="">
               ein Rennrad
             </label>
             <div class="controls">
@@ -956,7 +1051,8 @@
             </div>
           </div>
           <div class="control-group visualClear">
-            <label class="control-label">
+            <label class="control-label"
+               i18n:translate="">
               ein Mountainbike
             </label>
             <div class="controls">
@@ -978,7 +1074,7 @@
             </div>
           </div>
           <div class="control-group visualClear">
-            <label class="control-label">
+            <label class="control-label" i18n:translate="">
               eine Trainerstunde
             </label>
             <div class="controls controls-row">
@@ -1000,7 +1096,7 @@
             </div>
           </div>
           <div class="control-group visualClear">
-            <label class="control-label">
+            <label class="control-label" i18n:translate="">
               Monatsabo im Fitnessclub
             </label>
             <div class="controls controls-row">
@@ -1024,39 +1120,42 @@
         </div><!-- / addon products -->
 
         <div class="survey-question">
-          <h4>
+          <h4 i18n:translate="">
             18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren
             Rennrads oder Laufbands) auf den Markt kommen.
             W&uuml;rdest Du Dir einen RUFUS kaufen?
           </h4>
           <div class="control-group visualClear">
-            <label class="control-label">
+            <label class="control-label" i18n:translate="">
               Monatsabo im Fitnessclub
             </label>
             <div class="controls controls-row">
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.1">
-                  ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
+                  <span i18n:translate="">
+                    ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
+                  </span>
               </label>
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.2">
-                  nein
+                  <span i18n:translate="">
+                  nein</span>
               </label>
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.3">
-                  unentschieden
+                  <span i18n:translate="">unentschieden</span>
               </label>
             </div>
           <div id="nopurchase" class="controls">
-              <label for="purchase.comment">
+              <label for="purchase.comment" i18n:translate="">
                 Begr&uuml;ndung</label>
               <textarea rows="3" class="input-xxlarge"
                 id="purchase.comment" name="purchase.comment">
               </textarea>
-              <span class="help-block">
+              <span class="help-block" i18n:translate="">
                 Falls Deine Antwort &bdquo;nein&ldquo; oder &bdquo;unentschieden&ldquo; ist,
                 w&uuml;rdest Du uns sehr helfen, wenn Du eine kurze Begr&uuml;ndung
                 angeben w&uuml;rdest.
@@ -1068,18 +1167,20 @@
           <div class="controls">
             <label class="checkbox">
               <input type="checkbox" value="interest.1" name="interest">
+              <span i18n:translate="">
               ja, ich interessiere mich f&uuml;r RUFUS und w&uuml;rde gerne informiert
-              werden, wie es mit ihm weitergeht und wann er auf dem Markt ist. 
+              werden, wie es mit ihm weitergeht und wann er auf dem Markt ist.</span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="interest.2" name="interest">
+                <span  i18n:translate="">
                 Ich halte RUFUS f&uuml;r eine tolle Produktidee und m&ouml;chte mir eine
                 unverbindliche Kaufoption zu einem &bdquo;Fr&uuml;hbucher-Rabatt&ldquo; von 25%
                 sichern, die ich jederzeit und ohne weitere Mitteilung
-                verfallen lassen kann.
+                verfallen lassen kann.</span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet">E-Mail-Adresse</span>
+               <span class="add-on discreet" i18n:translate="">E-Mail-Adresse</span>
               <input class="input-xxlarge" id="email" type="text"
                 name="email"
                 placeholder="max@mustermann.de">
