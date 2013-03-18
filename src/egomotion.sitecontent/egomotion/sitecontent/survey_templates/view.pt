@@ -38,11 +38,13 @@
     <section tal:condition="has_token">
       <div class="alert alert-error">
         <h4 i18n:translate="">Hinweis</h4>
-        <p i18n:translate="">Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
+        <p i18n:translate="">
+          Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
           Du hast bereits an unserer Umfrage teilgenommen.</p>
       </div>
       <h4 i18n:translate="">Weitere Informationen</h4>
-      <p i18n:translate="">F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
+      <p i18n:translate="">
+        F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
         an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage
         teilgenommen hast, k&ouml;nnte es sein, dass bereits
         einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden
@@ -471,7 +473,7 @@
               <input type="checkbox" value="accessory.2" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
                 <span i18n:translate="">
-                  Bottle holder, storage compartment ("glove compartment")
+                  Bottle holder, storage compartment (&quot;glove compartment&quot;)
                   for keys and other small items
                 </span>
             </label>
@@ -574,7 +576,7 @@
             <p><i class="icon-info-sign"></i>
             <span i18n:translate="">
               If you've answered this question with
-              "Never. I don't like running.", go straight to question 13.
+              &quot;Never. I don't like running.&quot;, go straight to question 13.
             </span>
             </p>
             <p>

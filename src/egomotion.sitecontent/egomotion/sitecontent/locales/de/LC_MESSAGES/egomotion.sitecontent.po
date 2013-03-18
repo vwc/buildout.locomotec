@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-18 13:47+0000\n"
+"POT-Creation-Date: 2013-03-18 16:19+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -14,145 +14,145 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: egomotionsitecontent\n"
 
-#: ./../survey_templates/view.pt:391
+#: ./../survey_templates/view.pt:393
 msgid "(You can select more than one answer here)"
 msgstr "(Mehrfachnennung möglich)"
 
-#: ./../survey_templates/view.pt:54
+#: ./../survey_templates/view.pt:56
 msgid "1. The following 15 design sketches show what RUFUS could look like as a product. Please choose three favourites from these sketches and state which design features you like most and which features you like least."
 msgstr "Die folgenden 15 Designskizzen zeigen, wie unser RUFUS als Produkt aussehen könnte. Bitte wähle unter diesen Skizzen drei Favoriten aus und gib an, welche designerischen Merkmale Dir am besten und welche am wenigsten gefallen."
 
-#: ./../survey_templates/view.pt:734
+#: ./../survey_templates/view.pt:736
 msgid "10. Assuming you train with a heart rate monitor, how accurately are you able to control your heart rate and running speed with this heart rate monitor (with a pedometer or GPS)?"
 msgstr "10. Vorausgesetzt Du trainierst mit einer Pulsuhr, wie genau kannst Du mit dieser Pulsuhr (mit Schrittzähler oder GPS) Deinen Puls und Deine Laufgeschwindigkeit steuern?"
 
-#: ./../survey_templates/view.pt:762
+#: ./../survey_templates/view.pt:764
 msgid "11. How important is it to you to have a personal running coach which is available to you at any time and completes a training programme specifically tailored to suit you with you?"
 msgstr "11. Wie wichtig w&auml;re es f&uuml;r Dich, einen pers&ouml;nlichen Lauftrainer zu haben, der Dir jederzeit zur Verf&uuml;gung steht und mit Dir ein individuell auf Dich zugeschnittenes Trainingsprogramm absolviert?"
 
-#: ./../survey_templates/view.pt:793
+#: ./../survey_templates/view.pt:795
 msgid "12. What is the maximum you would be prepared to pay for such a running coach per training hour?"
 msgstr "12. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro Trainingsstunde bezahlen wollen?"
 
-#: ./../survey_templates/view.pt:817
+#: ./../survey_templates/view.pt:819
 msgid "13. Age and sex"
 msgstr "13. Alter und Geschlecht"
 
-#: ./../survey_templates/view.pt:844
+#: ./../survey_templates/view.pt:846
 msgid "14. Professional position"
 msgstr "14. Berufliche Stellung"
 
-#: ./../survey_templates/view.pt:922
+#: ./../survey_templates/view.pt:924
 msgid "15. Approximately how much have you invested sport and wellness in the last year?"
 msgstr "15. Welchen Betrag hast Du ca. im letzten Jahr f&uuml;r Sport und Wellness investiert?"
 
-#: ./../survey_templates/view.pt:937
+#: ./../survey_templates/view.pt:939
 msgid "16. What did you spend this money on?"
 msgstr "16. Woraus hat sich dieser Betrag zusammengesetzt?"
 
-#: ./../survey_templates/view.pt:985
+#: ./../survey_templates/view.pt:987
 msgid "17. Approximately how much would you spend on the products listed below?"
 msgstr "17. Welchen Betrag w&uuml;rdest Du ungef&auml;hr investieren in die unten aufgelisteten Produkte?"
 
-#: ./../survey_templates/view.pt:1152
+#: ./../survey_templates/view.pt:1154
 msgid "18. RUFUS will cost about 2000 EUR (cost of a good racing bike or treadmill) when it enters the market. Would you buy yourself a RUFUS?"
 msgstr "18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren Rennrads oder Laufbands) auf den Markt kommen. W&uuml;rdest Du Dir einen RUFUS kaufen?"
 
-#: ./../survey_templates/view.pt:354
+#: ./../survey_templates/view.pt:356
 msgid "2. What do you like least about the other sketches?"
 msgstr "2. Was gef&auml;llt Dir am wenigsten bei den anderen Entw&uuml;rfen?"
 
-#: ./../survey_templates/view.pt:386
+#: ./../survey_templates/view.pt:388
 msgid "3. Which other functions should the running coach have in addition to those mentioned above in your opinion?"
 msgstr "3. Welche Funktionen sollte der Lauftrainer zus&auml;tzlich zu den oben genannten Deiner Meinung nach haben?"
 
-#: ./../survey_templates/view.pt:457
+#: ./../survey_templates/view.pt:459
 msgid "4. Which accessories should the running coach have in your opinion?"
-msgstr ""
+msgstr "4. Welches Zubeh&ouml;r sollte der Lauftrainer Deiner Meinung nach haben?"
 
-#: ./../survey_templates/view.pt:497
+#: ./../survey_templates/view.pt:499
 msgid "5. Which additional benefits should the running coach have in your opinion?"
-msgstr ""
+msgstr "5. Welchen zus&auml;tzlichen Nutzen sollte der Lauftrainer Deiner Meinung nach haben?"
 
-#: ./../survey_templates/view.pt:538
+#: ./../survey_templates/view.pt:540
 msgid "6. How often do you go running?"
-msgstr ""
+msgstr "6. Wie h&auml;ufig gehst Du laufen?"
 
-#: ./../survey_templates/view.pt:594
+#: ./../survey_templates/view.pt:596
 msgid "7. How important is systematic running training (based on a training plan, for example) to you?"
-msgstr ""
+msgstr "7. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?"
 
-#: ./../survey_templates/view.pt:625
+#: ./../survey_templates/view.pt:627
 msgid "8. Which aids do you use for your running training?"
-msgstr ""
+msgstr "8. Welche Hilfsmittel verwendest Du f&uuml;r Dein Lauftraining?"
 
-#: ./../survey_templates/view.pt:702
+#: ./../survey_templates/view.pt:704
 msgid "9. How effectively do these aids support you when training? In particular, how well do they help you monitor your heart rate and running speed?"
-msgstr ""
+msgstr "9. Wie wirkungsvoll unterst&uuml;tzen Dich diese Hilfsmittel bei deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz und Deiner Laufgeschwindigkeit?"
 
-#: ./../survey_templates/view.pt:1106
+#: ./../survey_templates/view.pt:1108
 msgid "A coach session"
-msgstr ""
+msgstr "Trainerstunden"
 
-#: ./../survey_templates/view.pt:1037
+#: ./../survey_templates/view.pt:1039
 msgid "A cross trainer"
-msgstr ""
+msgstr "einen Crosstrainer"
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
 msgid "A folderish survey holding participant objects"
 msgstr "Ein Ordner der Teilnehmerobjekte der Umfrage speichert."
 
-#: ./../survey_templates/view.pt:439
+#: ./../survey_templates/view.pt:441
 msgid "A function which allows me to organise a virtual running meeting with my friends (e.g. a video conference via Skype with friends who are too far away for me to meet with in person)"
-msgstr ""
+msgstr "eine Funktion, die es mir ermöglicht, mit meinen Freunden einen virtuellen Lauftreff zu organisieren (Videokonferenz z.B. über Skype mit Freunden an entfernten Orten)"
 
-#: ./../survey_templates/view.pt:407
+#: ./../survey_templates/view.pt:409
 msgid "A function which allows me to record and analyse my running behaviour later on in the form of a training transcript"
-msgstr ""
+msgstr "eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens in Form einer sogenannten Trainingsdokumentation"
 
-#: ./../survey_templates/view.pt:421
+#: ./../survey_templates/view.pt:423
 msgid "A function which includes my mood in the design of my training sessions"
-msgstr ""
+msgstr "eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht"
 
-#: ./../survey_templates/view.pt:414
+#: ./../survey_templates/view.pt:416
 msgid "A function which offers me strength and flexibility training as part of my running training"
-msgstr ""
+msgstr "eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und Beweglichkeitstraining anbietet"
 
-#: ./../survey_templates/view.pt:427
+#: ./../survey_templates/view.pt:429
 msgid "A function which suggests a diet based on my calorie consumption"
-msgstr ""
+msgstr "eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen Ernährungsvorschlag macht"
 
-#: ./../survey_templates/view.pt:991
+#: ./../survey_templates/view.pt:993
 msgid "A home exercise machine"
-msgstr ""
+msgstr "einen Hometrainer"
 
 #: ./../survey.py:51
 msgid "A list of participation UIDs for quick access"
 msgstr "Eine Liste von UIDs der Teilnehmerobjekte"
 
-#: ./../survey_templates/view.pt:1083
+#: ./../survey_templates/view.pt:1085
 msgid "A mountain bike"
-msgstr ""
+msgstr "ein Mountainbike"
 
-#: ./../survey_templates/view.pt:433
+#: ./../survey_templates/view.pt:435
 msgid "A navigation programme for running unfamiliar routes"
-msgstr ""
+msgstr "ein Navigationsprogramm zum Laufen auf unbekannten Routen"
 
-#: ./../survey_templates/view.pt:399
+#: ./../survey_templates/view.pt:401
 msgid "A program for monitoring performance (e.g. a program which analyses my pulse as the strain on your body changes, like in a exercise ECG)"
-msgstr ""
+msgstr "ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)"
 
-#: ./../survey_templates/view.pt:1060
+#: ./../survey_templates/view.pt:1062
 msgid "A racing bike"
-msgstr ""
+msgstr "ein rennrad"
 
 #: ./../profiles/default/types/egomotion.sitecontent.answer.xml
 msgid "A single survey participation"
 msgstr "Eine ausgefühlte und gespeicherte Umfrageteilnahme"
 
-#: ./../survey_templates/view.pt:1014
+#: ./../survey_templates/view.pt:1016
 msgid "A treadmill"
-msgstr ""
+msgstr "ein Laufband"
 
 #: ./../surveytool.py:356
 msgid "Accessory Additional"
@@ -170,9 +170,9 @@ msgstr "Zubehör 3"
 msgid "Accessory Two"
 msgstr "Zubehör 2"
 
-#: ./../survey_templates/view.pt:719
+#: ./../survey_templates/view.pt:721
 msgid "Adequately, but I could be making better training progress."
-msgstr ""
+msgstr "ausreichend, aber meine Trainingsfortschritte könnten besser sein"
 
 #: ./../profiles/default/types/egomotion.sitecontent.answer.xml
 msgid "Answer"
@@ -202,13 +202,13 @@ msgstr "Zusatznutzen 3"
 msgid "Benefit Two"
 msgstr "Zusatznutzen 2"
 
-#: ./../survey_templates/view.pt:865
+#: ./../survey_templates/view.pt:867
 msgid "Blue-collar/clerical worker"
-msgstr ""
+msgstr "ArbeiterIn / SachbearbeiterIn"
 
-#: ./../survey_templates/view.pt:473
-msgid "Bottle holder, storage compartment ("glove compartment") for keys and other small items"
-msgstr ""
+#: ./../survey_templates/view.pt:475
+msgid "Bottle holder, storage compartment (&quot;glove compartment&quot;) for keys and other small items"
+msgstr "Flaschenhalter, Ablage (&quot;Handschuhfach&quot;) für Schlüssel und andere Kleinigkeiten"
 
 #: ./../survey.py:45
 msgid "Client"
@@ -220,15 +220,15 @@ msgstr "Clients"
 
 #: ./../survey_templates/surveysaved.pt:59
 msgid "Close window"
-msgstr ""
+msgstr "Fenster schliessen"
 
-#: ./../survey_templates/view.pt:952
+#: ./../survey_templates/view.pt:954
 msgid "Coach sessions"
-msgstr ""
+msgstr "Trainerstunden"
 
 #: ./../survey_templates/surveysaved.pt:41
 msgid "Code word"
-msgstr ""
+msgstr "Codewort"
 
 #: ./../survey_templates/surveyinvalid.pt:17
 msgid "Dieser Link ist ung&uuml;ltig"
@@ -246,9 +246,9 @@ msgstr "Negativmerkmale andere 3"
 msgid "Dislike Two"
 msgstr "Negativmerkmale andere 2"
 
-#: ./../survey_templates/view.pt:1178
+#: ./../survey_templates/view.pt:1180
 msgid "Don't know yet"
-msgstr ""
+msgstr "unentschieden"
 
 #: ./../surveyresults_templates/surveyresults.pt:67
 msgid "Download results"
@@ -260,31 +260,31 @@ msgstr "E-Mail-Adresse"
 
 #: ./../survey_templates/view.pt:41
 msgid "Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich. Du hast bereits an unserer Umfrage teilgenommen."
-msgstr ""
+msgstr "Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich. Du hast bereits an unserer Umfrage teilgenommen."
 
-#: ./../survey_templates/view.pt:1217
+#: ./../survey_templates/view.pt:1219
 msgid "Email address"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
-#: ./../survey_templates/view.pt:872
+#: ./../survey_templates/view.pt:874
 msgid "Employee with responsibility for other employees / civil servant in the middle grade of the civil service"
-msgstr ""
+msgstr "Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst"
 
-#: ./../survey_templates/view.pt:900
+#: ./../survey_templates/view.pt:902
 msgid "Entrepreneur"
-msgstr ""
+msgstr "Unternehmer(in)"
 
-#: ./../survey_templates/view.pt:712
+#: ./../survey_templates/view.pt:714
 msgid "Excellently. I'm making very good training progress (endurance and speed)"
-msgstr ""
+msgstr "optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)"
 
-#: ./../survey_templates/view.pt:879
+#: ./../survey_templates/view.pt:881
 msgid "Executive / civil servant in the upper grade of the civil service"
-msgstr ""
+msgstr "Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst"
 
-#: ./../survey_templates/view.pt:45
+#: ./../survey_templates/view.pt:46
 msgid "F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, k&ouml;nnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem B&uuml;ro)."
-msgstr ""
+msgstr "F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, k&ouml;nnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem B&uuml;ro)."
 
 #: ./../surveytool.py:321
 msgid "Favorite 1"
@@ -370,21 +370,21 @@ msgstr "Positivmerkmal Favorit 3-2"
 msgid "Favorite 3 - Like 3"
 msgstr "Positivmerkmal Favorit 3-3"
 
-#: ./../survey_templates/view.pt:153
+#: ./../survey_templates/view.pt:155
 msgid "Features which I like least"
-msgstr ""
+msgstr "Merkmale, die mir am wenigsten gefallen"
 
-#: ./../survey_templates/view.pt:123
+#: ./../survey_templates/view.pt:125
 msgid "Features which I like most"
-msgstr ""
+msgstr "Merkmale, die mir am besten gefallen"
 
-#: ./../survey_templates/view.pt:829
+#: ./../survey_templates/view.pt:831
 msgid "Female"
-msgstr ""
+msgstr "weiblich"
 
-#: ./../survey_templates/view.pt:550
+#: ./../survey_templates/view.pt:552
 msgid "Frequently (not every week but several times a month)"
-msgstr ""
+msgstr "häufig (nicht jede Woche aber mehrmals im Monat)"
 
 #: ./../surveytool.py:345
 msgid "Functionality 1"
@@ -418,45 +418,45 @@ msgstr "Funktionen 7"
 msgid "Functionality Additional"
 msgstr "Funktionen (Freitext)"
 
-#: ./../survey_templates/view.pt:970
+#: ./../survey_templates/view.pt:972
 msgid "Gym fees"
-msgstr ""
+msgstr "Fitnessstudiobeiträge"
 
-#: ./../survey_templates/view.pt:634
+#: ./../survey_templates/view.pt:636
 msgid "Heart rate monitor without GPS"
-msgstr ""
+msgstr "Pulsuhr ohne GPS"
 
 #: ./../survey_templates/view.pt:40
 msgid "Hinweis"
-msgstr ""
+msgstr "Hinweis"
 
-#: ./../survey_templates/view.pt:1209
+#: ./../survey_templates/view.pt:1211
 msgid "I think RUFUS is a great product idea and would like to make use of a non-binding purchase option which will give me a early-bird discount of 25%. I understand that I can relinquish this option at any time without providing further notification."
-msgstr ""
+msgstr "Ich halte RUFUS für eine tolle Produktidee und möchte mir eine unverbindliche Kaufoption zu einem „Frühbucher-Rabatt“ von 25% sichern, die ich jederzeit und ohne weitere Mitteilung verfallen lassen kann."
 
-#: ./../survey_templates/view.pt:514
+#: ./../survey_templates/view.pt:516
 msgid "I would like to be able to go jogging with my children (fixings for a child or baby seat)."
-msgstr ""
+msgstr "Ich möchte mit meinen Kindern joggen gehen (Befestigung für Kindersitz bzw. Babyschale)"
 
-#: ./../survey_templates/view.pt:521
+#: ./../survey_templates/view.pt:523
 msgid "I would like to be able to transport heavy loads with it as well and ride it myself."
-msgstr ""
+msgstr "Ich möchte damit auch schwere Lasten transportieren und selbst damit fahren können."
 
-#: ./../survey_templates/view.pt:507
+#: ./../survey_templates/view.pt:509
 msgid "I would like to be able to use it to go jogging when I do my shopping (fixings for a shopping basket)."
-msgstr ""
+msgstr "Ich würde damit gerne zum Einkaufen joggen (Befestigung für Einkaufskorb)."
 
-#: ./../survey_templates/view.pt:575
-msgid "If you've answered this question with "Never. I don't like running.", go straight to question 13."
-msgstr ""
+#: ./../survey_templates/view.pt:577
+msgid "If you've answered this question with &quot;Never. I don't like running.&quot;, go straight to question 13."
+msgstr "Falls Du diese Frage mit \"nie, mir macht Laufen keinen Spass\" beantwortet hast, dann gehe gleich zu Frage 13."
 
-#: ./../survey_templates/view.pt:1190
+#: ./../survey_templates/view.pt:1192
 msgid "If your answer is &quot;No&quot; or &quot;Don't know yet&quot;, it would be very helpful if you could provide with a short explanation for your answer."
-msgstr ""
+msgstr "Falls Deine Antwort „nein“ oder „unentschieden“ ist, würdest Du uns sehr helfen, wenn Du eine kurze Begründung angeben würdest."
 
-#: ./../survey_templates/view.pt:609
+#: ./../survey_templates/view.pt:611
 msgid "Important"
-msgstr ""
+msgstr "Wichtig"
 
 #: ./../surveytool.py:396
 msgid "Interest 1"
@@ -470,82 +470,82 @@ msgstr "Schlussfrage Begründung"
 msgid "Investment Maximum"
 msgstr "Ausgaben Betrag"
 
-#: ./../survey_templates/view.pt:581
+#: ./../survey_templates/view.pt:583
 msgid "Jump to question 13"
-msgstr ""
+msgstr "Zu Frage 13 springen"
 
 #: ./../survey.py:39
 msgid "Last Download"
 msgstr "Letzter Download"
 
-#: ./../survey_templates/view.pt:466
+#: ./../survey_templates/view.pt:468
 msgid "Lights, bell, lock"
-msgstr ""
+msgstr "Beleuchtung, Klingel, Schloss"
 
 #: ./../survey_templates/surveysaved.pt:26
 msgid "Make a note of your number and code word or print them out, so that you can claim your prize when the competition is over."
-msgstr ""
+msgstr "Merke Dir Deine Nummer und das Codewort oder drucke es Dir aus, damit Du nach Ablauf des Gewinnspiels Deinen Gewinn einfordern kannst."
 
-#: ./../survey_templates/view.pt:836
+#: ./../survey_templates/view.pt:838
 msgid "Male"
-msgstr ""
+msgstr "männlich"
 
-#: ./../survey_templates/view.pt:886
+#: ./../survey_templates/view.pt:888
 msgid "Managing director / board member"
-msgstr ""
+msgstr "GeschäftsführerIn / Vorstand"
 
-#: ./../survey_templates/view.pt:481
+#: ./../survey_templates/view.pt:483
 msgid "Media fixtures and connection points (smartphone docking station, USB port, etc.)"
-msgstr ""
+msgstr "Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)"
 
-#: ./../survey_templates/view.pt:1158
+#: ./../survey_templates/view.pt:1160
 msgid "Monatsabo im Fitnessclub"
-msgstr ""
+msgstr "Monatsabo im Fitnessclub"
 
-#: ./../survey_templates/view.pt:1128
+#: ./../survey_templates/view.pt:1130
 msgid "Monthly subscription for a fitness club"
-msgstr ""
+msgstr "Monatsabo im Fitnessclub"
 
-#: ./../survey_templates/view.pt:93
+#: ./../survey_templates/view.pt:95
 msgid "My favourites"
-msgstr ""
+msgstr "Meine Favoriten"
 
 #: ./../survey_templates/surveyinvalid.pt:18
 msgid "Nach Abschluss der Umfrage kann nur einmalig eine Losnummer und der dazugeh&ouml;rige Gewinncode ausgegeben werden."
 msgstr "Nach Abschluss der Umfrage kann nur einmalig eine Losnummer und der dazugeh&ouml;rige Gewinncode ausgegeben werden."
 
-#: ./../survey_templates/view.pt:562
+#: ./../survey_templates/view.pt:564
 msgid "Never, but I've been thinking about taking up running for a long time"
-msgstr ""
+msgstr "nie, aber ich überlege schon länger damit anzufangen"
 
-#: ./../survey_templates/view.pt:568
+#: ./../survey_templates/view.pt:570
 msgid "Never. I don't like running."
-msgstr ""
+msgstr "nie, mir macht Laufen keinen Spass"
 
-#: ./../survey_templates/view.pt:1172
+#: ./../survey_templates/view.pt:1174
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
-#: ./../survey_templates/view.pt:100
+#: ./../survey_templates/view.pt:102
 msgid "Number"
-msgstr ""
+msgstr "Nummer"
 
-#: ./../survey_templates/view.pt:556
+#: ./../survey_templates/view.pt:558
 msgid "Occasionally"
-msgstr ""
+msgstr "gelegentlich"
 
-#: ./../survey_templates/view.pt:749
+#: ./../survey_templates/view.pt:751
 msgid "Ok"
-msgstr ""
+msgstr "es geht so"
 
-#: ./../survey_templates/view.pt:446
+#: ./../survey_templates/view.pt:448
 msgid "Other"
-msgstr ""
+msgstr "Sonstiges"
 
 #: ./../exportresults.py:104
 #: ./../surveyresults.py:112
 msgid "Outdated field value"
-msgstr ""
+msgstr "Veraltete Feldwerte"
 
 #: ./../surveytool.py:378
 msgid "Participant Age"
@@ -605,27 +605,27 @@ msgstr "Teilnehmer"
 
 #: ./../survey_templates/surveysaved.pt:20
 msgid "Participation in the Prize Draw"
-msgstr ""
+msgstr "Teilnahme am Gewinnspiel"
 
-#: ./../survey_templates/view.pt:687
+#: ./../survey_templates/view.pt:689
 msgid "Pedometer with calorie consumption"
-msgstr ""
+msgstr "Schrittzähler mit Kalorienverbrauch"
 
-#: ./../survey_templates/view.pt:907
+#: ./../survey_templates/view.pt:909
 msgid "Pensioner"
-msgstr ""
+msgstr "Rentner(in)"
 
-#: ./../survey_templates/view.pt:657
+#: ./../survey_templates/view.pt:659
 msgid "Personal running coach at a club"
-msgstr ""
+msgstr "persönlicher Lauftrainer im Verein"
 
-#: ./../survey_templates/view.pt:755
+#: ./../survey_templates/view.pt:757
 msgid "Poorly"
-msgstr ""
+msgstr "schlecht"
 
-#: ./../survey_templates/view.pt:726
+#: ./../survey_templates/view.pt:728
 msgid "Poorly. I'm hardly making any training progress."
-msgstr ""
+msgstr "schlecht, ich mache kaum Trainingsfortschritte"
 
 #: ./../surveytool.py:390
 msgid "Price Bike"
@@ -657,19 +657,19 @@ msgstr "Ausgabenbereitschaft Laufband"
 
 #: ./../survey_templates/surveysaved.pt:24
 msgid "Print"
-msgstr ""
+msgstr "Drucken"
 
-#: ./../survey_templates/view.pt:663
+#: ./../survey_templates/view.pt:665
 msgid "Private personal running coach"
-msgstr ""
+msgstr "persönlicher Lauftrainer privat"
 
-#: ./../survey_templates/view.pt:675
+#: ./../survey_templates/view.pt:677
 msgid "Private running group"
-msgstr ""
+msgstr "Laufgruppe privat"
 
-#: ./../survey_templates/view.pt:851
+#: ./../survey_templates/view.pt:853
 msgid "Pupil/student"
-msgstr ""
+msgstr "Schüler / Student"
 
 #: ./../surveytool.py:394
 msgid "Purchase"
@@ -679,41 +679,41 @@ msgstr "Purchase"
 msgid "Purchase Comment"
 msgstr "Kaufinteresse Begründung"
 
-#: ./../survey_templates/view.pt:1184
+#: ./../survey_templates/view.pt:1186
 msgid "Reasons"
-msgstr ""
+msgstr "Begründung"
 
-#: ./../survey_templates/view.pt:544
+#: ./../survey_templates/view.pt:546
 msgid "Regularly (several times a week)"
-msgstr ""
+msgstr "regelmäßig (mehrmals in der Woche)"
 
 #: ./../surveytool.py:362
 msgid "Roadwork"
 msgstr "Systematisches Lauftraining"
 
-#: ./../survey_templates/view.pt:669
+#: ./../survey_templates/view.pt:671
 msgid "Running group at a club"
-msgstr ""
+msgstr "Laufgruppe im Verein"
 
-#: ./../survey_templates/view.pt:893
+#: ./../survey_templates/view.pt:895
 msgid "Self-employed person / freelancer"
-msgstr ""
+msgstr "Selbständige(r) / Freiberufliche(r)"
 
 #: ./../survey.py:506
 msgid "Session cleared"
 msgstr "Der Zwischenspeicher wurde entleert"
 
-#: ./../survey_templates/view.pt:958
+#: ./../survey_templates/view.pt:960
 msgid "Sports clothing"
-msgstr ""
+msgstr "Sportbekleidung"
 
-#: ./../survey_templates/view.pt:946
+#: ./../survey_templates/view.pt:948
 msgid "Sports equipment"
-msgstr ""
+msgstr "Sportgeräte"
 
-#: ./../survey_templates/view.pt:1231
+#: ./../survey_templates/view.pt:1233
 msgid "Submit questionnaire"
-msgstr ""
+msgstr "Umfrage abschicken"
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
 msgid "Survey"
@@ -729,15 +729,15 @@ msgstr "Wurde der Gutscheincode abgerufen?"
 
 #: ./../survey_templates/surveysaved.pt:14
 msgid "Thank you very much for participating in our survey"
-msgstr ""
+msgstr "Vielen Dank für die Teilnahme an unserer Umfrage"
 
 #: ./../survey_templates/surveysaved.pt:57
 msgid "This prize code will only be shown once!"
-msgstr ""
+msgstr "Dieser Gewinncode wird nur einmalig angezeigt!"
 
 #: ./../survey_templates/surveysaved.pt:30
 msgid "Ticket number"
-msgstr ""
+msgstr "Losnummer"
 
 #: ./../surveytool.py:361
 msgid "Training Frequency"
@@ -803,71 +803,71 @@ msgstr "Hilfsmittel Sonst"
 msgid "Training Resource Effect"
 msgstr "Wirkungsgrad"
 
-#: ./../survey_templates/view.pt:681
+#: ./../survey_templates/view.pt:683
 msgid "Training app on my smartphone"
-msgstr ""
+msgstr "Trainingsapp auf Smartphone"
 
-#: ./../survey_templates/view.pt:645
+#: ./../survey_templates/view.pt:647
 msgid "Treadmill at home"
-msgstr ""
+msgstr "Laufband zuhause"
 
-#: ./../survey_templates/view.pt:651
+#: ./../survey_templates/view.pt:653
 msgid "Treadmill at the gym"
-msgstr ""
+msgstr "Laufband im Fitnessstudio"
 
-#: ./../survey_templates/view.pt:447
+#: ./../survey_templates/view.pt:449
 msgid "Type additional information here if you wish"
-msgstr ""
+msgstr "Optionale weitere Angaben"
 
 #: ./../survey_templates/surveyinvalid.pt:13
 msgid "Umfrage Informationen"
 msgstr "Umfrage Informationen"
 
-#: ./../survey_templates/view.pt:858
+#: ./../survey_templates/view.pt:860
 msgid "Unemployed person"
-msgstr ""
+msgstr "Nicht-Erwerbstätige(r)"
 
-#: ./../survey_templates/view.pt:616
+#: ./../survey_templates/view.pt:618
 msgid "Unimportant"
-msgstr ""
+msgstr "Unwichtig"
 
 #: ./../survey_templates/surveysaved.pt:52
 msgid "Value successfully copied to the clipboard!"
-msgstr ""
+msgstr "Der Wert wurde erfolgreich in den Zwischenspeicher kopiert!"
 
-#: ./../survey_templates/view.pt:602
+#: ./../survey_templates/view.pt:604
 msgid "Very important"
-msgstr ""
+msgstr "Sehr wichtig"
 
-#: ./../survey_templates/view.pt:44
+#: ./../survey_templates/view.pt:45
 msgid "Weitere Informationen"
-msgstr ""
+msgstr "Weitere Informationen"
 
-#: ./../survey_templates/view.pt:743
+#: ./../survey_templates/view.pt:745
 msgid "Well"
-msgstr ""
+msgstr "Gut"
 
-#: ./../survey_templates/view.pt:964
+#: ./../survey_templates/view.pt:966
 msgid "Wellness (saunas, massages)"
-msgstr ""
+msgstr "Wellness (Sauna, Massagen)"
 
-#: ./../survey_templates/view.pt:1202
+#: ./../survey_templates/view.pt:1204
 msgid "Yes, I am interested in RUFUS and would like to be updated on its progress and when it is to enter the market."
-msgstr ""
+msgstr "ja, ich interessiere mich für RUFUS und würde gerne informiert werden, wie es mit ihm weitergeht und wann er auf dem Markt ist."
 
-#: ./../survey_templates/view.pt:1165
+#: ./../survey_templates/view.pt:1167
 msgid "Yes, if the design, functionality, and quality are right for me."
-msgstr ""
+msgstr "ja, wenn Design, Funktionalität und Qualität stimmen."
 
 #: ./../survey_templates/surveyinvalid.pt:20
 msgid "Zur Startseite egomotion.com"
 msgstr "Zur Startseite egomotion.com"
 
-#: ./../survey_templates/view.pt:1220
+#: ./../survey_templates/view.pt:1222
 msgid "john@example.tld"
-msgstr ""
+msgstr "max@mustermann.de"
 
-#: ./../survey_templates/view.pt:824
+#: ./../survey_templates/view.pt:826
 msgid "years old"
-msgstr ""
+msgstr "Jahre"
 
