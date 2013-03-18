@@ -52,10 +52,9 @@
 
     <section tal:condition="not:has_token">
       <h4 i18n:translate="">
-        1. Die folgenden 15 Designskizzen zeigen, wie unser RUFUS als
-        Produkt aussehen k&ouml;nnte. Bitte w&auml;hle unter diesen Skizzen drei
-        Favoriten aus und gib an, welche designerischen Merkmale Dir am besten und welche
-        am wenigsten gefallen.
+        1. The following 15 design sketches show what RUFUS could look like as a
+        product. Please choose three favourites from these sketches and state 
+        which design features you like most and which features you like least.
       </h4>
       <div id="design-gallery"
         tal:condition="view/has_images">
@@ -91,7 +90,7 @@
                         data-appui-target python:context_url + '/@@autosave-survey'">
 
         <div class="survey-question">
-          <h4 i18n:translate="">Meine Favoriten</h4>
+          <h4 i18n:translate="">My favourites</h4>
           <div class="row-fluid">
             <div class="span4">
               <div class="control-group field"
@@ -100,7 +99,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1"
-                  i18n:translate="">Nummer</label>
+                  i18n:translate="">Number</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -123,7 +122,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.likes.one"
-                  i18n:translate="">Merkmale, die mir am besten gefallen</label>
+                  i18n:translate="">Features which I like most</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -153,7 +152,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.dislikes.one"
-                  i18n:translate="">Merkmale, die mir am wenigsten gefallen</label>
+                  i18n:translate="">Features which I like least</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -186,7 +185,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1"
-                  i18n:translate="">Nummer</label>
+                  i18n:translate="">Number</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -209,7 +208,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.likes.one"
-                  i18n:translate="">Merkmale, die mir am besten gefallen</label>
+                  i18n:translate="">Features which I like most</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -239,7 +238,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.dislikes.one"
-                  i18n:translate="">Merkmale, die mir am wenigsten gefallen</label>
+                  i18n:translate="">Features which I like least</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -272,7 +271,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1"
-                  i18n:translate="">Nummer</label>
+                  i18n:translate="">Number</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -295,7 +294,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.likes.one"
-                  i18n:translate="">Merkmale, die mir am besten gefallen</label>
+                  i18n:translate="">Features which I like most</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -325,7 +324,7 @@
                 tal:attributes="class python:err_msg and 'control-group error' or 'control-group'">
                 <label class="control-label"
                   for="favorite1.dislikes.one"
-                  i18n:translate="">Merkmale, die mir am wenigsten gefallen</label>
+                  i18n:translate="">Features which I like least</label>
                 <div class="controls">
                   <input
                     type="text"
@@ -353,7 +352,7 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            2. Was gef&auml;llt Dir am wenigsten bei den anderen Entw&uuml;rfen?
+            2. What do you like least about the other sketches?
           </h4>
 
           <div class="control-group">
@@ -385,12 +384,12 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            3. Welche Funktionen sollte der Lauftrainer zus&auml;tzlich zu den
-            oben genannten Deiner Meinung nach haben?
+            3. Which other functions should the running coach have in addition
+            to those mentioned above in your opinion?
           </h4>
 
           <div class="help-block" i18n:translate="">
-            (mehrere Antworten m&ouml;glich)
+            (You can select more than one answer here)
           </div>
 
           <div class="control-group">
@@ -398,55 +397,57 @@
               <input type="checkbox" value="functionality.1" name="functionality"
                 tal:attributes="checked python:view.default_value(fieldname='functionality')">
                 <span i18n:translate="">
-                  ein Programm für Leistungsdiagnostik (z.B. Analyse Pulsverlauf bei wechselnder Belastung ähnlich wie bei Belastungs-EKG)
+                  A program for monitoring performance (e.g. a program which
+                  analyses my pulse as the strain on your body changes,
+                  like in a exercise ECG)
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.2" name="functionality">
                 <span i18n:translate="">
-                  eine Funktion zur Aufzeichnung und späteren Analyse meines Laufverhaltens
-                  in Form einer sogenannten Trainingsdokumentation
+                  A function which allows me to record and analyse my running
+                  behaviour later on in the form of a training transcript
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.3" name="functionality">
                 <span i18n:translate="">
-                  eine Funktion, die mir im Rahmen des Lauftrainings ein Kräftigungs- und
-                  Beweglichkeitstraining anbietet
+                  A function which offers me strength and flexibility training
+                  as part of my running training
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.4" name="functionality">
                 <span i18n:translate="">
-                  eine Funktion, die meine Stimmungslage in die Trainingsgestaltung mit einbezieht
+                  A function which includes my mood in the design of my training sessions
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.5" name="functionality">
                 <span i18n:translate="">
-                  eine Funktion, die auf der Grundlage meines Kalorienverbrauchs einen
-                  Ern&auml;hrungsvorschlag macht
+                  A function which suggests a diet based on my calorie consumption
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.6" name="functionality">
                 <span i18n:translate="">
-                  ein Navigationsprogramm zum Laufen auf unbekannten Routen
+                  A navigation programme for running unfamiliar routes
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="functionality.7" name="functionality">
                 <span i18n:translate="">
-                  eine Funktion, die es mir erm&ouml;glicht, mit meinen Freunden einen
-                  virtuellen Lauftreff zu organisieren (Videokonferenz z.B. &uuml;ber
-                  Skype mit Freunden an entfernten Orten)
+                  A function which allows me to organise a virtual running meeting
+                  with my friends (e.g. a video conference via Skype with friends
+                  who are too far away for me to meet with in person) 
                 </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Other</span>
               <input class="input-xxlarge" id="functionality.additional"
                 name="functionality.additional"
-                type="text" placeholder="Optionale weitere Angaben"
+                type="text" placeholder="Type additional information here if you wish"
+                i18n:attributes="placeholder"
                 >
             </div>
           </div>
@@ -454,8 +455,8 @@
 
         <div class="survey-question">
           <h4><span i18n:translate="">
-            4. Welches Zubeh&ouml;r sollte der Lauftrainer Deiner Meinung nach haben?</span><br />
-            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
+            4. Which accessories should the running coach have in your opinion?</span><br />
+            <small i18n:translate="">(You can select more than one answer here)</small>
           </h4>
 
           <div class="control-group">
@@ -463,28 +464,30 @@
               <input type="checkbox" value="accessory.1" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.one')">
                 <span i18n:translate="">
-                  Beleuchtung, Klingel, Schloss
+                  Lights, bell, lock
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="accessory.2" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.two')">
                 <span i18n:translate="">
-                  Flaschenhalter, Ablage (&bdquo;Handschuhfach&ldquo;) f&uuml;r Schl&uuml;ssel und andere Kleinigkeiten
+                  Bottle holder, storage compartment ("glove compartment")
+                  for keys and other small items
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="accessory.3" name="accessory"
                 tal:attributes="checked python:view.default_value(fieldname='accessory.three')">
                 <span i18n:translate="">
-                  Medienzubeh&ouml;r bzw. Anschl&uuml;sse (Dockingstation f&uuml;r Smartphone, USB, etc)
+                  Media fixtures and connection points (smartphone docking station, USB port, etc.)
                 </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Other</span>
               <input class="input-xxlarge" id="accessory.additional"
                 name="accessory.additional"
-                type="text" placeholder="Optionale weitere Angaben"
+                type="text" placeholder="Type additional information here if you wish"
+                i18n:attributes="placeholder"
                 tal:attributes="value python:view.default_value(fieldname='accessory.additional')">
             </div>
           </div>
@@ -492,9 +495,9 @@
 
         <div class="survey-question">
           <h4><span i18n:translate="">
-            5. Welchen zus&auml;tzlichen Nutzen sollte der Lauftrainer Deiner
-            Meinung nach haben?</span><br />
-            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
+            5. Which additional benefits should the running coach have in your opinion?
+            </span><br />
+            <small i18n:translate="">(You can select more than one answer here)</small>
           </h4>
 
           <div class="control-group">
@@ -502,28 +505,30 @@
               <input type="checkbox" value="benefit.1" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.one')">
                 <span i18n:translate="">
-                  Ich w&uuml;rde damit gerne zum Einkaufen joggen (Befestigung f&uuml;r Einkaufskorb).
+                  I would like to be able to use it to go jogging when I do my shopping (fixings for a shopping basket).
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="benefit.2" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.two')">
                 <span i18n:translate="">
-                  Ich m&ouml;chte mit meinen Kindern joggen gehen (Befestigung f&uuml;r Kindersitz bzw. Babyschale)
+                  I would like to be able to go jogging with my children (fixings for a child or baby seat).
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="benefit.3" name="benefit"
                 tal:attributes="checked python:view.default_value(fieldname='benefit.three')">
                 <span i18n:translate="">
-                  Ich m&ouml;chte damit auch schwere Lasten transportieren und selbst damit fahren k&ouml;nnen.
+                  I would like to be able to transport heavy loads with it as
+                  well and ride it myself.
                 </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Other</span>
               <input class="input-xxlarge" id="benefit.additional"
-                type="text" placeholder="Optionale weitere Angaben"
+                type="text" placeholder="Type additional information here if you wish"
                 name="benefit.additional"
+                i18n:attributes="placeholder"
                 tal:attributes="value python:view.default_value(fieldname='benefit.additional')">
             </div>
           </div>
@@ -531,50 +536,53 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            6. Wie h&auml;ufig gehst Du laufen?
+            6. How often do you go running?
           </h4>
           <div class="controls">
             <label class="radio">
               <input type="radio" name="frequency" id="frequency1" value="frequency.1">
                 <span i18n:translate="">
-                  regelm&auml;&szlig;ig (mehrmals in der Woche)
+                  Regularly (several times a week)
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency2" value="frequency.2">
                 <span i18n:translate="">
-                  h&auml;ufig (nicht jede Woche aber mehrmals im Monat)
+                  Frequently (not every week but several times a month)
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency3" value="frequency.3">
                 <span i18n:translate="">
-                  gelegentlich
+                  Occasionally
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency4" value="frequency.4">
                 <span i18n:translate="">
-                  nie, aber ich &uuml;berlege schon l&auml;nger damit anzufangen
+                  Never, but I've been thinking about taking up running for a long time
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="frequency" id="frequency5" value="frequency.5">
                 <span i18n:translate="">
-                  nie, mir macht Laufen keinen Spass
+                  Never. I don't like running.
                 </span>
             </label>
           </div>
           <div class="alert">
             <p><i class="icon-info-sign"></i>
-            <span i18n:translate="">Falls Du diese Frage mit &quot;nie, mir macht Laufen keinen Spass&quot;
-            beantwortet hast, dann gehe gleich zu Frage 13.</span>
+            <span i18n:translate="">
+              If you've answered this question with
+              "Never. I don't like running.", go straight to question 13.
+            </span>
             </p>
             <p>
             <a href="#survey-question-13"
               data-appui="pagescroll" data-target="#survey-question-13"
                i18n:translate="">
-              Zu Frage 13 springen</a>
+              Jump to question 13
+            </a>
             </p>
           </div>
           <p>
@@ -584,28 +592,29 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            7. Wie wichtig ist Dir ein systematisches Lauftraining (z.B. nach einem Trainingsplan)?
+            7. How important is systematic running training (based on a training
+            plan, for example) to you?
           </h4>
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork1" value="roadwork.1"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
                 <span i18n:translate="">
-                  sehr wichtig
+                  Very important
                 </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork2" value="roadwork.2"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
                 <span i18n:translate="">
-                  wichtig
+                  Important
                 </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="roadwork" id="roadwork3" value="roadwork.3"
                 tal:attributes="checked python:view.default_value(fieldname='roadwork')">
                 <span i18n:translate="">
-                  unwichtig
+                  Unimportant
                 </span>
             </label>
           </div>
@@ -613,84 +622,87 @@
 
         <div class="survey-question">
           <h4>
-            <span i18n:translate="">8. Welche Hilfsmittel verwendest Du f&uuml;r Dein Lauftraining?</span><br />
-            <small i18n:translate="">(mehrere Antworten m&ouml;glich)</small>
+            <span i18n:translate="">
+              8. Which aids do you use for your running training?
+            </span><br />
+            <small i18n:translate="">(You can select more than one answer here)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.1" name="trainingresource">
                 <span i18n:translate="">
-                  Pulsuhr ohne GPS
+                  Heart rate monitor without GPS
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.2" name="trainingresource"
                  i18n:translate="">
-                Pulsuhr mit GPS
+                Heart rate monitor with GPS
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.3" name="trainingresource">
                 <span i18n:translate="">
-                  Laufband zuhause
+                  Treadmill at home
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.4" name="trainingresource">
                 <span i18n:translate="">
-                  Laufband im Fitnessstudio
+                  Treadmill at the gym
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.5" name="trainingresource">
                 <span i18n:translate="">
-                  persönlicher Lauftrainer im Verein
+                  Personal running coach at a club
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.6" name="trainingresource">
                 <span i18n:translate="">
-                  persönlicher Lauftrainer privat
+                  Private personal running coach
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.7" name="trainingresource">
                 <span i18n:translate="">
-                  Laufgruppe im Verein
+                  Running group at a club
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.8" name="trainingresource">
                 <span i18n:translate="">
-                  Laufgruppe privat
+                  Private running group
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.9" name="trainingresource">
                 <span i18n:translate="">
-                  Trainingsapp auf Smartphone
+                  Training app on my smartphone
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.10" name="trainingresource">
                 <span i18n:translate="">
-                  Schrittzähler mit Kalorienverbrauch
+                  Pedometer with calorie consumption
                 </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Other</span>
               <input class="input-xxlarge" id="trainingresource.additional"
                 name="trainingresource.additional"
-                type="text" placeholder="Optionale weitere Angaben">
+                type="text" placeholder="Type additional information here if you wish"
+                i18n:attributes="placeholder">
             </div>
           </div>
         </div><!-- / addon products -->
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            9. Wie wirkungsvoll unterst&uuml;tzen Dich diese Hilfsmittel bei
-            deinem Training insbesondere bei der Kontrolle Deiner Herzfrequenz
-            und Deiner Laufgeschwindigkeit?
+            9. How effectively do these aids support you when training? In
+            particular, how well do they help you monitor your heart rate and
+            running speed?
           </h4>
 
           <div class="control-group">
@@ -698,21 +710,21 @@
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.1">
                 <span i18n:translate="">
-                  optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindigkeit)
+                  Excellently. I'm making very good training progress (endurance and speed)
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.2">
                 <span i18n:translate="">
-                  ausreichend, aber meine Trainingsfortschritte k&ouml;nnten besser sein
+                  Adequately, but I could be making better training progress.
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="trainingresource.effect"
                 value="trainingresource.effect.3">
                 <span i18n:translate="">
-                  schlecht, ich mache kaum Trainingsfortschritte
+                  Poorly. I'm hardly making any training progress.
                 </span>
             </label>
           </div>
@@ -720,65 +732,67 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            10. Vorausgesetzt Du trainierst mit einer Pulsuhr, wie genau kannst
-            Du mit dieser Pulsuhr (mit Schrittzähler oder GPS)
-            Deinen Puls und Deine Laufgeschwindigkeit steuern?
+            10. Assuming you train with a heart rate monitor, how accurately are
+            you able to control your heart rate and running speed with this
+            heart rate monitor (with a pedometer or GPS)?
           </h4>
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.1">
                 <span i18n:translate="">
-                  gut</span>
+                  Well</span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.2">
                 <span i18n:translate="">
-                  es geht so</span>
+                  Ok</span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.monitor" id="optionsRadios1"
                 value="training.monitor.3">
                 <span i18n:translate="">
-                  schlecht</span>
+                  Poorly</span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            11. Wie wichtig wäre es für Dich, einen persönlichen Lauftrainer
-            zu haben, der Dir jederzeit zur Verfügung steht und mit Dir ein
-            individuell auf Dich zugeschnittenes Trainingsprogramm absolviert?
+            11. How important is it to you to have a personal running coach
+            which is available to you at any time and completes a training
+            programme specifically tailored to suit you with you?
           </h4>
           <div class="controls">
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.1">
                 <span i18n:translate="">
-                  sehr wichtig
+                  Very important
                 </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.2">
                 <span i18n:translate="">
-                  wichtig</span>
+                  Important
+                </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="training.personalization" id="optionsRadios1"
                 value="training.personalization.3">
                 <span i18n:translate="">
-                  unwichtig</span>
+                  Unimportant
+                </span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            12. Wieviel w&uuml;rdest Du maximal f&uuml;r einen solchen Lauftrainer pro
-            Trainingsstunde bezahlen wollen?
+            12. What is the maximum you would be prepared to pay for such a
+            running coach per training hour?
           </h4>
           <div class="controls">
             <label class="radio inline">
@@ -801,105 +815,113 @@
 
         <div class="survey-question" id="survey-question-13">
           <h4 i18n:translate="">
-            13. Alter und Geschlecht
+            13. Age and sex
           </h4>
           <div class="controls">
             <div class="input-append">
               <input class="span1" id="appendedInput" type="text"
                 name="participant.age">
-              <span class="add-on discreet" i18n:translate="">Jahre</span>
+              <span class="add-on discreet" i18n:translate="">years old</span>
             </div>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1"
                 value="participant.gender.1">
                 <span i18n:translate="">
-                  weiblich
+                  Female
                 </span>
             </label>
             <label class="radio inline">
               <input type="radio" name="participant.gender" id="optionsRadios1"
                 value="participant.gender.2">
                 <span i18n:translate="">
-                  m&auml;nnlich</span>
+                  Male
+                </span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            14. Berufliche Stellung
+            14. Professional position
           </h4>
           <div class="controls">
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios1"
                 value="participant.occupation.1">
                 <span i18n:translate="">
-                  Sch&uuml;ler / Student
+                  Pupil/student
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios2"
                 value="participant.occupation.2">
                 <span i18n:translate="">
-                  Nicht-Erwerbst&auml;tige(r)
+                  Unemployed person
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios3"
                 value="participant.occupation.3">
                 <span i18n:translate="">
-                  ArbeiterIn / SachbearbeiterIn
+                  Blue-collar/clerical worker
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios4"
                 value="participant.occupation.4">
                 <span i18n:translate="">
-                  Angestellte(r) mit Personalverantwortung / Beamter im mittleren Dienst
+                  Employee with responsibility for other employees / civil servant in the middle grade of the civil service
                 </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios5"
                 value="participant.occupation.5">
                 <span i18n:translate="">
-                  Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst</span>
+                  Executive / civil servant in the upper grade of the civil service
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios6"
                 value="participant.occupation.6">
                 <span i18n:translate="">
-                  GeschäftsführerIn / Vorstand</span>
+                  Managing director / board member
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios7"
                 value="participant.occupation.7">
                 <span i18n:translate="">
-                  Selbständige(r) / Freiberufliche(r)</span>
+                  Self-employed person / freelancer
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios8"
                 value="participant.occupation.8">
                 <span i18n:translate="">
-                  Unternehmer(in)</span>
+                  Entrepreneur
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios9"
                 value="participant.occupation.9">
                 <span i18n:translate="">
-                  Rentner(in)</span>
+                  Pensioner
+                </span>
             </label>
             <label class="radio">
               <input type="radio" name="participant.occupation" id="participantOccupationRadios10"
                 value="participant.occupation.10">
                 <span i18n:translate="">
-                  Sonst</span>
+                  Other
+                </span>
             </label>
           </div>
         </div>
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            15. Welchen Betrag hast Du ca. im letzten Jahr für Sport und Wellness investiert?
+            15. Approximately how much have you invested sport and wellness in
+            the last year?
           </h4>
           <div class="controls">
             <div class="input-append">
@@ -913,55 +935,62 @@
 
         <div class="survey-question">
           <h4><span i18n:translate="">
-            16. Woraus hat sich dieser Betrag zusammengesetzt?</span><br />
-            <small i18n:translate="">(Mehrfachnennung möglich)</small>
+            16. What did you spend this money on?
+            </span><br />
+            <small i18n:translate="">(You can select more than one answer here)</small>
           </h4>
 
           <div class="control-group">
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.1" name="participant.investment">
                 <span i18n:translate="">
-                  Sportgeräte</span>
+                  Sports equipment
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.2" name="participant.investment">
                 <span i18n:translate="">
-                  Trainerstunden</span>
+                  Coach sessions
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.3" name="participant.investment">
                 <span i18n:translate="">
-                  Sportbekleidung</span>
+                  Sports clothing
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.4" name="participant.investment">
                 <span i18n:translate="">
-                  Wellness (Sauna, Massagen)</span>
+                  Wellness (saunas, massages)
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="participant.investment.5" name="participant.investment">
                 <span i18n:translate="">
-                  Fitnessstudiobeiträge</span>
+                  Gym fees
+                </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">Sonstiges</span>
+               <span class="add-on discreet" i18n:translate="">Other</span>
               <input class="input-xxlarge" id="participant.investment.additional"
-                type="text" placeholder="Optionale weitere Angaben"
-                name="participant.investment.additional">
+                type="text" placeholder="Type additional information here if you wish"
+                name="participant.investment.additional"
+                i18n:attributes="placeholder">
             </div>
           </div>
         </div><!-- / addon products -->
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            17. Welchen Betrag würdest Du ungefähr investieren in
-              die unten aufgelisteten Produkte?
+            17. Approximately how much would you spend on the products listed
+            below?
           </h4>
 
           <div class="control-group">
             <label class="control-label" for="inputWarning"
                i18n:translate="">
-              einen Hometrainer
+              A home exercise machine
             </label>
             <div class="controls">
               <label class="radio inline">
@@ -984,7 +1013,7 @@
           <div class="control-group">
             <label class="control-label" for="inputWarning"
                i18n:translate="">
-              ein Laufband
+              A treadmill
             </label>
             <div class="controls">
               <label class="radio inline">
@@ -1007,7 +1036,7 @@
           <div class="control-group">
             <label class="control-label" for="inputWarning"
                i18n:translate="">
-              einen Crosstrainer
+              A cross trainer
             </label>
             <div class="controls">
               <label class="radio inline">
@@ -1030,7 +1059,7 @@
           <div class="control-group visualClear">
             <label class="control-label"
                i18n:translate="">
-              ein Rennrad
+              A racing bike
             </label>
             <div class="controls">
               <label class="radio inline">
@@ -1053,7 +1082,7 @@
           <div class="control-group visualClear">
             <label class="control-label"
                i18n:translate="">
-              ein Mountainbike
+              A mountain bike
             </label>
             <div class="controls">
               <label class="radio inline">
@@ -1075,7 +1104,7 @@
           </div>
           <div class="control-group visualClear">
             <label class="control-label" i18n:translate="">
-              eine Trainerstunde
+              A coach session
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
@@ -1097,7 +1126,7 @@
           </div>
           <div class="control-group visualClear">
             <label class="control-label" i18n:translate="">
-              Monatsabo im Fitnessclub
+              Monthly subscription for a fitness club
             </label>
             <div class="controls controls-row">
               <label class="radio inline">
@@ -1121,9 +1150,9 @@
 
         <div class="survey-question">
           <h4 i18n:translate="">
-            18. RUFUS wird zu einem Preis von ca. 2000 EUR (Preis eines besseren
-            Rennrads oder Laufbands) auf den Markt kommen.
-            W&uuml;rdest Du Dir einen RUFUS kaufen?
+            18. RUFUS will cost about 2000 EUR (cost of a good racing bike or
+            treadmill) when it enters the market. Would you buy yourself a
+            RUFUS?
           </h4>
           <div class="control-group visualClear">
             <label class="control-label" i18n:translate="">
@@ -1134,31 +1163,34 @@
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.1">
                   <span i18n:translate="">
-                    ja, wenn Design, Funktionalit&auml;t und Qualit&auml;t stimmen.
+                    Yes, if the design, functionality, and quality are right for me.
                   </span>
               </label>
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.2">
                   <span i18n:translate="">
-                  nein</span>
+                  No</span>
               </label>
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
                   value="purchase.3">
-                  <span i18n:translate="">unentschieden</span>
+                  <span i18n:translate="">
+                    Don't know yet
+                  </span>
               </label>
             </div>
           <div id="nopurchase" class="controls">
               <label for="purchase.comment" i18n:translate="">
-                Begr&uuml;ndung</label>
+                Reasons
+              </label>
               <textarea rows="3" class="input-xxlarge"
                 id="purchase.comment" name="purchase.comment">
               </textarea>
               <span class="help-block" i18n:translate="">
-                Falls Deine Antwort &bdquo;nein&ldquo; oder &bdquo;unentschieden&ldquo; ist,
-                w&uuml;rdest Du uns sehr helfen, wenn Du eine kurze Begr&uuml;ndung
-                angeben w&uuml;rdest.
+                If your answer is &quot;No&quot; or &quot;Don't know yet&quot;, it would be very
+                helpful if you could provide with a short explanation for
+                your answer.
               </span>
           </div>
         </div>
@@ -1168,22 +1200,27 @@
             <label class="checkbox">
               <input type="checkbox" value="interest.1" name="interest">
               <span i18n:translate="">
-              ja, ich interessiere mich f&uuml;r RUFUS und w&uuml;rde gerne informiert
-              werden, wie es mit ihm weitergeht und wann er auf dem Markt ist.</span>
+                Yes, I am interested in RUFUS and would like to be updated on
+                its progress and when it is to enter the market.
+              </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="interest.2" name="interest">
                 <span  i18n:translate="">
-                Ich halte RUFUS f&uuml;r eine tolle Produktidee und m&ouml;chte mir eine
-                unverbindliche Kaufoption zu einem &bdquo;Fr&uuml;hbucher-Rabatt&ldquo; von 25%
-                sichern, die ich jederzeit und ohne weitere Mitteilung
-                verfallen lassen kann.</span>
+                I think RUFUS is a great product idea and would like to make
+                use of a non-binding purchase option which will give me a
+                early-bird discount of 25%. I understand that I can relinquish
+                this option at any time without providing further notification.
+              </span>
             </label>
             <div class="input-prepend">
-               <span class="add-on discreet" i18n:translate="">E-Mail-Adresse</span>
+               <span class="add-on discreet" i18n:translate="">
+                Email address
+               </span>
               <input class="input-xxlarge" id="email" type="text"
                 name="email"
-                placeholder="max@mustermann.de">
+                placeholder="john@example.tld"
+                i18n:attributes="placeholder">
             </div>
           </div>
         </div>
@@ -1195,8 +1232,8 @@
             class="btn btn-primary btn-large pull-right"
             id="btn-submit"
             name="form.buttons.Submit"
-            value="Fragebogen abschicken"
-            i18n:translate="" />
+            value="Submit questionnaire"
+            i18n:attributes="value" />
         </div>
       </form>
     </section>
