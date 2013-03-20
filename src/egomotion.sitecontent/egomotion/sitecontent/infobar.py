@@ -30,6 +30,7 @@ class InfoBarViewlet(grok.Viewlet):
 
 class LanguageSwitch(grok.Viewlet):
     grok.context(Interface)
+    grok.layer(IEgomotionSite)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
     grok.name('locomotec.sitecontent.LanguageSwitch')
