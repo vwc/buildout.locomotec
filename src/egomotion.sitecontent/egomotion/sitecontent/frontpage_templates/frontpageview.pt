@@ -9,35 +9,68 @@
 
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
-    <div id="frontpage-header">
-      <div id="frontpage-claim">
-        <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.plaintext/fp-claim" />
+    <div tal:define="lang view/current_lang">
+      <tal:de tal:condition="python:lang == 'de'">
+      <div id="frontpage-header">
+        <div id="frontpage-claim">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.plaintext/fp-claim" />
+        </div>
+        <div id="frontpage-intro">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-intro" />
+        </div>
       </div>
-      <div id="frontpage-intro">
-        <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-intro" />
-      </div>
-    </div>
-    <hr />
-  <article id="frontpage-view">
-    <header>
-      <h1 tal:content="context/Title" />
-    </header>
-
-    <section id="fp-box-1">
-      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-1" />
-    </section>
-    <section id="fp-box-2">
-      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-2" />
-    </section>
-    <section id="fp-box-3">
-      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-3" />
-    </section>
-    <section id="fp-box-4">
-      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-4" />
-    </section>
-
-  </article>
+      <hr />
+      <article id="frontpage-view">
+        <header>
+          <h1 tal:content="context/Title" />
+        </header>
     
+        <section id="fp-box-1">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-1" />
+        </section>
+        <section id="fp-box-2">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-2" />
+        </section>
+        <section id="fp-box-3">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-3" />
+        </section>
+        <section id="fp-box-4">
+          <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-4" />
+        </section>
+    
+      </article>
+      </tal:de>
+      <tal:en tal:condition="python:lang == 'en'">
+        <div id="frontpage-header">
+          <div id="frontpage-claim">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.plaintext/fp-claim-en" />
+          </div>
+          <div id="frontpage-intro">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-intro-en" />
+          </div>
+        </div>
+        <hr />
+        <article id="frontpage-view">
+          <header>
+            <h1 tal:content="context/Title" />
+          </header>
+      
+          <section id="fp-box-1">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-1-en" />
+          </section>
+          <section id="fp-box-2">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-2-en" />
+          </section>
+          <section id="fp-box-3">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-3-en" />
+          </section>
+          <section id="fp-box-4">
+            <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/fp-box-4-en" />
+          </section>
+      
+        </article>
+      </tal:en>
+    </div>
   </metal:content-core>
 </metal:main>
 

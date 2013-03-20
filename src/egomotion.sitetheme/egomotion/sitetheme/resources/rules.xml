@@ -100,6 +100,19 @@
         <!--<replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />-->
 
+        <replace css:content-children="#call-to-action"
+            css:theme="#btn-survey" />
+
+        <replace css:content-children="#language-links"
+            css:theme-children="#language-nav" />
+
+        <replace css:content-children="#main-nav"
+            css:theme-children="#main-nav" />
+
+        <replace css:content-children="#main-nav"
+            css:theme-children="#footer-nav" />
+
+
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs'
             css:theme-children='#breadcrumbs' />
@@ -111,15 +124,6 @@
         <before css:content=".portalMessage" css:theme="#content" />
         <replace css:content-children="#viewlet-below-content"
             css:theme-children="#below-main-content" />
-
-        <!-- Columns -->
-        <replace css:content-children="#portal-column-one > *"
-            css:theme-children="#sidebar-left" />
-        <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar-right" />
-        <!-- example for the fixed.html template -->
-        <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#sidebar" />
 
     </rules>
 

@@ -1,9 +1,31 @@
 <div id="infobar"
-    tal:define="portal_url viewlet/portal_url">
-    <div id="header-claim">
-        <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.plaintext/header-claim" />
-    </div>
-    <div id="header-intro">
-        <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.richtext/header-intro" />
-    </div>
+    tal:define="portal_url viewlet/portal_url;
+                lang viewlet/current_lang">
+    <tal:block tal:condition="python:lang == 'de'">
+        <div id="header-claim">
+            <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.plaintext/header-claim" />
+        </div>
+        <div id="header-intro">
+            <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.richtext/header-intro" />
+        </div>
+    </tal:block>
+    <tal:block tal:condition="python:lang == 'en'">
+        <div id="header-claim">
+            <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.plaintext/header-claim-en" />
+        </div>
+        <div id="header-intro">
+            <div tal:attributes="data-tile string:${portal_url}/@@vwc.tiles.richtext/header-intro-en" />
+        </div>
+    </tal:block>
+</div>
+
+<div id="call-to-action"
+    tal:define="portal_url viewlet/portal_url"
+    i18n:domain="egomotion.sitecontent">
+    <a class="btn btn-large btn-block btn-primary" id="btn-survey"
+        href="/umfrage"
+        tal:attributes="href python:portal_url + '/umfrage'">
+        <span class="highlighted" i18n:translate="">Go to survey</span><br />
+        <span i18n:translate="">participate &amp; win</span>
+    </a>
 </div>

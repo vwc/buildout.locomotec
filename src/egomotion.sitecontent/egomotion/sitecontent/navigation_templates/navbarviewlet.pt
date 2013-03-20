@@ -1,0 +1,34 @@
+<div id="navbar"
+    tal:define="portal_url viewlet/portal_url;
+                lang viewlet/current_lang">
+    <nav tal:condition="python:lang == 'de'">
+        <ul class="nav nav-pills pull-right" id="main-nav">
+            <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
+            <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
+                    tal:attributes="href python:portal_url + '/erlaeuterungen-und-teilnahmebedingungen'">
+                    Erl&auml;uterungen und Teilnahmebedingungen</a>
+            </li>
+            <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
+                  rel="prettyPhoto"
+                  target="_blank">Video</a></li>
+            <li><a href="/impressum"
+                    tal:attributes="href python:portal_url + '/impressum'">
+                    Impressum</a></li>
+        </ul>
+    </nav>
+    <tal:block tal:condition="python:lang == 'en'">
+        <ul class="nav nav-pills pull-right" id="main-nav">
+            <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
+            <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
+                    tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
+                    Information and Participation Terms and Conditions</a>
+            </li>
+            <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
+                  rel="prettyPhoto"
+                  target="_blank">Video</a></li>
+            <li><a href="/impressum"
+                    tal:attributes="href python:portal_url + '/impressum'">
+                    Legal Notice</a></li>
+        </ul>
+    </tal:block>
+</div>

@@ -82,7 +82,7 @@ body.frontpage #site-wrapper {
       }
     }
     nav {
-      margin-top: @baseLineHeight;
+      //margin-top: @baseLineHeight;
       #main-nav > li > a:hover {
         color: @white;
         background-color: @linkColor;
@@ -102,6 +102,15 @@ body.frontpage #site-wrapper {
         display: inline-block;
         .square(20px);
       }
+      &.last {
+        margin-bottom: 0px;
+      }
+    }
+    #language-nav {
+      margin-top: 0px;
+    }
+    #language-nav > li > a {
+      font-weight: bold;
     }
   }
   .splashbox {

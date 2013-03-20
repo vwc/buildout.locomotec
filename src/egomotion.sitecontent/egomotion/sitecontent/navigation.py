@@ -10,12 +10,12 @@ from plone.app.layout.viewlets.interfaces import IPortalFooter
 from egomotion.sitecontent.interfaces import IEgomotionSite
 
 
-class InfoBarViewlet(grok.Viewlet):
+class NavBarViewlet(grok.Viewlet):
     grok.context(Interface)
     grok.layer(IEgomotionSite)
     grok.require('zope2.View')
     grok.viewletmanager(IPortalFooter)
-    grok.name('egomotion.sitecontent.InfoBarViewlet')
+    grok.name('egomotion.sitecontent.NavBarViewlet')
 
     def update(self):
         self.portal_url = api.portal.get().absolute_url()
@@ -26,13 +26,3 @@ class InfoBarViewlet(grok.Viewlet):
                                  name=u"plone_portal_state")
         lang = pstate.language()
         return lang
-
-
-class LanguageSwitch(grok.Viewlet):
-    grok.context(Interface)
-    grok.require('zope2.View')
-    grok.viewletmanager(IPortalFooter)
-    grok.name('locomotec.sitecontent.LanguageSwitch')
-
-    def switcher_base_url(self):
-        return api.portal.get().absolute_url()
