@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-18 16:19+0000\n"
+"POT-Creation-Date: 2013-03-20 15:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -419,6 +419,10 @@ msgstr ""
 
 #: ./../surveytool.py:352
 msgid "Functionality Additional"
+msgstr ""
+
+#: ./../infobar_templates/infobarviewlet.pt:28
+msgid "Go to survey"
 msgstr ""
 
 #: ./../survey_templates/view.pt:972
@@ -868,6 +872,10 @@ msgstr ""
 
 #: ./../survey_templates/view.pt:1222
 msgid "john@example.tld"
+msgstr ""
+
+#: ./../infobar_templates/infobarviewlet.pt:29
+msgid "participate &amp; win"
 msgstr ""
 
 #: ./../survey_templates/view.pt:826

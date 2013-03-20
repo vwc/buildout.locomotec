@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-18 16:19+0000\n"
+"POT-Creation-Date: 2013-03-20 15:11+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -417,6 +417,10 @@ msgstr "Funktionen 7"
 #: ./../surveytool.py:352
 msgid "Functionality Additional"
 msgstr "Funktionen (Freitext)"
+
+#: ./../infobar_templates/infobarviewlet.pt:28
+msgid "Go to survey"
+msgstr "Zur Umfrage"
 
 #: ./../survey_templates/view.pt:972
 msgid "Gym fees"
@@ -866,6 +870,10 @@ msgstr "Zur Startseite egomotion.com"
 #: ./../survey_templates/view.pt:1222
 msgid "john@example.tld"
 msgstr "max@mustermann.de"
+
+#: ./../infobar_templates/infobarviewlet.pt:29
+msgid "participate &amp; win"
+msgstr "mitmachen &amp; gewinnen"
 
 #: ./../survey_templates/view.pt:826
 msgid "years old"
