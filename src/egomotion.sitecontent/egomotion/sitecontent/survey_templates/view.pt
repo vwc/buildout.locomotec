@@ -1157,9 +1157,6 @@
             RUFUS?
           </h4>
           <div class="control-group visualClear">
-            <label class="control-label" i18n:translate="">
-              Monatsabo im Fitnessclub
-            </label>
             <div class="controls controls-row">
               <label class="radio">
                 <input type="radio" name="purchase" id="optionsRadios1"
