@@ -10,3 +10,10 @@ class FrontpageView(grok.View):
     grok.layer(IEgomotionSite)
     grok.require('zope2.View')
     grok.name('frontpage-view')
+
+
+class FrontpageEN(grok.View):
+    grok.context(INavigationRoot)
+    grok.layer(IEgomotionSite)
+    grok.require('zope2.View')
+    grok.name('frontpage-en-view')
