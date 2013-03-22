@@ -412,7 +412,7 @@ msgstr "Funktionen (Freitext)"
 
 #: ./../survey_templates/view.pt:46
 msgid "Further information"
-msgstr ""
+msgstr "Weitere Informationen"
 
 #: ./../infobar_templates/infobarviewlet.pt:28
 msgid "Go to survey"
@@ -520,7 +520,7 @@ msgstr "Nein"
 
 #: ./../survey_templates/view.pt:40
 msgid "Note"
-msgstr ""
+msgstr "Hinweis"
 
 #: ./../survey_templates/view.pt:102
 msgid "Number"
@@ -540,7 +540,7 @@ msgstr "Sonstiges"
 
 #: ./../survey_templates/view.pt:47
 msgid "Our database indicates that from your computer or your IP address somebody provided already a complete set of answers to our survey. If it was not yourself, somebody else might have already participated in the survey under the same IP address."
-msgstr ""
+msgstr "Für Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, könnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem Büro)."
 
 #: ./../exportresults.py:104
 #: ./../surveyresults.py:112
@@ -705,7 +705,7 @@ msgstr "Der Zwischenspeicher wurde entleert"
 
 #: ./../survey_templates/view.pt:41
 msgid "Sorry! You have already participated in our survey. You cannot participate more than once."
-msgstr ""
+msgstr "Eine Teilnahme an unserer Umfrage ist nicht möglich. Du hast bereits an unserer Umfrage teilgenommen."
 
 #: ./../survey_templates/view.pt:960
 msgid "Sports clothing"
