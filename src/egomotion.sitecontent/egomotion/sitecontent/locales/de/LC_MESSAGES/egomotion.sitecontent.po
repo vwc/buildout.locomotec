@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-20 15:11+0000\n"
+"POT-Creation-Date: 2013-03-22 11:40+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -246,7 +246,7 @@ msgstr "Negativmerkmale andere 3"
 msgid "Dislike Two"
 msgstr "Negativmerkmale andere 2"
 
-#: ./../survey_templates/view.pt:1180
+#: ./../survey_templates/view.pt:1177
 msgid "Don't know yet"
 msgstr "unentschieden"
 
@@ -258,11 +258,7 @@ msgstr "Umfrageergebnisse herunterladen"
 msgid "E-Mail"
 msgstr "E-Mail-Adresse"
 
-#: ./../survey_templates/view.pt:41
-msgid "Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich. Du hast bereits an unserer Umfrage teilgenommen."
-msgstr "Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich. Du hast bereits an unserer Umfrage teilgenommen."
-
-#: ./../survey_templates/view.pt:1219
+#: ./../survey_templates/view.pt:1216
 msgid "Email address"
 msgstr "E-Mail-Adresse"
 
@@ -281,10 +277,6 @@ msgstr "optimal, ich mache sehr gute Trainingsfortschritte (Ausdauer, Geschwindi
 #: ./../survey_templates/view.pt:881
 msgid "Executive / civil servant in the upper grade of the civil service"
 msgstr "Leitende(r) Angestellte(r) / Beamter im gehobenen Dienst"
-
-#: ./../survey_templates/view.pt:46
-msgid "F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, k&ouml;nnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem B&uuml;ro)."
-msgstr "F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, k&ouml;nnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem B&uuml;ro)."
 
 #: ./../surveytool.py:321
 msgid "Favorite 1"
@@ -418,6 +410,10 @@ msgstr "Funktionen 7"
 msgid "Functionality Additional"
 msgstr "Funktionen (Freitext)"
 
+#: ./../survey_templates/view.pt:46
+msgid "Further information"
+msgstr ""
+
 #: ./../infobar_templates/infobarviewlet.pt:28
 msgid "Go to survey"
 msgstr "Zur Umfrage"
@@ -430,11 +426,7 @@ msgstr "Fitnessstudiobeiträge"
 msgid "Heart rate monitor without GPS"
 msgstr "Pulsuhr ohne GPS"
 
-#: ./../survey_templates/view.pt:40
-msgid "Hinweis"
-msgstr "Hinweis"
-
-#: ./../survey_templates/view.pt:1211
+#: ./../survey_templates/view.pt:1208
 msgid "I think RUFUS is a great product idea and would like to make use of a non-binding purchase option which will give me a early-bird discount of 25%. I understand that I can relinquish this option at any time without providing further notification."
 msgstr "Ich halte RUFUS für eine tolle Produktidee und möchte mir eine unverbindliche Kaufoption zu einem „Frühbucher-Rabatt“ von 25% sichern, die ich jederzeit und ohne weitere Mitteilung verfallen lassen kann."
 
@@ -454,7 +446,7 @@ msgstr "Ich würde damit gerne zum Einkaufen joggen (Befestigung für Einkaufsko
 msgid "If you've answered this question with &quot;Never. I don't like running.&quot;, go straight to question 13."
 msgstr "Falls Du diese Frage mit \"nie, mir macht Laufen keinen Spass\" beantwortet hast, dann gehe gleich zu Frage 13."
 
-#: ./../survey_templates/view.pt:1192
+#: ./../survey_templates/view.pt:1189
 msgid "If your answer is &quot;No&quot; or &quot;Don't know yet&quot;, it would be very helpful if you could provide with a short explanation for your answer."
 msgstr "Falls Deine Antwort „nein“ oder „unentschieden“ ist, würdest Du uns sehr helfen, wenn Du eine kurze Begründung angeben würdest."
 
@@ -502,10 +494,6 @@ msgstr "GeschäftsführerIn / Vorstand"
 msgid "Media fixtures and connection points (smartphone docking station, USB port, etc.)"
 msgstr "Medienzubehör bzw. Anschlüsse (Dockingstation für Smartphone, USB, etc)"
 
-#: ./../survey_templates/view.pt:1160
-msgid "Monatsabo im Fitnessclub"
-msgstr "Monatsabo im Fitnessclub"
-
 #: ./../survey_templates/view.pt:1130
 msgid "Monthly subscription for a fitness club"
 msgstr "Monatsabo im Fitnessclub"
@@ -526,9 +514,13 @@ msgstr "nie, aber ich überlege schon länger damit anzufangen"
 msgid "Never. I don't like running."
 msgstr "nie, mir macht Laufen keinen Spass"
 
-#: ./../survey_templates/view.pt:1174
+#: ./../survey_templates/view.pt:1171
 msgid "No"
 msgstr "Nein"
+
+#: ./../survey_templates/view.pt:40
+msgid "Note"
+msgstr ""
 
 #: ./../survey_templates/view.pt:102
 msgid "Number"
@@ -545,6 +537,10 @@ msgstr "es geht so"
 #: ./../survey_templates/view.pt:448
 msgid "Other"
 msgstr "Sonstiges"
+
+#: ./../survey_templates/view.pt:47
+msgid "Our database indicates that from your computer or your IP address somebody provided already a complete set of answers to our survey. If it was not yourself, somebody else might have already participated in the survey under the same IP address."
+msgstr ""
 
 #: ./../exportresults.py:104
 #: ./../surveyresults.py:112
@@ -683,7 +679,7 @@ msgstr "Purchase"
 msgid "Purchase Comment"
 msgstr "Kaufinteresse Begründung"
 
-#: ./../survey_templates/view.pt:1186
+#: ./../survey_templates/view.pt:1183
 msgid "Reasons"
 msgstr "Begründung"
 
@@ -707,6 +703,10 @@ msgstr "Selbständige(r) / Freiberufliche(r)"
 msgid "Session cleared"
 msgstr "Der Zwischenspeicher wurde entleert"
 
+#: ./../survey_templates/view.pt:41
+msgid "Sorry! You have already participated in our survey. You cannot participate more than once."
+msgstr ""
+
 #: ./../survey_templates/view.pt:960
 msgid "Sports clothing"
 msgstr "Sportbekleidung"
@@ -715,7 +715,7 @@ msgstr "Sportbekleidung"
 msgid "Sports equipment"
 msgstr "Sportgeräte"
 
-#: ./../survey_templates/view.pt:1233
+#: ./../survey_templates/view.pt:1230
 msgid "Submit questionnaire"
 msgstr "Umfrage abschicken"
 
@@ -843,10 +843,6 @@ msgstr "Der Wert wurde erfolgreich in den Zwischenspeicher kopiert!"
 msgid "Very important"
 msgstr "Sehr wichtig"
 
-#: ./../survey_templates/view.pt:45
-msgid "Weitere Informationen"
-msgstr "Weitere Informationen"
-
 #: ./../survey_templates/view.pt:745
 msgid "Well"
 msgstr "Gut"
@@ -855,11 +851,11 @@ msgstr "Gut"
 msgid "Wellness (saunas, massages)"
 msgstr "Wellness (Sauna, Massagen)"
 
-#: ./../survey_templates/view.pt:1204
+#: ./../survey_templates/view.pt:1201
 msgid "Yes, I am interested in RUFUS and would like to be updated on its progress and when it is to enter the market."
 msgstr "ja, ich interessiere mich für RUFUS und würde gerne informiert werden, wie es mit ihm weitergeht und wann er auf dem Markt ist."
 
-#: ./../survey_templates/view.pt:1167
+#: ./../survey_templates/view.pt:1164
 msgid "Yes, if the design, functionality, and quality are right for me."
 msgstr "ja, wenn Design, Funktionalität und Qualität stimmen."
 
@@ -867,7 +863,7 @@ msgstr "ja, wenn Design, Funktionalität und Qualität stimmen."
 msgid "Zur Startseite egomotion.com"
 msgstr "Zur Startseite egomotion.com"
 
-#: ./../survey_templates/view.pt:1222
+#: ./../survey_templates/view.pt:1219
 msgid "john@example.tld"
 msgstr "max@mustermann.de"
 

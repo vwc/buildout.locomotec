@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-20 15:11+0000\n"
+"POT-Creation-Date: 2013-03-22 11:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -249,7 +249,7 @@ msgstr ""
 msgid "Dislike Two"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1180
+#: ./../survey_templates/view.pt:1177
 msgid "Don't know yet"
 msgstr ""
 
@@ -261,11 +261,7 @@ msgstr ""
 msgid "E-Mail"
 msgstr ""
 
-#: ./../survey_templates/view.pt:41
-msgid "Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich. Du hast bereits an unserer Umfrage teilgenommen."
-msgstr ""
-
-#: ./../survey_templates/view.pt:1219
+#: ./../survey_templates/view.pt:1216
 msgid "Email address"
 msgstr ""
 
@@ -283,10 +279,6 @@ msgstr ""
 
 #: ./../survey_templates/view.pt:881
 msgid "Executive / civil servant in the upper grade of the civil service"
-msgstr ""
-
-#: ./../survey_templates/view.pt:46
-msgid "F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage teilgenommen hast, k&ouml;nnte es sein, dass bereits einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden (z.B. durch einen Kollegen in Deinem B&uuml;ro)."
 msgstr ""
 
 #: ./../surveytool.py:321
@@ -421,6 +413,10 @@ msgstr ""
 msgid "Functionality Additional"
 msgstr ""
 
+#: ./../survey_templates/view.pt:46
+msgid "Further information"
+msgstr ""
+
 #: ./../infobar_templates/infobarviewlet.pt:28
 msgid "Go to survey"
 msgstr ""
@@ -433,11 +429,7 @@ msgstr ""
 msgid "Heart rate monitor without GPS"
 msgstr ""
 
-#: ./../survey_templates/view.pt:40
-msgid "Hinweis"
-msgstr ""
-
-#: ./../survey_templates/view.pt:1211
+#: ./../survey_templates/view.pt:1208
 msgid "I think RUFUS is a great product idea and would like to make use of a non-binding purchase option which will give me a early-bird discount of 25%. I understand that I can relinquish this option at any time without providing further notification."
 msgstr ""
 
@@ -457,7 +449,7 @@ msgstr ""
 msgid "If you've answered this question with &quot;Never. I don't like running.&quot;, go straight to question 13."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1192
+#: ./../survey_templates/view.pt:1189
 msgid "If your answer is &quot;No&quot; or &quot;Don't know yet&quot;, it would be very helpful if you could provide with a short explanation for your answer."
 msgstr ""
 
@@ -505,10 +497,6 @@ msgstr ""
 msgid "Media fixtures and connection points (smartphone docking station, USB port, etc.)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1160
-msgid "Monatsabo im Fitnessclub"
-msgstr ""
-
 #: ./../survey_templates/view.pt:1130
 msgid "Monthly subscription for a fitness club"
 msgstr ""
@@ -529,8 +517,12 @@ msgstr ""
 msgid "Never. I don't like running."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1174
+#: ./../survey_templates/view.pt:1171
 msgid "No"
+msgstr ""
+
+#: ./../survey_templates/view.pt:40
+msgid "Note"
 msgstr ""
 
 #: ./../survey_templates/view.pt:102
@@ -547,6 +539,10 @@ msgstr ""
 
 #: ./../survey_templates/view.pt:448
 msgid "Other"
+msgstr ""
+
+#: ./../survey_templates/view.pt:47
+msgid "Our database indicates that from your computer or your IP address somebody provided already a complete set of answers to our survey. If it was not yourself, somebody else might have already participated in the survey under the same IP address."
 msgstr ""
 
 #: ./../exportresults.py:104
@@ -686,7 +682,7 @@ msgstr ""
 msgid "Purchase Comment"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1186
+#: ./../survey_templates/view.pt:1183
 msgid "Reasons"
 msgstr ""
 
@@ -710,6 +706,10 @@ msgstr ""
 msgid "Session cleared"
 msgstr ""
 
+#: ./../survey_templates/view.pt:41
+msgid "Sorry! You have already participated in our survey. You cannot participate more than once."
+msgstr ""
+
 #: ./../survey_templates/view.pt:960
 msgid "Sports clothing"
 msgstr ""
@@ -718,7 +718,7 @@ msgstr ""
 msgid "Sports equipment"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1233
+#: ./../survey_templates/view.pt:1230
 msgid "Submit questionnaire"
 msgstr ""
 
@@ -846,10 +846,6 @@ msgstr ""
 msgid "Very important"
 msgstr ""
 
-#: ./../survey_templates/view.pt:45
-msgid "Weitere Informationen"
-msgstr ""
-
 #: ./../survey_templates/view.pt:745
 msgid "Well"
 msgstr ""
@@ -858,11 +854,11 @@ msgstr ""
 msgid "Wellness (saunas, massages)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1204
+#: ./../survey_templates/view.pt:1201
 msgid "Yes, I am interested in RUFUS and would like to be updated on its progress and when it is to enter the market."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1167
+#: ./../survey_templates/view.pt:1164
 msgid "Yes, if the design, functionality, and quality are right for me."
 msgstr ""
 
@@ -870,7 +866,7 @@ msgstr ""
 msgid "Zur Startseite egomotion.com"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1222
+#: ./../survey_templates/view.pt:1219
 msgid "john@example.tld"
 msgstr ""
 

@@ -1,18 +1,21 @@
-msgid ""
-msgstr ""
-"Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-15 14:42+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
-"Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Language-Code: de\n"
-"Language-Name: German\n"
-"Preferred-Encodings: utf-8 latin1\n"
-"Domain: egomotionsitecontent\n"
+<section tal:condition="has_token">
+      <div class="alert alert-error">
+        <h4 i18n:translate="">Hinweis</h4>
+        <p i18n:translate="">
+          Eine Teilnahme an unserer Umfrage ist nicht m&ouml;glich.
+          Du hast bereits an unserer Umfrage teilgenommen.</p>
+      </div>
+      <h4 i18n:translate="">Weitere Informationen</h4>
+      <p i18n:translate="">
+        F&uuml;r Deinen Arbeitplatz wurde bereits eine abgeschlossene Teilnahme
+        an unserer Umfrage gespeichert. Falls Du nicht selbst an unserer Umfrage
+        teilgenommen hast, k&ouml;nnte es sein, dass bereits
+        einmal aus Deinem Netzwerk alle Fragen beantwortet und abgeschickt wurden
+        (z.B. durch einen Kollegen in Deinem B&uuml;ro).
+      </p>
+    </section>
+
+
 
 #: ./../survey_templates/view.pt:916
 msgid "(Mehrfachnennung m&ouml;glich)"
