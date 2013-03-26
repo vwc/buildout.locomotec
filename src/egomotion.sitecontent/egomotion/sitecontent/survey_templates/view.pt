@@ -681,13 +681,13 @@
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.9" name="trainingresource">
                 <span i18n:translate="">
-                  Training app on my smartphone
+                  Training app on smartphone
                 </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.10" name="trainingresource">
                 <span i18n:translate="">
-                  Pedometer with calorie consumption
+                  Pedometer
                 </span>
             </label>
             <div class="input-prepend">

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-22 11:40+0000\n"
+"POT-Creation-Date: 2013-03-26 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -611,7 +611,7 @@ msgid "Participation in the Prize Draw"
 msgstr ""
 
 #: ./../survey_templates/view.pt:689
-msgid "Pedometer with calorie consumption"
+msgid "Pedometer"
 msgstr ""
 
 #: ./../survey_templates/view.pt:909
@@ -723,6 +723,7 @@ msgid "Submit questionnaire"
 msgstr ""
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
+#: ./../survey_templates/view.pt:17
 msgid "Survey"
 msgstr ""
 
@@ -811,7 +812,7 @@ msgid "Training Resource Effect"
 msgstr ""
 
 #: ./../survey_templates/view.pt:683
-msgid "Training app on my smartphone"
+msgid "Training app on smartphone"
 msgstr ""
 
 #: ./../survey_templates/view.pt:647

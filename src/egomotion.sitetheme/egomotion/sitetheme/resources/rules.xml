@@ -97,6 +97,17 @@
                 css:theme-children="#frontpage-content" />
         </rules>
 
+        <rules css:if-content="body.section-information-and-participation-terms-and-conditions">
+            <replace css:theme-children="#frontpage-claim"
+                css:content-children="#header-claim"
+                css:if-content="#header-claim" />
+            <replace css:theme-children="#frontpage-intro"
+                css:content-children="#header-intro"
+                css:if-content="#header-intro" />
+            <replace css:content-children="#content"
+                css:theme-children="#frontpage-content" />
+        </rules>
+
         <!-- Global navigation -->
         <!--<replace css:content="#portal-globalnav li"
             css:theme-children="#main-nav" />-->

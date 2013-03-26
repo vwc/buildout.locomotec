@@ -21,14 +21,14 @@
             <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
             <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
                     tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
-                    Information and Participation Terms and Conditions</a>
+                    Information and Conditions of Participation</a>
             </li>
             <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
                   rel="prettyPhoto"
                   target="_blank">Video</a></li>
             <li><a href="/impressum"
                     tal:attributes="href python:portal_url + '/imprint'">
-                    Legal Notice</a></li>
+                    Imprint</a></li>
         </ul>
     </tal:block>
 </div>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-22 11:40+0000\n"
+"POT-Creation-Date: 2013-03-26 13:20+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -608,7 +608,7 @@ msgid "Participation in the Prize Draw"
 msgstr "Teilnahme am Gewinnspiel"
 
 #: ./../survey_templates/view.pt:689
-msgid "Pedometer with calorie consumption"
+msgid "Pedometer"
 msgstr "Schrittzähler mit Kalorienverbrauch"
 
 #: ./../survey_templates/view.pt:909
@@ -720,6 +720,7 @@ msgid "Submit questionnaire"
 msgstr "Umfrage abschicken"
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
+#: ./../survey_templates/view.pt:17
 msgid "Survey"
 msgstr "Umfrage"
 
@@ -808,7 +809,7 @@ msgid "Training Resource Effect"
 msgstr "Wirkungsgrad"
 
 #: ./../survey_templates/view.pt:683
-msgid "Training app on my smartphone"
+msgid "Training app on smartphone"
 msgstr "Trainingsapp auf Smartphone"
 
 #: ./../survey_templates/view.pt:647
