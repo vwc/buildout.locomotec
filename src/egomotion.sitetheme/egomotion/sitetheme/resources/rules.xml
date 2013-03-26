@@ -10,6 +10,7 @@
     <theme href="minimal.html" if-path="@@edit-tile" />
     <theme href="frontpage.html" css:if-content="body.template-frontpage-view" />
     <theme href="frontpage.html" css:if-content="body.section-erlaeuterungen-und-teilnahmebedingungen" />
+    <theme href="frontpage.html" css:if-content="body.section-information-and-participation-terms-and-conditions" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
