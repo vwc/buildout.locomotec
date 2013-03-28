@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-26 13:20+0000\n"
+"POT-Creation-Date: 2013-03-28 09:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -418,7 +418,7 @@ msgid "Further information"
 msgstr ""
 
 #: ./../infobar_templates/infobarviewlet.pt:28
-msgid "Go to survey"
+msgid "Go to questionnaire"
 msgstr ""
 
 #: ./../survey_templates/view.pt:972
@@ -682,6 +682,10 @@ msgstr ""
 msgid "Purchase Comment"
 msgstr ""
 
+#: ./../survey_templates/view.pt:17
+msgid "Questionnaire"
+msgstr ""
+
 #: ./../survey_templates/view.pt:1183
 msgid "Reasons"
 msgstr ""
@@ -723,7 +727,6 @@ msgid "Submit questionnaire"
 msgstr ""
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
-#: ./../survey_templates/view.pt:17
 msgid "Survey"
 msgstr ""
 

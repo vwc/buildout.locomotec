@@ -25,7 +25,7 @@
     <a class="btn btn-large btn-block btn-primary" id="btn-survey"
         href="/umfrage"
         tal:attributes="href python:portal_url + '/umfrage'">
-        <span class="highlighted" i18n:translate="">Go to survey</span><br />
+        <span class="highlighted" i18n:translate="">Go to questionnaire</span><br />
         <span i18n:translate="">participate &amp; win</span>
     </a>
 </div>

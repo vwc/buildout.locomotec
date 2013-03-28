@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: egomotion.sitecontent\n"
-"POT-Creation-Date: 2013-03-26 13:20+0000\n"
+"POT-Creation-Date: 2013-03-28 09:23+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -415,7 +415,7 @@ msgid "Further information"
 msgstr "Weitere Informationen"
 
 #: ./../infobar_templates/infobarviewlet.pt:28
-msgid "Go to survey"
+msgid "Go to questionnaire"
 msgstr "Zur Umfrage"
 
 #: ./../survey_templates/view.pt:972
@@ -679,6 +679,10 @@ msgstr "Purchase"
 msgid "Purchase Comment"
 msgstr "Kaufinteresse Begründung"
 
+#: ./../survey_templates/view.pt:17
+msgid "Questionnaire"
+msgstr "Umfrage"
+
 #: ./../survey_templates/view.pt:1183
 msgid "Reasons"
 msgstr "Begründung"
@@ -720,7 +724,6 @@ msgid "Submit questionnaire"
 msgstr "Umfrage abschicken"
 
 #: ./../profiles/default/types/egomotion.sitecontent.survey.xml
-#: ./../survey_templates/view.pt:17
 msgid "Survey"
 msgstr "Umfrage"
 

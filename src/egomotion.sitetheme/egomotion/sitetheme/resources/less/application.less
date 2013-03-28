@@ -50,7 +50,7 @@ body > header {
       #logo {
         display:block;
         overflow: hidden;
-        margin: @baseLineHeight / 2 0 @baseLineHeight * 2 0;
+        margin: @baseLineHeight / 2 0 @baseLineHeight 0;
         background:url(../img/logo.png) no-repeat 0 0 transparent;
         text-indent: -9999px;
         .size(65px, 260px);
@@ -75,7 +75,7 @@ body.frontpage #site-wrapper {
     }
     #btn-survey {
       .pull-right();
-      margin: @baseLineHeight 0;
+      margin: 0 0 @baseLineHeight;
       .highlighted {
         text-transform: uppercase;
         font-size: @baseFontSize * 1.75;
@@ -87,6 +87,9 @@ body.frontpage #site-wrapper {
         color: @white;
         background-color: @linkColor;
       }
+    }
+    #language-nav {
+      margin-bottom: 0px;
     }
   }
   #header-contact-info {
@@ -107,7 +110,7 @@ body.frontpage #site-wrapper {
       }
     }
     #language-nav {
-      margin-top: 0px;
+      margin: 0px;
     }
     #language-nav > li > a {
       font-weight: bold;
