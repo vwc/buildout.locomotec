@@ -4,9 +4,13 @@
     <nav tal:condition="python:lang == 'de'">
         <ul class="nav nav-pills pull-right" id="main-nav">
             <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
-            <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
+            <li><a href="/"
+                tal:attributes="href python:portal_url + '/funktion'">
+                Funktion</a>
+            </li>
+            <li><a href="/funktion"
                     tal:attributes="href python:portal_url + '/erlaeuterungen-und-teilnahmebedingungen'">
-                    Erl&auml;uterungen und Teilnahmebedingungen</a>
+                    Teilnahmebedingungen</a>
             </li>
             <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
                   rel="prettyPhoto"
@@ -19,9 +23,12 @@
     <tal:block tal:condition="python:lang == 'en'">
         <ul class="nav nav-pills pull-right" id="main-nav">
             <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
+            <li><a href="/" tal:attributes="href python:portal_url + '/function'">
+                Funktion</a>
+            </li>
             <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
                     tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
-                    Information and Conditions of Participation</a>
+                    Terms and Conditions</a>
             </li>
             <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
                   rel="prettyPhoto"
