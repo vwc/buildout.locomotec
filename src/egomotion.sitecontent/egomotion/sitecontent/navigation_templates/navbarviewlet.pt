@@ -24,7 +24,7 @@
         <ul class="nav nav-pills pull-right" id="main-nav">
             <li><a href="/" tal:attributes="href portal_url">RUFUS</a></li>
             <li><a href="/" tal:attributes="href python:portal_url + '/function'">
-                Funktion</a>
+                Function</a>
             </li>
             <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
                     tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
