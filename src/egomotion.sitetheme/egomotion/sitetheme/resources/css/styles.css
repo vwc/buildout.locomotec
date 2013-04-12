@@ -6838,9 +6838,6 @@ body.frontpage #site-wrapper .splashbox:first-child {
 body.frontpage #site-wrapper .splashbox h2 {
   color: #205d2e;
 }
-body.frontpage #site-wrapper #frontpage-content {
-  min-height: 800px;
-}
 #toolbar + #site-wrapper,
 #topbar + #site-wrapper {
   margin-top: 40px;
