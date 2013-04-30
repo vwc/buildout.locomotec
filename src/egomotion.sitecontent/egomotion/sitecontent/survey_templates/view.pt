@@ -638,9 +638,10 @@
                 </span>
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="trainingresource.2" name="trainingresource"
-                 i18n:translate="">
-                Heart rate monitor with GPS
+              <input type="checkbox" value="trainingresource.2" name="trainingresource">
+                <span i18n:translate="">
+                  Heart rate monitor with GPS
+                </span>
             </label>
             <label class="checkbox">
               <input type="checkbox" value="trainingresource.3" name="trainingresource">

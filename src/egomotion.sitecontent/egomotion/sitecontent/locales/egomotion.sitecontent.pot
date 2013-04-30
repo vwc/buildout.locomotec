@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-03-28 09:23+0000\n"
+"POT-Creation-Date: 2013-04-30 08:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,39 +25,39 @@ msgstr ""
 msgid "1. The following 15 design sketches show what RUFUS could look like as a product. Please choose three favourites from these sketches and state which design features you like most and which features you like least."
 msgstr ""
 
-#: ./../survey_templates/view.pt:736
+#: ./../survey_templates/view.pt:737
 msgid "10. Assuming you train with a heart rate monitor, how accurately are you able to control your heart rate and running speed with this heart rate monitor (with a pedometer or GPS)?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:764
+#: ./../survey_templates/view.pt:765
 msgid "11. How important is it to you to have a personal running coach which is available to you at any time and completes a training programme specifically tailored to suit you with you?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:795
+#: ./../survey_templates/view.pt:796
 msgid "12. What is the maximum you would be prepared to pay for such a running coach per training hour?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:819
+#: ./../survey_templates/view.pt:820
 msgid "13. Age and sex"
 msgstr ""
 
-#: ./../survey_templates/view.pt:846
+#: ./../survey_templates/view.pt:847
 msgid "14. Professional position"
 msgstr ""
 
-#: ./../survey_templates/view.pt:924
+#: ./../survey_templates/view.pt:925
 msgid "15. Approximately how much have you invested sport and wellness in the last year?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:939
+#: ./../survey_templates/view.pt:940
 msgid "16. What did you spend this money on?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:987
+#: ./../survey_templates/view.pt:988
 msgid "17. Approximately how much would you spend on the products listed below?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1154
+#: ./../survey_templates/view.pt:1155
 msgid "18. RUFUS will cost about 2000 EUR (cost of a good racing bike or treadmill) when it enters the market. Would you buy yourself a RUFUS?"
 msgstr ""
 
@@ -89,15 +89,15 @@ msgstr ""
 msgid "8. Which aids do you use for your running training?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:704
+#: ./../survey_templates/view.pt:705
 msgid "9. How effectively do these aids support you when training? In particular, how well do they help you monitor your heart rate and running speed?"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1108
+#: ./../survey_templates/view.pt:1109
 msgid "A coach session"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1039
+#: ./../survey_templates/view.pt:1040
 msgid "A cross trainer"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "A function which suggests a diet based on my calorie consumption"
 msgstr ""
 
-#: ./../survey_templates/view.pt:993
+#: ./../survey_templates/view.pt:994
 msgid "A home exercise machine"
 msgstr ""
 
@@ -133,7 +133,7 @@ msgstr ""
 msgid "A list of participation UIDs for quick access"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1085
+#: ./../survey_templates/view.pt:1086
 msgid "A mountain bike"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr ""
 msgid "A program for monitoring performance (e.g. a program which analyses my pulse as the strain on your body changes, like in a exercise ECG)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1062
+#: ./../survey_templates/view.pt:1063
 msgid "A racing bike"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 msgid "A single survey participation"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1016
+#: ./../survey_templates/view.pt:1017
 msgid "A treadmill"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Accessory Two"
 msgstr ""
 
-#: ./../survey_templates/view.pt:721
+#: ./../survey_templates/view.pt:722
 msgid "Adequately, but I could be making better training progress."
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "Benefit Two"
 msgstr ""
 
-#: ./../survey_templates/view.pt:867
+#: ./../survey_templates/view.pt:868
 msgid "Blue-collar/clerical worker"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Close window"
 msgstr ""
 
-#: ./../survey_templates/view.pt:954
+#: ./../survey_templates/view.pt:955
 msgid "Coach sessions"
 msgstr ""
 
@@ -249,7 +249,7 @@ msgstr ""
 msgid "Dislike Two"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1177
+#: ./../survey_templates/view.pt:1178
 msgid "Don't know yet"
 msgstr ""
 
@@ -261,23 +261,23 @@ msgstr ""
 msgid "E-Mail"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1216
+#: ./../survey_templates/view.pt:1217
 msgid "Email address"
 msgstr ""
 
-#: ./../survey_templates/view.pt:874
+#: ./../survey_templates/view.pt:875
 msgid "Employee with responsibility for other employees / civil servant in the middle grade of the civil service"
 msgstr ""
 
-#: ./../survey_templates/view.pt:902
+#: ./../survey_templates/view.pt:903
 msgid "Entrepreneur"
 msgstr ""
 
-#: ./../survey_templates/view.pt:714
+#: ./../survey_templates/view.pt:715
 msgid "Excellently. I'm making very good training progress (endurance and speed)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:881
+#: ./../survey_templates/view.pt:882
 msgid "Executive / civil servant in the upper grade of the civil service"
 msgstr ""
 
@@ -373,7 +373,7 @@ msgstr ""
 msgid "Features which I like most"
 msgstr ""
 
-#: ./../survey_templates/view.pt:831
+#: ./../survey_templates/view.pt:832
 msgid "Female"
 msgstr ""
 
@@ -421,15 +421,19 @@ msgstr ""
 msgid "Go to questionnaire"
 msgstr ""
 
-#: ./../survey_templates/view.pt:972
+#: ./../survey_templates/view.pt:973
 msgid "Gym fees"
+msgstr ""
+
+#: ./../survey_templates/view.pt:642
+msgid "Heart rate monitor with GPS"
 msgstr ""
 
 #: ./../survey_templates/view.pt:636
 msgid "Heart rate monitor without GPS"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1208
+#: ./../survey_templates/view.pt:1209
 msgid "I think RUFUS is a great product idea and would like to make use of a non-binding purchase option which will give me a early-bird discount of 25%. I understand that I can relinquish this option at any time without providing further notification."
 msgstr ""
 
@@ -449,7 +453,7 @@ msgstr ""
 msgid "If you've answered this question with &quot;Never. I don't like running.&quot;, go straight to question 13."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1189
+#: ./../survey_templates/view.pt:1190
 msgid "If your answer is &quot;No&quot; or &quot;Don't know yet&quot;, it would be very helpful if you could provide with a short explanation for your answer."
 msgstr ""
 
@@ -485,11 +489,11 @@ msgstr ""
 msgid "Make a note of your number and code word or print them out, so that you can claim your prize when the competition is over."
 msgstr ""
 
-#: ./../survey_templates/view.pt:838
+#: ./../survey_templates/view.pt:839
 msgid "Male"
 msgstr ""
 
-#: ./../survey_templates/view.pt:888
+#: ./../survey_templates/view.pt:889
 msgid "Managing director / board member"
 msgstr ""
 
@@ -497,7 +501,7 @@ msgstr ""
 msgid "Media fixtures and connection points (smartphone docking station, USB port, etc.)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1130
+#: ./../survey_templates/view.pt:1131
 msgid "Monthly subscription for a fitness club"
 msgstr ""
 
@@ -517,7 +521,7 @@ msgstr ""
 msgid "Never. I don't like running."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1171
+#: ./../survey_templates/view.pt:1172
 msgid "No"
 msgstr ""
 
@@ -533,7 +537,7 @@ msgstr ""
 msgid "Occasionally"
 msgstr ""
 
-#: ./../survey_templates/view.pt:751
+#: ./../survey_templates/view.pt:752
 msgid "Ok"
 msgstr ""
 
@@ -610,23 +614,23 @@ msgstr ""
 msgid "Participation in the Prize Draw"
 msgstr ""
 
-#: ./../survey_templates/view.pt:689
+#: ./../survey_templates/view.pt:690
 msgid "Pedometer"
 msgstr ""
 
-#: ./../survey_templates/view.pt:909
+#: ./../survey_templates/view.pt:910
 msgid "Pensioner"
 msgstr ""
 
-#: ./../survey_templates/view.pt:659
+#: ./../survey_templates/view.pt:660
 msgid "Personal running coach at a club"
 msgstr ""
 
-#: ./../survey_templates/view.pt:757
+#: ./../survey_templates/view.pt:758
 msgid "Poorly"
 msgstr ""
 
-#: ./../survey_templates/view.pt:728
+#: ./../survey_templates/view.pt:729
 msgid "Poorly. I'm hardly making any training progress."
 msgstr ""
 
@@ -662,15 +666,15 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: ./../survey_templates/view.pt:665
+#: ./../survey_templates/view.pt:666
 msgid "Private personal running coach"
 msgstr ""
 
-#: ./../survey_templates/view.pt:677
+#: ./../survey_templates/view.pt:678
 msgid "Private running group"
 msgstr ""
 
-#: ./../survey_templates/view.pt:853
+#: ./../survey_templates/view.pt:854
 msgid "Pupil/student"
 msgstr ""
 
@@ -686,7 +690,7 @@ msgstr ""
 msgid "Questionnaire"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1183
+#: ./../survey_templates/view.pt:1184
 msgid "Reasons"
 msgstr ""
 
@@ -698,11 +702,11 @@ msgstr ""
 msgid "Roadwork"
 msgstr ""
 
-#: ./../survey_templates/view.pt:671
+#: ./../survey_templates/view.pt:672
 msgid "Running group at a club"
 msgstr ""
 
-#: ./../survey_templates/view.pt:895
+#: ./../survey_templates/view.pt:896
 msgid "Self-employed person / freelancer"
 msgstr ""
 
@@ -714,15 +718,15 @@ msgstr ""
 msgid "Sorry! You have already participated in our survey. You cannot participate more than once."
 msgstr ""
 
-#: ./../survey_templates/view.pt:960
+#: ./../survey_templates/view.pt:961
 msgid "Sports clothing"
 msgstr ""
 
-#: ./../survey_templates/view.pt:948
+#: ./../survey_templates/view.pt:949
 msgid "Sports equipment"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1230
+#: ./../survey_templates/view.pt:1231
 msgid "Submit questionnaire"
 msgstr ""
 
@@ -814,15 +818,15 @@ msgstr ""
 msgid "Training Resource Effect"
 msgstr ""
 
-#: ./../survey_templates/view.pt:683
+#: ./../survey_templates/view.pt:684
 msgid "Training app on smartphone"
 msgstr ""
 
-#: ./../survey_templates/view.pt:647
+#: ./../survey_templates/view.pt:648
 msgid "Treadmill at home"
 msgstr ""
 
-#: ./../survey_templates/view.pt:653
+#: ./../survey_templates/view.pt:654
 msgid "Treadmill at the gym"
 msgstr ""
 
@@ -834,7 +838,7 @@ msgstr ""
 msgid "Umfrage Informationen"
 msgstr ""
 
-#: ./../survey_templates/view.pt:860
+#: ./../survey_templates/view.pt:861
 msgid "Unemployed person"
 msgstr ""
 
@@ -850,19 +854,19 @@ msgstr ""
 msgid "Very important"
 msgstr ""
 
-#: ./../survey_templates/view.pt:745
+#: ./../survey_templates/view.pt:746
 msgid "Well"
 msgstr ""
 
-#: ./../survey_templates/view.pt:966
+#: ./../survey_templates/view.pt:967
 msgid "Wellness (saunas, massages)"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1201
+#: ./../survey_templates/view.pt:1202
 msgid "Yes, I am interested in RUFUS and would like to be updated on its progress and when it is to enter the market."
 msgstr ""
 
-#: ./../survey_templates/view.pt:1164
+#: ./../survey_templates/view.pt:1165
 msgid "Yes, if the design, functionality, and quality are right for me."
 msgstr ""
 
@@ -870,7 +874,7 @@ msgstr ""
 msgid "Zur Startseite egomotion.com"
 msgstr ""
 
-#: ./../survey_templates/view.pt:1219
+#: ./../survey_templates/view.pt:1220
 msgid "john@example.tld"
 msgstr ""
 
@@ -878,7 +882,7 @@ msgstr ""
 msgid "participate &amp; win"
 msgstr ""
 
-#: ./../survey_templates/view.pt:826
+#: ./../survey_templates/view.pt:827
 msgid "years old"
 msgstr ""
 
