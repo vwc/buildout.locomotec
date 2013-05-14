@@ -12,7 +12,7 @@
                     tal:attributes="href python:portal_url + '/erlaeuterungen-und-teilnahmebedingungen'">
                     Teilnahmebedingungen</a>
             </li>
-            <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
+            <li><a href="http://www.youtube.com/watch?v=ulj7VzVcpAY"
                   rel="prettyPhoto"
                   target="_blank">Video</a></li>
             <li><a href="/impressum"
@@ -30,7 +30,7 @@
                     tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
                     Terms and Conditions</a>
             </li>
-            <li><a href="http://www.youtube.com/watch?v=bo30SKPVQmc"
+            <li><a href="http://www.youtube.com/watch?v=ulj7VzVcpAY"
                   rel="prettyPhoto"
                   target="_blank">Video</a></li>
             <li><a href="/impressum"
