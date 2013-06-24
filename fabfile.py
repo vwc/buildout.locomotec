@@ -9,9 +9,9 @@ env.port = '22222'
 env.user = 'root'
 env.hosts = ['5zu2']
 env.webserver = '/opt/webserver/buildout.webserver'
-env.code_root = '/opt/sites/re/buildout.re'
+env.code_root = '/opt/sites/locomotec/buildout.locomotec'
 env.local_root = '/Users/cb/dev/locomotec/buildout.locomotec'
-env.sitename = 're'
+env.sitename = 'locomotec'
 env.code_user = 'root'
 env.prod_user = 'www'
 
