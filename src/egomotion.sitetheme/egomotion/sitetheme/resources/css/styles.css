@@ -6789,7 +6789,7 @@ body.frontpage #site-wrapper #site-header #frontpage-intro {
 }
 body.frontpage #site-wrapper #site-header #btn-survey {
   float: right;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
 }
 body.frontpage #site-wrapper #site-header #btn-survey .highlighted {
   text-transform: uppercase;
