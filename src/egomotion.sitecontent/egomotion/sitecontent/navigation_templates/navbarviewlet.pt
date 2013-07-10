@@ -9,8 +9,8 @@
                 Funktion</a>
             </li>
             <li><a href="/funktion"
-                    tal:attributes="href python:portal_url + '/erlaeuterungen-und-teilnahmebedingungen'">
-                    Teilnahmebedingungen</a>
+                    tal:attributes="href python:portal_url + '/uber-uns'">
+                    &Uuml;ber uns</a>
             </li>
             <li><a href="http://www.youtube.com/watch?v=ulj7VzVcpAY"
                   rel="prettyPhoto"
@@ -27,8 +27,8 @@
                 Function</a>
             </li>
             <li><a href="/erlaeuterungen-und-teilnahmebedingungen"
-                    tal:attributes="href python:portal_url + '/information-and-participation-terms-and-conditions'">
-                    Terms and Conditions</a>
+                    tal:attributes="href python:portal_url + '/about-us'">
+                    About us</a>
             </li>
             <li><a href="http://www.youtube.com/watch?v=ulj7VzVcpAY"
                   rel="prettyPhoto"
