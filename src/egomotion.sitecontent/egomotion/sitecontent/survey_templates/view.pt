@@ -12,7 +12,7 @@
 
   <article id="survey-view"
     tal:define="context_url context/absolute_url;
-                has_token view/locked">
+                has_token view/token">
     <header class="page-header">
       <h1 i18n:translate="">Questionnaire</h1>
     </header>
